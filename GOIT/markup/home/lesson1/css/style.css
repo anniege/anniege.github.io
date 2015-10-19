@@ -5,7 +5,6 @@
 
 body {
 	background: #eee;
-	font-family: "Times New Roman";
 }
 
 .wrapper {
@@ -32,6 +31,8 @@ body {
 
 .name {
 	text-align: center;
+	padding-bottom: 15px;
+	font-family: TimesNewRoman, 'Times New Roman', Times, Baskerville, Georgia, serif;
 }
 
 #photo {
@@ -45,7 +46,7 @@ a {
 }
 
 p, a {
-	text-indent: 10px;
+	padding-left: 10px;
 }
 
 ul {
@@ -56,6 +57,10 @@ ul {
 
 p, a, ul li {
 	font-size: 17px;
+	font-family: TimesNewRoman, 'Times New Roman', Times, Baskerville, Georgia, serif;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: 400;
 }
 
 .row div:first-child {
