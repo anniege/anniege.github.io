@@ -47,7 +47,6 @@ a {
 
 p, a {
 	padding-left: 10px;
-	line-height: normal;
 }
 
 ul {
@@ -57,11 +56,7 @@ ul {
 }
 
 p, a, ul li {
-	font-size: 17px;
-	font-family: TimesNewRoman, 'Times New Roman', Times, Baskerville, Georgia, serif;
-	font-style: normal;
-	font-variant: normal;
-	font-weight: 400;
+	font: normal 17px/1.2 TimesNewRoman, 'Times New Roman', Times, Baskerville, Georgia, serif;
 }
 
 .row div:first-child {
