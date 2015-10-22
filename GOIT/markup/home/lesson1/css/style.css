@@ -9,7 +9,6 @@ body {
 
 .wrapper {
 	width: 513px;
-	height: auto;
 	margin: 3px auto;
 	padding: 20px 0 30px;
 	background: #fff;
@@ -59,6 +58,6 @@ p, a, ul li {
 	font: normal 17px/1.2 TimesNewRoman, 'Times New Roman', Times, Baskerville, Georgia, serif;
 }
 
-.row div:first-child {
+.row .row_item:first-child {
 	margin-bottom: 30px;
 }
