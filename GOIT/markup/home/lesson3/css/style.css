@@ -38,22 +38,21 @@ body {
 .menu {
 	background: rgba(102,102,102,1);
 	background: -moz-linear-gradient(top, rgba(102,102,102,1) 0%, rgba(51,51,51,1) 100%);
-	background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(102,102,102,1)), color-stop(100%, rgba(51,51,51,1)));
 	background: -webkit-linear-gradient(top, rgba(102,102,102,1) 0%, rgba(51,51,51,1) 100%);
 	background: -o-linear-gradient(top, rgba(102,102,102,1) 0%, rgba(51,51,51,1) 100%);
 	background: -ms-linear-gradient(top, rgba(102,102,102,1) 0%, rgba(51,51,51,1) 100%);
 	background: linear-gradient(to bottom, rgba(102,102,102,1) 0%, rgba(51,51,51,1) 100%);
 }
 
-ul.menu_list {
+.menu_list {
 	font-size: 0px;
 }
 
-li.menu_list_item {
+.menu_list_item {
 	display: inline-block;
 }
 
-li.menu_list_item a {
+.menu_list_item a {
 	display: block;
 	width: 145px;
 	height: 40px;
@@ -65,11 +64,11 @@ li.menu_list_item a {
 	text-shadow: 1px 2px 2px rgba(0, 0, 0, 0.5);
 }
 
-li.menu_list_item:not(:last-child) a {
+.menu_list_item:not(:last-child) a {
 	border-right: 1px solid #999;
 }
 
-li.menu_list_item:hover {
+.menu_list_item:hover {
 	background: #333;
 }
 
@@ -83,12 +82,12 @@ li.menu_list_item:hover {
 	width: 264px;
 }
 
-ul.left_menu_list {
+.left_menu_list {
 	width: 238px;
 	border: 1px solid #ccc;
 }
 
-li.left_menu_list_item a {
+.left_menu_list_item a {
 	display: block;
 	height: 39px;
 	color: #666;
@@ -102,11 +101,11 @@ li.left_menu_list_item a {
 	transition: padding-left 0.4s ease-out 0.1s;
 }
 
-li.left_menu_list_item:not(:last-child) a {
+.left_menu_list_item:not(:last-child) a {
 	border-bottom: 1px solid #ccc;
 }
 
-li.left_menu_list_item a:hover {
+.left_menu_list_item a:hover {
 	padding-left: 36px;
 	color: #333;
 }
@@ -154,20 +153,20 @@ li.left_menu_list_item a:hover {
 	width: 30%;
 }
 
-li.footer_menu_list_item {
+.footer_menu_list_item {
 	display: inline-block;
 	width: 120px;
 	text-align: center;
 }
 
-li.footer_menu_list_item a {
+.footer_menu_list_item a {
 	text-decoration: none;
 	font: 13px 'Open Sans',sans-serif;
 	line-height: 40px;
 	color: #333;
 }
 
-li.footer_menu_list_item a:hover {
+.footer_menu_list_item a:hover {
 	text-decoration: underline;
 }
 
