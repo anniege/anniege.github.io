@@ -1,6 +1,6 @@
 @font-face {
 	font-family: 'Open Sans';
-	src: url(../fonts/OpenSans-Regular.ttf); 
+	src: url(../fonts/OpenSans-Regular.ttf);
 }
 
 body {
@@ -18,7 +18,7 @@ body {
 
 /*HEADER*/
 
-.header, 
+.header,
 .container,
 .footer {
 	width: 100%;
@@ -108,6 +108,7 @@ body {
 .left_menu_list_item a:hover {
 	padding-left: 36px;
 	color: #333;
+	background: #f9f9f9;
 }
 
 .content {
