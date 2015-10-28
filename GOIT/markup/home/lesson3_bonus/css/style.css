@@ -1,34 +1,99 @@
 body {
-	background: #000 url("../img/bg.jpg") no-repeat fixed center;
-}
-
-.wrapper {
-	width: 960;
-	margin: 0 auto;
+	background: fixed #000 url("../img/bg.jpg") center center no-repeat;
+	font-family: Tahoma, Geneva, Verdana, sans-serif;
 	color: #fff;
 }
 
+
+/*WRAPPER*/
+
+.wrapper {
+	width: 818px;
+	margin: 0 auto;
+	padding-top: 50px;
+}
+
+
+/*HEADER*/
+
 .header {
-	height: 818px;
+	position: relative;
+	height: 150px;
 }
 
-.header .logo {
-	float: left;
-	width: 266px;
+.contacts {
+	position: absolute;
+	top: 94px;
+	right: 0;
+	padding-right: 15px;
 }
 
-.header .contacts {
-	float: right;
-	width: 120px;
-	font-family: Tahoma, Geneva, Verdana, sans-serif;
-}
-
-.header .contacts .contacts_header {
+.contacts_header {
 	font-size: 10px;
 	line-height: 15px;
+	font-weight: 600;
 }
 
-.header .contacts .contacts_phone, .contacts_email {
+.contacts_email, .contacts_phone {
 	font-size: 9px;
 	line-height: 12px;
+}
+
+
+/*CONTENT*/
+
+.content {
+	padding-bottom: 49px;
+}
+
+.row {
+	font-size: 0;
+	line-height: 0;
+}
+
+.country {
+	float: left;
+	text-align: center;
+	padding-bottom: 69px;
+}
+
+.country:not(:last-child) {
+	margin-right: 17px;
+}
+
+.content .row .country a {
+	display: block;
+	text-decoration: none;
+	position: relative;
+}
+
+.content .row .country a:before {
+	content: url(../img/border.png);
+	position: absolute;
+	left: -3px;
+	top: -3px;
+}
+
+.content .row .country p {
+	font-size: 15px;
+	text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.5);
+	line-height: 20px;
+	color: #fff;
+	padding: 3px 0;
+}
+
+/*FOOTER*/
+
+.clearfix:after {
+	content: ".";
+	display: block;
+	height: 0;
+	clear: both;
+	visibility: hidden;
+}
+
+.footer p {
+	font-size: 10px;
+	text-align: center;
+	padding: 30px 0;
 }
