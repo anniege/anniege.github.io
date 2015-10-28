@@ -1,0 +1,63 @@
+body {
+	width:100%;
+	background: #009999 url(../img/bg.jpg) no-repeat fixed;
+	font-family: Tahoma, Geneva, Verdana, sens-serif;
+}
+
+.wrapper {
+	width: 1000px;
+	background: #fff;
+	margin: 0 auto;
+	-webkit-box-shadow: 1px 0 2px 3px rgba(0, 0, 0, .4), -1px 0 2px 3px rgba(0, 0, 0, .2);
+	box-shadow: 1px 0 2px 3px rgba(0, 0, 0, .4), -1px 0 2px 3px rgba(0, 0, 0, .2);
+	border-bottom: 2px solid #000;
+}
+
+
+/*HEADER*/
+
+.logo {
+	float: left;
+	padding: 0 0 9px 29px;
+}
+
+.info {
+	float: right;
+}
+
+.countries {
+	float: right;
+}
+
+.countries a {
+	/*float: right;*/display: inline-block;
+	text-decoration: none;
+	color: #009999;
+	font-size: 0;
+	line-height: 0;
+	border:0;
+}
+
+.countries p {
+	font-size: 10px;
+	text-decoration: underline;
+}
+
+.clearfix:after {
+	content: ".";
+	display: block;
+	height: 0;
+	clear: both;
+	visibility: hidden;
+}
+
+.contacts {
+	font-size: 12px;
+	line-height: 15px;
+	color: #009999;
+	height: 68px;
+	width: 126px;
+	float: right;
+	padding: 9px 32px 34px 0;
+	clear: both;
+}
