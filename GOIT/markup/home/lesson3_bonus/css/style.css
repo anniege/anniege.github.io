@@ -47,14 +47,13 @@ body {
 }
 
 .row {
-	font-size: 0;
-	line-height: 0;
+	height: 206px;
+	padding-bottom: 69px;
 }
 
 .country {
 	float: left;
 	text-align: center;
-	padding-bottom: 69px;
 }
 
 .country:not(:last-child) {
@@ -65,6 +64,11 @@ body {
 	display: block;
 	text-decoration: none;
 	position: relative;
+	opacity: 1;
+	transition: all 0.8s ease-out;
+	-webkit-transition: all 0.8s ease-out;
+	-moz-transition: all 0.8s ease-out;
+	-o-transition: all 0.8s ease-out;
 }
 
 .content .row .country a:before {
@@ -72,6 +76,10 @@ body {
 	position: absolute;
 	left: -3px;
 	top: -3px;
+}
+
+.content .row .country a:hover {
+	opacity: 0.5;
 }
 
 .content .row .country p {
