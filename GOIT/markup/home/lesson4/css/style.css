@@ -24,23 +24,24 @@ body {
 }
 
 .header {
-
+	padding: 0px 33px 9px 28px;
 }
 
 .logo {
 	float: left;
-	padding: 0 0 9px 29px;
 }
 
 .header_right {
 	float: right;
-	padding-bottom: 9px;
 }
 
 .header_right_contacts {
 	height: 68px;
-	width: 126px;
-	padding: 9px 32px 34px 176px;
+	padding: 11px 0 34px 167px;
+}
+
+.header_right_contacts p {
+	width: 127px;
 	font-size: 12px;
 	line-height: 15px;
 	color: #009999;
@@ -48,7 +49,6 @@ body {
 
 .header_right_countries {
 	float: right;
-	padding-right: 34px
 }
 
 .header_right_countries a {
@@ -65,10 +65,11 @@ body {
 	display: block;
 	font-size: 10px;
 	padding: 5px 0 8px;
-	text-align: center; 
+	text-align: center;
 }
 
 .slider img {
+	clear: both;
 	display: block;
 	border-top: 1px solid #009999;
 	border-bottom: 1px solid #009999;
@@ -79,7 +80,7 @@ body {
 .menu_list {
 	height: 27px;
 	border-bottom: 1px solid #000;
-	background: #333; 
+	background: #333;
 	-webkit-box-shadow: 0 2px 3px rgba(0,0,0,.4);
 	box-shadow: 0 2px 3px rgba(0,0,0,.4);
 }
@@ -126,12 +127,12 @@ body {
 	background: #333;
 }
 
-.menu_list > li:hover {
-	background: #111;
-}
-
 .menu_list > li:hover ul {
 	visibility: visible;
+}
+
+.menu_list > li:hover {
+	background: #111;
 }
 
 .drop_item ul li:hover {
