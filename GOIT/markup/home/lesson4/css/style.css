@@ -140,7 +140,18 @@ body {
 	top: 12px;
 	height: 0;
 	width: 0;
-	right: 30px;
+}
+
+.menu_list li:nth-of-type(2) a:after {
+	right: 28px;
+}
+
+.menu_list li:nth-of-type(3) a:after {
+	right: 69px;
+}
+
+.menu_list li:nth-of-type(4) a:after {
+	right: 41px;
 }
 
 /*CONTENT*/
