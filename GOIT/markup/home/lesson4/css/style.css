@@ -169,6 +169,10 @@ body {
 	color: #333;
 }
 
+.content div:not(:last-child) {
+	border-right: 1px solid #ccc;
+}
+
 .content div p {
 	padding-left: 16px;
 	font-size: 14px;
@@ -181,21 +185,21 @@ body {
 }
 
 .col_inform {
-	width: 31%;
+	width: 208px;
 	float: left;
 	padding-bottom: 20000px;
 	margin-bottom: -20000px;
 }
 
 .col_main {
-	width: 49%;
+	width: 581px;
 	float: left;
 	padding-bottom: 20000px;
 	margin-bottom: -20000px;
 }
 
 .col_news {
-	width: 21%;
+	width: 209px;
 	float: right;
 	padding-bottom: 20000px;
 	margin-bottom: -20000px;
