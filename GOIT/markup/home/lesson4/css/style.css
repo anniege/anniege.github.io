@@ -85,7 +85,7 @@ body {
 	width: 142px;
 }
 
-.menu_list > li > a, .drop_item ul a {
+.menu_list li a {
 	display: block;
 	font-size: 14px;
 	line-height: 27px;
@@ -133,7 +133,6 @@ body {
 .menu_list .drop_item > a:after {
 	content: " ";
 	position: absolute;
-	display: block;
 	border-top: 5px solid #fff;
 	border-left: 3px solid transparent;
 	border-right: 3px solid transparent;
@@ -162,7 +161,7 @@ body {
 }
 
 .content h2 {
-	padding: 12px 0 9px;
+	padding: 12px 0 7px;
 	font-weight: 600px;
 	text-align: center;
 	font-size: 18px;
