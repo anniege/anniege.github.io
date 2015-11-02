@@ -31,7 +31,7 @@ body {
 .contacts_header {
 	font-size: 10px;
 	line-height: 15px;
-	font-weight: 600;
+	font-weight: bold;
 }
 
 .contacts_email, .contacts_phone {
@@ -57,29 +57,24 @@ body {
 }
 
 .country:not(:last-child) {
-	margin-right: 17px;
+	margin-right: 4px;
 }
 
 .content .row .country a {
 	display: block;
 	text-decoration: none;
-	position: relative;
-	opacity: 1;
-	transition: all 0.8s ease-out;
-	-webkit-transition: all 0.8s ease-out;
-	-moz-transition: all 0.8s ease-out;
-	-o-transition: all 0.8s ease-out;
 }
 
-.content .row .country a:before {
-	content: url(../img/border.png);
-	position: absolute;
-	left: -3px;
-	top: -3px;
+.content .row .country img {
+	transition: all .8s ease-out;
+	-webkit-transition: all .8s ease-out;
+	-moz-transition: all .8s ease-out;
+	-o-transition: all .8s ease-out;
 }
 
-.content .row .country a:hover {
-	opacity: 0.5;
+.content .row .country img:hover {
+	opacity: .4;
+	filter: alpha(opacity=40);
 }
 
 .content .row .country p {
@@ -89,6 +84,7 @@ body {
 	color: #fff;
 	padding: 3px 0;
 }
+
 
 /*FOOTER*/
 
