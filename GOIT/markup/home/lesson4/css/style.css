@@ -1,6 +1,6 @@
 body {
 	width:100%;
-	background: #009999 url(../img/bg.jpg) no-repeat fixed;
+	background: #009999 url(../img/bg.png) repeat-x fixed;
 	font-family: Tahoma, Geneva, Verdana, sens-serif;
 }
 
@@ -8,11 +8,10 @@ body {
 	width: 1000px;
 	background: #fff;
 	margin: 0 auto;
-	-webkit-box-shadow: 1px 0 2px 3px rgba(0, 0, 0, .4), -1px 0 2px 3px rgba(0, 0, 0, .2);
-	box-shadow: 1px 0 2px 3px rgba(0, 0, 0, .4), -1px 0 2px 3px rgba(0, 0, 0, .2);
+	-webkit-box-shadow: 1px 0 2px 3px rgba(0, 0, 0, .1), -1px 0 2px 3px rgba(0, 0, 0, .1);
+	box-shadow: 1px 0 2px 3px rgba(0, 0, 0, .1), -1px 0 2px 3px rgba(0, 0, 0, .1);
 	border-bottom: 2px solid #000;
 }
-
 
 /*HEADER*/
 
@@ -24,16 +23,21 @@ body {
 	visibility: hidden;
 }
 
+.header {
+
+}
+
 .logo {
 	float: left;
 	padding: 0 0 9px 29px;
 }
 
-.header_contacts_countries {
+.header_right {
 	float: right;
+	padding-bottom: 9px;
 }
 
-.contacts {
+.header_right_contacts {
 	height: 68px;
 	width: 126px;
 	padding: 9px 32px 34px 176px;
@@ -42,21 +46,23 @@ body {
 	color: #009999;
 }
 
-.countries {
+.header_right_countries {
 	float: right;
 	padding-right: 34px
 }
 
-.countries a {
+.header_right_countries a {
 	display: inline-block;
 	font-size: 0;
 	line-height: 0;
 	vertical-align: 0;
 	border:0;
+	text-align: center;
 	color: #009999;
 }
 
-.countries p {
+.header_right_countries span {
+	display: block;
 	font-size: 10px;
 	padding: 5px 0 8px;
 	text-align: center; 
@@ -74,19 +80,19 @@ body {
 	height: 27px;
 	border-bottom: 1px solid #000;
 	background: #333; 
-	-webkit-box-shadow: 0 2px 3px rgba(0, 0, 0, .4);
-	box-shadow: 0 2px 3px rgba(0, 0, 0, .4);
+	-webkit-box-shadow: 0 2px 3px rgba(0,0,0,.4);
+	box-shadow: 0 2px 3px rgba(0,0,0,.4);
 }
 
 .menu_list > li {
 	position: relative;
 	float: left;
 	height: 27px;
-	width: 142px;
 }
 
 .menu_list li a {
 	display: block;
+	width: 142px;
 	font-size: 14px;
 	line-height: 27px;
 	text-decoration: none;
@@ -94,10 +100,15 @@ body {
 	color: #fff;
 }
 
+.menu_list .drop_item > a, .drop_item ul a {
+	width: 127px;
+	text-align: left;
+	padding-left: 15px;
+}
+
 .drop_item ul {
 	position: absolute;
 	visibility: hidden;
-	width: 142px;
 	left: 0;
 	top: 27px;
 	background: #333;
@@ -115,12 +126,11 @@ body {
 	background: #333;
 }
 
-.menu_list .drop_item > a, .drop_item ul a {
-	text-align: left;
-	padding-left: 15px;
+.menu_list > li:hover {
+	background: #111;
 }
 
-.menu_list li:hover ul {
+.menu_list > li:hover ul {
 	visibility: visible;
 }
 
@@ -162,7 +172,7 @@ body {
 
 .content h2 {
 	padding: 12px 0 7px;
-	font-weight: 600px;
+	font-weight: bold;
 	text-align: center;
 	font-size: 18px;
 	color: #333;
