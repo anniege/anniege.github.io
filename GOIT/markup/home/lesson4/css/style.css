@@ -201,16 +201,16 @@ body {
 	margin-bottom: -20000px;
 }
 
-.col_main {
-	width: 581px;
-	float: left;
+.col_news {
+	width: 209px;
+	float: right;
 	padding-bottom: 20000px;
 	margin-bottom: -20000px;
 }
 
-.col_news {
-	width: 209px;
-	float: right;
+.col_main {
+	width: 581px;
+	margin: 0 208px 0 209px;
 	padding-bottom: 20000px;
 	margin-bottom: -20000px;
 }
