@@ -78,9 +78,8 @@ body {
 /*MENU*/
 
 .menu_list {
-	height: 27px;
-	border-bottom: 1px solid #000;
 	background: #333;
+	border-bottom: 1px solid #000;
 	-webkit-box-shadow: 0 2px 3px rgba(0,0,0,.4);
 	box-shadow: 0 2px 3px rgba(0,0,0,.4);
 }
@@ -88,7 +87,6 @@ body {
 .menu_list > li {
 	position: relative;
 	float: left;
-	height: 27px;
 }
 
 .menu_list li a {
@@ -109,9 +107,8 @@ body {
 
 .drop_item ul {
 	position: absolute;
-	visibility: hidden;
-	left: 0;
-	top: 27px;
+	left: -99999px;
+	top: 100%;
 	background: #333;
 	-webkit-box-shadow: 3px 2px 4px rgba(0,0,0,0.4);
 	-moz-box-shadow: 3px 2px 4px rgba(0,0,0,0.4);
@@ -123,12 +120,11 @@ body {
 
 .drop_item  ul li {
 	height: 27px;
-	width: 142px;
 	background: #333;
 }
 
 .menu_list > li:hover ul {
-	visibility: visible;
+	left: 0;
 }
 
 .menu_list > li:hover {
