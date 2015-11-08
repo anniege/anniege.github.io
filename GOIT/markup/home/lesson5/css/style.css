@@ -3,6 +3,12 @@
 	src:url(../fonts/helveticaneuecyr-roman.otf);
 }
 
+@font-face {
+	font-family:'Helvetica Neue';
+	src:url(../fonts/helveticaneuecyr-light.otf);
+	font-weight: lighter;
+}
+
 body {
 	font-family: 'Helvetica Neue', Tahoma, Arial, sans-serif;
 }
@@ -21,7 +27,7 @@ body {
 	clear: both;
 	height: 0;
 	visibility: hidden;
-} 
+}
 
 /*HEADER*/
 
@@ -29,8 +35,6 @@ body {
 	width: 100%;
 	background:  #074f8f url(../img/pattern.png);
 	padding: 0 20px;
-	/*line-height: 36px;*/
-	/*position: fixed;*/
 }
 
 .header > * {
@@ -48,12 +52,17 @@ body {
 
 .menu li a {
 	display: block;
-	padding: 0 10px;
 	line-height: 36px;
+	padding: 0 10px;
 	text-decoration: none;
 	font-size: 14px;
 	color: #56a2dc;
 	transition: all 0.25s;
+}
+
+.menu li a:hover {
+	background: #4eabda;
+	color: #fff;
 }
 
 .menu:after {
@@ -67,11 +76,6 @@ body {
 	right: 0;
 }
 
-.menu li a:hover {
-	background: #4eabda;
-	color: #fff;
-}
-
 .flag {
 	width: 128px;
 	padding: 0 16px;
@@ -80,13 +84,12 @@ body {
 
 .fa.fa-flag, .flag a {
 	float: right;
-	display: block;
 	line-height: 36px;
 }
 
 .fa.fa-flag {
-	font-size: 21px;
 	padding-right: 5px;
+	font-size: 21px;
 	color: #fff;
 }
 
@@ -133,25 +136,138 @@ body {
 
 .content .form {
 	position: absolute;
-	display:block;
 	top: 50%;
 	left: 50%;
 	margin-top: -307px;
 	margin-left: -281px;
 	width: 561px;
-	height: 615px; 
 	background: rgba(0,0,0, .4);
 }
 
 .content .form_header {
+	padding: 22px 0;
 	border-bottom: 2px solid #bfc6b6;
 }
 
 .content .form_header h1 {
-	line-height: 64px;
+	font-size: 20px;
 	text-align: center;
-	font-size: 24px;
 	color: #fff;
 }
 
+.content .form_fb {
+	padding: 36px 142px;
+}
 
+.content .form_fb > div {
+	float: left;
+	line-height: 36px;
+	border-top: 1px solid #778ab5;
+	background: rgba(81,176,220,1);
+	background: -moz-linear-gradient(top, rgba(61, 87, 146,1) 0%, rgba(51, 65, 100,1) 100%);
+	background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(61, 87, 146,1)), color-stop(100%, rgba(46,121,196,1)));
+	background: -webkit-linear-gradient(top, rgba(61, 87, 146,1) 0%, rgba(51, 65, 100,1) 100%);
+	background: -o-linear-gradient(top, rgba(61, 87, 146,1) 0%, rgba(51, 65, 100,1) 100%);
+	background: -ms-linear-gradient(top, rgba(61, 87, 146,1) 0%, rgba(51, 65, 100,1) 100%);
+	background: linear-gradient(to bottom, rgba(61, 87, 146,1) 0%, rgba(51, 65, 100,1) 100%);
+	color: #fff;
+	cursor: pointer;
+}
+
+.content .fa.fa-facebook {
+	width: 37px;
+	border-right: 1px solid #1d3c75;
+	border-radius: 4px 0 0 4px;
+	font-size: 20px;
+	text-align: center;
+}
+
+.content .form_fb_login_button {
+	position: relative;
+	padding: 0 60px 0 31px;
+	border-left: 1px solid #4d68ab;
+	border-radius: 0 4px 4px 0;
+	font-size: 14px;
+	font-weight: bold;
+}
+
+.content .form_fb_login_button span:first-child {
+	font-weight: lighter;
+}
+
+.content .form_fb_login_button span:last-child {
+	position: absolute;
+	top: 50%;
+	right: 25px;
+	margin-top: -5px;
+	font-size: 12px;
+}
+
+.form_register {
+	width: 276px;
+	margin: 0 auto;
+	padding-top: 35px;
+	border-top: 1px solid #999;
+}
+
+.form_register legend {
+	padding: 0 5px;
+	text-align: center;
+	font-size: 14px;
+	color: #999;
+}
+
+.form_register input[type="text"], input[type="password"] {
+	display: block;
+	width: 276px;
+	height: 35px;
+	text-indent: 19px;
+	margin-bottom: 17px;
+	background: #0f0f0f;
+	border: none;
+	border-bottom: 1px solid #484848;
+	color: #ccc;
+	transition: all 0.2s;
+}
+
+.form_register input[type="text"]:focus, input[type="password"]:focus {
+	background: #1b5288;
+	-webkit-box-shadow: 2px 2px 8px 0px rgba(105,156,205,1), -2px -2px 8px 0px rgba(105,156,205,1), inset 1px 1px 9px 0px rgba(0,0,0,0.6), ;
+	-moz-box-shadow: 2px 2px 8px 0px rgba(105,156,205,1), -2px -2px 8px 0px rgba(105,156,205,1), inset 1px 1px 9px 0px rgba(0,0,0,0.6), ;
+	box-shadow: 2px 2px 8px 0px rgba(105,156,205,1), -2px -2px 8px 0px rgba(105,156,205,1), inset 1px 1px 9px 0px rgba(0,0,0,0.6), ;
+	color: #fff;
+}
+
+.form_register input[type="checkbox"] + label {
+	font-size: 14px;
+	color: #ccc;
+}
+
+.form_register input[type="submit"] {
+	display: block;
+	width: 151px;
+	height: 36px;
+	margin: 15px auto;
+	border: 1px solid #61a6e2;
+	border-radius: 4px;
+	font-size: 14px;
+	color: #fff;
+	cursor: pointer;
+	background: rgba(81,176,220,1);
+	background: -moz-linear-gradient(top, rgba(101, 168, 228,1) 0%, rgba(54, 134, 202,1) 100%);
+	background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(101, 168, 228,1)), color-stop(100%, rgba(54, 134, 202,1)));
+	background: -webkit-linear-gradient(top, rgba(101, 168, 228,1) 0%, rgba(54, 134, 202,1) 100%);
+	background: -o-linear-gradient(top, rgba(101, 168, 228,1) 0%, rgba(54, 134, 202,1) 100%);
+	background: -ms-linear-gradient(top, rgba(101, 168, 228,1) 0%, rgba(54, 134, 202,1) 100%);
+	background: linear-gradient(to bottom, rgba(101, 168, 228,1) 0%, rgba(54, 134, 202,1) 100%);
+}
+
+.content .form p {
+	width: 315px;
+	padding-bottom: 17px;
+	margin: 0 auto;
+	text-align: center;
+	font-size: 11px;
+	line-height: 17px;
+	color: #ccc;
+}

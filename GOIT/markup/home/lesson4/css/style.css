@@ -84,15 +84,14 @@ body {
 	box-shadow: 0 2px 3px rgba(0,0,0,.4);
 }
 
-.menu_list  li {
+.menu_list > li {
 	position: relative;
 	float: left;
 }
 
 .menu_list li a {
 	display: block;
-	/*width: 142px;*/
-	padding: 0 33px;
+	width: 142px;
 	font-size: 14px;
 	line-height: 27px;
 	text-decoration: none;
