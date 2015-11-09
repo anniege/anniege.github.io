@@ -100,6 +100,7 @@ body {
 }
 
 .flag a:hover {
+	text-decoration: underline;
 	color: #fff;
 }
 
@@ -207,7 +208,7 @@ body {
 	width: 276px;
 	margin: 0 auto;
 	padding-top: 35px;
-	border-top: 1px solid #999;
+	border-top: 2px ridge #999;
 }
 
 .form_register legend {
@@ -232,9 +233,9 @@ body {
 
 .form_register input[type="text"]:focus, input[type="password"]:focus {
 	background: #1b5288;
-	-webkit-box-shadow: 2px 2px 8px 0px rgba(105,156,205,1), -2px -2px 8px 0px rgba(105,156,205,1), inset 1px 1px 9px 0px rgba(0,0,0,0.6), ;
-	-moz-box-shadow: 2px 2px 8px 0px rgba(105,156,205,1), -2px -2px 8px 0px rgba(105,156,205,1), inset 1px 1px 9px 0px rgba(0,0,0,0.6), ;
-	box-shadow: 2px 2px 8px 0px rgba(105,156,205,1), -2px -2px 8px 0px rgba(105,156,205,1), inset 1px 1px 9px 0px rgba(0,0,0,0.6), ;
+	-webkit-box-shadow: 2px 2px 8px 0px rgba(105,156,205,1), -2px -2px 8px 0px rgba(105,156,205,1), inset 1px 1px 9px 0px rgba(0,0,0,0.2), ;
+	-moz-box-shadow: 2px 2px 8px 0px rgba(105,156,205,1), -2px -2px 8px 0px rgba(105,156,205,1), inset 1px 1px 9px 0px rgba(0,0,0,0.2), ;
+	box-shadow: 2px 2px 8px 0px rgba(105,156,205,1), -2px -2px 8px 0px rgba(105,156,205,1), inset 1px 1px 9px 0px rgba(0,0,0,0.2), ;
 	color: #fff;
 }
 
