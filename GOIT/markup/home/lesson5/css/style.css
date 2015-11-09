@@ -11,14 +11,14 @@
 
 body {
 	font-family: 'Helvetica Neue', Tahoma, Arial, sans-serif;
+	background: #006699 url(../img/bg2.jpg) center center no-repeat fixed;
+	overflow: hidden;
 }
 
 .wrapper {
-	width: 1215px;
+	width: 100%;
 	height: 1028px;
 	margin: 0 auto;
-	background: #006699 url(../img/bg.jpg) center center no-repeat fixed;
-	overflow: hidden;
 }
 
 .clearfix:after {
@@ -139,7 +139,7 @@ body {
 	position: absolute;
 	top: 50%;
 	left: 50%;
-	margin-top: -307px;
+	margin-top: -335px;
 	margin-left: -281px;
 	width: 561px;
 	background: rgba(0,0,0, .4);
