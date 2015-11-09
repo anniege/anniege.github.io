@@ -18,7 +18,6 @@ body {
 .wrapper {
 	width: 100%;
 	height: 1028px;
-	margin: 0 auto;
 }
 
 .clearfix:after {
@@ -142,7 +141,7 @@ body {
 	margin-top: -335px;
 	margin-left: -281px;
 	width: 561px;
-	background: rgba(0,0,0, .4);
+	background: rgba(0,0,0, .5);
 }
 
 .content .form_header {
