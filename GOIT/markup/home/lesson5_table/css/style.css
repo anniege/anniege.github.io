@@ -1,0 +1,65 @@
+* {
+	padding: 0;
+	margin: 0;
+}
+
+.painting {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin: -270px 0 0 -250px;
+	width: 497px;
+	height: 542px;
+	border-collapse: collapse;
+}
+
+.painting tr {
+	height: 72px;
+}
+
+.painting td {
+	width: 71px;
+	border: 8px solid #000;
+	box-sizing: border-box;
+} 
+
+.painting tr:nth-child(8),
+.painting tr:nth-child(9) {
+	height: 30px;
+}
+
+.painting tr:nth-child(1) {
+	height: 50px;
+}
+
+.yellow_cell {
+	background: #ffec5c url(../img/noisy.png);
+}
+
+.scarlet_cell {
+	background: #ff5f44 url(../img/noisy.png);
+}
+
+.black_cell {
+	background: #1d2b26 url(../img/noisy.png);
+}
+
+.blue_cell {
+	background: #074683 url(../img/noisy.png);
+}
+
+.painting .bd_left_none {
+	border-left: transparent;
+}
+
+.painting .bd_right_none {
+	border-right: transparent;
+}
+
+.painting .bd_top_none {
+	border-top: transparent;
+}
+
+.painting .bd_bottom_none {
+	border-bottom: transparent;
+}
