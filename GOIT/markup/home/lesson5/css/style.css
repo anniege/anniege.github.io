@@ -9,16 +9,23 @@
 	font-weight: lighter;
 }
 
+html {
+	height: 100%;
+}
+
 body {
 	font-family: 'Helvetica Neue', Tahoma, Arial, sans-serif;
-	background: #006699 url(../img/bg.jpg) center center no-repeat fixed;
-	overflow-x: hidden;
+	height: 100%;
+	width: 100%;
+	min-height: 736px;
 }
 
 .wrapper {
 	position: relative;
+	background: #006699 url(../img/bg.jpg) center center no-repeat fixed;
+	height: 100%;
 	width: 100%;
-	min-height: 768px;
+	background-size: cover;
 }
 
 .clearfix:after {
@@ -37,15 +44,14 @@ body {
 }
 
 .header > * {
-	float: left;
+	float: right;
 }
 
-.menu {
+.menu ul {
 	position: relative;
 	font-size: 0;
 	line-height: 0;
 	vertical-align: 0;
-	min-width: 842px;
 }
 
 .menu li {
@@ -67,14 +73,14 @@ body {
 	color: #fff;
 }
 
-.menu:after {
+.menu ul:after {
 	position: absolute;
 	content: '';
-	height: 36px;
+	height: 32px;
 	width: 1px;
-	top: 0;
+	top: 2px;
 	right: 0;
-	background: url(../img/line.png);
+	background: #56a2dc;
 }
 
 .flag {
@@ -85,7 +91,7 @@ body {
 
 .fa.fa-flag, .flag a {
 	float: right;
-	line-height: 36px;
+	line-height: 32px;
 }
 
 .fa.fa-flag {
@@ -107,6 +113,7 @@ body {
 
 .login {
 	width: 189px;
+	margin-right: 21px;
 	border: 1px solid #4299d2;
 	text-align: center;
 	background: rgba(81,176,220,1);
@@ -131,12 +138,8 @@ body {
 /*CONTENT*/
 
 .content .form {
-	position: absolute;
 	width: 561px;
-	top: 50%;
-	left: 50%;
-	margin-top: -335px;
-	margin-left: -281px;
+	margin: 50px auto 15px;
 	background: rgba(0,0,0, .5);
 }
 
