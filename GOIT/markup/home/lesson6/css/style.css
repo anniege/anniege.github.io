@@ -122,12 +122,14 @@
 /*MENU*/
 
 .menu {
+	position: relative;
 	padding-top: 6px;
 }
 
 .menu ul {
 	padding: 4px 0;
 	padding-left: 126px;
+	border-radius: 4px;
 	background: rgba(86,95,103,1);
 	background: -moz-linear-gradient(top, rgba(86,95,103,1) 0%, rgba(0,0,0,1) 13%, rgba(0,0,0,1) 100%);
 	background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(86,95,103,1)), color-stop(13%, rgba(0,0,0,1)), color-stop(100%, rgba(0,0,0,1)));
@@ -135,6 +137,8 @@
 	background: -o-linear-gradient(top, rgba(86,95,103,1) 0%, rgba(0,0,0,1) 13%, rgba(0,0,0,1) 100%);
 	background: -ms-linear-gradient(top, rgba(86,95,103,1) 0%, rgba(0,0,0,1) 13%, rgba(0,0,0,1) 100%);
 	background: linear-gradient(to bottom, rgba(86,95,103,1) 0%, rgba(0,0,0,1) 13%, rgba(0,0,0,1) 100%);
+	-webkit-box-shadow: 2px 2px 3px rgba(0,0,0,.5);
+	box-shadow: 2px 2px 3px rgba(0,0,0,.5);
 }
 
 .menu ul li {
@@ -166,5 +170,34 @@
 }
 
 .menu_basket {
+	position: absolute;
+	top: 15px;
+	right: 20px;
+}
+
+div.menu_basket:before {
+	content: '';
+	position: absolute;
+	background: url(../img/basket.png) no-repeat;
+	height: 20px;
+	width: 17px;
+	top: 0;
+    left: -22px;
+}
+
+.menu_basket span {
+	font-size: 11px;
 	color: #929b9f;
+}
+
+.menu_basket a {
+	text-decoration: none;
+	font-size: 12px;
+	color: #0d5a8f
+}
+
+/*SERACH*/
+
+.search {
+	
 }
