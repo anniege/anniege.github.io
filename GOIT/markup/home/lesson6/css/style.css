@@ -199,5 +199,383 @@ div.menu_basket:before {
 /*SERACH*/
 
 .search {
-	
+	margin-top: 12px;
+}
+
+.search > div {
+	position: relative;
+	float: left;
+	height: 112px;
+	border: 1px solid #9c9c9d;
+	border-radius: 13px;
+	-webkit-box-shadow: 2px 2px 5px rgba(0,0,0,.3);
+	box-shadow: 2px 2px 5px rgba(0,0,0,.3);
+}
+
+.search fieldset {
+	float: left;
+}
+
+.search button {
+	/*display: block;*/
+	position: absolute;
+	right: 5px;
+	bottom: 1px;
+	border: none;
+	/*border-bottom: 1px solid #8aa1b3;*/
+	line-height: 22px;
+	font-size: 14px;
+	font-family: Arial sans-serif;
+	font-style: italic;
+	text-transform: uppercase;
+	text-decoration: underline;
+	background: transparent;
+	color: #154467;
+	clear: both;
+	cursor: pointer;
+	outline: none;
+}
+
+.search .search_header {
+	position: absolute;
+	top: 3px;
+	font-size: 12px;
+	line-height: 12px;
+	font-family: Arial, sans-serif;
+	font-weight: bolder;
+	letter-spacing: 0px;
+	color: #154467;
+}
+
+.search legend {
+	position: absolute;
+	top: 4px;
+	font-size: 11px;
+	font-family: Arial, sans-serif;
+	letter-spacing: 0px;
+	font-weight: 900;
+	color: #154468;
+}
+
+.search form fieldset:first-of-type legend {
+	left: 20px;
+}
+
+.search form fieldset:last-of-type legend {
+	right: 20px;
+}
+
+.search dt,
+.search dd {
+	display: inline-block;
+}
+
+.search dd {
+	position: relative;
+}
+
+.search dd:not([class="bottom_list"]):after {
+	content: '';
+	position: absolute;
+	width: 18px;
+	height: 17px;
+	top: 0;
+	right: 0;
+	background: url(../img/arrow.png) right no-repeat;
+	z-index: -999;
+}
+
+.search select {
+	border: none;
+	-webkit-box-shadow: inset 1px 1px 1px rgba(0,0,0,.5);
+	box-shadow: inset 1px 1px 1px rgba(0,0,0,.5);
+	outline: none;
+	background-color: transparent;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	-ms-appearance: none;
+	-o-appearance: none;
+	appearance: none;
+}
+
+/*.search select option {
+		-webkit-appearance: none;
+	-moz-appearance: none;
+	-ms-appearance: none;
+	-o-appearance: none;
+	appearance: none;
+	border: 1px solid #000;
+}
+*/
+
+.search label {
+	font: 10px/8px 'Lucida Sans Unicode', Trebuchet MS, sans-serif;
+}
+
+.search label span {
+	font: 9px/8px 'Lucida Sans Unicode', Trebuchet MS, sans-serif;
+	color: #77858b;
+}
+
+/*------------------------------search_by_car-------------------------*/
+
+.search .search_by_car {
+	padding: 19px 14px 0px 19px;
+	margin-right: 15px;
+}
+
+.search .search_by_car .search_header  {
+	left: 125px;
+}
+.search .search_by_car label {
+	font: 10px/8px Arial, sans-serif;
+}
+
+.search .search_by_car label span {
+	font: 9px/8px Arial, sans-serif;
+	color: #77858b;
+}
+
+.search .search_by_car fieldset {
+	width: 176px;
+}
+
+.search .search_by_car fieldset:first-child {
+	margin-right: 27px;
+}
+
+.search .search_by_car dl {
+	font-size: 0;
+	line-height: 0;
+}
+
+.search .search_by_car dt {
+	width: 70px;
+	height: 16px;
+}
+
+.search .search_by_car dd{
+	margin-bottom: 3px;
+}
+
+.search .search_by_car select {
+	width: 100px;
+}
+
+.search .search_by_car select[name='year'] {
+	width: 57px;
+}
+
+/*-----------------------------search_by_tier---------------------------*/
+
+.search .search_by_tier {
+	width: 162px;
+	padding: 21px 14px 0 14px;
+	margin-right: 10px;
+}
+
+/*.inline_item {
+	display: inline-block;
+}*/
+
+.search .search_by_tier dd {
+	margin-bottom: 7px;
+}
+
+.search .search_by_tier dt {
+	line-height: 14px;
+	margin-bottom: 7px;
+	line-height: 17px;
+}
+
+.search .search_by_tier dt label {
+	height: 17px;
+}
+
+.search .search_by_tier select {
+	width: 50px;
+	height: 17px;
+}
+
+.search .search_by_tier dt:not(:nth-of-type(2)) {
+	width: 45px;
+}
+
+.search .search_by_tier dt:nth-of-type(3) {
+	text-align: right;
+}
+
+.search .search_by_tier dd:nth-of-type(3) {
+	margin-right: 59px;
+}
+
+.search .search_by_tier .bottom_list {
+	line-height: 0;
+	font-size: 0;
+}
+
+.search .search_by_tier dd.bottom_list {
+	width: 113px;
+}
+
+.search .search_by_tier dt.bottom_list {
+	vertical-align: top;
+}
+
+.search .search_by_tier .bottom_list label {
+	display: inline-block;
+	width: 97px;
+	margin-bottom: 3px;
+}
+
+.search .search_by_tier .bottom_list input[type="checkbox"] {
+	margin: 0 3px 3px 0;
+}
+
+/*----------------------------search_by_wheel------------------------------*/
+
+.search .search_by_wheel {
+	padding: 21px 17px 0px 15px;
+}
+
+.search .search_by_wheel fieldset:first-of-type {
+	width: 160px;
+	border-right: 1px solid #bdc6ca;
+}
+
+.search .search_by_wheel fieldset:last-of-type {
+	position: relative;
+	top: -10px;
+	width: 72px;
+	padding-left: 11px;
+}
+
+.search .search_by_wheel dl {
+	font-size: 0;
+	line-height: 0;
+}
+
+.search .search_by_wheel dt {
+	width: 92px;
+	/*height: 16px;*/
+}
+
+.search .search_by_wheel dd {
+	margin-bottom: 3px;
+}
+
+.search .search_by_wheel select {
+	width: 57px;
+}
+
+.search .search_by_wheel select[name='qty'] {
+	width: 50px;
+}
+
+.search .search_by_wheel fieldset:last-of-type dt {
+	width: 62px;
+}
+
+.search .search_by_wheel fieldset:last-of-type dt label span {
+	font-size: 8px;
+	display: block;
+}
+
+/*MAIN*/
+
+.content {
+	padding-top: 17px;
+}
+
+.content_catalogue {
+	float: left;
+	padding: 4px 8px 0 0;
+}
+
+.content_brands {
+	float: right;
+}
+
+.content_catalogue_header {
+	display: block;
+	padding: 0 9px 0 29px;
+	line-height: 24px;
+	margin-bottom: 15px;
+}
+
+.content_catalogue section header {
+	line-height: 26px;
+	padding-left: 29px;
+	width: 119px;
+	margin-left: 3px;
+}
+
+.caption {
+	font-size: 13px;
+	border-radius: 22px;
+	border: 1px solid #79878d;
+	border-radius: 22px;
+	text-transform: uppercase;
+	color: #114165;
+}
+
+.content_catalogue ul li {
+	list-style-type: circle;
+	list-style-position: inside;
+	padding-left: 38px;
+}
+
+.content_catalogue ul li:not(:last-child) {
+	padding-bottom: 16px;
+}
+
+.content_catalogue ul li a {
+	color: #465961;
+	text-decoration: none;
+	font-size: 13px;
+	font-family: 'Lucida Sans Unicode' Trebuchet MS sans-serif;
+	-webkit-transition: all .25s;
+	-o-transition: all .25s;
+	transition: all .25s;
+	letter-spacing: -0.5px;
+}
+
+.content_catalogue ul li a:hover {
+	color: #0c3256;
+	text-decoration: underline;
+	font-style: italic;
+	font-weight: bold;
+}
+
+
+.content_display {
+	width: 527px;
+	margin: 0 auto;
+}
+
+.content_display .row figure {
+	float: left;
+}
+
+.content_display .row figcaption {
+	display: block;
+	text-align: center;
+}
+
+.content_display figure figcaption + span {
+	display: block;
+	text-align: center;
+}
+
+.content_display figure {
+
+}
+
+.content_display figure {
+	display: block;
+	width: 127px;
+	height: 138px;
+	border: 1px solid #000;
+	border-radius: 10px;
+	background-color: #fff;
 }

@@ -9,7 +9,7 @@
 </head>
 <body>
 	<div class="wrapper">
-	<header class="header clearfix">
+		<header class="header clearfix">
 			<address class="header_contacts">
 				(044)123-45-67 (044)567-89-10
 			</address>
@@ -48,219 +48,300 @@
 				<span>грн.</span>
 			</div>
 		</nav>
-		<div class="search">
+		<div class="search clearfix">
 			<div class="search_by_car">
-				<h2>Поиск по автомобилю</h2>
-				<fieldset>
-					<legend>Диски:</legend>
-					<dl>
-						<dt><label>Марка <span>авто:</span></label></dt>
-						<dd><select name="brand" id="">
-							<option value=""></option>
-							<option value=""></option>
-							<option value=""></option>
-						</select></dd>
-						<dt><label>Модель <span>автомобиля:</span></label></dt>
-						<dd><select name="model" id="">
-							<option value=""></option>
-							<option value=""></option>
-							<option value=""></option>
-						</select></dd>
-						<dt><label>Год выпуска <span>автомобиля:</span></label></dt>
-						<dd><select name="year" id="">
-							<option value=""></option>
-							<option value=""></option>
-							<option value=""></option>
-						</select></dd>
-						<dt><label>Комплектация:</label></dt>
-						<dd><select name="spec" id="">
-							<option value=""></option>
-							<option value=""></option>
-							<option value=""></option>
-						</select></dd>
-					</dl>
-				</fieldset>
-				<fieldset>
-					<legend>Шины:</legend>
-					<dl>
-						<dt><label>Марка <span>авто:</span></label></dt>
-						<dd><select name="brand" id="">
-							<option value=""></option>
-							<option value=""></option>
-							<option value=""></option>
-						</select></dd>
-						<dt><label>Модель <span>автомобиля:</span></label></dt>
-						<dd><select name="model" id="">
-							<option value=""></option>
-							<option value=""></option>
-							<option value=""></option>
-						</select></dd>
-						<dt><label>Год выпуска <span>автомобиля:</span></label></dt>
-						<dd><select name="year" id="">
-							<option value=""></option>
-							<option value=""></option>
-							<option value=""></option>
-						</select></dd>
-						<dt><label>Комплектация:</label></dt>
-						<dd><select name="spec" id="">
-							<option value=""></option>
-							<option value=""></option>
-							<option value=""></option>
-						</select></dd>
-					</dl>
-				</fieldset>
+				<h2 class="search_header">Поиск по автомобилю</h2>
+				<form action="#" class="clearfix">
+					<fieldset>
+						<legend>Диски:</legend>
+						<dl>
+							<dt><label>Марка <span>авто:</span></label></dt>
+							<dd>
+								<select name="brand" id="">
+									<option value=""></option>
+									<option value=""></option>
+									<option value=""></option>
+								</select>
+							</dd>
+							<dt><label>Модель <span>автомобиля:</span></label></dt>
+							<dd>
+								<select name="model" id="">
+									<option value=""></option>
+									<option value=""></option>
+									<option value=""></option>
+								</select>
+							</dd>
+							<dt><label>Год выпуска <span>автомобиля:</span></label></dt>
+							<dd>
+								<select name="year" id="">
+									<option value=""></option>
+									<option value=""></option>
+									<option value=""></option>
+								</select>
+							</dd>
+							<dt><label>Комплектация:</label></dt>
+							<dd>
+								<select name="spec" id="">
+									<option value=""></option>
+									<option value=""></option>
+									<option value=""></option>
+								</select>
+							</dd>
+						</dl>
+					</fieldset>
+					<fieldset>
+						<legend>Шины:</legend>
+						<dl>
+							<dt><label>Марка <span>авто:</span></label></dt>
+							<dd>
+								<select name="brand" id="">
+									<option value=""></option>
+									<option value=""></option>
+									<option value=""></option>
+								</select>
+							</dd>
+							<dt><label>Модель <span>автомобиля:</span></label></dt>
+							<dd>
+								<select name="model" id="">
+									<option value=""></option>
+									<option value=""></option>
+									<option value=""></option>
+								</select>
+							</dd>
+							<dt><label>Год выпуска <span>автомобиля:</span></label></dt>
+							<dd>
+								<select name="year" id="">
+									<option value=""></option>
+									<option value=""></option>
+									<option value=""></option>
+								</select>
+							</dd>
+							<dt><label>Комплектация:</label></dt>
+							<dd>
+								<select name="spec" id="">
+									<option value=""></option>
+									<option value=""></option>
+									<option value=""></option>
+								</select>
+							</dd>
+						</dl>
+					</fieldset>
+					<button type="submit">поиск...</button>
+				</form>
 			</div>
 			<div class="search_by_tier">
-				<h2>поиск шин</h2>
-				<dl>
-					<dt><label>Размер:</label></dt>
-					<dd><select name="" id="">
-						<option value=""></option>
-						<span>/</span>
-						<option value=""></option>
-						<span>R</span> <option value=""></option>
-					</select></dd>
-					<dt><label></label></dt>
-					<dd><select name="" id="">
-						<option value=""></option>
-						<option value=""></option>
-						<option value=""></option>
-					</select></dd>
-				</dl>
+				<h2 class="search_header">поиск шин</h2>
+				<form action="#">
+					<dl>
+						<dt><label>Размер:</label></dt>
+						<dd>
+							<select name="" id="">
+								<option value=""></option>
+								<option value=""></option>
+								<option value=""></option>
+							</select>
+						</dd>
+						<dt><label>/</label></dt>
+						<dd>
+							<select name="" id="">
+								<option value=""></option>
+								<option value=""></option>
+								<option value=""></option>
+							</select>
+						</dd>
+						<dt><label>R</label></dt>
+						<dd>
+							<select name="" id="">
+								<option value=""></option>
+								<option value=""></option>
+								<option value=""></option>
+							</select>
+						</dd>
+						<dt class="bottom_list"><label>Сезон:</label></dt>
+						<dd class="bottom_list">
+							<input type="checkbox" id="summer">
+							<label for="summer">лето</label>
+							<input type="checkbox" id="winter">
+							<label for="winter">зима</label>
+							<input type="checkbox" id="allseasons">
+							<label for="allseasons">всесез</label>
+						</dd>
+					</dl>
+					<button type="submit">поиск...</button>
+				</form>
 			</div>
 			<div class="search_by_wheel">
-				<h2>поиск дисков</h2>
-				<dl>
-					<dt><label></label></dt>
-					<dd><select name="" id="">
-						<option value=""></option>
-						<option value=""></option>
-						<option value=""></option>
-					</select></dd>
-					<dt><label></label></dt>
-					<dd><select name="" id="">
-						<option value=""></option>
-						<option value=""></option>
-						<option value=""></option>
-					</select></dd>
-				</dl>
+				<h2 class="search_header">поиск дисков</h2>
+				<form action="#" class="clearfix">
+					<fieldset>
+						<dl>
+						<dt><label>Диаметр <span>диска</span>:</label></dt>
+							<dd>
+								<select name="" id="">
+									<option value="14">14</option>
+									<option value=""></option>
+									<option value=""></option>
+								</select>
+							</dd>
+							<dt><label>Количество <span>крепёжных отверстий</span>:</label></dt>
+							<dd>
+								<select name="qty" id="">
+									<option value="3">3</option>
+									<option value=""></option>
+									<option value=""></option>
+								</select>
+							</dd>
+							<dt><label>Диаметр <span>расположения крепёжных отверстий</span>:</label></dt>
+							<dd>
+								<select name="" id="">
+									<option value="12" selected>12</option>
+									<option value="11">11</option>
+									<option value="10">10</option>
+								</select>
+							</dd>
+						</dl>
+					</fieldset>
+					<fieldset>
+						<dl>
+							<dt><label>ДЦО <span>(диаметр центрального отверстия):</span></label></dt>
+							<dd>
+								<select name="" id="">
+									<option value="12">12</option>
+									<option value=""></option>
+									<option value=""></option>
+								</select>
+							</dd>
+							<dt><label>ЕТ <span>(вылет диска):</span></label></dt>
+							<dd>
+								<select name="" id="">
+									<option value="12">12</option>
+									<option value=""></option>
+									<option value=""></option>
+								</select>
+							</dd>
+						</dl>
+					</fieldset>
+					<button type="submit">поиск...</button>
+				</form>
 			</div>
 		</div>
-		<main class="content" role="main">
+		<main class="content clearfix" role="main">
 			<aside class="content_catalogue">
-				<h1>каталог продукции</h1>
+				<h1 class="content_catalogue_header caption">каталог продукции</h1>
 				<section>
-					<header>шины</header>
+					<header class="caption">шины</header>
 					<ul>
-						<li>Наименование 1</li>
-						<li>Наименование 2</li>
-						<li>Наименование 3</li>
-						<li>Наименование 4</li>
+						<li><a href="#">Наименование 1</a></li>
+						<li><a href="#">Наименование 2</a></li>
+						<li><a href="#">Наименование 3</a></li>
+						<li><a href="#">Наименование 4</a></li>
 					</ul>
 				</section>
 				<section>
-					<header>диски</header>
+					<header class="caption">диски</header>
 					<ul>
-						<li>Наименование 1</li>
-						<li>Наименование 2</li>
-						<li>Наименование 3</li>
-						<li>Наименование 4</li>
+						<li><a href="#">Наименование 1</a></li>
+						<li><a href="#">Наименование 2</a></li>
+						<li><a href="#">Наименование 3</a></li>
+						<li><a href="#">Наименование 4</a></li>
 					</ul>
 				</section>
 				<section>
-					<header>болты</header>
+					<header class="caption">болты</header>
 					<ul>
-						<li>Наименование 1</li>
-						<li>Наименование 2</li>
-						<li>Наименование 3</li>
-						<li>Наименование 4</li>
+						<li><a href="#">Наименование 1</a></li>
+						<li><a href="#">Наименование 2</a></li>
+						<li><a href="#">Наименование 3</a></li>
+						<li><a href="#">Наименование 4</a></li>
 					</ul>
 				</section>
 			</aside>
+			<div class="content_display">
+				<div class="row clearfix">
+					<h2>Goodyear</h2>
+					<span class="description">Ultra Grip Extreme</span>
+					<figure>
+						<img src="img/tier.jpg" alt="">
+					</figure>
+					<span class="price"></span>
+					<figure>
+						<figcaption>Nokian</figcaption>
+						<span class="description">Hakkapeliitta R</span>
+						<img src="img/tier.jpg" alt="">
+						<span class="price"></span>
+					</figure>
+					<figure>
+						<figcaption>Hankook</figcaption>
+						<span class="description">K 708 155/65 R14</span>
+						<img src="img/tier.jpg" alt="">
+						<span class="price"></span>
+					</figure>
+				</div>
+				<div class="row clearfix">
+					<figure>
+						<figcaption>Goodyear</figcaption>
+						<span class="description">Ultra Grip Extreme</span>
+						<img src="img/tier.jpg" alt="">
+						<span class="price"></span>
+					</figure>
+					<figure>
+						<figcaption>Nokian</figcaption>
+						<span class="description">Hakkapeliitta R</span>
+						<img src="img/tier.jpg" alt="">
+						<span class="price"></span>
+					</figure>
+					<figure>
+						<figcaption>Hankook</figcaption>
+						<span class="description">K 708 155/65 R14</span>
+						<img src="img/tier.jpg" alt="">
+						<span class="price"></span>
+					</figure>
+				</div>
+				<div class="row clearfix">
+					<figure>
+						<figcaption>Goodyear</figcaption>
+						<span class="description">Ultra Grip Extreme</span>
+						<img src="img/tier.jpg" alt="">
+						<span class="price"></span>
+					</figure>
+					<figure>
+						<figcaption>Nokian</figcaption>
+						<span class="description">Hakkapeliitta R</span>
+						<img src="img/tier.jpg" alt="">
+						<span class="price"></span>
+					</figure>
+					<figure>
+						<figcaption>Hankook</figcaption>
+						<span class="description">K 708 155/65 R14</span>
+						<img src="img/tier.jpg" alt="">
+						<span class="price"></span>
+					</figure>
+				</div>
+			</div>
 			<aside class="content_brands">
-				<h1></h1>
+				<h1 class="caption">бренды</h1>
 				<form action="#">
-					<section>
+					<fieldset>
+					<legend class="caption">шины</legend>
 						<input type="checkbox" name="" id="">
 						<label for="">Бренд 1</label>
 						<input type="checkbox" name="" id="">
 						<label for="">Бренд 2</label>
 						<input type="checkbox" name="" id="">
 						<label for="">Бренд 3</label>
-					</section>
-					<section>
+					</fieldset>
+					<fieldset>
+					<legend class="caption">диски</legend>
 						<input type="checkbox" name="" id="">
 						<label for="">Бренд 1</label>
 						<input type="checkbox" name="" id="">
 						<label for="">Бренд 2</label>
 						<input type="checkbox" name="" id="">
 						<label for="">Бренд 3</label>
-					</section>
+					</fieldset>
 					<input type="submit" value="выбрать">
 				</form>
 			</aside>
-			<div class="content_display">
-				<div class="row">
-					<figure>
-						<figcaption></figcaption>
-						<span class="description"></span>
-						.				<img src="img/.jpg" alt="">
-						<span class="price"></span>
-					</figure>
-					<figure>
-						<figcaption></figcaption>
-						<span class="description"></span>
-						<img src="img/.jpg" alt="">
-						<span class="price"></span>
-					</figure>
-					<figure>
-						<figcaption></figcaption>
-						<span class="description"></span>
-						<img src="img/.jpg" alt="">
-						<span class="price"></span>
-					</figure>
-				</div>
-				<div class="row">
-					<figure>
-						<figcaption></figcaption>
-						<span class="description"></span>
-						<img src="img/.jpg" alt="">
-						<span class="price"></span>
-					</figure>
-					<figure>
-						<figcaption></figcaption>
-						<span class="description"></span>
-						<img src="img/.jpg" alt="">
-						<span class="price"></span>
-					</figure>
-					<figure>
-						<figcaption></figcaption>
-						<span class="description"></span>
-						<img src="img/.jpg" alt="">
-						<span class="price"></span>
-					</figure>
-				</div>
-				<div class="row">
-					<figure>
-						<figcaption></figcaption>
-						<span class="description"></span>
-						<img src="img/.jpg" alt="">
-						<span class="price"></span>
-					</figure>
-					<figure>
-						<figcaption></figcaption>
-						<span class="description"></span>
-						<img src="img/.jpg" alt="">
-						<span class="price"></span>
-					</figure>
-					<figure>
-						<figcaption></figcaption>
-						<span class="description"></span>
-						<img src="img/.jpg" alt="">
-						<span class="price"></span>
-					</figure>
-				</div>
-			</div>
 		</main>
 		<footer class="footer">
 			<div class="footer_logos">
