@@ -175,7 +175,7 @@
 				<form action="#" class="clearfix">
 					<fieldset>
 						<dl>
-						<dt><label>Диаметр <span>диска</span>:</label></dt>
+							<dt><label>Диаметр <span>диска</span>:</label></dt>
 							<dd>
 								<select name="" id="">
 									<option value="14">14</option>
@@ -227,7 +227,7 @@
 		</div>
 		<main class="content clearfix" role="main">
 			<aside class="content_catalogue">
-				<h1 class="content_catalogue_header caption">каталог продукции</h1>
+				<h1 class="content_catalogue_header caption"><span><i class="fa fa-file-text-o"></i></span> каталог продукции:</h1>
 				<section>
 					<header class="caption">шины</header>
 					<ul>
@@ -256,112 +256,145 @@
 					</ul>
 				</section>
 			</aside>
-			<div class="content_display">
-				<div class="row clearfix">
-					<h2>Goodyear</h2>
-					<span class="description">Ultra Grip Extreme</span>
-					<figure>
-						<img src="img/tier.jpg" alt="">
-					</figure>
-					<span class="price"></span>
-					<figure>
-						<figcaption>Nokian</figcaption>
-						<span class="description">Hakkapeliitta R</span>
-						<img src="img/tier.jpg" alt="">
-						<span class="price"></span>
-					</figure>
-					<figure>
-						<figcaption>Hankook</figcaption>
-						<span class="description">K 708 155/65 R14</span>
-						<img src="img/tier.jpg" alt="">
-						<span class="price"></span>
-					</figure>
-				</div>
-				<div class="row clearfix">
-					<figure>
-						<figcaption>Goodyear</figcaption>
-						<span class="description">Ultra Grip Extreme</span>
-						<img src="img/tier.jpg" alt="">
-						<span class="price"></span>
-					</figure>
-					<figure>
-						<figcaption>Nokian</figcaption>
-						<span class="description">Hakkapeliitta R</span>
-						<img src="img/tier.jpg" alt="">
-						<span class="price"></span>
-					</figure>
-					<figure>
-						<figcaption>Hankook</figcaption>
-						<span class="description">K 708 155/65 R14</span>
-						<img src="img/tier.jpg" alt="">
-						<span class="price"></span>
-					</figure>
-				</div>
-				<div class="row clearfix">
-					<figure>
-						<figcaption>Goodyear</figcaption>
-						<span class="description">Ultra Grip Extreme</span>
-						<img src="img/tier.jpg" alt="">
-						<span class="price"></span>
-					</figure>
-					<figure>
-						<figcaption>Nokian</figcaption>
-						<span class="description">Hakkapeliitta R</span>
-						<img src="img/tier.jpg" alt="">
-						<span class="price"></span>
-					</figure>
-					<figure>
-						<figcaption>Hankook</figcaption>
-						<span class="description">K 708 155/65 R14</span>
-						<img src="img/tier.jpg" alt="">
-						<span class="price"></span>
-					</figure>
-				</div>
-			</div>
+
 			<aside class="content_brands">
-				<h1 class="caption">бренды</h1>
+				<h1 class="content_brands_header caption"><span><i class="fa fa-file-text-o"></i></span> бренды:</h1>
 				<form action="#">
 					<fieldset>
-					<legend class="caption">шины</legend>
-						<input type="checkbox" name="" id="">
-						<label for="">Бренд 1</label>
-						<input type="checkbox" name="" id="">
-						<label for="">Бренд 2</label>
-						<input type="checkbox" name="" id="">
-						<label for="">Бренд 3</label>
+						<legend class="caption">шины</legend>
+						<input type="checkbox" name="tier_brand_1" id="tier_brand_1">
+						<label for="tier_brand_1">Бренд 1</label>
+						<input type="checkbox" name="tier_brand_2" id="tier_brand_2">
+						<label for="tier_brand_2">Бренд 2</label>
+						<input type="checkbox" name="tier_brand_3" id="tier_brand_3">
+						<label for="tier_brand_3">Бренд 3</label>
 					</fieldset>
 					<fieldset>
-					<legend class="caption">диски</legend>
-						<input type="checkbox" name="" id="">
-						<label for="">Бренд 1</label>
-						<input type="checkbox" name="" id="">
-						<label for="">Бренд 2</label>
-						<input type="checkbox" name="" id="">
-						<label for="">Бренд 3</label>
+						<legend class="caption">диски</legend>
+						<input type="checkbox" name="disk_brand_1" id="disk_brand_1">
+						<label for="disk_brand_1">Бренд 1</label>
+						<input type="checkbox" name="disk_brand_2" id="disk_brand_2">
+						<label for="disk_brand_2">Бренд 2</label>
+						<input type="checkbox" name="disk_brand_3" id="disk_brand_3">
+						<label for="disk_brand_3">Бренд 3</label>
 					</fieldset>
 					<input type="submit" value="выбрать">
 				</form>
 			</aside>
-		</main>
-		<footer class="footer">
-			<div class="footer_logos">
+			<div class="content_display clearfix">
 				<ul>
-					<li><a href="#"><img src="" alt=""></a></li>
-					<li><a href="#"><img src="" alt=""></a></li>
-					<li><a href="#"><img src="" alt=""></a></li>
-					<li><a href="#"><img src="" alt=""></a></li>
-					<li><a href="#"><img src="" alt=""></a></li>
-					<li><a href="#"><img src="" alt=""></a></li>
-					<li><a href="#"><img src="" alt=""></a></li>
-					<li><a href="#"><img src="" alt=""></a></li>
+					<li>
+						<a href="#">
+							<figure>
+								<figcaption>Goodyear</figcaption>
+								<h6 class="description">Ultra Grip Extreme</h6>
+								<p><img src="img/tier.jpg" alt="tier0"></p>
+								<span class="price">90.00 <span>грн.</span></span>
+							</figure>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<figure>
+								<figcaption>Nokian</figcaption>
+								<h6 class="description">Hakkapeliitta R</h6>
+								<p><img src="img/tier.jpg" alt="tier1"></p>
+								<span class="price">115.00 <span>грн.</span></span>
+							</figure>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<figure>
+								<figcaption>Hankook</figcaption>
+								<h6 class="description">K 708 155/65 R14</h6>
+								<p><img src="img/tier.jpg" alt="tier2"></p>
+								<span class="price">393.00 <span>грн.</span></span>
+							</figure>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<figure>
+								<figcaption>Goodyear</figcaption>
+								<h6 class="description">Ultra Grip Extreme</h6>
+								<p><img src="img/tier.jpg" alt="tier3"></p>
+								<span class="price">90.00 <span>грн.</span></span>
+							</figure>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<figure>
+								<figcaption>Nokian</figcaption>
+								<h6 class="description">Hakkapeliitta R</h6>
+								<p><img src="img/tier.jpg" alt="tier4"></p>
+								<span class="price">115.00 <span>грн.</span></span>
+							</figure>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<figure>
+								<figcaption>Hankook</figcaption>
+								<h6 class="description">K 708 155/65 R14</h6>
+								<p><img src="img/tier.jpg" alt="tier5"></p>
+								<span class="price">393.00 <span>грн.</span></span>
+							</figure>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<figure>
+								<figcaption>Goodyear</figcaption>
+								<h6 class="description">Ultra Grip Extreme</h6>
+								<p><img src="img/tier.jpg" alt="tier6"></p>
+								<span class="price">90.00 <span>грн.</span></span>
+							</figure>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<figure>
+								<figcaption>Nokian</figcaption>
+								<h6 class="description">Hakkapeliitta R</h6>
+								<p><img src="img/tier.jpg" alt="tier7"></p>
+								<span class="price">115.00 <span>грн.</span></span>
+							</figure>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<figure>
+								<figcaption>Hankook</figcaption>
+								<h6 class="description">K 708 155/65 R14</h6>
+								<p><img src="img/tier.jpg" alt="tier8"></p>
+								<span class="price">393.00 <span>грн.</span></span>
+							</figure>
+						</a>
+					</li>
 				</ul>
 			</div>
-			<div class="footer_menu">
+		</main>
+		<footer class="footer">
+			<div class="footer_logos clearfix">
 				<ul>
-					<li>О компании</li>
-					<li>Доставка</li>
-					<li>Статьи</li>
-					<li>Контакты</li>
+					<li><a href="#"><img src="img/1_toyo.png" alt="toyo tiers"></a></li>
+					<li><a href="#"><img src="img/2_bridgestone.png" alt="bridgestone"></a></li>
+					<li><a href="#"><img src="img/3_conti.png" alt="continental"></a></li>
+					<li><a href="#"><img src="img/4_cooper.png" alt="cooper"></a></li>
+					<li><a href="#"><img src="img/5_avon.png" alt="avon"></a></li>
+					<li><a href="#"><img src="img/6_factory.png" alt="tier factory"></a></li>
+					<li><a href="#"><img src="img/7_pirelli.png" alt="pirelli"></a></li>
+					<li><a href="#"><img src="img/8_dunlop.png" alt="dunlop"></a></li>
+				</ul>
+			</div>
+			<div class="footer_menu clearfix">
+				<ul>
+					<li><a href="#">О компании</a></li>
+					<li><a href="#">Доставка</a></li>
+					<li><a href="#">Статьи</a></li>
+					<li><a href="#">Контакты</a></li>
 				</ul>
 			</div>
 			<p class="rights">
