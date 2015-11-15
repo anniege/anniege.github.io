@@ -26,12 +26,12 @@
 
 .header_contacts {
 	position: relative;
-	font-size: 19px;
-	line-height: 22px;
-	color: #5e696d;
-	padding-right: 17px;
 	padding-top: 5px;
-	letter-spacing: 1.2px;
+	padding-right: 15px;
+	line-height: 22px;
+	letter-spacing: .7px;
+	font-size: 19px;
+	color: #5e696d;
 }
 
 .header_contacts:before {
@@ -46,10 +46,9 @@
 }
 
 .header_login {
-	padding: 2px 10px 2px 6px;
+	padding: 4px 10px 4px 6px;
+	font-family: 'Lucida Sans Unicode', 'Trebuchet MS', sans-serif;
 	border-radius: 2px;
-	-webkit-box-shadow: 1px 1px 2px rgba(0,0,0,.4);
-	box-shadow: 1px 1px 2px rgba(0,0,0,.4);
 	background: rgba(32,105,136,1);
 	background: -moz-linear-gradient(top, rgba(32,105,136,1) 0%, rgba(12,50,86,1) 100%);
 	background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(32,105,136,1)), color-stop(100%, rgba(12,50,86,1)));
@@ -57,40 +56,47 @@
 	background: -o-linear-gradient(top, rgba(32,105,136,1) 0%, rgba(12,50,86,1) 100%);
 	background: -ms-linear-gradient(top, rgba(32,105,136,1) 0%, rgba(12,50,86,1) 100%);
 	background: linear-gradient(to bottom, rgba(32,105,136,1) 0%, rgba(12,50,86,1) 100%);
-	font-family: 'Lucida Sans Unicode', 'Trebuchet MS', sans-serif;
+	-webkit-box-shadow: 2px 2px 3px rgba(0,0,0,.4);
+	box-shadow: 2px 2px 3px rgba(0,0,0,.4);
 	color: #fff;
 }
-
+f
 .header_login * {
 	float: left;
 }
 
 .fa.fa-user {
-	padding-top: 3px;
-	font-size: 18px;
+	padding-top: 1px;
+	font-size: 17px;
 }
 
-.header_login input[type="text"],
+/*.header_login input[type="text"],
 .header_login input[type="password"] {
+	height: 12px;
 	margin: 0 3px;
-}
+}*/
 
 .header_login input[type="text"] {
-	width: 111px;
-	text-indent: 3px;
-	letter-spacing: -1px;
+		height: 12px;
+	margin: 0 1px;
+	width: 109px;
+	text-indent: 2px;
+	letter-spacing: .5px;
+	font-size: 11px;
 }
 
 .header_login input[type="password"] {
-	width: 111px;
+		height: 12px;
+	margin: 0 1px;
+	width: 110px;
 	text-indent: 3px;
 	letter-spacing: -1px;
 }
 
 .header_login input[type="submit"],
 .header_login input[type="button"] {
-	line-height: 20px;
 	font-size: 11px;
+	line-height: 16px;
 	border: none;
 	background: transparent;
 	color: #fff;
@@ -106,9 +112,9 @@
 }
 
 .header_login a {
-	padding-left: 14px;
+	padding-left: 4px;
 	font-size: 12px;
-	line-height: 22px;
+	line-height: 18px;
 	color: #bfbfbf;
 }
 
@@ -127,12 +133,11 @@
 
 .menu {
 	position: relative;
-	padding-top: 6px;
+	padding-top: 3px;
 }
 
 .menu ul {
-	padding: 4px 0;
-	padding-left: 126px;
+	padding: 4px 0 4px 134px;
 	border-radius: 4px;
 	background: rgba(86,95,103,1);
 	background: -moz-linear-gradient(top, rgba(86,95,103,1) 0%, rgba(0,0,0,1) 13%, rgba(0,0,0,1) 100%);
@@ -152,10 +157,11 @@
 
 .menu ul li a {
 	display: block;
-	padding: 7px 16px;
+	padding: 7px 12.5px;
 	border-radius: 20%/86%;
 	text-decoration: none;
 	text-transform: uppercase;
+	letter-spacing: -.2px;
 	font-size: 14px;
 	font-family: 'Lucida Sans Unicode', 'Trebuchet MS', sans-serif;
 	font-weight: bold;
@@ -176,8 +182,8 @@
 
 .menu_basket {
 	position: absolute;
-	top: 15px;
-	right: 20px;
+	top: 10px;
+	right: 19px;
 }
 
 div.menu_basket:before {
@@ -186,25 +192,30 @@ div.menu_basket:before {
 	background: url(../img/basket.png) no-repeat;
 	height: 20px;
 	width: 17px;
-	top: 0;
-    left: -22px;
+	top: 1px;
+ 	left: -28px;
 }
 
 .menu_basket span {
-	font-size: 11px;
+	font-size: 13px;
 	color: #929b9f;
 }
 
 .menu_basket a {
 	text-decoration: none;
-	font-size: 12px;
+	font-size: 13px;
 	color: #0d5a8f
+}
+
+.menu_basket span:last-of-type {
+	padding-left: 7px;
 }
 
 /*SERACH*/
 
 .search {
-	margin-top: 12px;
+	margin-top: 11px;
+	padding: 0 4px;
 }
 
 .search > div {
@@ -224,12 +235,12 @@ div.menu_basket:before {
 .search button {
 	/*display: block;*/
 	position: absolute;
-	right: 5px;
-	bottom: 1px;
+	right: 12px;
+	bottom: 2px;
 	border: none;
 	/*border-bottom: 1px solid #8aa1b3;*/
-	line-height: 22px;
-	font-size: 14px;
+	line-height: 30px;
+	font-size: 13px;
 	font-family: Arial sans-serif;
 	font-style: italic;
 	text-transform: uppercase;
@@ -243,8 +254,8 @@ div.menu_basket:before {
 
 .search .search_header {
 	position: absolute;
-	top: 3px;
-	font-size: 12px;
+	top: 0px;
+	font-size: 14px;
 	line-height: 12px;
 	font-family: Arial, sans-serif;
 	font-weight: bolder;
@@ -263,11 +274,13 @@ div.menu_basket:before {
 }
 
 .search form fieldset:first-of-type legend {
-	left: 20px;
+	left: 18px;
+	top: 2px;
 }
 
 .search form fieldset:last-of-type legend {
-	right: 20px;
+	right: 19px;
+	top: 1px;
 }
 
 .search dt,
@@ -303,6 +316,12 @@ div.menu_basket:before {
 	appearance: none;
 }
 
+.search select {
+	font-size: 11px;
+	font-family: 'Arial Regular', Arial, sans-serif;
+	color: #000;
+}
+
 /*.search select option {
 		-webkit-appearance: none;
 	-moz-appearance: none;
@@ -325,7 +344,7 @@ div.menu_basket:before {
 /*------------------------------search_by_car-------------------------*/
 
 .search .search_by_car {
-	padding: 19px 14px 0px 19px;
+	padding: 19px 15px 2px 17px;
 	margin-right: 15px;
 }
 
@@ -346,7 +365,7 @@ div.menu_basket:before {
 }
 
 .search .search_by_car fieldset:first-child {
-	margin-right: 27px;
+	margin-right: 29px;
 }
 
 .search .search_by_car dl {
@@ -357,6 +376,7 @@ div.menu_basket:before {
 .search .search_by_car dt {
 	width: 70px;
 	height: 16px;
+	padding-right: 6px;
 }
 
 .search .search_by_car dd{
@@ -374,9 +394,14 @@ div.menu_basket:before {
 /*-----------------------------search_by_tier---------------------------*/
 
 .search .search_by_tier {
-	width: 162px;
-	padding: 21px 14px 0 14px;
-	margin-right: 10px;
+	width: 168px;
+	padding: 21px 11px 0 12px;
+	margin-right: 9px;
+}
+
+.search .search_by_tier .search_header {
+	top: 1px;
+	left: 8px;
 }
 
 /*.inline_item {
@@ -384,13 +409,18 @@ div.menu_basket:before {
 }*/
 
 .search .search_by_tier dd {
-	margin-bottom: 7px;
+	/*margin-bottom: 7px;*/
+	margin-left: 1px;
+}
+
+.search .search_by_tier dd:nth-of-type(3) select {
+	/*margin-bottom: 7px;*/
+	width: 45px;
 }
 
 .search .search_by_tier dt {
-	line-height: 14px;
 	margin-bottom: 7px;
-	line-height: 17px;
+	line-height: 16px;
 }
 
 .search .search_by_tier dt label {
@@ -398,12 +428,12 @@ div.menu_basket:before {
 }
 
 .search .search_by_tier select {
-	width: 50px;
+	width: 53px;
 	height: 17px;
 }
 
 .search .search_by_tier dt:not(:nth-of-type(2)) {
-	width: 45px;
+	width: 38px;
 }
 
 .search .search_by_tier dt:nth-of-type(3) {
@@ -430,7 +460,8 @@ div.menu_basket:before {
 .search .search_by_tier .bottom_list label {
 	display: inline-block;
 	width: 97px;
-	margin-bottom: 3px;
+	vertical-align: top;
+	line-height: 9px;
 }
 
 .search .search_by_tier .bottom_list input[type="checkbox"] {
@@ -440,7 +471,13 @@ div.menu_basket:before {
 /*----------------------------search_by_wheel------------------------------*/
 
 .search .search_by_wheel {
-	padding: 21px 17px 0px 15px;
+	padding: 19px 6px 0px 15px;
+}
+
+.search .search_by_wheel .search_header {
+	top: 0px;
+	left: 9px;
+	letter-spacing: .5px;
 }
 
 .search .search_by_wheel fieldset:first-of-type {
@@ -489,7 +526,7 @@ div.menu_basket:before {
 /*MAIN*/
 
 .content {
-	padding-top: 17px;
+	padding-top: 14px;
 }
 
 .content_catalogue {
@@ -503,9 +540,9 @@ div.menu_basket:before {
 
 .content_catalogue_header {
 	display: block;
-	padding: 0 9px 0 29px;
+	padding: 0 7px 0 26px;
 	line-height: 24px;
-	margin-bottom: 15px;
+	margin-bottom: 14px;
 }
 
 .content_catalogue_header span,
@@ -531,7 +568,7 @@ div.menu_basket:before {
 .content_catalogue section header {
 	line-height: 26px;
 	padding-left: 29px;
-	width: 119px;
+	width: 118px;
 	margin-left: 3px;
 }
 
@@ -565,6 +602,14 @@ header.caption {
 	margin: 7px 0 8px;
 }
 
+.content_catalogue header.caption {
+	margin-bottom: 3px;
+}
+
+.content_catalogue section:not(:first-child) .caption {
+	margin-top: 2px;
+}
+
 .content_catalogue ul li {
 	list-style-type: circle;
 	list-style-position: inside;
@@ -572,7 +617,7 @@ header.caption {
 }
 
 .content_catalogue ul li:not(:last-child) {
-	padding-bottom: 16px;
+	padding-bottom: 10px;
 }
 
 .content_catalogue ul li a {
@@ -622,9 +667,9 @@ header.caption {
 
 .content_brands legend {
 	width: 106px;
-	line-height: 28px;
+	line-height: 26px;
 	padding-left: 31px;
-	margin-bottom: 10px;
+	margin-bottom: 5px;
 }
 
 .content_brands input {
@@ -634,14 +679,14 @@ header.caption {
 
 .content_brands input[type="checkbox"] {
 	margin-left: 11px;
-	margin-bottom: 12px;
+	margin-bottom: 11px;
 }
 
 
 .content_brands label {
 	display: inline-block;
 	padding-right: 83px;
-	padding-bottom: 12px;
+	padding-bottom: 11px;
 	font-size: 13px;
 	font-family: 'Lucida Sans Unicode' Trebuchet MS sans-serif;
 	color: #465961;
@@ -687,8 +732,8 @@ header.caption {
 
 
 .content_display {
-	width: 503px;
-	padding: 15px 0 4px 24px;
+	width: 511px;
+	padding: 15px 0 4px 17px;
 	margin: 0 auto;
 	border-radius: 5px;
 	background: rgba(229,231,232,1);
@@ -723,7 +768,7 @@ header.caption {
 }
 
 .content_display figure {
-	padding: 0 30px 24px 0;
+	padding: 0 23px 24px 8px;
 }
 
 .content_display figure p {
@@ -752,7 +797,7 @@ header.caption {
 .content_display .price {
 	display: block;
 	margin-top: 5.5px;
-	text-align: center;
+	padding-left: 36px;
 	font-size: 16px;
 	font-family: Arial, sans-serif;
 	font-style: italic;
@@ -767,7 +812,7 @@ header.caption {
 /*FOOTER*/
 
 .footer_logos ul {
-	padding: 0 111px;
+	padding: 12px 103px 0px 118px;
 }
 
 .footer_logos ul li {
@@ -778,7 +823,7 @@ header.caption {
 .footer_logos ul li a {
 	display: block;
 	padding-right: 13px;
-	line-height: 90px;
+	line-height: 83px;
 }
 
 .footer_logos ul li a img {
@@ -790,7 +835,7 @@ header.caption {
 }
 
 .footer_menu ul {
-	padding-left: 308px;
+	padding-left: 297px;
 }
 
 .footer_menu ul li {
@@ -801,11 +846,12 @@ header.caption {
 
 .footer_menu ul li a {
 	display: block;
-	padding: 0 12px;
+	padding: 0 12.5px;
 	line-height: 12px;
 	text-decoration: none;
 	font-family: Arial, sans-serif;
 	font-size: 12px;
+	letter-spacing: .2px;
 	color: #bec6c9;
 }
 
