@@ -314,9 +314,6 @@
 	position: relative;
 }
 
-/*.search dd {
-}*/
-
 .search dd:not([class="bottom_list"]):after {
 	content: '';
 	position: absolute;
@@ -343,12 +340,6 @@
 	-o-appearance: none;
 	appearance: none;
 }
-
-/*.search select {
-	font-size: 11px;
-	font-family: 'Arial Regular', Arial, sans-serif;
-	color: #000;
-}*/
 
 .search label {
 	font: 10px/8px 'Lucida Sans Unicode', Trebuchet MS, sans-serif;
@@ -512,7 +503,6 @@
 
 .search .search_by_wheel dt {
 	width: 92px;
-	/*height: 16px;*/
 }
 
 .search .search_by_wheel dd {
@@ -852,8 +842,8 @@ header.caption:before {
 
 .footer_logos ul li a {
 	display: block;
-	padding-right: 13px;
 	line-height: 83px;
+	padding-right: 13px;
 }
 
 .footer_logos ul li a img {
@@ -870,14 +860,14 @@ header.caption:before {
 
 .footer_menu ul li {
 	float: left;
-	list-style: none;
 	padding: 12px 0 16px;
+	list-style: none;
 }
 
 .footer_menu ul li a {
 	display: block;
-	padding: 0 12.5px;
 	line-height: 12px;
+	padding: 0 12.5px;
 	text-decoration: none;
 	font-family: Arial, sans-serif;
 	font-size: 12px;
@@ -894,8 +884,8 @@ header.caption:before {
 }
 
 .rights {
-	text-align: center;
 	padding-bottom: 51px;
+	text-align: center;
 	font-family: Arial, sans-serif;
 	font-size: 10px;
 	color: #7f4740;
