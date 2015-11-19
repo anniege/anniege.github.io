@@ -838,12 +838,12 @@ header.caption:before {
 .footer_logos ul li {
 	float: left;
 	list-style: none;
+	padding-right: 13px;
 }
 
 .footer_logos ul li a {
 	display: block;
 	line-height: 83px;
-	padding-right: 13px;
 }
 
 .footer_logos ul li a img {
