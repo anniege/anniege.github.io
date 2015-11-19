@@ -11,21 +11,21 @@
 
 /* Определение шрифта для остальных браузеров */
 @font-face {
-	font-family: LeagueGothic; 
+	font-family: LeagueGothic;
 	src: url(../fonts/leaguegothic-regular-webfont.ttf) format('truetype'),
 		url(../fonts/LeagueGothic-Regular.otf) format('opentype');
 	font-weight: normal;
 }
 
 @font-face {
-	font-family: MyriadProRegular; 
+	font-family: MyriadProRegular;
 	src: url(../fonts/Myriad Pro Regular.ttf) format('truetype'),
 		url(../fonts/MyriadPro-Regular.otf) format('opentype');
 	font-weight: normal;
 }
 
 @font-face {
-	font-family: 'Open Sans Light'; 
+	font-family: 'Open Sans Light';
 	src: url(../fonts/OpenSans-Light.ttf) format('truetype');
 	font-weight: lighter;
 }
@@ -122,8 +122,8 @@
 
 .vertical-menu .menu_item:not(:first-child):hover {
 	background: rgba(43, 34, 49, .9);
-	-webkit-box-sizing: border-box; 
-	-moz-box-sizing: border-box; 
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
 	box-sizing: border-box;
 	border-bottom: 2px solid rgba(237, 191, 255, .9);
 }
@@ -243,20 +243,41 @@
 
 .blog_list {
 	width: 213px;
-	padding-left: 18px;
+	padding-left: 62px;
 	margin: 0 auto;
 }
 
 .blog_title {
+  position: relative;
 	text-transform: uppercase;
 	font-family: LeagueGothic, Arial, sans-serif;
 	font-size: 19px;
 	color: #fff;
 }
 
+.blog_title::before {
+  content: '';
+  position: absolute;
+  height: 30px;
+  width: 30px;
+  left: -51px;
+}
+
+.wrench::before {
+  background: url(../img/blog_icon.png) 0 0 no-repeat;
+}
+
+.question::before {
+  background: url(../img/blog_icon.png) -30px 0 no-repeat;
+}
+
+.music::before {
+  background: url(../img/blog_icon.png) -60px 0 no-repeat;
+}
+
 .blog_article article {
 	height: 70px;
-	line-height: 22px;
+	line-height: 24px;
 	font-family: 'Open Sans Light', 'Trebuchet MS', Arial, sans-serif;
 	font-weight: lighter;
 	font-size: 16px;
@@ -271,4 +292,8 @@
 	font-size: 14px;
 	font-family: LeagueGothic, Arial, sans-serif;
 	color: #fff;
+}
+
+.blog_link:hover {
+  text-shadow: 0px 0px 8px #fff;
 }
