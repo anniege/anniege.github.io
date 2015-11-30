@@ -1,7 +1,7 @@
 ( function() {
 	do {
 		var num = prompt('Введите число или нажмите ESC:');
-		
+
 		var myPow = function(number) {
 			if (!isNaN(number)) {
 				return number*number;
@@ -14,6 +14,6 @@
 		}
 	} while (((num !== null)&&(num !== "")));
 
-	console.log('Вы вышли из программы');
+	console.log('Вы вышли из программы.');
 
 })();
