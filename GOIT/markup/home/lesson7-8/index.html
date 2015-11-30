@@ -2,18 +2,17 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<!-- <meta name="viewport" content="wih3h=device-wih3h; initial-scale=1.0"> -->
-	<title>Lesson7-8</title>
+	<title>Lesson7-8-9</title>
 	<link rel="stylesheet" href="css/reset.css">
 	<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 	<div class="wrapper">
 		<header class="header">
-			<div class="header_top-wrapper clearfix">
+			<div class="container container-top clear">
 				<h1 class="logo"><a href="#">pingbull<span>er</span></a></h1>
-				<div class="menu top-menu">
-					 <ul>
+				<div class="menu top-menu drop-menu clearfix">
+					<ul class="menu_list">
 						<li class="menu_item">
 							<a href="#" class="menu_link">home</a>
 						</li>
@@ -35,156 +34,179 @@
 					</ul>
 				</div>
 			</div>
-			<div class="slider iphone">
-				<section class="slider_item">
+			<div class="slider">
+				<div class="container container-bottom">
 					<h2 class="slider_header">lorem ipsum dolor</h2>
 					<h3 class="slider_sub-header">it will make all of your dreams come</h3>
-					<p class="slider_preview">
+					<p class="slider_content">
 						Semper sollicitudin gravida eget, vestibulum sit amet sapien. Nunc dignissim tincidunt est, et auctor turpis ornare a. Nam venenatis hendrerit est at volutpat. Morbi elementum euismod lacus id semper. In odio nunc, imperdiet eget aliquam quis, euismod id lectus. Nulla interdum arcu et felis aliquam a tempus lectus lobortis.
 					</p>
-				</section>
-				<section class="radio clearfix">
-					<ul class="clearfix">
-						<li class="radio_item"><a href="#" class="radio_link"></a></li>
-						<li class="radio_item"><a href="#" class="radio_link"></a></li>
-						<li class="radio_item"><a href="#" class="radio_link"></a></li>
-						<li class="radio_item"><a href="#" class="radio_link"></a></li>
-					</ul>
-				</section>
+					<img src="img/iphone.png" class="slider_img" alt="iphone">
+					<div class="radio clearfix">
+						<ul>
+							<li class="radio_item"><a href="#" class="radio_link"></a></li>
+							<li class="radio_item"><a href="#" class="radio_link"></a></li>
+							<li class="radio_item"><a href="#" class="radio_link"></a></li>
+							<li class="radio_item"><a href="#" class="radio_link"></a></li>
+						</ul>
+					</div>
+				</div>
 			</div>
 		</header>
-		<div class="blog">
-			<div class="blog_wrapper">
-				<article class="blog_article">
-					<h3 class="blog_title wrench">
-						about our company
-					</h3>
-					<p class="blog_content">
-						Nunc turpis neque, feugiat eget eleifend et, lacinia non neque. Praesent rhoncus ultrices posuere. Pellentesque vel lacus eget nisi convallis auctor. Nam vitae lectus eu libero pellentesque pulvinar. Quisque urna risus, mattis pulvinar bibendum in, venenatis quis neque. Mauris nec metus ultricies erat consequat dignissim non eu nisl. Quisque libero tellus, pharetra et eleifend id, interdum elementum arcu. Suspendisse quis mauris non ligula rutrum faucibus eu quis odio. Phasellus eu lobortis odio. In hac habitasse platea dictumst. Proin vestibulum turpis at mauris aliquam non euismod lorem euismod. Aenean dapibus ultricies enim, eget vulputate leo feugiat non.
-					</p>
-					<a href="#" class="blog_link">read more</a>
-				</article>
-				<article class="blog_article">
-					<h3 class="blog_title question">
-						about our company
-					</h3>
-					<p class="blog_content">
-						Nunc turpis neque, feugiat eget eleifend et, lacinia non neque. Praesent rhoncus ultrices posuere. Pellentesque vel lacus eget nisi convallis auctor. Nam vitae lectus eu libero pellentesque pulvinar. Quisque urna risus, mattis pulvinar bibendum in, venenatis quis neque. Mauris nec metus ultricies erat consequat dignissim non eu nisl. Quisque libero tellus, pharetra et eleifend id, interdum elementum arcu. Suspendisse quis mauris non ligula rutrum faucibus eu quis odio. Phasellus eu lobortis odio. In hac habitasse platea dictumst. Proin vestibulum turpis at mauris aliquam non euismod lorem euismod. Aenean dapibus ultricies enim, eget vulputate leo feugiat non.
-					</p>
-					<a href="#" class="blog_link">read more</a>
-				</article>
-				<article class="blog_article">
-					<h3 class="blog_title music">
-						about our company
-					</h3>
-					<p class="blog_content">
-						Nunc turpis neque, feugiat eget eleifend et, lacinia non neque. Praesent rhoncus ultrices posuere. Pellentesque vel lacus eget nisi convallis auctor. Nam vitae lectus eu libero pellentesque pulvinar. Quisque urna risus, mattis pulvinar bibendum in, venenatis quis neque. Mauris nec metus ultricies erat consequat dignissim non eu nisl. Quisque libero tellus, pharetra et eleifend id, interdum elementum arcu. Suspendisse quis mauris non ligula rutrum faucibus eu quis odio. Phasellus eu lobortis odio. In hac habitasse platea dictumst. Proin vestibulum turpis at mauris aliquam non euismod lorem euismod. Aenean dapibus ultricies enim, eget vulputate leo feugiat non.
-					</p>
-					<a href="#" class="blog_link">read more</a>
-				</article>
-			</div>
-		</div>
-		<main class="content clearfix" role="main">
-			<div class="slider short">
-				<section class="slider_item">
-					<a href="#" class="slider_icon"><img src="img/user_icon.png" alt="slider_icon"></a>
-					<h2 class="slider_header">pingbuller</h2>
-					<h3 class="slider_sub-header">starts here</h3>
-					<p class="slider_preview">
-						“Nunc turpis neque, feugiat eget eleifend et, lacinia non neque. Praesent rhoncus ultrices posuere. Pellentesque vel lacus eget nisi convallis auctor. Nam vitae lectus eu libero pellentesque pulvinar urna risus, mattis pulvinar bibendum in, venenatis quis neque. Mauris nec metus ultricies erat consequat dignissim non eu nisl.”
-					</p>
-				</section>
-				<section class="radio black">
-					<ul>
-						<li class="radio_item"><a href="#" class="radio_link"></a></li>
-						<li class="radio_item"><a href="#" class="radio_link"></a></li>
-						<li class="radio_item"><a href="#" class="radio_link"></a></li>
-						<li class="radio_item"><a href="#" class="radio_link"></a></li>
+		<main class="main" role="main">
+			<section class="blog">
+				<div class="container clearfix">
+					<article class="blog_article">
+						<h4 class="blog_title icon-wrench">
+							about our company
+						</h4>
+						<p class="blog_content">
+							Nunc turpis neque, feugiat eget eleifend et, lacinia non neque. Praesent rhoncus ultrices posuere. Pellentesque vel lacus eget nisi convallis auctor. Nam vitae lectus eu libero pellentesque pulvinar. Quisque urna risus, mattis pulvinar bibendum in, venenatis quis neque. Mauris nec metus ultricies erat consequat dignissim non eu nisl. Quisque libero tellus, pharetra et eleifend id, interdum elementum arcu. Suspendisse quis mauris non ligula rutrum faucibus eu quis odio. Phasellus eu lobortis odio. In hac habitasse platea dictumst. Proin vestibulum turpis at mauris aliquam non euismod lorem euismod. Aenean dapibus ultricies enim, eget vulputate leo feugiat non.
+						</p>
+						<a href="#" class="blog_link">read more</a>
+					</article>
+					<article class="blog_article">
+						<h4 class="blog_title icon-question">
+							about our company
+						</h4>
+						<p class="blog_content">
+							Nunc turpis neque, feugiat eget eleifend et, lacinia non neque. Praesent rhoncus ultrices posuere. Pellentesque vel lacus eget nisi convallis auctor. Nam vitae lectus eu libero pellentesque pulvinar. Quisque urna risus, mattis pulvinar bibendum in, venenatis quis neque. Mauris nec metus ultricies erat consequat dignissim non eu nisl. Quisque libero tellus, pharetra et eleifend id, interdum elementum arcu. Suspendisse quis mauris non ligula rutrum faucibus eu quis odio. Phasellus eu lobortis odio. In hac habitasse platea dictumst. Proin vestibulum turpis at mauris aliquam non euismod lorem euismod. Aenean dapibus ultricies enim, eget vulputate leo feugiat non.
+						</p>
+						<a href="#" class="blog_link">read more</a>
+					</article>
+					<article class="blog_article">
+						<h4 class="blog_title icon-music">
+							about our company
+						</h4>
+						<p class="blog_content">
+							Nunc turpis neque, feugiat eget eleifend et, lacinia non neque. Praesent rhoncus ultrices posuere. Pellentesque vel lacus eget nisi convallis auctor. Nam vitae lectus eu libero pellentesque pulvinar. Quisque urna risus, mattis pulvinar bibendum in, venenatis quis neque. Mauris nec metus ultricies erat consequat dignissim non eu nisl. Quisque libero tellus, pharetra et eleifend id, interdum elementum arcu. Suspendisse quis mauris non ligula rutrum faucibus eu quis odio. Phasellus eu lobortis odio. In hac habitasse platea dictumst. Proin vestibulum turpis at mauris aliquam non euismod lorem euismod. Aenean dapibus ultricies enim, eget vulputate leo feugiat non.
+						</p>
+						<a href="#" class="blog_link">read more</a>
+					</article>
+				</div>
+			</section>
+			<section class="main-content">
+				<div class="container">
+					<div class="slider slider-small">
+						<a href="#" class="slider_icon"><img src="img/user_icon.png" alt="slider_icon"></a>
+						<h2 class="slider_header">pingbuller</h2>
+						<h3 class="slider_sub-header">starts here</h3>
+						<p class="slider_content">
+							“Nunc turpis neque, feugiat eget eleifend et, lacinia non neque. Praesent rhoncus ultrices posuere. Pellentesque vel lacus eget nisi convallis auctor. Nam vitae lectus eu libero pellentesque pulvinar urna risus, mattis pulvinar bibendum in, venenatis quis neque. Mauris nec metus ultricies erat consequat dignissim non eu nisl.”
+						</p>
+						<div class="radio radio-black clearfix">
+							<ul class="radio_list clearfix">
+								<li class="radio_item"><a href="#" class="radio_link"></a></li>
+								<li class="radio_item"><a href="#" class="radio_link"></a></li>
+								<li class="radio_item"><a href="#" class="radio_link"></a></li>
+								<li class="radio_item"><a href="#" class="radio_link"></a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="updates">
+						<h4 class="updates_header">recent updates</h4>
+						<ul>
+							<li class="updates_item">
+								<a href="#" class="updates_icon">
+									<img src="img/updates_icon.png" alt="updates_icon">
+								</a>
+								<a href="#" class="updates_title">
+									<h6>Nunc turpis neque feugiat eget</h6>
+								</a>
+								<p class="updates_content">
+									Posted by Admin on March 13 2012 in Recent News
+								</p>
+							</li>
+							<li class="updates_item">
+								<a href="#" class="updates_icon">
+									<img src="img/updates_icon.png" alt="updates_icon">
+								</a>
+								<a href="#" class="updates_title">
+									<h6>Nunc turpis neque feugiat eget</h6>
+								</a>
+								<p class="updates_content">
+									Posted by Admin on March 13 2012 in Category
+								</p>
+							</li>
+							<li class="updates_item">
+								<a href="#" class="updates_icon">
+									<img src="img/updates_icon.png" alt="updates_icon">
+								</a>
+								<a href="#" class="updates_title">
+									<h6>Nunc turpis neque feugiat eget</h6>
+								</a>
+								<p class="updates_content">
+									Posted by Admin on March 13 2012 in Blog Updates
+								</p>
+							</li>
+						</ul>
+						<a class="updates_link">more blog posts</a>
+					</div>
+				</div>
+			</section>
+			<section class="brands">
+				<div class="container">
+					<ul class="brands_list">
+						<li class="brands_logo">
+							<a href="#">
+								<img src="img/brands_1.png" alt="brand_logo">
+							</a>
+						</li>
+						<li class="brands_logo">
+							<a href="#">
+								<img src="img/brands_2.png" alt="brand_logo">
+							</a>
+						</li>
+						<li class="brands_logo">
+							<a href="#">
+								<img src="img/brands_3.png" alt="brand_logo">
+							</a>
+						</li>
+						<li class="brands_logo">
+							<a href="#">
+								<img src="img/brands_4.png" alt="brand_logo">
+							</a>
+						</li>
+						<li class="brands_logo">
+							<a href="#">
+								<img src="img/brands_5.png" alt="brand_logo">
+							</a>
+						</li>
+						<li class="brands_logo">
+							<a href="#">
+								<img src="img/brands_6.png" alt="brand_logo">
+							</a>
+						</li>
 					</ul>
-				</section>
-			</div>
-			<div class="updates">
-				<h4 class="updates_header">recent updates</h4>
-				<ul>
-					<li class="updates_item">
-						<a href="#" class="updates_icon">
-							<img src="img/updates_icon.png" alt="updates_icon first">
-						</a>
-						<a href="#" class="updates_title">
-							<h6>Nunc turpis neque feugiat eget</h6>
-						</a>
-						<p>Posted by Admin on March 13 2012 in Recent News</p>
-					</li>
-					<li class="updates_item">
-						<a href="#" class="updates_icon">
-							<img src="img/updates_icon.png" alt="updates_icon second">
-						</a>
-						<a href="#" class="updates_title">
-							<h6>Nunc turpis neque feugiat eget</h6>
-						</a>
-						<p>Posted by Admin on March 13 2012 in Category</p>
-					</li>
-					<li class="updates_item">
-						<a href="#" class="updates_icon">
-							<img src="img/updates_icon.png" alt="updates_icon third">
-						</a>
-						<a href="#" class="updates_title">
-							<h6>Nunc turpis neque feugiat eget</h6>
-						</a>
-						<p>Posted by Admin on March 13 2012 in Blog Updates</p>
-					</li>
-				</ul>
-				<a class="updates_link">more blog posts</a>
-			</div>
+				</div>
+			</section>
+			<section class="articles">
+				<div class="container clearfix">
+					<article class="articles_item">
+						<h2 class="articles_title title-big">pigbill<span>er</span></h2>
+						<h3 class="articles_title title-regular">news categories</h3>
+						<h4 class="articles_title title-small">Copyright 2013, Pingbull AS</h4>
+						<p class="articles_content">
+							Nunc turpis neque, feugiat eget eleifend et, lacinia non neque. Praesent rhoncus ultrices posuere. Pellentesque vel lacus eget nisi convallis auctor. Nam vitae lectus eu libero pellentesque pulvinar. Quisque urna risus, mattis pulvinar bibendum in, venenatis quis neque. Mauris nec metus ultricies erat consequat dignissim non eu nisl. Quisque libero tellus, pharetra et eleifend id, interdum elementum arcu. Suspendisse quis mauris non ligula rutrum faucibus eu quis odio. Phasellus eu lobortis odio. In hac habitasse platea dictumst. Proin vestibulum turpis at mauris aliquam non euismod lorem euismod. Aenean dapibus ultricies enim, eget vulputate leo feugiat non.
+						</p>
+					</article>
+					<article class="articles_item">
+						<h3 class="articles_title">news categories</h3>
+						<p class="articles_content">
+							Nunc turpis neque, feugiat eget eleifend et, lacinia non neque. Praesent rhoncus ultrices posuere. Pellentesque vel lacus eget nisi convallis auctor. Nam vitae lectus eu libero pellentesque pulvinar. Quisque urna risus, mattis pulvinar bibendum in, venenatis quis neque. Mauris nec metus ultricies erat consequat dignissim non eu nisl. Quisque libero tellus, pharetra et eleifend id, interdum elementum arcu. Suspendisse quis mauris non ligula rutrum faucibus eu quis odio. Phasellus eu lobortis odio. In hac habitasse platea dictumst. Proin vestibulum turpis at mauris aliquam non euismod lorem euismod. Aenean dapibus ultricies enim, eget vulputate leo feugiat non.
+						</p>
+					</article>
+					<article class="articles_item">
+						<h3 class="articles_title">news categories</h3>
+						<p class="articles_content">
+							Nunc turpis neque, feugiat eget eleifend et, lacinia non neque. Praesent rhoncus ultrices posuere. Pellentesque vel lacus eget nisi convallis auctor. Nam vitae lectus eu libero pellentesque pulvinar. Quisque urna risus, mattis pulvinar bibendum in, venenatis quis neque. Mauris nec metus ultricies erat consequat dignissim non eu nisl. Quisque libero tellus, pharetra et eleifend id, interdum elementum arcu. Suspendisse quis mauris non ligula rutrum faucibus eu quis odio. Phasellus eu lobortis odio. In hac habitasse platea dictumst. Proin vestibulum turpis at mauris aliquam non euismod lorem euismod. Aenean dapibus ultricies enim, eget vulputate leo feugiat non.
+						</p>
+					</article>
+				</div>
+			</section>
 		</main>
-		<div class="brands">
-			<ul class="clearfix">
-				<li class="brands_logo">
-					<a href="#"></a>
-				</li>
-				<li class="brands_logo">
-					<a href="#"></a>
-				</li>
-				<li class="brands_logo">
-					<a href="#"></a>
-				</li>
-				<li class="brands_logo">
-					<a href="#"></a>
-				</li>
-				<li class="brands_logo">
-					<a href="#"></a>
-				</li>
-				<li class="brands_logo">
-					<a href="#"></a>
-				</li>
-			</ul>
-		</div>
-		<div class="articles">
-			<div class="articles_wrapper">
-				<article class="articles_item">
-					<h3 class="articles_title title-old">news categories</h3>
-					<h3 class="articles_title-new">pigbill<span>er</span></h3>
-					<h4 class="articles_title-new small-new">Copyright 2013, Pingbull AS</h4>
-					<p class="articles_content">
-						Nunc turpis neque, feugiat eget eleifend et, lacinia non neque. Praesent rhoncus ultrices posuere. Pellentesque vel lacus eget nisi convallis auctor. Nam vitae lectus eu libero pellentesque pulvinar. Quisque urna risus, mattis pulvinar bibendum in, venenatis quis neque. Mauris nec metus ultricies erat consequat dignissim non eu nisl. Quisque libero tellus, pharetra et eleifend id, interdum elementum arcu. Suspendisse quis mauris non ligula rutrum faucibus eu quis odio. Phasellus eu lobortis odio. In hac habitasse platea dictumst. Proin vestibulum turpis at mauris aliquam non euismod lorem euismod. Aenean dapibus ultricies enim, eget vulputate leo feugiat non.
-					</p>
-				</article>
-				<article class="articles_item">
-					<h3 class="articles_title">news categories</h3>
-					<p class="articles_content">
-						Nunc turpis neque, feugiat eget eleifend et, lacinia non neque. Praesent rhoncus ultrices posuere. Pellentesque vel lacus eget nisi convallis auctor. Nam vitae lectus eu libero pellentesque pulvinar. Quisque urna risus, mattis pulvinar bibendum in, venenatis quis neque. Mauris nec metus ultricies erat consequat dignissim non eu nisl. Quisque libero tellus, pharetra et eleifend id, interdum elementum arcu. Suspendisse quis mauris non ligula rutrum faucibus eu quis odio. Phasellus eu lobortis odio. In hac habitasse platea dictumst. Proin vestibulum turpis at mauris aliquam non euismod lorem euismod. Aenean dapibus ultricies enim, eget vulputate leo feugiat non.
-					</p>
-				</article>
-				<article class="articles_item">
-					<h3 class="articles_title">news categories</h3>
-					<p class="articles_content">
-						Nunc turpis neque, feugiat eget eleifend et, lacinia non neque. Praesent rhoncus ultrices posuere. Pellentesque vel lacus eget nisi convallis auctor. Nam vitae lectus eu libero pellentesque pulvinar. Quisque urna risus, mattis pulvinar bibendum in, venenatis quis neque. Mauris nec metus ultricies erat consequat dignissim non eu nisl. Quisque libero tellus, pharetra et eleifend id, interdum elementum arcu. Suspendisse quis mauris non ligula rutrum faucibus eu quis odio. Phasellus eu lobortis odio. In hac habitasse platea dictumst. Proin vestibulum turpis at mauris aliquam non euismod lorem euismod. Aenean dapibus ultricies enim, eget vulputate leo feugiat non.
-					</p>
-				</article>
-			</div>
-		</div>
 		<footer class="footer">
-			<div class="footer_wrapper clearfix">
+			<div class="container clearfix">
 				<div class="menu">
 					<ul class="clearfix">
 						<li class="menu_item">
@@ -207,7 +229,7 @@
 						</li>
 					</ul>
 				</div>
-				<p>Designed by <span>Pingbull AS</span></p>
+				<p class="footer_author">Designed by <a href="#" class="footer_link">Pingbull AS</a></p>
 			</div>
 		</footer>
 	</div>
