@@ -16,24 +16,24 @@
   do {
     currentName = prompt('Введите имя для внесения в базу данных:');
 
-    if ((currentName !== null)&&(currentName !== "")) {
+    if (currentName !== null) {
         if (testName(currentName)) {
-        db[index] = currentName.toLowerCase();
-        index++;
-      } 
+          db[index] = currentName.toLowerCase();
+          index++;
+        }
     }
-  } while ((currentName !== null)&&(currentName !== ""));
+  } while (currentName !== null);
 
 
-console.log("Ваша база данных состоит из следующим имен:\n" + db.toString());
+  console.log("Ваша база данных состоит из следующим имен:\n" + db.toString());
 
-currentName = prompt('Введите имя пользователя:');
-if (testName(currentName)) {
-  stringDb = db.join(" ");
-  var reg = new RegExp('(^|\\s)('+currentName+')($|\\s)', 'ig');
-    if (reg.test(stringDb)) {
-      alert(currentName.capitalize() + ", вы успешно вошли!");
-    } else {alert("Такого пользователя нет в базе данных")}
-} else {alert("Такого пользователя нет в базе данных")}
+  currentName = prompt('Пожалуйста, введите имя пользователя:');
+  if (testName(currentName)) {
+    stringDb = db.join(" ");
+    var reg = new RegExp('(^|\\s)('+currentName+')($|\\s)', 'ig');
+      if (reg.test(stringDb)) {
+        alert(currentName.capitalize() + ", вы успешно вошли!");
+      } else {alert("Такого пользователя нет в базе данных")}
+  } else {alert("Некорректное имя пользователя")}
 
 })();

@@ -1,18 +1,41 @@
 ( function() {
+	var num,
+			exp,
+			result;
+
 	do {
-		var num = prompt('Введите число или нажмите ESC:');
+		num = prompt('Введите число или нажмите ESC:');
+		exp = prompt('Введите степень или нажмите ESC:');
 
-		var myPow = function(number) {
-			if (!isNaN(number)) {
-				return number*number;
-			} else return -1;
+		var checkInput = function(inputValue) {
+			if ((inputValue !== null)&&(inputValue !== "")) {
+				 return true;
+			} else {
+				 return false;
+			}
 		}
 
-		var number = myPow(+num);
-		if ((num !== null)&&(num !== "")) {
-			number>= 0 ? console.log("Результат " + num+ "x" + num + "=" + myPow(num)) : console.log("Вы ввели некорректные дааные.");
+		var myPow = function(number, n) {
+			var temp = 1;
+				if (!isNaN(number) && !isNaN(n)) {
+					for (var i = 0; i < Math.abs(n); i++) {
+						temp = temp*number;
+					}
+					if (n >= 0) {
+							return temp;
+					} else {
+							return 1/temp;
+					}
+				} else return -1;
 		}
-	} while (((num !== null)&&(num !== "")));
+
+		if (checkInput(num) && checkInput(exp)) {
+			result = myPow(parseInt(num), parseInt(exp));
+			result >= 0 ? console.log("Результат " + num + " в степене " + exp + " = " + result) : console.log("Вы ввели некорректные дааные.");
+		} else { break; }
+
+		var conf = confirm('Хотите продолжить?');
+	} while (conf);
 
 	console.log('Вы вышли из программы.');
 

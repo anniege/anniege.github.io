@@ -823,7 +823,7 @@ body {
 @media only screen and (min-width: 480px) and (max-width: 767px) {
 	.container {
 		min-width: 27.5rem;
-		width: 55%;
+		/*width: 91.66%;*/
 		margin: 0 auto;
 	}
 
@@ -928,7 +928,7 @@ body {
 		top: 12.656rem;
 		padding:  5.99rem 0 6.156rem;
 	}
-	
+
 	.slider_header,
 	.slider_sub-header {
 		padding-left: 4%;
@@ -974,7 +974,7 @@ body {
 	}
 
 	.radio_list {
-		float:left; 
+		float:left;
 		position:relative;
 		left:50%;
 	}
@@ -984,12 +984,115 @@ body {
 		position:relative;
 		right:50%
 	}
-	
-	.blog {
 
+	.blog {
+		padding: 4.812rem 0 4.375rem;
+	}
+
+	.blog_title {
+		padding-bottom: .31rem;
+		font-size: 1.188 rem;
 	}
 
 	.blog_article {
 		float: none;
+		width: auto;
+		padding-left: 3.75rem;
+	}
+
+	.blog_article:not(:last-child) {
+		margin-right: 0;
+		margin-bottom: 1.75rem;
+	}
+
+	.blog_content {
+		height: 4.5rem;
+		font-size: 1rem;
+		padding-right: .75rem;
+	}
+
+	.blog_link {
+		margin-top: 1.125rem;
+	}
+
+	.main-content .container {
+		padding: 4.375rem 0 5.75rem;
+	}
+
+	.slider-small,
+	.updates {
+		float: none;
+	}
+
+	.slider-small {
+		top: auto;
+		width: auto;
+		padding: 1.906rem 1.968rem 2.156rem 2.406rem;
+		margin-bottom: 5.688rem;
+		margin-right: 0;
+	}
+
+	.slider-small .slider_header,
+	.slider-small .slider_sub-header {
+			padding-left: 0;
+		}
+
+	.slider-small .slider_content {
+		display: block;
+		height: 10.5rem;
+		font-size: 1.12rem;
+		line-height: 1.5rem;
+
+	}
+
+	.radio-black {
+		bottom: -4.583rem;
+	}
+
+	.radio-black .radio_link {
+		width: 1.125rem;
+		height: 1.125rem;
+	}
+
+	.radio-black .radio_link:hover {
+		width: .875rem;
+		height: .875rem;
+		border-width: .125rem;
+	}
+
+	.updates {
+		width: auto;
+		padding: 0 1.969rem 0 3.906rem;
+	}
+
+	.updates_header {
+		font-size: 1.406rem;
+		margin-bottom: 1.625rem;
+	}
+
+	.updates_title {
+		font-size: 1.063rem;
+		padding-bottom: .406rem;
+	}
+
+	.updates_content {
+		width: 92%;
+		overflow: hidden;
+	}
+
+	.brands .container {
+		min-width: 27.5rem;
+		padding: 0;
+		width: 55%;
+	}
+
+	.brands_logo {
+		float: left;
+		margin: 0 7% 0 7%;
+	}
+
+	.brands_list {
+		width: 80%;
+		padding: 0 10%;
 	}
 }
