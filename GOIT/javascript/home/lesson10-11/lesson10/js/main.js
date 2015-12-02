@@ -8,7 +8,7 @@
 		exp = prompt('Введите степень или нажмите ESC:');
 
 		var checkInput = function(inputValue) {
-			if ((inputValue !== null)&&(inputValue !== "")) {
+			if (inputValue !== null) {
 				 return true;
 			} else {
 				 return false;
@@ -31,7 +31,7 @@
 
 		if (checkInput(num) && checkInput(exp)) {
 			result = myPow(parseInt(num), parseInt(exp));
-			result >= 0 ? console.log("Результат " + num + " в степене " + exp + " = " + result) : console.log("Вы ввели некорректные дааные.");
+			result >= 0 ? console.log("Результат " + parseInt(num) + " в степене " + parseInt(exp) + " = " + result) : console.log("Вы ввели некорректные дааные.");
 		} else { break; }
 
 		var conf = confirm('Хотите продолжить?');
