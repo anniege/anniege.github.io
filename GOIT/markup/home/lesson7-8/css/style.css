@@ -1,7 +1,8 @@
 /* Определение шрифта для Internet Explorer */
 @font-face {
 	font-family: LeagueGothic;
-	src: url(leaguegothic-regular-webfont.eot);
+	 src: url("../fonts/leaguegothic-regular-webfont.eot");
+     src: local('☺'), 
 }
 
 /* Определение шрифта для остальных браузеров */
@@ -1601,4 +1602,16 @@ body {
 		float: none;
 		text-align: center;
 	}
+}
+
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+   /* стили только для IE10 */
+   * {
+   	font-size: 16px;
+   }
+
+   .logo span {
+	color: #5e426b;
+	background: transparent;
+}
 }
