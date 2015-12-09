@@ -9,20 +9,25 @@
   }
 
   function testName(name) {
-    var res = /^[a-zA-Zа-яА-ЯёЁ]+$/.test(name);
-    if (res) {return true; } else { return false; }
+    var res = /^[a-zA-Zа-яА-ЯёЁіЇ]+$/.test(name);
+      if (res) {
+        return true;
+       } else {
+        alert("Некорректные данные. Для имени пользователя допустимы только из буквы!");
+        return false;
+      }
   }
 
   do {
     currentName = prompt('Введите имя для внесения в базу данных:');
 
-    if (currentName !== null) {
+    if ((currentName !== null)&&(currentName !== "")) {
         if (testName(currentName)) {
           db[index] = currentName.toLowerCase();
           index++;
         }
     }
-  } while (currentName !== null);
+  } while ((currentName !== null)&&(index < 5));
 
 
   console.log("Ваша база данных состоит из следующим имен:\n" + db.toString());
