@@ -1,7 +1,5 @@
 
 var body = document.querySelector('body');
-console.log(body);
-
 
 var app = {
 	createElement: function(params) {
@@ -17,13 +15,22 @@ var app = {
 
 		if (params.inputType) {
 			elem.setAttribute('type', params.inputType);
+
+			if (params.name) {
+				elem.setAttribute('name', params.name);
+			}
+
 			if (params.value) {
 				elem.setAttribute('value', params.value);
 			}
 		}
 
 		if (params.parentName) {
-			params.parentName.appendChild(elem);
+			if (params.inputType === 'checkbox') {
+				params.parentName.insertAdjacentElement('AfterBegin', elem);
+			} else {
+				params.parentName.appendChild(elem);
+			}
 		} else {
 			body.appendChild(elem);
 		}
@@ -33,25 +40,56 @@ var app = {
 
 	generateHeading : function (parent) {
 		this.createElement({
-		    tagName: 'h1',
-		    text: 'Тест по программированию',
-		    parentName: parent
-		 });
+			tagName: 'h2',
+			text: 'Тест по программированию',
+			className: 'well well-sm text-info text-center',
+			parentName: parent
+		});
 	},
 
 	generateQuestions: function(parent, questionQty, answerQty) {
 
 		var list = this.createElement({
 			tagName: 'ol',
+			className: 'list-group text-muted',
 			parentName: parent
 		});
 
-		// var parent = this.createElement({
-		// 	tagName: 'div',
-		// 	className: 'checkbox'
-		// });
+		for (var i = questionQty-1; i >= 0; i--) {
+			var listItem = this.createElement({
+				tagName: 'li',
+				className: 'list-group-item',
+				parentName: list
+			});
 
+			this.createElement({
+				tagName: 'h4',
+				parentName: listItem,
+				text: 'Вопрос №' + (questionQty - i)
+			});
 
+			for (var j = answerQty - 1; j >= 0; j--) {
+				var wrapCheckbox = this.createElement({
+					tagName: 'div',
+					className: 'checkbox',
+					parentName: listItem
+				});
+
+				var label = this.createElement({
+					tagName: 'label',
+					parentName: wrapCheckbox,
+					text: 'Вариант ответа №' + (answerQty - j)
+				});
+				
+				this.createElement({
+					tagName:'input',
+					inputType: 'checkbox',
+					name: 'question'+ (questionQty - i),
+					value: 'answer' + (answerQty - j),
+					parentName: label
+				});
+			}
+		}
 	},
 
 	generateButton: function (parent) {
@@ -59,7 +97,7 @@ var app = {
 			tagName: 'input',
 			inputType: 'submit',
 			value: 'Проверить мои результаты',
-			className: 'btn btn-primary',
+			className: 'btn btn-primary center-block',
 			parentName: parent
 		})
 	},
@@ -77,7 +115,7 @@ var app = {
 			parentName: parent
 		});
 
-		this.generateQuestions(form);
+		this.generateQuestions(form, 3, 3);
 
 		this.generateButton(form);
 	}
