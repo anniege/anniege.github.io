@@ -42,7 +42,6 @@ body {
 
 .wrapper {
 	max-width: 150rem;
-	/*min-width: 960px;*/
 	margin: 0 auto;
 	overflow: hidden;
 }
@@ -106,28 +105,6 @@ body {
 	text-shadow: 0 1px 3px rgba(0,0,0,.3);
 	color: #fff;
 }
-
-/*.top-menu {
-	float: right;
-}
-
-.top-menu .menu_item {
-	float: left;
-	line-height: 2.94rem;
-}
-
-.top-menu .menu_item:not(:last-child) {
-	padding-right: 5%;
-}
-
-.top-menu .menu_link {
-	font-size: 1.19rem;
-	border-bottom: 2px solid transparent;
-}
-
-.top-menu .menu_link:hover {
-	border-bottom: 2px solid rgba(237, 191, 255, .9);
-}*/
 
 .top-menu {
 	margin-left: 20rem;
@@ -680,6 +657,11 @@ body {
 	.logo {
 		float: none;
 		padding-bottom: 1.3rem;
+	}
+
+	.logo a {
+		display: inline;
+		text-align: center;
 	}
 
 	.top-menu {
