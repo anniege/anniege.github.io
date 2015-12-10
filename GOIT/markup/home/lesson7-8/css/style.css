@@ -1,61 +1,32 @@
-/* Определение шрифта для Internet Explorer */
-/*@font-face {
-	font-family: LeagueGothic;
-	 src: url("../fonts/leaguegothic-regular-webfont.eot");
-     src: local('☺'), 
-}*/
-
-/* Определение шрифта для остальных браузеров */
-/*@font-face {
-	font-family: LeagueGothic;
-	src: url(../fonts/leaguegothic-regular-webfont.ttf) format('truetype'),
-	url(../fonts/LeagueGothic-Regular.otf) format('opentype');
+@font-face {
+	font-family: "Open Sans Light";
+	src: url("../fonts/OpenSansLight/OpenSansLight.eot");
+	src: url("../fonts/OpenSansLight/OpenSansLight.eot?#iefix")format("embedded-opentype"),
+	url("../fonts/OpenSansLight/OpenSansLight.woff") format("woff"),
+	url("../fonts/OpenSansLight/OpenSansLight.ttf") format("truetype");
+	font-style: normal;
 	font-weight: normal;
 }
 
 @font-face {
-	font-family: 'Open Sans Light';
-	src: url(../fonts/OpenSans-Light.ttf) format('truetype');
-	font-weight: lighter;
+	font-family: "Open Sans ExtBold";
+	src: url("../fonts/OpenSansExtraBold/OpenSansExtraBold.eot");
+	src: url("../fonts/OpenSansExtraBold/OpenSansExtraBold.eot?#iefix")format("embedded-opentype"),
+	url("../fonts/OpenSansExtraBold/OpenSansExtraBold.woff") format("woff"),
+	url("../fonts/OpenSansExtraBold/OpenSansExtraBold.ttf") format("truetype");
+	font-style: normal;
+	font-weight: normal;
 }
 
 @font-face {
-	font-family: 'Open Sans ExtBold';
-	src: url(../fonts/OpenSans-ExtraBold.ttf) format('truetype');
-	font-weight: bold;
-}*/
-
-@font-face {
-    font-family: "Open Sans Light";
-    src: url("../fonts/OpenSansLight/OpenSansLight.eot");
-    src: url("../fonts/OpenSansLight/OpenSansLight.eot?#iefix")format("embedded-opentype"),
-    url("../fonts/OpenSansLight/OpenSansLight.woff") format("woff"),
-    url("../fonts/OpenSansLight/OpenSansLight.ttf") format("truetype");
-    font-style: normal;
-    font-weight: normal;
+	font-family: "LeagueGothic";
+	src: url("../fonts/LeagueGothicRegular/LeagueGothicRegular.eot");
+	src: url("../fonts/LeagueGothicRegular/LeagueGothicRegular.eot?#iefix")format("embedded-opentype"),
+	url("../fonts/LeagueGothicRegular/LeagueGothicRegular.woff") format("woff"),
+	url("../fonts/LeagueGothicRegular/LeagueGothicRegular.ttf") format("truetype");
+	font-style: normal;
+	font-weight: normal;
 }
-
-@font-face {
-    font-family: "Open Sans ExtBold";
-    src: url("../fonts/OpenSansExtraBold/OpenSansExtraBold.eot");
-    src: url("../fonts/OpenSansExtraBold/OpenSansExtraBold.eot?#iefix")format("embedded-opentype"),
-    url("../fonts/OpenSansExtraBold/OpenSansExtraBold.woff") format("woff"),
-    url("../fonts/OpenSansExtraBold/OpenSansExtraBold.ttf") format("truetype");
-    font-style: normal;
-    font-weight: normal;
-}
-
-@font-face {
-    font-family: "LeagueGothic";
-    src: url("../fonts/LeagueGothicRegular/LeagueGothicRegular.eot");
-    src: url("../fonts/LeagueGothicRegular/LeagueGothicRegular.eot?#iefix")format("embedded-opentype"),
-    url("../fonts/LeagueGothicRegular/LeagueGothicRegular.woff") format("woff"),
-    url("../fonts/LeagueGothicRegular/LeagueGothicRegular.ttf") format("truetype");
-    font-style: normal;
-    font-weight: normal;
-}
-
-
 
 .clearfix:after {
 	content: '';
@@ -406,7 +377,7 @@ body {
 
 .slider-small {
 	position: relative;
-	top:0;
+	top: 0rem;
 	width: 36.1%;
 	padding: 2.021rem 2.625rem 2.24rem 2.438rem;
 	margin-left: 1.438rem;
@@ -1639,7 +1610,7 @@ body {
 @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
    /* стили только для IE10 */
    * {
-   	font-size: 16px;
+	font-size: 16px;
    }
 
    .logo span {
