@@ -1,0 +1,53 @@
+.clearfix:after {
+	content: '';
+	display: block;
+	line-height: 0;
+	clear: both;
+	visibility: hidden;
+}
+
+.container {
+	width: 79%;
+	margin: 0 auto;
+}
+
+.watch {
+	position: relative;
+	width: 50%;
+	padding: 20px 180px;
+	margin: 200px auto 50px;
+	border-radius: 6px;
+	background: rgba(0,0,0,0.2);
+}
+
+.watch span {
+	font-size: 122px;
+	font-family: Arial, sans-serif;
+	font-weight: bold;
+	color: #fff;
+}
+
+.watch .millisec {
+	position: absolute;
+	bottom: 18px;
+	right: 195px;
+	font-size: 20px;
+}
+
+.panel {
+	width: 86%;
+	margin: 0 auto;
+}
+
+.start, .stop {
+	text-transform: uppercase;
+	font-size: 25px;
+}
+
+.start {
+	float: left;
+}
+
+.stop {
+	float: right;
+}

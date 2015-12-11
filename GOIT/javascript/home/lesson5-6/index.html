@@ -3,19 +3,23 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Lesson5-6</title>
+	<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 	<div class="container">
 		<div class="watch">
-			<span class="hours"></span><span>:</span>
-			<span class="minues"></span><span>:</span>
-			<span class="sec"></span>
-			<span class="millisec"></span>
+			<div class="watch-wrapper">
+				<span class="hours">00</span><span>:</span>
+				<span class="minutes">00</span><span>:</span>
+				<span class="sec">00</span>
+				<span class="millisec">0</span>
+			</div>
 		</div>
-		<div class="panel">
-			<button class="start"></button>
-			<button class="stop"></button>
+		<div class="panel clearfix">
+			<button class="start">start</button>
+			<button class="stop">stop</button>
 		</div>
 	</div>
+	<script src="js/script.js"></script>
 </body>
 </html>
