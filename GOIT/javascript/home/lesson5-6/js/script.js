@@ -60,10 +60,7 @@
 
 		this.startTimer = function () {
 			if (flag) {
-				timerId = setTimeout(function run() {
-					calc();
-					timerId = setTimeout(run, 1);
-				}, 1);
+				timerId = setInterval(calc, 1);
 				flag = false;
 				startButton.innerHTML = 'pause';
 				if (startButton.classList.contains('button-warning')) {
