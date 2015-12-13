@@ -62,7 +62,7 @@
 			if (flag) {
 				timerId = setTimeout(function run() {
 					calc();
-					setTimeout(run, 1);
+					timerId = setTimeout(run, 1);
 				}, 1);
 				flag = false;
 				startButton.innerHTML = 'pause';
