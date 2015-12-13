@@ -94,6 +94,8 @@
 
 	var myTimer = new Timer();
 
-	startButton.addEventListener('click', myTimer.startTimer);
-	stopButton.addEventListener('click', myTimer.stopTimer);
+	document.addEventListener( "DOMContentLoaded", function() {
+		startButton.addEventListener('click', myTimer.startTimer);
+		stopButton.addEventListener('click', myTimer.stopTimer);
+	});
 })();
