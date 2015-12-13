@@ -20,9 +20,9 @@
 		var flag = true;
 
 		function calc() {
-			counter.millisec++;
-			counter.millisec = counter.millisec % 1000;
-			if ((counter.millisec%1000) === 0) {
+				counter.millisec= counter.millisec+4;
+				if ((counter.millisec%1000) === 0) {
+				counter.millisec=0;
 				counter.seconds++;
 				if (counter.seconds === 60) {
 					counter.seconds = 0;
