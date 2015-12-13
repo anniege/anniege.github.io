@@ -6,22 +6,28 @@
 	visibility: hidden;
 }
 
+body {
+	background: #293a4d url(../img/gun-metal.png);
+}
+
 .container {
 	width: 79%;
 	margin: 0 auto;
+	font-size: 100%;
 }
 
 .watch {
 	position: relative;
-	width: 50%;
+	width: 81%;
 	padding: 20px 180px;
 	margin: 200px auto 50px;
 	border-radius: 6px;
 	background: rgba(0,0,0,0.2);
+	box-sizing: border-box;
 }
 
 .watch span {
-	font-size: 122px;
+	font-size: 764%;
 	font-family: Arial, sans-serif;
 	font-weight: bold;
 	color: #fff;
@@ -30,12 +36,12 @@
 .watch .millisec {
 	position: absolute;
 	bottom: 18px;
-	right: 195px;
+	right: 205px;
 	font-size: 20px;
 }
 
 .panel {
-	width: 86%;
+	width: 81%;
 	margin: 0 auto;
 }
 
@@ -50,4 +56,16 @@
 
 .stop {
 	float: right;
+}
+
+.button-error {
+	background: rgb(202, 60, 60);
+}
+
+.button-success {
+			background: rgb(28, 184, 65); 
+}
+
+.button-warning {
+			background: rgb(223, 117, 20); 
 }
