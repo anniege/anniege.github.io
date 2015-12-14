@@ -1,0 +1,31 @@
+body {
+	background: #000;
+}
+
+.container {
+	width: 100%;
+	padding-top: 20%;
+	font-size: 100%;
+	text-align: center;
+}
+
+.time {
+	font-size: 84px;
+	font-family: Arial, sans-serif;
+	font-weight: bold;
+	color: red;
+}
+
+.startstop, .split, .reset {
+	text-transform: capitalize;
+	font-size: 40px;
+	color: #000;
+}
+
+.splitMsg {
+	margin: 5px 0;
+	font-size: 40px;
+	font-weight: bold;
+	font-family: Arial, sans-serif;
+	color: #666;
+}
