@@ -81,7 +81,7 @@
 
 		this.resetTimer = function () {
 			clearInterval(timerId);
-			globalDate = new Date;
+			globalDate = temp;
 			calcTime(globalDate, time);
 			startstopButton.innerHTML = "start";
 			index = 1;
