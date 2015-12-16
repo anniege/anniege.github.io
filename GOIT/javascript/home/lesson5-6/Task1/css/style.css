@@ -25,16 +25,17 @@ body {
 	background: rgba(0,0,0,0.2);
 	box-sizing: border-box;
 	box-shadow: 0px 0px 8px 0px rgba(255,255,255,.1);
-}
-
-.watch span {
-	font-size: 764%;
 	font-family: Arial, sans-serif;
 	font-weight: bold;
 	color: #fff;
 }
 
-.watch .millisec {
+.time {
+	font-size: 110px;
+
+}
+
+.millisec {
 	position: absolute;
 	bottom: 18px;
 	right: 205px;

@@ -2,77 +2,77 @@
 
 	var startButton = document.querySelector('.start'),
 		stopButton = document.querySelector('.stop'),
-		hours = document.querySelector('.hours'),
-		min = document.querySelector('.minutes'),
-		sec = document.querySelector('.sec'),
+		time = document.querySelector('.time'),
 		millisec = document.querySelector('.millisec');
 
 
 	var Timer =  function() {
-		var timerId;
-		var counter = {
-				hours: 0,
-				minutes: 0,
-				seconds: 0,
-				millisec: 0
+		var timerId,
+			startDate,
+			startflag,
+			pauseflag,
+			counterMs,
+			currentDate,
+			flag = true;
+
+		function formatTime(msValue) {
+			var timeStr = new Date(msValue).toUTCString().replace(/.*([0-9][0-9]:[0-9][0-9]:[0-9][0-9]).*/,'$1');
+			var msStr = String(msValue%1000);
+			while (msStr.length < 3) {
+				msStr = '0' + msStr;
+			}
+			return {
+						timeString: timeStr,
+						millisecString: msStr 
+					};
 		}
 
-		var flag = true;
-
-		function calc() {
-				counter.millisec= counter.millisec+4;
-				if ((counter.millisec%1000) === 0) {
-				counter.millisec=0;
-				counter.seconds++;
-				if (counter.seconds === 60) {
-					counter.seconds = 0;
-					counter.minutes++;
-					if (counter.minutes === 60) {
-						counter.minutes = 0;
-						counter.hours++;
-					}
-				}
-			}
-			drawCounter();
+		function calcMillisec() {
+			counterMs = currentDate - startDate;
+			return counterMs;
 		}
 
-		function drawCounter () {
-			millisec.innerHTML = counter.millisec;
-			if (counter.seconds < 10) {
-				sec.innerHTML = '0' + counter.seconds;
-			} else {
-				sec.innerHTML = counter.seconds;
-			}
-
-			if (counter.minutes < 10) {
-				min.innerHTML ='0'+ counter.minutes;
-			} else {
-				min.innerHTML = counter.minutes;
-			}
+		function drawTime() {
+			var deltaMs = calcMillisec();
+			var resultStr = formatTime(deltaMs);
+			time.innerHTML = resultStr.timeString;
+			millisec.innerHTML = resultStr.millisecString;
 		}
 
 		function clearCounter() {
-			for (i in counter) {
-				counter[i] = 0;
-			}
-			drawCounter ();
+			currentDate = startDate;
+			drawTime();
 		}
+
 
 		this.startTimer = function () {
 			if (flag) {
+				if (!startflag) {
+					startDate = new Date;
+					startflag = true;
+				} 
+
+				if (pauseflag) {
+					current = currentDate - new Date;
+					startDate = new Date(startDate.getTime() - current);
+				}
+
 				timerId = setTimeout(function run() {
-					calc();
+					currentDate = new Date;
+					drawTime();
 					timerId = setTimeout(run, 1);
 				}, 1);
+
 				flag = false;
 				startButton.innerHTML = 'pause';
+
 				if (startButton.classList.contains('button-warning')) {
 					startButton.classList.remove('button-warning');
 				}
 				startButton.classList.add('button-success');
-				
 			} else {
 				clearInterval(timerId);
+				pauseflag = true;
 				startButton.innerHTML = "cont..";
 				startButton.classList.remove('button-success');
 				startButton.classList.add('button-warning');
@@ -83,6 +83,7 @@
 		this.stopTimer = function () {
 			clearInterval(timerId);
 			clearCounter();
+			startflag = pauseflag = false;
 			startButton.innerHTML = "start";
 			if (startButton.classList.contains('button-warning')) {
 				startButton.classList.remove('button-warning');
