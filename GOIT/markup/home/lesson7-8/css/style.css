@@ -1074,8 +1074,8 @@ body {
 	.slider-small {
 		top: auto;
 		width: auto;
-		padding: 1.906rem 1.968rem 2.156rem 2.406rem;
-		margin-bottom: 4.3rem;
+		padding: 1.906rem 1.968rem .9rem 2.406rem;
+		margin-bottom: 5.5rem;
 		margin-right: 0;
 	}
 
@@ -1094,9 +1094,13 @@ body {
 	}
 
 	.radio-black {
-		bottom: -2.656rem;
+		bottom: -3.5rem;
 	}
 
+/*	.radio-black {
+		bottom: -3.5rem;
+	}
+*/
 	.radio-black .radio_link {
 		width: 1.125rem;
 		height: 1.125rem;
