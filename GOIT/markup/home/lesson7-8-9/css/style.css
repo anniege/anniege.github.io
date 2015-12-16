@@ -438,6 +438,13 @@ body {
 	background: rgba(0,0,0,.4);
 }
 
+
+.radio-black  .radio_item:first-child .radio_link {
+	width: .81rem;
+	height: .81rem;
+	border: .125rem solid #fff;
+	background: rgba(0,0,0,.4);
+}
 /*UPDATES*/
 
 
