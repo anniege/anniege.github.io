@@ -1097,10 +1097,14 @@ body {
 		bottom: -3.5rem;
 	}
 
-/*	.radio-black {
-		bottom: -3.5rem;
+	.radio-black .radio_list {
+		margin-left: -.5rem;
 	}
-*/
+
+	.radio-black .radio_item:not(:last-child) .radio_link {
+		margin-right: 2px;
+	}
+
 	.radio-black .radio_link {
 		width: 1.125rem;
 		height: 1.125rem;
@@ -1487,9 +1491,14 @@ body {
 	.radio-black .radio_item {
 		right: auto;
 	}
+
+	.radio-black .radio_item:not(:last-child) .radio_link {
+		margin-right: 2px;
+	}
 	
 	.radio-black .radio_list {
 		float: none;
+		margin-left: -2rem;
 	}
 
 	.radio-black .radio_link {
