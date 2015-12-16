@@ -223,7 +223,7 @@ body {
 	width:  1.063rem;
 	height: 1.063rem;
 	border-radius: 50%;
-	background: rgba(0,0,0,.3);
+	background: rgba(0,0,0,.2);
 	color: #fff;
 }
 
@@ -231,10 +231,17 @@ body {
 	margin-right: 6px;
 }
 
+.radio_item:nth-child(2) .radio_link  {
+	width: .688rem;
+	height: .688rem;
+	border: .1875rem solid rgba(0,0,0,.6);
+	background: #fff;
+}
+
 .radio_link:hover {
 	width: .688rem;
 	height: .688rem;
-	border: .1875rem solid rgba(0,0,0,.5);
+	border: .1875rem solid rgba(0,0,0,.6);
 	background: #fff;
 }
 
@@ -439,7 +446,7 @@ body {
 }
 
 
-.radio-black  .radio_item:first-child .radio_link {
+.radio-black  .radio_item:nth-child(2) .radio_link {
 	width: .81rem;
 	height: .81rem;
 	border: .125rem solid #fff;
