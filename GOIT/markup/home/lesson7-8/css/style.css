@@ -435,7 +435,7 @@ body {
 	width: .81rem;
 	height: .81rem;
 	border: .125rem solid #fff;
-	background: rgba(0,0,0,.5);
+	background: rgba(0,0,0,.4);
 }
 
 /*UPDATES*/
@@ -804,6 +804,7 @@ body {
 	}
 	
 	.brands .container {
+		min-width: 45.5rem;
 		padding: 0;
 	}
 	
@@ -1600,16 +1601,4 @@ body {
 		float: none;
 		text-align: center;
 	}
-}
-
-@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
-   /* стили только для IE10 */
-   * {
-	font-size: 16px;
-   }
-
-   .logo span {
-	color: #5e426b;
-	background: transparent;
-}
 }
