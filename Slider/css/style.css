@@ -1,0 +1,47 @@
+.col-md-12 {
+	color: #bbb;
+}
+
+.slider {
+	margin-top: 50px;
+}
+
+.slider-indicators li {
+	list-style: none;
+	display: inline-block;
+	cursor: pointer;
+}
+
+.slider-inner {
+	position: relative;
+	min-width: 875px;
+	height: 462px;
+	width: 80%;
+	margin: 0 auto;
+}
+
+
+.slider-item img {
+  max-width:100%; 
+  max-height:100%;
+  margin:auto;
+  display:block;
+}
+
+.active {
+	color: #555;
+}
+
+.activeItem {
+	z-index: 999;
+}
+
+.slider-item {
+	position: absolute;
+	height: 346px;
+	width: 346px;
+	margin: 58px 0;
+	top: 0;
+	right: 15px;
+	transition: all 1s;
+}
