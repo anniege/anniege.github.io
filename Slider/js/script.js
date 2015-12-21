@@ -12,9 +12,8 @@
 		var imgs = [],
 			globalId,
 			index,
-			timer;
-
-		var slidesLength = slides.length;
+			timer,
+			slidesLength = slides.length;
 
 		if (defaultItem) {
 			slide(+defaultItem);
@@ -39,7 +38,6 @@
 				slide(index);
 			}
 		}
-
 
 		function removeActiveClass(items, customClass) {
 			[].forEach.call(items, function(item) {
@@ -78,7 +76,7 @@
 					 	arrSlider[i].setAttribute('style', '');
 					 	arrSlider[i].style.opacity = '0';
 					 	arrSlider[i].style.zIndex = slidesLength - i;
-					 	if (i == (number+1)) {
+					 	if (i === (number+1)) {
 					 		arrSlider[i].style.opacity = '1';
 					 	}
 					 	texts[i].style.visibility = 'hidden';
@@ -106,7 +104,6 @@
 	}
 
 document.addEventListener('DOMContentLoaded', function() {
-
 	new SliderApp('0');
 });
 })();
