@@ -40,8 +40,7 @@
 	text-decoration: none;
 	color: #fff;
 	border-right: 20px solid transparent;
-	border-bottom: 34px solid #000;
-	border-bottom-color: #777;
+	border-bottom: 34px solid #777;
 	opacity: .3;
 	filter: alpha(opacity=30);
 	transition: all .3s;
@@ -71,7 +70,7 @@
 
 #tabs .current {
   z-index: 3;
-  border-bottom-color: #2ac7e1;
+  border-bottom-color: #31a1b2;
   color: #eee;
   opacity: 1;
   filter: alpha(opacity=100);   

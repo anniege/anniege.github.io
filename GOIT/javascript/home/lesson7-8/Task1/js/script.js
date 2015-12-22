@@ -9,6 +9,7 @@
 
 		if (defaultTab) {
 			textTabs[defaultTabNumber].style.visibility = 'visible';
+			tabsItems[defaultTabNumber].classList.add('current');
 		} else {
 			defaultTab = 'false';
 		}
