@@ -1,0 +1,91 @@
+/* font-family: "RobotoRegular"; */
+@font-face {
+	font-family: "RobotoRegular";
+	src: url("../fonts/RobotoRegular/RobotoRegular.eot");
+	src: url("../fonts/RobotoRegular/RobotoRegular.eot?#iefix")format("embedded-opentype"),
+	url("../fonts/RobotoRegular/RobotoRegular.woff") format("woff"),
+	url("../fonts/RobotoRegular/RobotoRegular.ttf") format("truetype");
+	font-style: normal;
+	font-weight: normal;
+}
+/* font-family: "RobotoLight"; */
+@font-face {
+	font-family: "RobotoLight";
+	src: url("../fonts/RobotoLight/RobotoLight.eot");
+	src: url("../fonts/RobotoLight/RobotoLight.eot?#iefix")format("embedded-opentype"),
+	url("../fonts/RobotoLight/RobotoLight.woff") format("woff"),
+	url("../fonts/RobotoLight/RobotoLight.ttf") format("truetype");
+	font-style: normal;
+	font-weight: normal;
+}
+/* font-family: "RobotoMedium"; */
+@font-face {
+	font-family: "RobotoMedium";
+	src: url("../fonts/RobotoMedium/RobotoMedium.eot");
+	src: url("../fonts/RobotoMedium/RobotoMedium.eot?#iefix")format("embedded-opentype"),
+	url("../fonts/RobotoMedium/RobotoMedium.woff") format("woff"),
+	url("../fonts/RobotoMedium/RobotoMedium.ttf") format("truetype");
+	font-style: normal;
+	font-weight: normal;
+}
+/* font-family: "RobotoBold"; */
+@font-face {
+	font-family: "RobotoBold";
+	src: url("../fonts/RobotoBold/RobotoBold.eot");
+	src: url("../fonts/RobotoBold/RobotoBold.eot?#iefix")format("embedded-opentype"),
+	url("../fonts/RobotoBold/RobotoBold.woff") format("woff"),
+	url("../fonts/RobotoBold/RobotoBold.ttf") format("truetype");
+	font-style: normal;
+	font-weight: normal;
+}
+
+.wrapper {
+	max-width: 640px;
+	margin: 0 auto;
+	font-family: RobotoLight, Arial, sans-serif;
+}
+
+.header {
+	height: 90px;
+	padding: 0 17px;
+	background: rgba(54,54,54,1);
+	background: -moz-linear-gradient(top, rgba(54,54,54,1) 0%, rgba(54,54,54,1) 50%, rgba(47,47,47,1) 51%, rgba(47,47,47,1) 100%);
+	background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(54,54,54,1)), color-stop(50%, rgba(54,54,54,1)), color-stop(51%, rgba(47,47,47,1)), color-stop(100%, rgba(47,47,47,1)));
+	background: -webkit-linear-gradient(top, rgba(54,54,54,1) 0%, rgba(54,54,54,1) 50%, rgba(47,47,47,1) 51%, rgba(47,47,47,1) 100%);
+	background: -o-linear-gradient(top, rgba(54,54,54,1) 0%, rgba(54,54,54,1) 50%, rgba(47,47,47,1) 51%, rgba(47,47,47,1) 100%);
+	background: -ms-linear-gradient(top, rgba(54,54,54,1) 0%, rgba(54,54,54,1) 50%, rgba(47,47,47,1) 51%, rgba(47,47,47,1) 100%);
+	background: linear-gradient(to bottom, rgba(54,54,54,1) 0%, rgba(54,54,54,1) 50%, rgba(47,47,47,1) 51%, rgba(47,47,47,1) 100%);
+}
+
+.header_age {
+	float: left;
+	width: 64px;
+	height: 64px;
+	line-height: 64px;
+	padding: 13px 0;
+	font-size: 27px;
+	text-align: center;
+	background: url(../img/flower.png) center center no-repeat;
+	color: #fff;
+}
+
+.header_title {
+	text-align: center;	
+}
+
+.header_link {
+	line-height: 90px;
+	margin-left: -64px;
+	text-decoration: none;
+	text-transform: uppercase;
+	font-size: 36px;
+	font-family: RobotoLight, Arial, sans-serif;
+	color: #fff;
+}
+
+.header_link span {
+	display: inline-block;
+	text-transform: capitalize;
+	font-family: RobotoBold, Arial, sans-serif;
+	color: #ff002a;
+}
