@@ -39,14 +39,26 @@
 	font-weight: normal;
 }
 
+.clearfix:after {
+	content: ".";
+	display: block;
+	height: 0;
+	clear: both;
+	visibility: hidden;
+}
+
 .wrapper {
 	max-width: 640px;
+	min-width: 320px;
+	height: 100%;
+	font-size: 100%;
 	margin: 0 auto;
 	font-family: RobotoLight, Arial, sans-serif;
 }
 
 .header {
-	height: 90px;
+	height: 8.4%;
+	/*height: 88px;*/
 	padding: 0 17px;
 	background: rgba(54,54,54,1);
 	background: -moz-linear-gradient(top, rgba(54,54,54,1) 0%, rgba(54,54,54,1) 50%, rgba(47,47,47,1) 51%, rgba(47,47,47,1) 100%);
@@ -63,7 +75,7 @@
 	height: 64px;
 	line-height: 64px;
 	padding: 13px 0;
-	font-size: 27px;
+	font-size: 169%;
 	text-align: center;
 	background: url(../img/flower.png) center center no-repeat;
 	color: #fff;
@@ -74,7 +86,8 @@
 }
 
 .header_link {
-	line-height: 90px;
+	display: inline-block;
+	line-height: 62px;
 	margin-left: -64px;
 	text-decoration: none;
 	text-transform: uppercase;
@@ -85,7 +98,215 @@
 
 .header_link span {
 	display: inline-block;
+	width: 95px;
+	height: 62px;
+	margin: 14px 0;
+	border-radius: 38px/11px;
+	-webkit-box-shadow: inset 0 -1px 8px rgba(0,0,0,.3);
+	box-shadow: inset 0 -1px 8px rgba(0,0,0,.3);
 	text-transform: capitalize;
 	font-family: RobotoBold, Arial, sans-serif;
+	background: #fff;
 	color: #ff002a;
+}
+
+.main {
+	/*height: 74%;*/
+	background: url(../img/bob.jpg) center center no-repeat;
+	background-size: cover;
+}
+
+.video {
+	position: relative;
+	height: 672px;
+	/*height: 100%;*/
+	background-color: rgba(0,0,0,0.5);
+}
+
+.video_header {
+	line-height: 109px;
+	padding: 0 38px;
+	text-align: right;
+	background: rgba(0,0,0,.2);
+	color: #fff;
+}
+
+.video_title {
+	float: left;
+	font-size: 30px;
+}
+
+.watch, .share {
+	display: inline-block;
+	line-height: 109px;
+	cursor: pointer;
+}
+
+.share {
+	margin-left: 24px;
+}
+
+.watch img, .share img {
+	vertical-align: middle;
+}
+
+.video_play {
+	position: absolute;
+	top: 45%;
+	left: 50%;
+	width: 70.63%;
+	/*margin-left: -226px;*/
+	margin-left: -35.3%;
+}
+
+.video_link {
+	display: block;
+	/*width: 360px;*/
+	height: 192px;
+	padding: 0 46px;
+	text-decoration: none;
+	text-transform: capitalize;
+	font-size: 375%;
+	font-family: RobotoMedium, Arial, sans-serif;
+	border-radius: 35px;
+	background: rgb(255,0,42);
+	-webkit-box-shadow: inset 0 0 20px #da0c1b;
+	box-shadow: inset 0 0 20px #da0c1b;
+	color: #fff;
+}
+
+.video_link:hover {
+	text-shadow: 0 0 3px #fff;
+}
+
+.video_run {
+	position: relative;
+	display: block;
+	line-height: 192px;
+}
+
+.video_run:after {
+	content: "";
+	position: absolute;
+	width: 84px;
+	height: 93px;
+	top: 50%;
+	margin-top: -46.5px;
+	right: -10px;
+	background: url(../img/triangle.png) center center no-repeat;
+	background-size: cover;
+}
+
+.viewers {
+	padding: 21px 0 41px;
+	font-size: 24px;
+	text-align: center;
+	color: #bababa;
+}
+
+.cancel a {
+	display: block;
+	width: 136px;
+	line-height: 52px;
+	margin: 0 auto;
+	border: 1px solid  #bababa;
+	border-radius: 10px;
+	text-decoration: none;
+	text-align: center;
+	font-size: 28px;
+	font-family: RobotoLight, Arial, sans-serif;
+	background: rgba(0,0,0,.3);
+	color: #fff;
+}
+
+.cancel a:hover {
+	background: rgba(0,0,0,.8);	
+}
+
+.panel {
+	height: 106px;
+	padding: 0 33px 0 36px;
+	background: #000;
+}
+
+.panel_timer {
+	padding-left: 39px;
+	font-size: 24px;
+	color: #bababa;
+}
+
+.panel_timer span {
+	color: #fff;
+}
+
+.panel_play, .panel_volume, .panel_timer {
+	float: left;
+	line-height: 106px;
+}
+
+.panel_play img, .panel_volume img, .panel_zoom img  {
+	vertical-align: middle;	
+	cursor: pointer;
+}
+
+.panel_zoom {
+	float: right;
+	line-height: 106px;
+}
+
+
+.panel_play {
+	padding-right: 46px;
+}
+
+.footer {
+	padding: 23px 33px 10px 18px;
+	background: #2f2f2f;
+	color: #a4a4a4;
+}
+
+.footer_rules {
+	font-size: 24px;
+}
+
+.footer_rules .checkbox {
+	position: absolute;
+	opacity: 0;
+}
+
+.footer_rules .checkbox:not(:checked) + label:before {
+	content: " ";
+	position: absolute;
+	width: 35px;
+	height: 35px;
+	left: 4px;
+	top: 0;
+	background: url(../img/checkbox_sprite.png) 0 0 no-repeat;
+}
+
+.footer_rules .checkbox:checked + label:before {
+	content: " ";
+	position: absolute;
+	width: 35px;
+	height: 35px;
+	left: 4px;
+	top: 0;
+	background: url(../img/checkbox_sprite.png) -36px 0 no-repeat;
+}
+
+.footer_rules .checkbox+ label {
+	position: relative;
+	display: block;
+	padding-left: 60px;
+	padding-top: 10px;
+}
+
+.footer_rules label span {
+	text-decoration: underline;
+	color: #fff;
+}
+
+.footer_text {
+	font-size: 24px;
+	padding-top: 18px;
 }

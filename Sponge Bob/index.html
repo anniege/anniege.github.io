@@ -16,35 +16,48 @@
 		</header>
 		<main class="main" role="main">
 			<div class="video">
-				<div class="video_header"></div>
-				<div class="video-play">
-					<a class="video-play_link" href="#">
-						<span class="video-play_text">смотреть</span>
-						<span class="triangle"></span>
+				<div class="video_header">
+					<span class="video_title">Видео HD</span>
+					<span class="watch">
+						<img src="img/watch.png" alt="watch">
+					</span>
+					<span class="share">
+						<img src="img/share.png" alt="share">
+					</span>
+				</div>
+				<div class="video_play">
+					<a class="video_link" href="#">
+						<span class="video_run">смотреть</span>
 					</a>
-				</div>
-				<div class="viewers">
-					Просмотров: 14204
-				</div>
-				<div class="cancel">
-					<a href="#">Отмена</a>
+					<div class="viewers">
+						Просмотров: 14204
+					</div>
+					<div class="cancel">
+						<a href="#">Отмена</a>
+					</div>
 				</div>
 			</div>
 			<div class="panel">
-				<span class="panel_play"></span>
-				<span class="panel_volume"></span>
-				<p class="timer"><span>0:01</span>/15:44</p>
-				<span class="zoom"></span>
+				<div class="panel_play">
+					<img src="img/triangle_small.png" alt="play">
+				</div>
+				<div class="panel_volume">
+					<img src="img/sound.png" alt="volume">
+				</div>
+				<p class="panel_timer"><span>0:01</span>/15:44</p>
+				<div class="panel_zoom">
+					<img src="img/zoom.png" alt="zoom">
+				</div>
 			</div>
 		</main>
 		<footer class="footer">
-				<div class="footer_rules">
-					<input id="rules" type="checkbox" name="rules" value="confirm">
-					<label for="rules">Подтверждаю, что люблю мультики, и соглашаюсь с <span>правилами предоставления услуги</span></label>
-				</div>
-				<div class="footer_text">
-					Услуга: domainname.eu. Провайдер ООО “Эс Эм Экс Комьюникейшнс”. Стоимость: 20 руб в сутки с НДС. 
-				</div>
+			<div class="footer_rules clearfix">
+				<input id="rules" type="checkbox" class="checkbox" name="rules" value="confirm">
+				<label for="rules">Подтверждаю, что люблю мультики, и соглашаюсь с <span>правилами предоставления услуги</span></label>
+			</div>
+			<div class="footer_text">
+				Услуга: domainname.eu. Провайдер ООО “Эс Эм Экс Комьюникейшнс”. Стоимость: 20 руб в сутки с НДС. 
+			</div>
 		</footer>
 	</div>
 </body>
