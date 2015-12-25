@@ -40,7 +40,7 @@
 	color: #fff;
 	border-right: 20px solid transparent;
 	border-bottom: 34px solid #777;
-	opacity: .3;
+	opacity: .5;
 	filter: alpha(opacity=30);
 	transition: all .3s;
 }
@@ -70,10 +70,10 @@
 }
 
 #tabs .current {
-	z-index: 3;
 	border-bottom-color: #C1DD55;
 	color: #eee;
 	color: #8EA76A;
 	opacity: 1;
 	filter: alpha(opacity=100);   
+	z-index: 3;
 }
