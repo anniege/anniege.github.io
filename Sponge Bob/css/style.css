@@ -47,6 +47,9 @@
 	visibility: hidden;
 }
 
+body {
+	height: 100%;
+}
 .wrapper {
 	max-width: 640px;
 	min-width: 320px;
@@ -111,7 +114,7 @@
 }
 
 .main {
-	/*height: 74%;*/
+	height: 74%;
 	background: url(../img/bob.jpg) center center no-repeat;
 	background-size: cover;
 }
@@ -119,6 +122,7 @@
 .video {
 	position: relative;
 	height: 672px;
+	min-height: 307px;
 	/*height: 100%;*/
 	background-color: rgba(0,0,0,0.5);
 }
@@ -224,7 +228,8 @@
 }
 
 .panel {
-	height: 106px;
+	height: 10.12%;
+	/*height: 106px;*/
 	padding: 0 33px 0 36px;
 	background: #000;
 }
@@ -266,7 +271,8 @@
 }
 
 .footer_rules {
-	font-size: 24px;
+	font-size: 150%;
+	/*font-size: 24px;*/
 }
 
 .footer_rules .checkbox {
