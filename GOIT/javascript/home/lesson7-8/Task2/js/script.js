@@ -1,17 +1,15 @@
 $(function() {
 	var t0, t1, x0, y0, x1, y1;
 
-	$("input").each(function(){
-		var msg = $(this).attr("title");
-		$(this).removeAttr("title");
-		var tooltip = $("<p></p>").text(msg).addClass("tooltip");
-		$(this).after(tooltip);
-	});
+$("input").each(function(){
+	var msg = $(this).attr("title");
+	$(this).removeAttr("title");
+	var tooltip = $("<p></p>").text(msg).addClass("tooltip");
+	$(this).after(tooltip);
+});
 
 $("input").mouseenter(function(){
-	// if ($("fieldset div").prop("position")) {
 		$("fieldset div").css("position", "");
-	// }
 		t0 = new Date();
 		x0=event.pageX;
 		y0=event.pageY;
@@ -36,26 +34,12 @@ $("input").mouseenter(function(){
 
 
 
-	$("<button>").text("Show help").click(function() {
+	$("<button>").text("Show help").insertAfter("form").click(function() {
 		$("fieldset div").css("position","relative");
-		var check = $(".tooltip").length;
-		if (check > 0) {
-			$(".tooltip").animate({ "opacity": 1 },300).css({"top":" -5px", "left": "225px", "z-index": "999"});
+			$(".tooltip").css({"top":" -5px", "left": "225px", "z-index": "999"}).stop().animate({ "opacity": 1 }, 100);
 			setTimeout(function() {
 				$(".tooltip").stop().animate({ "opacity": 0 }, 1).css("z-index", "-1");
-					$("fieldset div").removeProp("position");
-			}, 1500);
-		} else {
-			$("[title]").after("<p>");
-			$("p").addClass("tooltip");
-			 [].forEach.call($("[title]"), function(item) {
-				var msg = $(item).attr("title");
-				$(item).siblings("p.tooltip").text(msg);
-				setTimeout(function() {
-					$(".tooltip").css({"top": -5, "left": 25, "z-index": "999"}).stop().animate({ "opacity": 0 },1);
-						$("fieldset div").removeProp("position");
-				}, 1500);
-			});
-		}
-	}).insertAfter("form");
+				$("fieldset div").css("position", "");
+			}, 1000);
+	});
 });
