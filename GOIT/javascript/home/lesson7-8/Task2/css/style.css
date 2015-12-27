@@ -7,11 +7,12 @@
 fieldset {
 	padding: 20px 40px;
 	margin-bottom: 15px;
-	border: 2px solid #aaa;
+	outline: 2px solid #aaa;
+	border: 2px solid yellow;
 }
 
 fieldset div {
-	position: relative;
+	/*position: relative;*/
 	margin-bottom: 15px;
 }
 
@@ -31,11 +32,32 @@ label {
 	top: -5px;
 	right: -25px;
 	line-height: 20px;
-	border: 1px solid #ccc;
+	border: 2px solid #777;
 	border-radius: 4px;
 	text-align: center;
 	font-size: 12px;
 	font-family: Arial, sans-serif;
-	background: rgba(0,0,0,.4);
-	color: #eee;
+	background: rgba(0,0,0,.5);
+	color: yellow;
+	 z-index:999;
+ 	left:-9999px;
 }
+
+/*.tooltip{
+ position:absolute;
+ z-index:999;
+ left:-9999px;
+ background-color:#dedede;
+ padding:5px;
+ border:1px solid #fff;
+ width:250px;
+}
+
+.tooltip p{
+ margin:0;
+ padding:0;
+ color:#fff;
+ background-color:#222;
+ padding:2px 7px;
+}*/
+

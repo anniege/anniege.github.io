@@ -1,42 +1,49 @@
 $(function() {
+	var t0, t1, x0, y0, x1, y1;
 
-	$("[title]").hover(function(event) {
-		event.preventDefault();
+	$("input").each(function(){
+		var msg = $(this).attr("title");
+		$(this).removeAttr("title");
+		var tooltip = $("<p></p>").text(msg).addClass("tooltip");
+		$(this).after(tooltip);
 	});
-	$("[title]").mouseenter(function(event){
-		event.preventDefault();
-		var x=event.clientX;
-		console.log(x);
-		var y=-event.clientY;
-		console.log(y);
-		var search =  $(this).siblings("p.tooltip").length;
-		if (search) {
-			$(this).siblings("p.tooltip").stop().animate({ "opacity": 1 },100);
-		} else {
-			var msg = $(this).attr("title");
-			var tooltip = $("<p></p>").text(msg).addClass("tooltip");
-			// tooltip.css("", "");
-			// .css({"top": "x", "right": "y"})
-			$(this).after(tooltip);
-			$(".tooltip").css("top", "611px")
-			$(".tooltip").css("left", 0)
-			console.log($(".tooltip").css("top"));
-			console.log($(".tooltip").css("left"));
-		}
-	}).mouseleave(function(event) {
-		event.preventDefault();
+
+$("input").mouseenter(function(){
+	// if ($("fieldset div").prop("position")) {
+		$("fieldset div").css("position", "");
+	// }
+		t0 = new Date();
+		x0=event.pageX;
+		y0=event.pageY;
+		$(".tooltip").stop().animate({ "opacity": 0 },0).css({"opacity": "0", "z-index": -1});
+	}).mousemove(function(){
+		t1 = new Date();
+		x1=event.pageX;
+		y1=event.pageY;
+		var delta = t1-t0;
+		var speed = Math.sqrt(Math.pow(x0 - x1, 2) + Math.pow(y0 - y1, 2)) / delta;
+		if (speed === 0) {
+			console.log(speed);
+			$(this).siblings(".tooltip").css({"top":y1, "left":x1, "z-index": "999"}).stop().animate({ "opacity": 1 },400); 
 			var self = this;
 			setTimeout(function() {
-				$(self).siblings("p.tooltip").stop().animate({ "opacity": 0 },100);
-			}, 500);
+				$(self).siblings(".tooltip").stop().animate({ "opacity": 0 }, 0).css({"opacity": "0", "z-index": -1});
+			}, 1000);
+		}
+	}).mouseleave(function() {
+		$(this).siblings(".tooltip").stop().animate({ "opacity": 0 }, 0).css({"opacity": "0", "z-index": -1});
 	});
 
+
+
 	$("<button>").text("Show help").click(function() {
+		$("fieldset div").css("position","relative");
 		var check = $(".tooltip").length;
 		if (check > 0) {
-			$(".tooltip").animate({ "opacity": 1 },300);
+			$(".tooltip").animate({ "opacity": 1 },300).css({"top":" -5px", "left": "225px", "z-index": "999"});
 			setTimeout(function() {
-				$(".tooltip").stop().animate({ "opacity": 0 },300);
+				$(".tooltip").stop().animate({ "opacity": 0 }, 1).css("z-index", "-1");
+					$("fieldset div").removeProp("position");
 			}, 1500);
 		} else {
 			$("[title]").after("<p>");
@@ -45,7 +52,8 @@ $(function() {
 				var msg = $(item).attr("title");
 				$(item).siblings("p.tooltip").text(msg);
 				setTimeout(function() {
-					$(".tooltip").stop().animate({ "opacity": 0 },100);
+					$(".tooltip").css({"top": -5, "left": 25, "z-index": "999"}).stop().animate({ "opacity": 0 },1);
+						$("fieldset div").removeProp("position");
 				}, 1500);
 			});
 		}
