@@ -39,7 +39,7 @@ $("input").mouseenter(function(){
 			$(".tooltip").css({"top":" -5px", "left": "225px", "z-index": "999"}).stop().animate({ "opacity": 1 }, 100);
 			var self = this;
 			setTimeout(function() {
-				$("self").stop().animate({ "opacity": 0 }, 1).css("z-index", "-1");
+				$(self).stop().animate({ "opacity": 0 }, 1).css("z-index", "-1");
 			}, 400);
 	});
 });
