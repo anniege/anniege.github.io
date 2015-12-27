@@ -21,7 +21,7 @@ $("input").mouseenter(function(){
 		y1=event.pageY;
 		var delta = t1-t0;
 		var speed = Math.sqrt(Math.pow(x0 - x1, 2) + Math.pow(y0 - y1, 2)) / delta;
-		if (speed === 0) {
+		if (speed < 0.1) {
 			console.log(speed);
 			$(this).siblings(".tooltip").css({"top":y1, "left":x1, "z-index": "999"}).stop().animate({ "opacity": 1 },400); 
 			var self = this;
