@@ -36,9 +36,9 @@ $("input").mouseenter(function(){
 
 	$("<button>").text("Show help").insertAfter("form").click(function() {
 		$("fieldset div").css("position","relative");
-			$(".tooltip").css({"top":" -5px", "left": "225px", "z-index": "999"}).stop().animate({ "opacity": 1 }, 400);
+			$(".tooltip").css({"top":" -5px", "left": "225px", "z-index": "999"}).stop().animate({ "opacity": 1 }, 800);
 			setTimeout(function() {
 				$(".tooltip").stop().animate({ "opacity": 0 }, 1).css("z-index", "-1");
-			}, 1000);
+			}, 2000);
 	});
 });
