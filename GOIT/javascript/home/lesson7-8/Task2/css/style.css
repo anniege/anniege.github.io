@@ -9,10 +9,10 @@ fieldset {
 	margin-bottom: 15px;
 	outline: 2px solid #aaa;
 	border: 2px solid yellow;
+	background: #999;
 }
 
 fieldset div {
-	/*position: relative;*/
 	margin-bottom: 15px;
 }
 
@@ -22,6 +22,8 @@ label, input {
 
 label {
 	width: 100px;
+	font-family: Arial, sans-serif;
+	color: #eee;
 }
 
 .tooltip {
@@ -43,21 +45,22 @@ label {
  	left:-9999px;
 }
 
-/*.tooltip{
- position:absolute;
- z-index:999;
- left:-9999px;
- background-color:#dedede;
- padding:5px;
- border:1px solid #fff;
- width:250px;
+button {
+	width: 100px;
+	height: 30px;
+	font-family: Arial, sans-serif;
+	font-weight: bold;
+	text-transform: uppercase;
+	background: #888;
+	border: 1px solid #eee;
+	border-radius: 3px;
+	color: #eee;
+	outline: none;
+	-webkit-box-shadow: 0px 0px 5px rgba(0,0,0,.5);
+	box-shadow: 0px 0px 5px rgba(0,0,0,.5);
 }
 
-.tooltip p{
- margin:0;
- padding:0;
- color:#fff;
- background-color:#222;
- padding:2px 7px;
-}*/
-
+button:hover {
+	background: #555;
+	color: yellow;
+}

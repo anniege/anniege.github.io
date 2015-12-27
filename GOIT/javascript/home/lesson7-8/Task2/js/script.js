@@ -13,7 +13,8 @@ $("input").mouseenter(function(){
 		t0 = new Date();
 		x0=event.pageX;
 		y0=event.pageY;
-		$(".tooltip").stop().animate({ "opacity": 0 },0).css({"opacity": "0", "z-index": -1});
+		$(".tooltip").stop().animate({ "opacity": 0 },0).css({"z-index": -1});
+		$(this).siblings(".tooltip").css({"top":y0, "left":x0, "z-index": "999"}).stop().animate({ "opacity": 1 },400); 
 	}).mousemove(function(){
 		t1 = new Date();
 		x1=event.pageX;
@@ -25,20 +26,23 @@ $("input").mouseenter(function(){
 			$(this).siblings(".tooltip").css({"top":y1, "left":x1, "z-index": "999"}).stop().animate({ "opacity": 1 },400); 
 			var self = this;
 			setTimeout(function() {
-				$(self).siblings(".tooltip").stop().animate({ "opacity": 0 }, 0).css({"opacity": "0", "z-index": -1});
+				$(self).siblings(".tooltip").stop().animate({ "opacity": 0 }, 0).css({"z-index": -1});
 			}, 1000);
 		}
 	}).mouseleave(function() {
-		$(this).siblings(".tooltip").stop().animate({ "opacity": 0 }, 0).css({"opacity": "0", "z-index": -1});
+		$(this).siblings(".tooltip").stop().animate({ "opacity": 0 }, 0).css({"z-index": -1});
 	});
 
 
 
 	$("<button>").text("Show help").insertAfter("form").click(function() {
 		$("fieldset div").css("position","relative");
-			$(".tooltip").css({"top":" -5px", "left": "225px", "z-index": "999"}).stop().animate({ "opacity": 1 }, 800);
+		$(".tooltip").each(function(){
+			$(this).stop().css({"top":" -5px", "left": "225px", "z-index": "999"}).animate({ "opacity": 1 }, 400);
+			var self = this;
 			setTimeout(function() {
-				$(".tooltip").stop().animate({ "opacity": 0 }, 1).css("z-index", "-1");
-			}, 2000);
+				$(self).stop().animate({ "opacity": 0 }, 1).css("z-index", "-1");
+			}, 4000);
+		});
 	});
 });
