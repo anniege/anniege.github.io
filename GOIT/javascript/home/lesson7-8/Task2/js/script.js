@@ -40,6 +40,6 @@ $("input").mouseenter(function(){
 			var self = this;
 			setTimeout(function() {
 				$("self").stop().animate({ "opacity": 0 }, 1).css("z-index", "-1");
-			}, 1000);
+			}, 400);
 	});
 });
