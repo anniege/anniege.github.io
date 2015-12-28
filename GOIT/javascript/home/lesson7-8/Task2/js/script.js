@@ -15,7 +15,7 @@ $("input").mouseenter(function(){
 		x0=event.pageX;
 		y0=event.pageY;
 		$(".tooltip").stop().animate({ "opacity": 0 }, 0).css({"z-index": -1});
-		$(this).siblings(".tooltip").css({"top":y0, "left":x0, "z-index": "999"}).animate({ "opacity": 1 },100); 
+		$(this).siblings(".tooltip").css({"top":y0, "left":x0, "z-index": "999"}).stop().animate({ "opacity": 1 },100); 
 
 	}).mousemove(function(){
 		t1 = new Date();
@@ -24,11 +24,11 @@ $("input").mouseenter(function(){
 		var delta = t1-t0;
 		var speed = Math.sqrt(Math.pow(x0 - x1, 2) + Math.pow(y0 - y1, 2)) / delta;
 		if (speed < 0.1) {
-			$(this).siblings(".tooltip").css({"top":y1, "left":x1, "z-index": "999"}).animate({ "opacity": 1 }, 400); 
+			$(this).siblings(".tooltip").css({"top":y1, "left":x1, "z-index": "999"}).stop().animate({ "opacity": 1 }, 100); 
 			var self = this;
 			setTimeout(function() {
-				$(self).siblings(".tooltip").stop().animate({ "opacity": 0 }, 200).stop().css({"z-index": -1});
-			}, 700);
+				$(self).siblings(".tooltip").stop().animate({ "opacity": 0 }, 0).css({"z-index": -1});
+			}, 800);
 		}
 
 	}).mouseleave(function() {
