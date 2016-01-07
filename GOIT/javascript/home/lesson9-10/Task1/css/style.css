@@ -3,6 +3,14 @@ body {
 	background: rgba(0,0,0,.9);
 }
 
+.clearfix:after {
+	content: ".";
+	display: block;
+	height: 0;
+	clear: both;
+	visibility: hidden;
+}
+
 .jcarousel-wrapper {
 	margin: 40px auto;
 	position: relative;
@@ -99,4 +107,103 @@ body {
 
 .jcarousel-pagination .active:after {
 	background-color: #fff;
+}
+
+.select-container{
+	position: relative;
+	width: 330px;
+}
+
+.customSelect {
+	width: 330px;
+	height: 50px;
+	border-radius: 3px;
+	background-color: #fff;
+	line-height: 50px;
+	text-indent: 10px;
+	font-family: Arial, sens-serif;
+	font-size: 14px;
+	font-weight: bold;
+	text-transform: capitalize;
+	color: #888;
+}
+
+.select-container:after {
+	content: "<>";
+	position: absolute;
+	width: 50px;
+	height: 50px;
+	line-height: 50px;
+	font-size: 27px;
+	font-family: monospace;
+	text-align: center;
+	top: -1px;
+	right: 0; 
+	border-bottom: 2px solid #bbb;
+	-webkit-transform:rotate(90deg);
+    -moz-transform:rotate(90deg);
+    -ms-transform:rotate(90deg);
+    transform:rotate(90deg); 
+	color: #bbb;
+}
+
+.control-wrapper {
+	width: 812px;
+	padding: 40px 40px;
+	margin: 100px auto;
+	border: 1px solid #ddd;
+	background-color: #222;
+	-webkit-box-shadow: inset 0px 0px 25px 0px rgba(50, 50, 50, 0.95), 0px 0px 5px 0px rgba(252, 252, 252, 0.75);
+	-moz-box-shadow:    inset 0px 0px 25px 0px rgba(50, 50, 50, 0.95), 0px 0px 5px 0px rgba(252, 252, 252, 0.75);
+	box-shadow:         inset 0px 0px 25px 0px rgba(50, 50, 50, 0.95), 0px 0px 5px 0px rgba(252, 252, 252, 0.75);
+}
+
+.select-container, .checkbox-container, .customCheckbox-container {
+	float: left;
+}
+
+.checkbox-container {
+	width: 200px;
+	margin-left: 140px;
+	color: #fff;
+}
+
+.checkbox-container label {
+	display: block;
+	width: 100px;
+	margin-bottom: 15px;
+	font-family: Arial, sans-serif;
+	font-size: 18px;
+	color: #fff;
+}
+
+.customCheckbox-container label {
+	display: block;
+	width: 100px;
+	margin-bottom: 10px;
+	font-family: Arial, sens-serif;
+	font-size: 18px;
+	color: #fff;
+}
+
+.myCustomCheckbox {
+	position: absolute;
+	left: -9999px;
+}
+
+.customCheckbox-container label:before {
+	content: "";
+	position: relative;
+	display: inline-block;
+	width: 18px;
+	height: 18px;
+	top: 3px;
+	margin-right: 10px;
+	/*vertical-align: middle;*/
+	background: url('../img/checkbox.png') 0 0 no-repeat;
+	background-size: cover;
+}
+
+input.myCustomCheckbox:checked + label:before {
+	background-position:  -19px 0;	
 }

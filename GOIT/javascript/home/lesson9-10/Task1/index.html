@@ -5,7 +5,9 @@
 	<title>Lesson9-10</title>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/jquery.formstyler.css">
 	<link rel="stylesheet" href="css/style.css">
+	<!-- <link rel="stylesheet" href="css/cusel.css"> -->
 </head>
 <body>
 <div class="jcarousel-wrapper">
@@ -62,7 +64,38 @@
 		<a href="#8"></a>
 	</div>
 </div>
+<div class="control-wrapper clearfix">
+	<div class="select-container">
+	<select class="mySelectBoxClass">
+		<option value="0">Choose photo...</option>
+		<option value="1">bird</option>
+		<option value="2">mountain</option>
+		<option value="3">lake</option>
+		<option value="4">surfing</option>
+		<option value="5">night ocean</option>
+		<option value="6">owl</option>
+		<option value="7">ice ocean</option>
+		<option value="8">north pole</option>
+	</select>
+	</div>
+	<div class="checkbox-container">
+		<label for="myLabel1"><input type="checkbox" class="myCheckbox" name="label1" id="myLabel1"> label1</label>
+		<label for="myLabel2"><input type="checkbox" class="myCheckbox" name="label2" id="myLabel2"> label2</label>
+		<label for="myLabel3"><input type="checkbox" class="myCheckbox" name="label3" id="myLabel3"> label3</label>
+	</div>
+	<div class="customCheckbox-container">
+		<input type="checkbox" class="myCustomCheckbox" name="customLabel1" id="myCustomLabel1">
+		<label for="myCustomLabel1">label1</label>
+		<input type="checkbox" class="myCustomCheckbox" name="customLabel2" id="myCustomLabel2">
+		<label for="myCustomLabel2">label2</label>
+		<input type="checkbox" class="myCustomCheckbox" name="customLabel3" id="myCustomLabel3">
+		<label for="myCustomLabel3">label3</label>
+	</div>
+</div>
 	<script src="js/jquery.jcarousel.js"></script>
+	<script src='js/jquery.customSelect.min.js'></script> 
+	<script src='js/jquery.formstyler.min.js'></script> 
+	<!--<script src='js/cusel.min.js'></script>-->
 	<script src="js/script.js"></script>
 </body>
 </html>
