@@ -33,24 +33,12 @@ $(function(){
 		})
 		.jcarouselPagination();
 
-	 // $('.jcarousel').jcarouselAutoscroll({
-  //     interval: 3000,
-  //     target: '+=1',
-  //     autostart: true
-  // 	});
-
-
 	$('.mySelectBoxClass').customSelect();
 
 	$('.mySelectBoxClass').change(function(){
 		var index = $(this).find('option:selected').val();
 		if (+index) $('.jcarousel').jcarousel('scroll', index-1);
 	});
-
-// var params = {
-// 		changedEl: "select"
-// 	}
-// 	cuSel(params);
 
  $('.myCheckbox').styler();
 

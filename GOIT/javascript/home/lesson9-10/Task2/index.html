@@ -4,45 +4,56 @@
 	<meta charset="UTF-8">
 	<title>Lesson9-10</title>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<link href='https://fonts.googleapis.com/css?family=Ubuntu:400,300' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" href="css/reset.css">
 	<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 <div class="wrapper">
+	<div class="title">
+		<h1>Slide Down Menu</h1>
+		<h2>This is a simple slide down nav menu using jQuery and CSS</h2>
+	</div>
 	<div class="menu_container">
-		<ul class="menu">
-			<li class="menu_item">Nav 1</li>
-			<li class="menu_item">Nav 2</li>
-			<li class="menu_item">Nav 3
-				<ul class="menu inner">
-					<li class="menu_item inner-item">Nav 3.1</li>
-					<li class="menu_item inner-item">Nav 3.2</li>
-					<li class="menu_item inner-item">Nav 3.3</li>
-					<li class="menu_item inner-item">Nav 3.4
-						<ul class="menu inner">
-							<li class="menu_item inner-item">Nav 3.4.1</li>
-							<li class="menu_item inner-item">Nav 3.4.2
-								<ul class="menu inner">
-									<li class="menu_item inner-item">Nav 3.4.2.1</li>
-									<li class="menu_item inner-item">Nav 3.4.2.2</li>
-									<li class="menu_item inner-item">Nav 3.4.2.3</li>
-									<li class="menu_item inner-item">Nav 3.4.2.4</li>
-									<li class="menu_item inner-item">Nav 3.4.2.5</li>
+		<ul class="menu clearfix">
+			<li class="menu_item"><a href="#">Nav 1</a></li>
+			<li class="menu_item"><a href="#">Nav 2</a></li>
+			<li class="menu_item submenu"><a href="#">Nav 3</a>
+				<ul class="inner">
+					<li class="inner-item"><a href="#">Nav 3.1</a></li>
+					<li class="inner-item"><a href="#">Nav 3.2</a></li>
+					<li class="inner-item"><a href="#">Nav 3.3</a></li>
+					<li class="inner-item submenu"><a href="#">Nav 3.4</a>
+						<ul class="inner">
+							<li class="menu_item inner-item"><a href="#">Nav 3.4.1</a></li>
+							<li class="menu_item inner-item submenu"><a href="#">Nav 3.4.2</a>
+								<ul class="inner">
+									<li class="inner-item"><a href="#">Nav 3.4.2.1</a></li>
+									<li class="inner-item"><a href="#">Nav 3.4.2.2</a></li>
+									<li class="inner-item"><a href="#">Nav 3.4.2.3</a></li>
+									<li class="inner-item"><a href="#">Nav 3.4.2.4</a></li>
+									<li class="inner-item"><a href="#">Nav 3.4.2.5</a></li>
 								</ul>
 							</li>
-							<li class="menu_item inner-item">Nav 3.4.3</li>
-							<li class="menu_item inner-item">Nav 3.4.4</li>
-							<li class="menu_item inner-item">Nav 3.4.5</li>
+							<li class="inner-item"><a href="#">Nav 3.4.3</a></li>
+							<li class="inner-item"><a href="#">Nav 3.4.4</a></li>
+							<li class="inner-item"><a href="#">Nav 3.4.5</a></li>
 						</ul>
 					</li>
-					<li class="menu_item inner-item">Nav 3.5</li>
+					<li class="inner-item"><a href="#">Nav 3.5</a></li>
 				</ul>
 			</li>
-			<li class="menu_item">Nav 4</li>
-			<li class="menu_item">Nav 5</li>
+			<li class="menu_item"><a href="#">Nav 4</a></li>
+			<li class="menu_item"><a href="#">Nav 5</a></li>
 		</ul>
 	</div>
+	<div class="main">
+		<p class="text">
+			Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Typi non habent claritatem insitam;
+		</p>
+	</div>
 </div>
-	
+	<script src="js/jquery.color-2.1.2.min.js"></script>
+	<script src="js/script.js"></script>
 </body>
 </html>
