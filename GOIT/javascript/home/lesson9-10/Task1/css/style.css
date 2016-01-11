@@ -11,8 +11,19 @@ body {
 	visibility: hidden;
 }
 
+.title {
+	padding: 20px 0 0 30px;
+	text-align: left;
+	font-size: 20px;
+	text-transform: uppercase;
+	font-family: monospace;
+	font-weight: 900;
+	letter-spacing: 3px;
+	color: rgba(255,255,255,.3);
+}
+
 .jcarousel-wrapper {
-	margin: 40px auto;
+	margin: 20px auto;
 	position: relative;
 	width: 880px;
 	height: 530px;
@@ -164,13 +175,13 @@ body {
 
 .checkbox-container {
 	width: 200px;
-	margin-left: 140px;
+	margin-left: 100px;
 	color: #fff;
 }
 
 .checkbox-container label {
 	display: block;
-	width: 100px;
+	width: 150px;
 	margin-bottom: 15px;
 	font-family: Arial, sans-serif;
 	font-size: 18px;
