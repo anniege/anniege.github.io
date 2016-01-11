@@ -42,6 +42,7 @@
 }
 
 .menu_container li a {
+	display: block;
 	color: #fff;
 	text-decoration: none;
 }
@@ -67,6 +68,10 @@
 	top: 50px;
 	left: 0;
 	display: none;
+}
+
+.menu .visible {
+	display: block;
 }
 
 .inner-item {
