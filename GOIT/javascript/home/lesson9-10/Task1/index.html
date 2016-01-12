@@ -7,10 +7,13 @@
 	<link rel="stylesheet" href="css/reset.css">
 	<link rel="stylesheet" href="css/jquery.formstyler.css">
 	<link rel="stylesheet" href="css/style.css">
-	<!-- <link rel="stylesheet" href="css/cusel.css"> -->
+	<link href='https://fonts.googleapis.com/css?family=Roboto+Mono' rel='stylesheet' type='text/css'>
 </head>
 <body>
-<h1 class="title">Photo contest</h1>
+<header class="header">
+	<h1 class="title">Photo contest</h1>
+	<button class="animate">animate off</button>
+</header>
 <div class="jcarousel-wrapper">
 	<div class="jcarousel">
 		<ul>
@@ -65,8 +68,8 @@
 		<a href="#8"></a>
 	</div>
 </div>
-<div class="control-wrapper clearfix">
-	<h3>Select photo to view again:</h3>
+<div class="control-wrapper">
+	<h3 class="small-title">Select photo to view again:</h3>
 	<div class="select-container">
 	<select class="mySelectBoxClass">
 		<option value="0">Choose photo...</option>
@@ -80,30 +83,48 @@
 		<option value="8">north pole</option>
 	</select>
 	</div>
-	<div class="checkbox-container">
-		<h3>Choose the best photo:</h3>
-		<label for="myLabel1"><input type="checkbox" class="myCheckbox" name="label1" id="myLabel1"> bird</label>
-		<label for="myLabel2"><input type="checkbox" class="myCheckbox" name="label2" id="myLabel2"> mountain</label>
-		<label for="myLabel3"><input type="checkbox" class="myCheckbox" name="label3" id="myLabel3"> lake</label>
-		<label for="myLabel4"><input type="checkbox" class="myCheckbox" name="label4" id="myLabel4"> surfing</label>
-		<label for="myLabel5"><input type="checkbox" class="myCheckbox" name="label5" id="myLabel5"> night ocean</label>
-		<label for="myLabel6"><input type="checkbox" class="myCheckbox" name="label6" id="myLabel6"> owl</label>
-		<label for="myLabel7"><input type="checkbox" class="myCheckbox" name="label7" id="myLabel7"> ice ocean</label>
-		<label for="myLabel8"><input type="checkbox" class="myCheckbox" name="label8" id="myLabel8"> north pole</label>
-	</div>
-	<div class="customCheckbox-container">
-		<input type="checkbox" class="myCustomCheckbox" name="customLabel1" id="myCustomLabel1">
-		<label for="myCustomLabel1">label1</label>
-		<input type="checkbox" class="myCustomCheckbox" name="customLabel2" id="myCustomLabel2">
-		<label for="myCustomLabel2">label2</label>
-		<input type="checkbox" class="myCustomCheckbox" name="customLabel3" id="myCustomLabel3">
-		<label for="myCustomLabel3">label3</label>
-	</div>
+	<form action="#" class="clearfix">
+		<div class="checkbox-container">
+			<h3 class="small-title">Choose the best photo:</h3>
+			<label for="myLabel1"><input type="checkbox" class="myCheckbox" name="label1" id="myLabel1"> bird</label>
+			<label for="myLabel2"><input type="checkbox" class="myCheckbox" name="label2" id="myLabel2"> mountain</label>
+			<label for="myLabel3"><input type="checkbox" class="myCheckbox" name="label3" id="myLabel3"> lake</label>
+			<label for="myLabel4"><input type="checkbox" class="myCheckbox" name="label4" id="myLabel4"> surfing</label>
+			<label for="myLabel5"><input type="checkbox" class="myCheckbox" name="label5" id="myLabel5"> night ocean</label>
+			<label for="myLabel6"><input type="checkbox" class="myCheckbox" name="label6" id="myLabel6"> owl</label>
+			<label for="myLabel7"><input type="checkbox" class="myCheckbox" name="label7" id="myLabel7"> ice ocean</label>
+			<label for="myLabel8"><input type="checkbox" class="myCheckbox" name="label8" id="myLabel8"> north pole</label>
+		</div>
+		<div class="customCheckbox-container">
+		<h3 class="small-title">Choose the worst photo:</h3>
+			<input type="checkbox" class="myCustomCheckbox" name="customLabel1" id="myCustomLabel1">
+			<label for="myCustomLabel1">bird</label>
+			<input type="checkbox" class="myCustomCheckbox" name="customLabel2" id="myCustomLabel2">
+			<label for="myCustomLabel2">mountain</label>
+			<input type="checkbox" class="myCustomCheckbox" name="customLabel3" id="myCustomLabel3">
+			<label for="myCustomLabel3">lake</label>
+			<input type="checkbox" class="myCustomCheckbox" name="customLabel4" id="myCustomLabel4">
+			<label for="myCustomLabel4">surfing</label>
+			<input type="checkbox" class="myCustomCheckbox" name="customLabel5" id="myCustomLabel5">
+			<label for="myCustomLabel5">night ocean</label>
+			<input type="checkbox" class="myCustomCheckbox" name="customLabel6" id="myCustomLabel6">
+			<label for="myCustomLabel6">owl</label>
+			<input type="checkbox" class="myCustomCheckbox" name="customLabel7" id="myCustomLabel7">
+			<label for="myCustomLabel7">ice ocean</label>
+			<input type="checkbox" class="myCustomCheckbox" name="customLabel8" id="myCustomLabel8">
+			<label for="myCustomLabel8">north pole</label>
+		</div>
+		<input type="submit" class="submitButton" value="Send">
+	</form>
 </div>
+<footer class="footer">
+	<p>
+		2015 &copy; Copyreight.
+	</p>
+</footer>
 	<script src="js/jquery.jcarousel.js"></script>
 	<script src='js/jquery.customSelect.min.js'></script> 
 	<script src='js/jquery.formstyler.min.js'></script> 
-	<!--<script src='js/cusel.min.js'></script>-->
 	<script src="js/script.js"></script>
 </body>
 </html>

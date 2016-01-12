@@ -1,4 +1,5 @@
 $(function(){
+var $animateflag = false;
 
 	$('.jcarousel').jcarousel();
 
@@ -32,6 +33,29 @@ $(function(){
 			$(this).removeClass('active');
 		})
 		.jcarouselPagination();
+
+	$('.jcarousel').jcarouselAutoscroll({
+					interval: 2000,
+					target: '+=1',
+					autostart: false
+	});
+
+	$('.animate').click(function() {
+		if (!$animateflag) {
+			$('.jcarousel').jcarousel({
+				wrap: 'both'
+			}).jcarouselAutoscroll('start');
+			$(this).text('animate on');
+			$animateflag = true;
+		} else {
+			$('.jcarousel').jcarousel({
+				wrap: 'null'
+			}).jcarouselAutoscroll('stop');
+			$(this).text('animate off');
+			$animateflag = false;
+			$('.jcarousel-control').jcarouselControl('reload');
+		}
+	});
 
 	$('.mySelectBoxClass').customSelect();
 
