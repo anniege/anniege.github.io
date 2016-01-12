@@ -177,25 +177,6 @@ body {
 	color: #888;
 }
 
-.select-container:after {
-	content: "<>";
-	position: absolute;
-	width: 40px;
-	height: 40px;
-	line-height: 40px;
-	font-size: 21px;
-	font-family: monospace;
-	text-align: center;
-	top: -1px;
-	right: 1px; 
-	border-bottom: 2px solid #bbb;
-	-webkit-transform:rotate(90deg);
-    -moz-transform:rotate(90deg);
-    -ms-transform:rotate(90deg);
-    transform:rotate(90deg); 
-	color: #bbb;
-}
-
 .control-wrapper {
 	width: 812px;
 	padding: 40px 40px;

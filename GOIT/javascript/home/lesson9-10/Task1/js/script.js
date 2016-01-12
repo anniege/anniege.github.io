@@ -55,9 +55,9 @@ var $animateflag = false;
 		}
 	});
 
-	$('.mySelectBoxClass').customSelect();
+	$('select').selectric();
 
-	$('.mySelectBoxClass').change(function(){
+	$('select').change(function(){
 		var index = $(this).find('option:selected').val();
 		if (+index) $('.jcarousel').jcarousel('scroll', index-1);
 	});
