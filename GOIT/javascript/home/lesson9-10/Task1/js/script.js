@@ -1,7 +1,9 @@
 $(function(){
 var $animateflag = false;
 
-	$('.jcarousel').jcarousel();
+	$('.jcarousel').jcarousel({
+				wrap: 'both'
+		});
 
 		$('.jcarousel-control-prev')
 		.on('jcarouselcontrol:active', function() {
@@ -42,15 +44,11 @@ var $animateflag = false;
 
 	$('.animate').click(function() {
 		if (!$animateflag) {
-			$('.jcarousel').jcarousel({
-				wrap: 'both'
-			}).jcarouselAutoscroll('start');
+			$('.jcarousel').jcarouselAutoscroll('start');
 			$(this).text('animate on');
 			$animateflag = true;
 		} else {
-			$('.jcarousel').jcarousel({
-				wrap: 'null'
-			}).jcarouselAutoscroll('stop');
+			$('.jcarousel').jcarouselAutoscroll('stop');
 			$(this).text('animate off');
 			$animateflag = false;
 			$('.jcarousel-control').jcarouselControl('reload');
@@ -64,6 +62,5 @@ var $animateflag = false;
 		if (+index) $('.jcarousel').jcarousel('scroll', index-1);
 	});
 
- $('.myCheckbox').styler();
-
+	$('.myCheckbox').styler();
 });
