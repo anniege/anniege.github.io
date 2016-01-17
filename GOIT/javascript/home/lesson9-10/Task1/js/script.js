@@ -1,6 +1,9 @@
 $(function(){
+var $animateflag = false;
 
-	$('.jcarousel').jcarousel();
+	$('.jcarousel').jcarousel({
+				wrap: 'both'
+		});
 
 		$('.jcarousel-control-prev')
 		.on('jcarouselcontrol:active', function() {
@@ -33,13 +36,31 @@ $(function(){
 		})
 		.jcarouselPagination();
 
-	$('.mySelectBoxClass').customSelect();
+	$('.jcarousel').jcarouselAutoscroll({
+					interval: 2000,
+					target: '+=1',
+					autostart: false
+	});
 
-	$('.mySelectBoxClass').change(function(){
+	$('.animate').click(function() {
+		if (!$animateflag) {
+			$('.jcarousel').jcarouselAutoscroll('start');
+			$(this).text('animate on');
+			$animateflag = true;
+		} else {
+			$('.jcarousel').jcarouselAutoscroll('stop');
+			$(this).text('animate off');
+			$animateflag = false;
+			$('.jcarousel-control').jcarouselControl('reload');
+		}
+	});
+
+	$('select').selectric();
+
+	$('select').change(function(){
 		var index = $(this).find('option:selected').val();
 		if (+index) $('.jcarousel').jcarousel('scroll', index-1);
 	});
 
- $('.myCheckbox').styler();
-
+	$('.myCheckbox').styler();
 });
