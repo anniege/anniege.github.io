@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Lesson11-12</title>
+	<link rel="stylesheet" href="css/style.css">
+	<script src="js/template.js"></script>
+	<script src="js/script.js"></script>
+</head>
+<body>
+<div id="results">
+</div>
+	<script type="text/html" id="profile">
+	<div class="wrapper">
+		<div class="row">
+			<h1 class="name"><%=name%></h1>
+			<img src="<%=photo_url%>" alt="my profile photo" id="photo">
+			<p><%=job_title%></p>
+		</div>
+		<div class="row">
+			<p><%=motivation%></p>
+			<ul>
+				<% for ( var i = 0; i < motive_list.length; i++ ) { %>
+				    <li><%=motive_list[i]%></li>
+				<% }; %>
+			</ul>
+		</div>
+		<div class="row">
+			<div class="row_item">
+				<p><%=phone_title%></p>
+				<p><%=phone_number%></p>
+			</div>
+			<div class="row_item">
+				<p><%=facebook_title%></p>
+				<a href="<%=facebook_address%>"><%=facebook_url%></a>
+			</div>
+		</div>
+		<div class="row">
+			<p><%=feedback_title%></p>
+			<a href="<%=feedback_mail%>"><%=feedback%></a>
+		</div>
+	</div>
+	</script>
+</body>
+</html>

@@ -1,0 +1,63 @@
+* {
+	padding: 0;
+	margin: 0;
+}
+
+body {
+	background: #ddd;
+}
+
+.wrapper {
+	width: 513px;
+	margin: 3px auto;
+	padding: 20px 0 30px;
+	background: #fff;
+	-webkit-box-shadow: 1px 1px 6px 0px rgba(196,196,196,1);
+	-moz-box-shadow: 1px 1px 6px 0px rgba(196,196,196,1);
+	-o-box-shadow: 1px 1px 6px 0px rgba(196,196,196,1);
+	box-shadow: 1px 1px 6px 0px rgba(196,196,196,1);
+}
+
+.row {
+	width: 81%;
+	margin: 0 auto;
+	padding: 30px 0 20px;
+}
+
+.row:not(:last-child) {
+	border-bottom: 1px solid #ccc;
+}
+
+.name {
+	text-align: center;
+	padding-bottom: 15px;
+	font: bold 19px/1.1 TimesNewRoman, 'Times New Roman', Times, Baskerville, Georgia, serif;
+}
+
+#photo {
+	display: block;
+	height: 140px;
+	margin: 5px auto;
+}
+
+a {
+	display: block;
+}
+
+p, a {
+	padding-left: 10px;
+}
+
+ul {
+	list-style-position: inside;
+	padding: 30px 0 0 15px; 
+	line-height: 23px;
+}
+
+p, a, ul li {
+	font: normal 17px/1.2 TimesNewRoman, 'Times New Roman', Times, Baskerville, Georgia, serif;
+}
+
+.row .row_item:first-child {
+	margin-bottom: 30px;
+}
