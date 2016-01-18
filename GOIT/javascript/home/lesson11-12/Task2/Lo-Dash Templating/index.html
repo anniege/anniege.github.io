@@ -4,7 +4,7 @@
 	<meta charset="UTF-8">
 	<title>Lesson11-12</title>
 	<link rel="stylesheet" href="css/style.css">
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/3.2.0/lodash.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.0.0/lodash.js"></script>
 	<script src="js/script.js"></script>
 </head>
 <body>
@@ -20,9 +20,9 @@
 		<div class="row">
 			<p><%=motivation%></p>
 			<ul>
-				<% for ( var i = 0; i < motive_list.length; i++ ) { %>
-				    <li><%=motive_list[i]%></li>
-				<% }; %>
+				<% motive_list.forEach(function(item) { %>
+				    <li><%=item%></li>
+				<% }); %>
 			</ul>
 		</div>
 		<div class="row">

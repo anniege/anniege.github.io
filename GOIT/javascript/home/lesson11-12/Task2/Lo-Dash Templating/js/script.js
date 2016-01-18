@@ -21,8 +21,8 @@
 			feedback: "mailto:anniegemail@gmail.com"
 		};
 		var target = document.getElementById("results");
-		var profile = document.getElementById("profile").innerHTML;
-		target.innerHTML =  _.template(profile, data);
+		var profile = _.template(document.getElementById("profile").innerHTML);
+		target.innerHTML = profile(data);
 	}
 
 })();
