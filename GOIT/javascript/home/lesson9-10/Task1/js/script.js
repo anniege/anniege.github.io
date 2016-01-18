@@ -3,6 +3,10 @@ var $animateflag = false;
 
 	$('.jcarousel').jcarousel({
 				wrap: 'both'
+		}).jcarouselAutoscroll({
+					interval: 2000,
+					target: '+=1',
+					autostart: false
 		});
 
 		$('.jcarousel-control-prev')
@@ -35,12 +39,6 @@ var $animateflag = false;
 			$(this).removeClass('active');
 		})
 		.jcarouselPagination();
-
-	$('.jcarousel').jcarouselAutoscroll({
-					interval: 2000,
-					target: '+=1',
-					autostart: false
-	});
 
 	$('.animate').click(function() {
 		if (!$animateflag) {
