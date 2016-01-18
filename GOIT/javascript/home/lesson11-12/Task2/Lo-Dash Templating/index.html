@@ -13,30 +13,30 @@
 	<script type="text/template" id="profile">
 	<div class="wrapper">
 		<div class="row">
-			<h1 class="name"><%=name%></h1>
+			<h1 class="name"><%-name%></h1>
 			<img src="<%=photo_url%>" alt="my profile photo" id="photo">
-			<p><%=job_title%></p>
+			<p><%-job_title%></p>
 		</div>
 		<div class="row">
-			<p><%=motivation%></p>
+			<p><%-motivation%></p>
 			<ul>
 				<% motive_list.forEach(function(item) { %>
-				    <li><%=item%></li>
+				    <li><%-item%></li>
 				<% }); %>
 			</ul>
 		</div>
 		<div class="row">
 			<div class="row_item">
-				<p><%=phone_title%></p>
-				<p><%=phone_number%></p>
+				<p><%-phone_title%></p>
+				<p><%-phone_number%></p>
 			</div>
 			<div class="row_item">
-				<p><%=facebook_title%></p>
+				<p><%-facebook_title%></p>
 				<a href="<%=facebook_address%>"><%=facebook_url%></a>
 			</div>
 		</div>
 		<div class="row">
-			<p><%=feedback_title%></p>
+			<p><%-feedback_title%></p>
 			<a href="<%=feedback_mail%>"><%=feedback%></a>
 		</div>
 	</div>
