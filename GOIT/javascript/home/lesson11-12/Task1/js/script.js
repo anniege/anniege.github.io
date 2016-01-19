@@ -7,9 +7,7 @@ $('.acarousel-list').imageloader(
 		  $(elm).fadeIn();
 		}
 	  }
-	);
-
-$('.acarousel-list').acarousel({
+	).acarousel({
 	offsetX: 0.5,
 	count: 3,
 	scrollWrap: true,
