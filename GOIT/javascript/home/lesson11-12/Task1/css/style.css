@@ -28,19 +28,11 @@
 	text-align: center;
 }
  
-.acarousel-element img {
-/*	width: 280px;
-	height: 200px;
-	background-size: cover;*/
-	/*opacity: 0;*/
-}
-
-
 .acarousel-element .acarousel-img {
 	width: 280px;
 	height: 200px;
 	background-size: cover;
-	/*opacity: 0;*/
+	opacity: 0;
 }
 
 .acarousel-element p {
