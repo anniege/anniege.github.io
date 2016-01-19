@@ -30,12 +30,11 @@
 
 		$elems.find('img').each(function(){
 			var realsrc = $(this).attr('data-src');
-			$(this).attr('src', realsrc);
-			$(this).on('load', function(){
-				$(this).animate({opacity: 1}, 500);
+			$(this).one('load', function(){
+				$(this).addClass('acarousel-img').animate({opacity: 1}, 500);
 			});
+			$(this).attr('src', realsrc);
 		});
-
 
 		//scroll with click on LEFT and RIGHT controls
 		var $leftControl = $('.acarousel-arrow-left'),
