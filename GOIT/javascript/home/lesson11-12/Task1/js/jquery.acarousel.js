@@ -25,10 +25,19 @@
 		var $widthContainer = options.count * $widthElem - 25;
 		$('.acarousel-container').css("width", $widthContainer);
 		$('.acarousel-hider').css("width", $widthContainer);
+		
+		var $elems = this;
+
+		$elems.find('img').each(function(){
+			var realsrc = $(this).attr('data-src');
+			$(this).attr('src', realsrc);
+			$(this).on('load', function(){
+				$(this).animate({opacity: 1}, 500);
+			});
+		});
 
 
 		//scroll with click on LEFT and RIGHT controls
-		var $elems = this;
 		var $leftControl = $('.acarousel-arrow-left'),
 			$rightControl = $('.acarousel-arrow-right');
 
