@@ -27,7 +27,6 @@
 		$('.acarousel-hider').css("width", $widthContainer);
 
 
-
 		//scroll with click on LEFT and RIGHT controls
 		var $elems = this;
 		var $leftControl = $('.acarousel-arrow-left'),
@@ -103,7 +102,7 @@
 		}
 
 
-		//show large preview of the photo with click on it
+		//show large preview of the photo within click on it
 		var $page_y = $(window).height(),
 			$page_x = $(window).width();
 			
