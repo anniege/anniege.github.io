@@ -1,6 +1,13 @@
 $(function() {
 
-$('img').imageloader();
+$('.acarousel-list').imageloader(
+	  {
+		selector: '.acarousel-element img',
+		callback: function (elm) {
+		  $(elm).fadeIn();
+		}
+	  }
+	);
 
 $('.acarousel-list').acarousel({
 	offsetX: 0.5,
