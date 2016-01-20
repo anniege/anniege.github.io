@@ -109,7 +109,6 @@
 			flag = false;
 		}
 
-
 		//show large preview of the photo within click on it
 		var $page_y = $(window).height(),
 			$page_x = $(window).width();

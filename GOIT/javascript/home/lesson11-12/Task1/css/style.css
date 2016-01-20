@@ -39,7 +39,7 @@
 	position: absolute;
 	width: 100%;
 	height: 30px;
-	bottom: 4px;
+	bottom: 0;
 	background: rgba(0,0,0,.4);
 	color: #eee;
 	font-family: Arial, sans-serif;
