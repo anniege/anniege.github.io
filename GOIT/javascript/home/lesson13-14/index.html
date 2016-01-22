@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Lesson13-14</title>
+	<link rel="stylesheet" href="css/style.css">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.0.0/lodash.js"></script>
+	<script src="js/dataload.js"></script>>
+</head>
+<body>
+<div id="resultTest"></div>
+<script type="text/template" id="test">
+<div class="wrapper">
+	<h1><%-mainTitle%></h1>
+	<form action="#">
+	<div class="content">
+		<ul>
+			<% questions.forEach(function(question, i) { %>
+			<li class="test_item">
+				<h2><%-question.title%></h2>
+				<% question.options.forEach(function(option, index) { %>
+					<label>
+						<input type="checkbox" name="question<%-i%>" value="<%-index%>" />
+						<%-option%>
+					</label>
+				<% }); %>
+			</li>
+			<% }); %>
+		</ul>
+	</div>
+	<input type="submit" value="<%-submit%>">
+	</form>
+</div>
+</script>
+<script src="js/script.js"></script>
+</body>
+</html>
