@@ -1,4 +1,5 @@
 (function() {
+"use strict";
 var rightAnswers;
 var body = document.querySelector('body');
 var createRightAnswersDB = function(test) {
@@ -69,7 +70,6 @@ var checkAnswers = function(e) {
 		}
 		}
 	}
-
 
 var result = document.querySelector('.modalResult');
 result.innerHTML += counter; 
