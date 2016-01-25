@@ -5,8 +5,14 @@ margin: 0;
 
 .wrapper {
 	width: 60%;
-	margin: auto;
+	padding: 20px 0;
+	margin: 0 auto;
 	font-family: Arial, sans-serif;
+	text-align: center;
+}
+
+.content {
+	margin-bottom: 20px;
 }
 
 .header {
@@ -14,15 +20,159 @@ margin: 0;
 	line-height: 35px;
 	text-align: center;
 	font-size: 28px;
-	color: #aaa;
+	color: #09B8F7;
 }
 
-.test_item{
+.test_item {
 	list-style: none;
+	padding: 5px 10px;
+	border: 1px solid #ddd;
+	border-radius: 5px;
+	background-color: transparent;
+	text-align: left;
+	transition: all .5s;
+}
+
+.test_item:not(:last-of-type) {
+	margin-bottom: 5px;
+}
+
+.test_item:hover {
+	background-color: #ccc;
+}
+
+.item--modified {
+	border: none;
+	border-radius: 0;
+	padding: 0;
+	transition: none;
+}
+
+.test_item.item--modified:hover {
+	background-color: transparent;
+	cursor: inherit;
+}
+
+.test_item label {
+	display: block;
+	margin-bottom: 5px;
+	font-size: 13px;
+	color: #444;
+}
+
+.test_item  input[type="checkbox"] {
+	vertical-align: middle;
 }
 
 .small_header {
-	padding: 20px 0 10px;
+	padding: 10px 0 10px;
 	font-size: 18px;
 	color: #555;
+}
+
+.wrapper input[type="submit"] {
+	width: 180px;
+	height: 40px;
+	border-radius: 6px;
+	background-color: #09B8F7;
+	box-shadow: none;
+	border: none;
+	outline: none;
+	color: #fff;
+}
+
+.wrapper input[type="submit"]:hover {
+	background-color: #089CE0;
+	color: #eee;
+	cursor: pointer;
+}
+
+.modal {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: rgba(0,0,0,.4);
+	display: none;
+	z-index: 9999;
+	overflow: auto;
+}
+
+.modal-inner {
+	position: relative;
+	margin: 20px auto;
+	width: 380px;
+	padding: 15px 25px;
+	background-color: #fff;
+	text-align: center;
+}
+
+.modalTitle {
+	text-align: center;
+	font-size: 20px;
+	color: #089CE0;
+}
+
+.modalButton {
+	padding: 5px 30px;
+	border: 1px solid #aaa;
+	border-radius: 6px;
+	background-color: #fff;
+	color: #aaa;
+}
+
+.modalButton:hover {
+	background-color: #eee;
+	color: #888;
+	cursor: pointer;
+}
+
+
+.modalClose {
+	position: absolute;
+	top: -12px;
+	right: -12px;
+	width: 24px;
+	height: 24px;
+	text-decoration: none;
+	line-height: 24px;
+	text-align: center;
+	font-family: Arial,sans-serif;
+	font-size: 14px;
+	font-weight: bold;
+	border-radius: 50%;
+	background-color: #444;
+	color: #fff;
+}
+
+.modalClose:hover {
+	background-color: #ccc;
+}
+
+.modalResult {
+	padding-top: 20px;
+	text-align: center;
+	font-family: Arial, sans-serif;
+	font-weight: bold;
+	font-size: 12px;
+	color: red;
+}
+
+.hide {
+	overflow: hidden;
+}
+
+.test_item  .incorrect {
+	text-decoration: line-through;
+	color: red;
+}
+
+.test_item  .correct {
+	color: green;
+}
+
+.test_item .correct--missed {
+	color: orange;
+	font-style: italic;
 }

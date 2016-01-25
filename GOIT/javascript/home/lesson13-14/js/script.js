@@ -1,62 +1,80 @@
 (function() {
-
 var rightAnswers;
+var body = document.querySelector('body');
 var createRightAnswersDB = function(test) {
-		var answersObject = {};
-		test.questions.forEach(function(question, index) {
-			answersObject["question"+index] = question.trueValue;
-		});
-		return answersObject;
+	var answersObject = {};
+	test.questions.forEach(function(question, index) {
+		answersObject["question"+index] = question.trueValue;
+	});
+	return answersObject;
 }
 
 var checkAnswers = function(e) {
 	var e = e&&event || event.srcElement;
 	e.preventDefault();
+
+	createModal();
 	var userAnswers = {};
-	var inputs = document.querySelectorAll('[type="checkbox"]:checked');
-	console.log(inputs);
+	var inputs = document.querySelectorAll('.wrapper [type="checkbox"]:checked');
 		var i;
 		var arr;
 	[].forEach.call(inputs, function(item){
-		console.log(item);
 		if (!userAnswers[item.name]) {
 		i=0;
 		arr= [];
 		arr[i] = +item.value;
-		// console.log(arr[i], ' --- ', i);
 		userAnswers[item.name] = arr;
 	} else {
 		++i;
 		arr[i] = +item.value;
-		// console.log(arr[i], ' --- ', i);
 		userAnswers[item.name] = arr;
 	}
 	});
-	// console.log(arr);
 
-	var flag = true;
-	var errorMessage;
-	var correctMessage = 'You won!';
-	console.log(userAnswers);
-	console.log(rightAnswers);
+	var modal = document.querySelector('.modal');
+	var counter = 0; 
+	for (var rightQuestion in rightAnswers) {
+		var rightList = rightAnswers[rightQuestion];
+		var rightListLength = rightAnswers[rightQuestion].length;
+		var questionNumber = +rightQuestion.slice(-1);
+		var itemLi = modal.querySelectorAll('input[name="'+ rightQuestion +'"]');
+		if (rightQuestion in userAnswers) {
+				var userList = userAnswers[rightQuestion];
+				var userListLength = userAnswers[rightQuestion].length;
+				var counterFlag = true;
+				for (var j=0; j<rightListLength; j++) {
+				var flag = false;
+						for (var i=0; i<userListLength; i++) {
+							if (rightList[j] === userList[i]) {
+								itemLi[userList[i]].parentNode.classList.add('correct');
+								flag = true;
+								continue;
+							} 
+						}
+						if (!flag) {	
+							itemLi[rightList[j]].parentNode.classList.add('correct--missed');
+							counterFlag = false;
+						} 
+				}
+				if (counterFlag) ++counter;
+				for (var i=0; i<userListLength; i++) {
+							if (!itemLi[userList[i]].parentNode.classList.contains('correct')) {
+								itemLi[userList[i]].parentNode.classList.add('incorrect');
+							}	
+				}
 
-	for(var rightAnswer in rightAnswers) {
-
-		if (rightAnswer in userAnswers) {
-				console.log('rightAnswers[rightAnswer] ', rightAnswers[rightAnswer]);
-				console.log('userAnswers[rightAnswer] ', userAnswers[rightAnswer]);
-			if (!(rightAnswers[rightAnswer] === userAnswers[rightAnswer])) {
-				flag = false;
-				errorMessage = "Your answers were not all correct.";
-			}
 		} else {
-			flag = false;
-			errorMessage = "You didn't answer on all questions.";
+			for (var j=0; j<rightListLength; j++) {
+			itemLi[rightList[j]].parentNode.classList.add('correct--missed');
+		}
 		}
 	}
 
-(!flag) ? alert(errorMessage + '\nYou loose!') : alert(correctMessage);
-	return false;
+
+var result = document.querySelector('.modalResult');
+result.innerHTML += counter; 
+showModal();
+return false;
 }
 
 var render = function(test) {
@@ -67,19 +85,74 @@ var render = function(test) {
 	return test;
 }
 
+function createModal() {
+		var modal = document.createElement('div');
+		modal.classList.add('modal');
+		var modalInner = document.createElement('div');
+		modalInner.classList.add('modal-inner');
+		var modalTitle = document.createElement('h2');
+		modalTitle.classList.add('modalTitle');
+		modalTitle.innerHTML = "Результаты теста";
+		var modalResult = document.createElement('p');
+		modalResult.classList.add('modalResult');
+		modalResult.innerHTML = "Количество правильных ответов - ";
+		var close = document.createElement('a');
+		close.href ="#close";
+		close.title="Закрыть";
+		close.innerHTML = "X";
+		close.classList.add('modalClose');
+		var btnClose = document.createElement('button');
+		btnClose.classList.add('modalButton');
+		btnClose.innerHTML = "Закрыть";
+
+		var targetNode = document.querySelector('.content ul');
+		var cloneItem = targetNode.cloneNode(true);
+		var inputs = cloneItem.querySelectorAll('input');
+		[].forEach.call(inputs, function(inpt) {
+			inpt.setAttribute('disabled', 'disabled');
+		});
+		var lis = cloneItem.querySelectorAll('.test_item');
+		[].forEach.call(lis, function(liItem) {
+			liItem.classList.add('item--modified');
+		});
+
+		modalInner.appendChild(modalTitle);
+		modalInner.appendChild(modalResult);
+		modalInner.appendChild(cloneItem);
+		modalInner.appendChild(close);
+		modalInner.appendChild(btnClose);
+		modal.appendChild(modalInner);
+		body.appendChild(modal);
+		body.classList.add('hide');
+		btnClose.addEventListener('click', closeModal);
+		close.addEventListener('click', closeModal);
+}
+
+function showModal() {
+	var modal = document.querySelector('.modal');
+	modal.setAttribute('style', 'display:block;');
+}
+
+function closeModal() {
+	var modal = document.querySelector('.modal');
+	if (modal) body.removeChild(modal);
+	body.classList.remove('hide');
+	var inputs = document.querySelectorAll('.wrapper [type="checkbox"]:checked');
+	[].forEach.call(inputs, function(input) {
+		input.checked = false;
+	});
+}
+
 var clearStorage = function() {
 	localStorage.clear();
 }
-
 
 var doTest = function() {
 	
 	try {
 		//parse from localStorage
 		var test = JSON.parse(localStorage.test);
-
 		render(test);
-
 		//add event on submit
 		rightAnswers = createRightAnswersDB(test);
 		var sbmtButton = document.querySelector('[type="submit"]');
@@ -91,5 +164,4 @@ var doTest = function() {
 
 document.addEventListener('DOMContentLoaded', doTest);
 document.addEventListener('beforeunload', clearStorage);
-
 })();

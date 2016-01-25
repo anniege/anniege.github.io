@@ -22,7 +22,7 @@
 				<h2 class="small_header"><%-question.title%></h2>
 				<% question.options.forEach(function(option, index) { %>
 					<label>
-						<input type="checkbox" name="question<%-i%>" value="<%-index%>">
+						<input type="checkbox" class="question" name="question<%-i%>" value="<%-index%>">
 						<%-option%>
 					</label>
 				<% }); %>
