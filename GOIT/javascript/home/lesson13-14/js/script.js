@@ -90,9 +90,8 @@
 
 
 
-	function checkAnswers(e) {
-		var e = e&&event || event.srcElement;
-		e.preventDefault();
+	function checkAnswers(event) {
+		event.preventDefault();
 
 		//create the elements of modal
 		createModal();
