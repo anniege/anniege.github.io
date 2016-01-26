@@ -141,14 +141,15 @@ function checkAnswers(e) {
 						counterFlag = false;
 					} 
 				}
-				//if all answers were correct
-				if (counterFlag) ++counterOfRightAnswers;
 				//highlight the incorrect user answers
 				for (var i = 0; i < userListLength; i++) {
 					if (!inputsRightQuestion[userList[i]].parentNode.classList.contains('correct')) {
 						inputsRightQuestion[userList[i]].parentNode.classList.add('incorrect');
+						counterFlag = false;
 					}	
 				}
+				//if all answers were correct
+				if (counterFlag) ++counterOfRightAnswers;
 		} else {
 			//highlight the correct answers missed by user
 			for (var j=0; j<rightListLength; j++) {
