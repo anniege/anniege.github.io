@@ -41,14 +41,14 @@ margin: 0;
 	background-color: #ccc;
 }
 
-.item--modified {
+.test_item_modified {
 	border: none;
 	border-radius: 0;
 	padding: 0;
 	transition: none;
 }
 
-.test_item.item--modified:hover {
+.test_item .test_item_modified:hover {
 	background-color: transparent;
 	cursor: inherit;
 }
