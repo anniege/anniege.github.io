@@ -11,16 +11,16 @@ margin: 0;
 	text-align: center;
 }
 
-.content {
-	margin-bottom: 20px;
-}
-
 .header {
 	padding: 15px 0;
 	line-height: 35px;
 	text-align: center;
 	font-size: 28px;
 	color: #09B8F7;
+}
+
+.test_content {
+	margin-bottom: 20px;
 }
 
 .test_item {
@@ -64,13 +64,13 @@ margin: 0;
 	vertical-align: middle;
 }
 
-.small_header {
+.test_item_small-header {
 	padding: 10px 0 10px;
 	font-size: 18px;
 	color: #555;
 }
 
-.wrapper input[type="submit"] {
+.test_submit {
 	width: 180px;
 	height: 40px;
 	border-radius: 6px;
@@ -81,7 +81,7 @@ margin: 0;
 	color: #fff;
 }
 
-.wrapper input[type="submit"]:hover {
+.test_submit:hover {
 	background-color: #089CE0;
 	color: #eee;
 	cursor: pointer;
@@ -102,37 +102,71 @@ margin: 0;
 .modal-inner {
 	position: relative;
 	margin: 20px auto;
-	width: 380px;
+	width: 45%;
 	padding: 15px 25px;
 	background-color: #fff;
 	text-align: center;
 	border-radius: 5px;
 	-webkit-box-shadow: 0 0 15px rgba(0,0,0,.5);
 	box-shadow: 0 0 15px rgba(0,0,0,.5);
+	animation: pulse 1s ease;
 }
 
-.modalTitle {
+@keyframes pulse {
+  0% {	
+	transform: translateY(-999px);
+  }
+  100% {
+	transform: translateY(10px);
+  }
+}
+
+.modal_title {
 	text-align: center;
 	font-size: 20px;
-	color: #089CE0;
+	color: #000;
 }
 
-.modalButton {
+.modal .test_item, .modal .test_item_question {
+	pointer-events: none;
+}
+
+.test_item  .incorrect {
+	text-decoration: line-through;
+	color: #EA2923;
+}
+
+.test_item  .correct {
+	color: #1BB556;
+	font-style: italic;
+}
+
+.test_item .correct--missed {
+	color: #1BB556;
+	font-weight: bold;
+	text-decoration: underline;
+}
+
+.modal .test_item_small-header {
+	font-size: 16px;
+}
+
+.modal_button {
 	padding: 5px 30px;
 	border: 1px solid #aaa;
 	border-radius: 6px;
-	background-color: #fff;
-	color: #aaa;
-}
-
-.modalButton:hover {
 	background-color: #eee;
 	color: #888;
+}
+
+.modal_button:hover {
+	border: 1px solid transparent;
+	background-color: #999;
+	color: #fff;
 	cursor: pointer;
 }
 
-
-.modalClose {
+.modal_close {
 	position: absolute;
 	top: -12px;
 	right: -12px;
@@ -149,11 +183,11 @@ margin: 0;
 	color: #fff;
 }
 
-.modalClose:hover {
+.modal_close:hover {
 	background-color: #ccc;
 }
 
-.modalResult {
+.modal_result {
 	padding-top: 20px;
 	text-align: center;
 	font-family: Arial, sans-serif;
@@ -162,20 +196,10 @@ margin: 0;
 	color: red;
 }
 
+.modal_result_success {
+	color: blue;
+}
+
 .hide {
 	overflow: hidden;
-}
-
-.test_item  .incorrect {
-	text-decoration: line-through;
-	color: red;
-}
-
-.test_item  .correct {
-	color: green;
-}
-
-.test_item .correct--missed {
-	color: orange;
-	font-style: italic;
 }

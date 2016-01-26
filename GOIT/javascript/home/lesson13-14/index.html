@@ -8,32 +8,32 @@
 	<script src="js/data.js"></script>
 </head>
 <body>
-<div id="resultTest">
-	
-</div>
-<script type="text/template" id="test">
-<div class="wrapper">
-	<h1 class="header"><%-mainTitle%></h1>
-	<form action="#">
-	<div class="content">
-		<ul>
-			<% questions.forEach(function(question, i) { %>
-			<li class="test_item">
-				<h2 class="small_header"><%-question.title%></h2>
-				<% question.options.forEach(function(option, index) { %>
-					<label>
-						<input type="checkbox" class="question" name="question<%-i%>" value="<%-index%>">
-						<%-option%>
-					</label>
+	<div id="resultTest"></div>
+
+	<script type="text/template" id="test_Id">
+	<div class="wrapper">
+		<h1 class="header"><%-mainTitle%></h1>
+		<form action="#" class="test">
+		<div class="test_content">
+			<ul class="test_list">
+				<% questions.forEach(function(question, i) { %>
+				<li class="test_item">
+					<h2 class="test_item_small-header"><%-question.title%></h2>
+					<% question.options.forEach(function(option, index) { %>
+						<label>
+							<input type="checkbox" class="test_item_question" name="question<%-i%>" value="<%-index%>">
+							<%-option%>
+						</label>
+					<% }); %>
+				</li>
 				<% }); %>
-			</li>
-			<% }); %>
-		</ul>
+			</ul>
+		</div>
+		<input type="submit" class="test_submit" value="<%-submit%>">
+		</form>
 	</div>
-	<input type="submit" value="<%-submit%>" >
-	</form>
-</div>
-</script>
-<script src="js/script.js"></script>
+	</script>
+	
+	<script src="js/script.js"></script>
 </body>
 </html>

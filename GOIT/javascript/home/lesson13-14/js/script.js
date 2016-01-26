@@ -4,76 +4,79 @@
 var body = document.querySelector('body');
 var rightAnswers;
 
+
 function render(test) {
 	var target = document.getElementById("resultTest");
-	var testFunc = _.template(document.getElementById("test").innerHTML);
+	var testFunc = _.template(document.getElementById("test_Id").innerHTML);
 	target.innerHTML = testFunc(test);
 	return test;
 }
 
+
 function createModal() {
 	var modal = document.createElement('div');
 	var modalInner = document.createElement('div');
-	var close = document.createElement('a');
+	var modalClose = document.createElement('a');
 	var modalTitle = document.createElement('h2');
 	var modalResult = document.createElement('p');
 	var btnClose = document.createElement('button');
 		
 		modal.classList.add('modal');
 		modalInner.classList.add('modal-inner');
-		modalTitle.classList.add('modalTitle');
-		modalResult.classList.add('modalResult');
-		btnClose.classList.add('modalButton');
-		close.classList.add('modalClose');
+		modalTitle.classList.add('modal_title');
+		modalResult.classList.add('modal_result');
+		btnClose.classList.add('modal_button');
+		modalClose.classList.add('modal_close');
 		
-		modalTitle.innerHTML = "Результаты теста";
+		modalTitle.innerHTML = "Результат теста";
 		modalResult.innerHTML = "Количество правильных ответов - ";
 		btnClose.innerHTML = "Закрыть";
-		close.href ="#close";
-		close.title="Закрыть";
-		close.innerHTML = "X";
+		modalClose.href ="#close";
+		modalClose.title="Закрыть";
+		modalClose.innerHTML = "X";
 
-	var targetNode = document.querySelector('.content ul');
+	var targetNode = document.querySelector('.test_list');
 	var cloneItem = targetNode.cloneNode(true);
-	var inputs = cloneItem.querySelectorAll('input');
-	[].forEach.call(inputs, function(inpt) {
-		inpt.setAttribute('disabled', 'disabled');
+	var inputs = cloneItem.querySelectorAll('.wrapper .test_item_question');
+	[].forEach.call(inputs, function(input) {
+		input.setAttribute('disabled', 'disabled');
 	});
-	var lis = cloneItem.querySelectorAll('.test_item');
-	[].forEach.call(lis, function(liItem) {
+	var liItems = cloneItem.querySelectorAll('.test_item');
+	[].forEach.call(liItems, function(liItem) {
 		liItem.classList.add('item--modified');
 	});
 
 	modalInner.appendChild(modalTitle);
 	modalInner.appendChild(modalResult);
 	modalInner.appendChild(cloneItem);
-	modalInner.appendChild(close);
 	modalInner.appendChild(btnClose);
+	modalInner.appendChild(modalClose);
 	modal.appendChild(modalInner);
 	body.appendChild(modal);
 	body.classList.add('hide');
 	btnClose.addEventListener('click', closeModal);
-	close.addEventListener('click', closeModal);
+	modalClose.addEventListener('click', closeModal);
 }
+
 
 function showModal() {
 	var modal = document.querySelector('.modal');
 	modal.setAttribute('style', 'display:block;');
 }
 
+
 function closeModal() {
+	body.classList.remove('hide');
+
 	var modal = document.querySelector('.modal');
 	if (modal) body.removeChild(modal);
-	body.classList.remove('hide');
-	var inputs = document.querySelectorAll('.wrapper [type="checkbox"]:checked');
-	[].forEach.call(inputs, function(input) {
-		input.checked = false;
+
+	var inputsChecked = document.querySelectorAll('.wrapper .test_item_question:checked');
+	[].forEach.call(inputsChecked, function(inputChecked) {
+		inputChecked.checked = false;
 	});
 }
 
-function clearStorage() {
-	localStorage.clear();
-}
 
 function createRightAnswersDB(test) {
 	var answersObject = {};
@@ -83,84 +86,114 @@ function createRightAnswersDB(test) {
 	return answersObject;
 }
 
+
 function checkAnswers(e) {
 	var e = e&&event || event.srcElement;
 	e.preventDefault();
 
+	//create the elements of modal
 	createModal();
-	var userAnswers = {};
-	var inputs = document.querySelectorAll('.wrapper [type="checkbox"]:checked');
-		var arr;
-	[].forEach.call(inputs, function(item){
-		if (!userAnswers[item.name]) {
-		arr= [];
-		arr.push(+item.value);
-		userAnswers[item.name] = arr;
-	} else {
-		arr.push(+item.value);
-		userAnswers[item.name] = arr;
-	}
-	});
 
+	//create user answers database
+	var userAnswers = {};
+	var inputsChecked = document.querySelectorAll('.wrapper .test_item_question:checked');
+	var tempAnswerArr;
+	[].forEach.call(inputsChecked, function(inputChecked) {
+		if (!userAnswers[inputChecked.name]) {
+		tempAnswerArr= [];
+		tempAnswerArr.push(+inputChecked.value);
+		userAnswers[inputChecked.name] = tempAnswerArr;
+		} else {
+			tempAnswerArr.push(+inputChecked.value);
+			userAnswers[inputChecked.name] = tempAnswerArr;
+		}
+	});
+	//compare the user answers with right answers
+	var counterOfRightAnswers = 0; 
 	var modal = document.querySelector('.modal');
-	var counter = 0; 
+
 	for (var rightQuestion in rightAnswers) {
+		//array of right answers
 		var rightList = rightAnswers[rightQuestion];
+		//length of array of right answers
 		var rightListLength = rightAnswers[rightQuestion].length;
-		var questionNumber = +rightQuestion.slice(-1);
-		var itemLi = modal.querySelectorAll('input[name="'+ rightQuestion +'"]');
+		//select all checkboxes by key(question) from right answers database
+		var inputsRightQuestion = modal.querySelectorAll('input[name="'+ rightQuestion +'"]');
+
+		//if user answered on proper question
 		if (rightQuestion in userAnswers) {
+				//array of user answers
 				var userList = userAnswers[rightQuestion];
+				//length of array of user answers
 				var userListLength = userAnswers[rightQuestion].length;
 				var counterFlag = true;
-				for (var j=0; j<rightListLength; j++) {
-				var flag = false;
-						for (var i=0; i<userListLength; i++) {
-							if (rightList[j] === userList[i]) {
-								itemLi[userList[i]].parentNode.classList.add('correct');
-								flag = true;
-								continue;
-							} 
-						}
-						if (!flag) {	
-							itemLi[rightList[j]].parentNode.classList.add('correct--missed');
-							counterFlag = false;
+				//loop through the 2 arrays of right and user answers with comparing 
+				for (var j = 0; j < rightListLength; j++) {
+					var flag = false;
+					for (var i = 0; i < userListLength; i++) {
+						if (rightList[j] === userList[i]) {
+							inputsRightQuestion[userList[i]].parentNode.classList.add('correct');
+							flag = true;
 						} 
+					}
+					if (!flag) {	
+						inputsRightQuestion[rightList[j]].parentNode.classList.add('correct--missed');
+						counterFlag = false;
+					} 
 				}
-				if (counterFlag) ++counter;
-				for (var i=0; i<userListLength; i++) {
-							if (!itemLi[userList[i]].parentNode.classList.contains('correct')) {
-								itemLi[userList[i]].parentNode.classList.add('incorrect');
-							}	
+				//if all answers were correct
+				if (counterFlag) ++counterOfRightAnswers;
+				//highlight the incorrect user answers
+				for (var i = 0; i < userListLength; i++) {
+					if (!inputsRightQuestion[userList[i]].parentNode.classList.contains('correct')) {
+						inputsRightQuestion[userList[i]].parentNode.classList.add('incorrect');
+					}	
 				}
-
 		} else {
+			//highlight the correct answers missed by user
 			for (var j=0; j<rightListLength; j++) {
-			itemLi[rightList[j]].parentNode.classList.add('correct--missed');
-		}
+				inputsRightQuestion[rightList[j]].parentNode.classList.add('correct--missed');
+			}
 		}
 	}
-
-	var result = document.querySelector('.modalResult');
-	result.innerHTML += counter; 
+	//add the result message in modal
+	var result = document.querySelector('.modal_result');
+	if (counterOfRightAnswers === 5) {
+		result.classList.add('modal_result_success');
+		result.innerHTML += counterOfRightAnswers + ". ТЕСТ ПРОЙДЕН."; 
+	} else {
+		result.innerHTML += counterOfRightAnswers + ". ТЕСТ НЕ ПРОЙДЕН."; 
+	}
+	//show the modal 
 	showModal();
 	return false;
 }
+
+
+function clearStorage() {
+	window.localStorage.clear();
+}
+
 
 function doTest() {
 	try {
 		//parse from localStorage
 		var test = JSON.parse(localStorage.test);
+
+		//render data from localStorage
 		render(test);
-		//add event on submit
+
+		//create right answers database
 		rightAnswers = createRightAnswersDB(test);
+
+		//add event on test submit
 		var sbmtButton = document.querySelector('[type="submit"]');
 		sbmtButton.addEventListener('click', checkAnswers);
 	} catch(e) {
-		console.log('e = ', e);
+		console.log('error = ', e);
 	}
 }
 
 document.addEventListener('DOMContentLoaded', doTest);
-document.addEventListener('beforeunload', clearStorage);
+// document.addEventListener('beforeunload', clearStorage);
 })();
