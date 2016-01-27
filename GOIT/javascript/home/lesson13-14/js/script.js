@@ -90,8 +90,9 @@
 
 
 
-	function checkAnswers(event) {
-		event.preventDefault();
+	function checkAnswers(e) {
+		var e = event || window.event;
+		e.preventDefault();
 
 		//create the elements of modal
 		createModal();
@@ -161,7 +162,7 @@
 		}
 		//add the result message in modal
 		var result = document.querySelector('.modal_result');
-		if (counterOfRightAnswers === 5) {
+		if (counterOfRightAnswers === Object.keys(rightAnswers).length) {
 			result.classList.add('modal_result_success');
 			result.innerHTML += counterOfRightAnswers + ". ТЕСТ ПРОЙДЕН."; 
 		} else {
