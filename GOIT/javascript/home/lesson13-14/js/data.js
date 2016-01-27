@@ -1,5 +1,6 @@
 (function() {
 		var testData = { 
+		logo: 'img/logo.png',
 		mainTitle: 'ТЕСТ AngularJS',
 		questions: [
 		{

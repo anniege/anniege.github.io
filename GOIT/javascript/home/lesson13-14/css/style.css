@@ -12,11 +12,23 @@ margin: 0;
 }
 
 .header {
+	position: relative;
+}
+
+.header_logo {
+	position: absolute;
+	top: 0;
+	left: 20px;
+	width: 50px;
+	height: 50px;
+}
+
+.header_title {
 	padding: 15px 0;
 	line-height: 35px;
 	text-align: center;
 	font-size: 28px;
-	color: #09B8F7;
+	color: #000;
 }
 
 .test_content {
@@ -137,14 +149,13 @@ margin: 0;
 }
 
 .test_item  .correct {
-	color: #1BB556;
+	color: #09B8F7;
 	font-style: italic;
 }
 
 .test_item .correct--missed {
-	color: #1BB556;
+	color: orange;
 	font-weight: bold;
-	text-decoration: underline;
 }
 
 .modal .test_item_small-header {
