@@ -90,7 +90,7 @@
 
 
 
-	function checkAnswers(e) {
+	function checkAnswers(event) {
 		var e = event || window.event;
 		e.preventDefault();
 
