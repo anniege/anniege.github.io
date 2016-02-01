@@ -1,0 +1,155 @@
+* {
+	padding: 0;
+	margin: 0;
+}
+
+body {
+	font-family: Arial, sans-serif;
+}
+
+.clearfix:after {
+	content: '.';
+	display: block;
+	clear: both;
+	height: 0;
+	visibility: hidden;
+}
+
+.wrapper {
+	padding-top: 15px;
+}
+
+.logo {
+	float: left;
+	padding: 5px 13px;
+}
+
+.logo__link {
+	display: block;
+	width:95px;
+	height:37px;
+	position: relative;
+	overflow: hidden;
+}
+
+.logo__image {
+	position: absolute;
+	left: 0;
+	top: -41px;
+}
+
+.main {
+	float: left;
+}
+
+.search__input {
+	float: left;
+	width: 600px;
+	height: 40px;
+	padding: 0;
+	outline: 0;
+	box-sizing: border-box;
+	padding: 5px 9px 0;
+	border: 1px solid #ddd;
+	border-top-left-radius: 2px;
+	border-bottom-left-radius: 2px;
+}
+
+.search__button {
+	float: left;
+	width: 40px;
+	height: 40px;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	border-top-right-radius: 2px;
+	border-bottom-right-radius: 2px;
+	background-color: #4285f4;
+}
+
+.search__button:hover {
+	background-color: #3267C6;
+}
+
+.search__button__inner {
+	display: inline-block;
+	height: 24px;
+	width: 24px;
+	margin: 7px auto;
+	background: url(../img/logo.png) no-repeat -107px -55px;
+	color: transparent;
+}
+
+.search-result {
+	width: 80%;
+	padding: 20px 0; 
+	margin: 0 auto;
+	margin-left: 120px;
+}
+
+.search-result__list {
+	list-style: none;
+}
+
+.search-result__list__item {
+	width: 512px;
+	margin-bottom: 23px;
+}
+
+.search-result__list__item__title {
+	font-weight: normal;
+	font-size: 18px;
+}
+
+.search-result__list__item__link {
+	text-decoration: none;
+	text-transform: capitalize;
+	color: #473DBB;
+}
+
+.search-result__list__item__link:hover {
+	text-decoration: underline;
+}
+
+.search-result__list__item__content__url {
+	font-style: normal;
+	color: #006621;
+}
+
+.search-result__list__item__content__data {
+	line-height: 1.4;
+	word-wrap: break-wrap;
+	font-size: small;
+	color: #545454;
+}
+
+.search-result__message {
+	font-size: 16px;
+	color: #222;
+}
+
+.search-result__pages{
+	list-style: none;
+}
+
+.search-result__pages__item {
+	float: left;
+	width: 20px;
+	text-align: center;
+}
+
+.search-result__pages__item__link {
+	text-decoration: none;
+	font-size: 13px;
+	color: #4285f4;
+	cursor: pointer;
+}
+
+.search-result__pages__item__link:hover {
+	text-decoration: underline;
+}
+
+.search-result__pages__item__link--current {
+	color: #555;
+	text-decoration: none;
+}
