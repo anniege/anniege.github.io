@@ -6,7 +6,7 @@ $(function(){
 		var valueInput = encodeURIComponent($('.search__input').val());
 		if (valueInput) {
 			urlAdded +=valueInput+"&rsz=8&start="+index*8+"&callback=GoogleCallback&context=?";
-			var pages = 0;
+			var pages;
 			$.ajax({
 				url: urlAdded,
 				dataType : "jsonp",
@@ -53,11 +53,11 @@ $(function(){
 		}
 	}
 
-	$('.search__button').click(function() {
+	$('.search__button').click(function(e) {
+			e.preventDefault();
 			$googleSearch(0);
 	});
 });
-
 function GoogleCallback(func, data){
 	window[func](data);
 }
