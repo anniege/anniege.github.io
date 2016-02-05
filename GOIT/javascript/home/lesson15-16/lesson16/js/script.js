@@ -9,6 +9,7 @@
 		this.weight = weight || 75;
 	}
 
+
 	// class Worker inherits class Human
 	function Worker(name, age, gender, height, weight, job, wage) {
 		Human.apply(this, arguments);
@@ -28,6 +29,7 @@
 		}
 		return str;
 	};
+
 	
 	// class Student inherits class Human
 	function Student(name, age, gender, height, weight, studyPlace, scholarship) {
@@ -35,12 +37,14 @@
 		this.studyPlace = studyPlace || "manager";
 		this.scholarship = scholarship || 1500;
 	}
+
 	Student.prototype = Object.create(Human.prototype);
 	Student.prototype.constructor = Student;
 
 	Student.prototype.watchSeries = function() {
 		return this.name +' is '+ this.age +' years old and is watching Fast\'N\'Loud and has average scholarship in amount of ' + this.scholarship;
 	};
+
 
 	var worker1 = new Worker("Victor");
 	var worker2 = new Worker("Olga", undefined, "female", 156, 50, "teacher");
