@@ -39,7 +39,7 @@ module.exports = function(grunt) {
 		},
 		target: {
 			files: {
-				'public/css/style.css': ['css/reset.css', 'css/style1.css', 'css/style2.css']
+				'public/css/style.min.css': ['css/reset.css', 'css/style1.css', 'css/style2.css']
 			}
 		}
 	},
