@@ -18,7 +18,7 @@ module.exports = function(grunt) {
 		options: {
 			mangle: false
 		},
-		my_target: {
+		dist: {
 			files: {
 				'public/js/script.min.js': ['public/js/script.min.js']
 			}
@@ -26,11 +26,14 @@ module.exports = function(grunt) {
 	},
 	autoprefixer: {
 			options: {
-				browsers: ['last 8 versions', 'ie 8']
+				browsers: ['last 10 versions', 'ie 8', '> 1%']
 			},
-			files: {
-				'css/*.css': 'css/modified/*.css'
-			}
+     		multiple_files: {
+                expand: true,
+                flatten: true,
+                src: 'css/*.css',
+                dest: 'css/temp'
+            }
 	 },
 	cssmin: {
 		options: {
@@ -39,7 +42,7 @@ module.exports = function(grunt) {
 		},
 		target: {
 			files: {
-				'public/css/style.min.css': ['css/reset.css', 'css/style1.css', 'css/style2.css']
+				'public/css/style.min.css': ['css/temp/reset.css', 'css/temp/style1.css', 'css/temp/style2.css']
 			}
 		}
 	},
