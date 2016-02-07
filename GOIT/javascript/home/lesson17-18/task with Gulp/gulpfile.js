@@ -30,8 +30,11 @@ gulp.task('scripts', function() {
 });
 
 gulp.task('images', function(){
-	return gulp.src('img/*.jpg')
-	.pipe(imagemin({progressive: true}))
+	return gulp.src('img/*')
+	.pipe(imagemin({
+		progressive: true,
+		interlaced: true
+	}))
 	.pipe(gulp.dest('public/img'));
 });
 

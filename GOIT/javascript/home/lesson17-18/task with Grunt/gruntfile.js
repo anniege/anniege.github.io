@@ -47,17 +47,17 @@ module.exports = function(grunt) {
 		}
 	},
 	imagemin: {
-		jpg: {
+		static: {
 			options: {
-				progressive: true
+				progressive: true,
+				interlaced: true
 			},
 			files: [
 				{
 					expand: true,
 					cwd: 'img/',
-					src: ['*.jpg'],
+					src: ['*.{jpg,gif}'],
 					dest: 'public/img/',
-					ext: '.jpg'
 				}
 			]
 		}
