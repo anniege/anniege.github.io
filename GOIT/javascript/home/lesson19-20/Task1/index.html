@@ -4,9 +4,11 @@
 	<meta charset="UTF-8"/>
 	<title>Lesson19-20</title>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-	<link rel="stylesheet" href="public/css/style.css">
+	<link rel="stylesheet" href="dist/css/style.css">
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.0.0/lodash.js"></script>
-	<script src="public/js/script.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<script src="dist/js/jquery.jcarousel.js"></script>
+	<script src="dist/js/script.js"></script>
 </head>
 <body>
 	<div class="wrapper">
@@ -17,28 +19,28 @@
 			</div>
 			<div class="socials">
 				<ul class="socials__list clearfix">
-					<li class="socials__list__item">
-						<a href="#" class="socials__list__link">
+					<li class="socials__item">
+						<a href="#" class="socials__link">
 							<i class="fa fa-facebook"></i>
 						</a>
 					</li>
-					<li class="socials__list__item">
-						<a href="#" class="socials__list__link">
+					<li class="socials__item">
+						<a href="#" class="socials__link">
 							<i class="fa fa-twitter"></i>
 						</a>
 					</li>
-					<li class="socials__list__item">
-						<a href="#" class="socials__list__link">
+					<li class="socials__item">
+						<a href="#" class="socials__link">
 							<i class="fa fa-rss"></i>
 						</a>
 					</li>
-					<li class="socials__list__item">
-						<a href="#" class="socials__list__link">
+					<li class="socials__item">
+						<a href="#" class="socials__link">
 							<i class="fa fa-linkedin"></i>
 						</a>
 					</li>
-					<li class="socials__list__item">
-						<a href="#" class="socials__list__link">
+					<li class="socials__item">
+						<a href="#" class="socials__link">
 							<i class="fa fa-skype"></i>
 						</a>
 					</li>
@@ -47,95 +49,100 @@
 		</header>
 		<nav class="menu">
 			<ul class="menu__list clearfix">
-				<li class="menu__list__item"><a href="#" class="menu__list__link menu__list__link--active">home</a></li>
-				<li class="menu__list__item"><a href="#" class="menu__list__link">features</a></li>
-				<li class="menu__list__item"><a href="#" class="menu__list__link">services</a></li>
-				<li class="menu__list__item"><a href="#" class="menu__list__link">news</a></li>
-				<li class="menu__list__item"><a href="#" class="menu__list__link">shop</a></li>
+				<li class="menu__item"><a href="#" class="menu__link menu__link--active">home</a></li>
+				<li class="menu__item"><a href="#" class="menu__link">features</a></li>
+				<li class="menu__item"><a href="#" class="menu__link">services</a></li>
+				<li class="menu__item"><a href="#" class="menu__link">news</a></li>
+				<li class="menu__item"><a href="#" class="menu__link">shop</a></li>
 			</ul>
 			<div class="menu__search">
-				<input type="text" class="menu__search__control" placeholder="Search...">
+				<input type="text" class="menu__search-control" placeholder="Search...">
 				<i class="fa fa-search"></i>
 			</div>
 		</nav>
 		<main class="main">
-			<div class="slider">
+			<div class="slider jcarousel">
 				<ul class="slider__list">
-					<li class="slider__list__item">
-						<h3 class="slider__list__item__title">build your business</h3>
-						<img src="public/img/slider_1.jpg" alt="">
+					<li class="slider__item">
+						<h3 class="slider__title slider__title--active"><span>build</span><span>your</span><span>business</span></h3>
+						<img src="dist/img/slider_1.jpg" alt="">
 					</li>					
-					<li class="slider__list__item">
-						<h3 class="slider__list__item__title">build your life</h3>
-						<img src="public/img/slider_1.jpg" alt="">
+					<li class="slider__item">
+						<h3 class="slider__title"><span>build</span><span>your</span><span>life</span></h3>
+						<img src="dist/img/slider_1.jpg" alt="">
 					</li>					
-					<li class="slider__list__item">
-						<h3 class="slider__list__item__title">build your future</h3>
-						<img src="public/img/slider_1.jpg" alt="">
+					<li class="slider__item">
+						<h3 class="slider__title"><span>build</span><span>your</span><span>future</span></h3>
+						<img src="dist/img/slider_1.jpg" alt="">
 					</li>
 				</ul>
+				<div class="jcarousel-pagination">
+					<a href="#1"></a>
+					<a href="#2"></a>
+					<a href="#3"></a>
+				</div>
 			</div>
 			<div class="articles">
-				<ul class="article__list">
-					<li class="article__list__item">
-						<h3 class="article__list__item__title">Power Inside</h3>
-						<p class="article__list__item__content">
+				<ul class="article__list clearfix">
+					<li class="article__item">
+						<h3 class="article__title">Power Inside</h3>
+						<p class="article__content">
 							Cum sociis natoque penatibus et magnis dis parturient montesmus. Pro vel nibh et elit mollis commodo et nec augueique 
 						</p>
-						<a href="#" class="article__list__item__link">Read More</a>
+						<a href="#" class="article__link">Read More</a>
 					</li>
-					<li class="article__list__item">
-						<h3 class="article__list__item__title">New Technologies</h3>
-						<p class="article__list__item__content">
+					<li class="article__item">
+						<h3 class="article__title">New Technologies</h3>
+						<p class="article__content">
 							Cum sociis natoque penatibus et magnis dis parturient montesmus. Pro vel nibh et elit mollis commodo et nec augueique 
 						</p>
-						<a href="#" class="article__list__item__link">Read More</a>
+						<a href="#" class="article__link">Read More</a>
 					</li>
-					<li class="article__list__item">
-						<h3 class="article__list__item__title">Fast Support</h3>
-						<p class="article__list__item__content">
+					<li class="article__item">
+						<h3 class="article__title">Fast Support</h3>
+						<p class="article__content">
 							Cum sociis natoque penatibus et magnis dis parturient montesmus. Pro vel nibh et elit mollis commodo et nec augueique 
 						</p>
-						<a href="#" class="article__list__item__link">Read More</a>
+						<a href="#" class="article__link">Read More</a>
 					</li>
 				</ul>
 			</div>
 			<div class="services">
 				<h2 class="services__title">Our Services</h2>
 				<figure class="services__item">
-					<a href="#" class="services__item__link">
-						<img src="public/img/service_1.jpg" alt="service1">
-						<figurecaption class="services__item__title">Schedule Services</figurecaption>
+					<a href="#" class="services__link">
+						<img src="dist/img/service_1.jpg" alt="service1">
+						<figurecaption class="services__title">Schedule Services</figurecaption>
 					</a>
 				</figure>
 				<figure class="services__item">
-					<a href="#" class="services__item__link">
-						<img src="public/img/service_2.jpg" alt="service2">
-						<figurecaption class="services__item__title">Preventive Maintence</figurecaption>
+					<a href="#" class="services__link">
+						<img src="dist/img/service_2.jpg" alt="service2">
+						<figurecaption class="services__title">Preventive Maintence</figurecaption>
 					</a>
 				</figure>
 				<figure class="services__item">
-					<a href="#" class="services__item__link">
-						<img src="public/img/service_3.jpg" alt="service3">
-						<figurecaption class="services__item__title">Tire & Wheel Services</figurecaption>
+					<a href="#" class="services__link">
+						<img src="dist/img/service_3.jpg" alt="service3">
+						<figurecaption class="services__title">Tire & Wheel Services</figurecaption>
 					</a>
 				</figure>
 				<figure class="services__item">
-					<a href="#" class="services__item__link">
-						<img src="public/img/service_4.jpg" alt="service4">
-						<figurecaption class="services__item__title">Repair Services</figurecaption>
+					<a href="#" class="services__link">
+						<img src="dist/img/service_4.jpg" alt="service4">
+						<figurecaption class="services__title">Repair Services</figurecaption>
 					</a>
 					</figure>
 			</div>
 			<div class="news-banners"></div>
 			<div class="brands">
 				<ul class="brands__list">
-					<li class="brands__list__item"><a href="#"><img src="public/img/brand_1.png" alt=""></a></li>
-					<li class="brands__list__item"><a href="#"><img src="public/img/brand_2.png" alt=""></a></li>
-					<li class="brands__list__item"><a href="#"><img src="public/img/brand_3.png" alt=""></a></li>
-					<li class="brands__list__item"><a href="#"><img src="public/img/brand_4.png" alt=""></a></li>
-					<li class="brands__list__item"><a href="#"><img src="public/img/brand_5.png" alt=""></a></li>
-					<li class="brands__list__item"><a href="#"><img src="public/img/brand_6.png" alt=""></a></li>
+					<li class="brands__item"><a href="#" class="brands__link"><img src="dist/img/brand_1.png" alt=""></a></li>
+					<li class="brands__item"><a href="#" class="brands__link"><img src="dist/img/brand_2.png" alt=""></a></li>
+					<li class="brands__item"><a href="#" class="brands__link"><img src="dist/img/brand_3.png" alt=""></a></li>
+					<li class="brands__item"><a href="#" class="brands__link"><img src="dist/img/brand_4.png" alt=""></a></li>
+					<li class="brands__item"><a href="#" class="brands__link"><img src="dist/img/brand_5.png" alt=""></a></li>
+					<li class="brands__item"><a href="#" class="brands__link"><img src="dist/img/brand_6.png" alt=""></a></li>
 				</ul>
 			</div>
 		</main>
@@ -143,16 +150,16 @@
 			<div class="socials">
 				<h3>Socials</h3>
 				<ul class="footer__list">
-					<li class="footer__list__item">
+					<li class="footer__item">
 						<a href="#">Facebook</a>
 					</li>
-					<li class="footer__list__item">
+					<li class="footer__item">
 						<a href="#">Flickr</a>
 					</li>
-					<li class="footer__list__item">
+					<li class="footer__item">
 						<a href="#">Twitter</a>
 					</li>
-					<li class="footer__list__item">
+					<li class="footer__item">
 						<a href="#">Vimeo</a>
 					</li>
 				</ul>
@@ -160,16 +167,16 @@
 			<div class="links">
 				<h3>Links</h3>
 				<ul class="footer__list">
-					<li class="footer__list__item">
+					<li class="footer__item">
 						<a href="#">How to Write a Blog</a>
 					</li>
-					<li class="footer__list__item">
+					<li class="footer__item">
 						<a href="#">Create a Blog in 4 Steps</a>
 					</li>
-					<li class="footer__list__item">
+					<li class="footer__item">
 						<a href="#">15 Tips to Increase Traffic</a>
 					</li>
-					<li class="footer__list__item">
+					<li class="footer__item">
 						<a href="#">20 Blog Post Ideas</a>
 					</li>
 				</ul>
@@ -177,16 +184,16 @@
 			<div class="blogroll">
 				<h3>Blogroll</h3>
 				<ul class="footer__list">
-					<li class="footer__list__item">
+					<li class="footer__item">
 						<a href="#">Blogs Blog</a>
 					</li>
-					<li class="footer__list__item">
+					<li class="footer__item">
 						<a href="#">Roll Up Roll Up</a>
 					</li>
-					<li class="footer__list__item">
+					<li class="footer__item">
 						<a href="#">Blog Free</a>
 					</li>
-					<li class="footer__list__item">
+					<li class="footer__item">
 						<a href="#">Wordpress Blog</a>
 					</li>
 				</ul>
@@ -194,31 +201,31 @@
 			<div class="about">
 				<h3>About us</h3>
 				<ul class="footer__list">
-					<li class="footer__list__item">
+					<li class="footer__item">
 						<a href="#">Agriculture</a>
 					</li>
-					<li class="footer__list__item">
+					<li class="footer__item">
 						<a href="#">Harvest</a>
 					</li>
-					<li class="footer__list__item">
+					<li class="footer__item">
 						<a href="#">Company news</a>
 					</li>
-					<li class="footer__list__item">
+					<li class="footer__item">
 						<a href="#">Investor relations</a>
 					</li>
 				</ul>
 			</div>
 			<div class="contacts">
-				<p class="contacts_address">
+				<p class="contacts__address">
 					BuildHomeLtd.  Street Name 123   23 45 Cityname
 				</p>
-				<p class="contacts_tel">
+				<p class="contacts__tel">
 					+123 900 123 456
 				</p>
-				<p class="contacts_email">
+				<p class="contacts__email">
 					nfo@buildhome.web
 				</p>
-				<p class="contacts_copyright">
+				<p class="contacts__copyright">
 					&copy;2014 Build Home
 				</p>
 
@@ -230,16 +237,16 @@
 			<h2 class="news-banners__title"><% news.title %></h2>
 			<% news.articles.forEach(function(article) { %>
 			<article class="news__article">
-				<div class="news__article__photo">
+				<div class="news__photo">
 					<img src="<%-article.src%>" alt="">
-					<span class="news__article__date"><%- article.date.month %></span>
-					<span class="news__article__date"><%- article.date.day %></span>
+					<span class="news__date"><%- article.date.month %></span>
+					<span class="news__date"><%- article.date.day %></span>
 				</div>
-				<h3 class="news__article__title"><%- article.title %></h3>
-				<p class="news__article__subtitle">
+				<h3 class="news__title"><%- article.title %></h3>
+				<p class="news__subtitle">
 					by <span><%- article.user %></span> Comments(<span><%- article.comments %></span>)
 				</p>
-				<p class="news__article__content"><%- article.content %></p>
+				<p class="news__content"><%- article.content %></p>
 			</article>
 			<% });	%>
 		</section>
@@ -247,9 +254,9 @@
 		<h2 class="news-banners__title"><% banners.title %></h2>
 			<ul class="banners__list">
 			<% banners.bannerList.forEach(function(banner) { %>
-				<li class="banners__list__item">
-					<h4 class="banners__list__item__title"><%- banner.title %></h4>
-					<p class="banners__list__item__content"><%- banner.content %></p>
+				<li class="banners__item">
+					<h4 class="banners__title"><%- banner.title %></h4>
+					<p class="banners__content"><%- banner.content %></p>
 				</li>
 			<% });	%>
 			</ul>

@@ -55,8 +55,27 @@ function loadData() {
 	var newsBanners = document.querySelector('.news-banners');
 	var temp = _.template(document.getElementById('tmpl').innerHTML);
 	newsBanners.innerHTML = temp(info);
+
+		$('.jcarousel').jcarousel({
+				wrap: 'both'
+		}).jcarouselAutoscroll({
+					interval: 4000,
+					target: '+=1',
+					autostart: false
+		});
+
+		$('.jcarousel-pagination')
+		.on('jcarouselpagination:active', 'a', function() {
+			$(this).addClass('jcarousel-pagination--active');
+		})
+		.on('jcarouselpagination:inactive', 'a', function() {
+			$(this).removeClass('jcarousel-pagination--active');
+		})
+		.jcarouselPagination();
 }
 
 document.addEventListener('DOMContentLoaded', loadData);
+
+
 })();
 

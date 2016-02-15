@@ -304,19 +304,19 @@ table {
   float: right;
 }
 
-.socials .socials__list__item {
+.socials .socials__item {
   float: left;
   width: 33px;
   line-height: 36px;
   text-align: right;
 }
 
-.socials .socials__list__link .fa {
+.socials .socials__link .fa {
   color: #ccc;
   font-size: 16px;
 }
 
-.socials .socials__list__link:hover .fa {
+.socials .socials__link:hover .fa {
   color: #248cec;
 }
 
@@ -325,15 +325,16 @@ table {
   background-color: #2a2d32;
 }
 
-.menu__list__item {
+.menu__item {
   float: left;
 }
 
-.menu__list__link {
+.menu__link {
   display: block;
   line-height: 56px;
   padding: 0 40px;
   text-transform: uppercase;
+  border-right: 1px solid #181a1d;
   text-decoration: none;
   font-family: "UbuntuCondensedRegular";
   font-size: 14px;
@@ -341,11 +342,11 @@ table {
   font-weight: normal;
 }
 
-.menu__list__link.menu__list__link--active {
+.menu__link.menu__link--active {
   background-color: #248cec;
 }
 
-.menu__list__link:not(.menu__list__link--active):hover {
+.menu__link:not(.menu__link--active):hover {
   color: #f4b60d;
 }
 
@@ -365,7 +366,7 @@ table {
   color: #fff;
 }
 
-.menu__search__control {
+.menu__search-control {
   width: 223px;
   height: 38px;
   padding-left: 15px;
@@ -374,10 +375,86 @@ table {
   color: #fff;
 }
 
-.menu__search__control:focus {
+.menu__search-control:focus {
   outline: none;
 }
 
 .slider {
+  position: relative;
+  overflow: hidden;
   margin-top: 40px;
+}
+
+.slider .slider__list {
+  width: 20000em;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.slider .slider__item {
+  float: left;
+}
+
+.slider .slider__title {
+  position: absolute;
+  bottom: 22px;
+  left: 37px;
+  text-transform: uppercase;
+  font-family: "UbuntuMedium";
+  font-size: 39px;
+  color: #fff;
+  font-weight: bold;
+  padding: 5px;
+  visibility: hidden;
+}
+
+.slider .slider__title span {
+  clear: both;
+  float: left;
+  padding: 5px 20px;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.slider .slider__title span:first-of-type {
+  padding-right: 14px;
+  color: #f4b60d;
+}
+
+.slider .slider__title--active {
+  visibility: visible;
+}
+
+.slider img {
+  width: 1160px;
+  height: 470px;
+}
+
+.jcarousel-pagination {
+  position: absolute;
+  font-size: 0;
+}
+
+.jcarousel-pagination a {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  background-color: #fff;
+  border: 3px solid #fff;
+}
+
+.jcarousel-pagination--active {
+  background-color: #001d1d;
+}
+
+.article__item {
+  float: left;
+  width: 242px;
+}
+
+.article__item .article__title {
+  font-family: "UbuntuMedium";
+  font-size: 16px;
+  color: #2a2b2e;
+  font-weight: normal;
 }

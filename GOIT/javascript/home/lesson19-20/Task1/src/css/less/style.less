@@ -1,14 +1,16 @@
 @font-size-default: 16px;
 @font-weight-default:normal;
+
 @font-default: "UbuntuMedium";
 @font-default-small: "UbuntuLight";
+@menu-font-family: "UbuntuCondensedRegular";
+
 @font-color: #434343;
-@yellow-color: #f4b60d;
-@blue-color: #248cec;
 @menu-color: #2a2d32;
 @menu-text-color: #fff;
-@menu-font-family: "UbuntuCondensedRegular";
 @border-color-default: #181a1d;
+@yellow-color: #f4b60d;
+@blue-color: #248cec;
 
 
 .font-custom(@font-family: @font-default, @size: @font-size-default, @color: @font-color, @weight:@font-weight-default) {
@@ -25,6 +27,7 @@
 .border(@size: 1px, @type: solid, @color: @border-color-default) {
 	border: @arguments;
 }
+
 
 .clearfix {
 	display: block;
@@ -81,14 +84,14 @@
 .socials {
 	float: right;
 
-	.socials__list__item {
+	.socials__item {
 		float: left;
 		width: 33px;
 		line-height: 36px;
 		text-align: right;
 	}
 
-	.socials__list__link {
+	.socials__link {
 		.fa {
 			color: #ccc;
 			font-size: @font-size-default;
@@ -105,23 +108,25 @@
 	background-color: @menu-color;
 }
 
-.menu__list__item {
+.menu__item {
 	float: left;
 }
 
-.menu__list__link {
+.menu__link {
 	display: block;
 	line-height: 56px;
 	padding: 0 40px;
 	text-transform: uppercase;
+	border-right: 1px solid #181a1d;
 	.link;
 	.font-custom(@menu-font-family, 14px, @menu-text-color);
+
 	
-	&.menu__list__link--active {
+	&.menu__link--active {
 		background-color: @blue-color;
 	}
 
-	&:not(.menu__list__link--active):hover {
+	&:not(.menu__link--active):hover {
 		color: @yellow-color;
 	}
 }
@@ -142,7 +147,7 @@
 	}
 }
 
-.menu__search__control {
+.menu__search-control {
 	width: 223px;
 	height: 38px;
 	padding-left: 15px;
@@ -155,4 +160,79 @@
 	}
 }
 
+.slider {
+	position: relative;
+	overflow: hidden;
+	margin-top: 40px;
 
+	.slider__list {
+		width: 20000em;
+		// position: relative;
+		list-style: none;
+		margin: 0;
+		padding: 0;
+	}
+
+	.slider__item {
+		float: left;
+	}
+
+	.slider__title {
+		position: absolute;
+		bottom: 22px;
+		left: 37px;
+		text-transform: uppercase;
+		.font-custom(@font-default, 39px, #fff, bold);
+		padding: 5px;
+		visibility: hidden;
+
+		span {
+			clear:both;
+			float: left;
+			padding: 5px 20px;
+			background-color: rgba(0, 0, 0, 0.5);
+		}
+
+		span:first-of-type {
+			padding-right: 14px;
+			color: @yellow-color;
+		}
+
+		&--active {
+			visibility: visible;
+		}
+	}
+
+	img {
+		width: 1160px;
+		height: 470px;
+	}
+}
+
+.jcarousel-pagination {
+	@color-pagination: #001d1d;
+	position: absolute;
+	font-size: 0;
+
+	a {
+		display: inline-block;
+		width: 8px;
+		height: 8px;
+		background-color: #fff;
+		.border(3px, solid, #fff);
+	}
+
+	&--active {
+		background-color: @color-pagination;
+	}
+}
+
+.article__item {
+	float: left;
+	width: 242px;
+	@color-article-title: #2a2b2e;
+
+	.article__title {
+		.font-custom(@font-default, 16px, @color-article-title);
+	}
+}
