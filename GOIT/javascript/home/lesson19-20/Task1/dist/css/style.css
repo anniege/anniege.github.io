@@ -615,6 +615,7 @@ table {
 
 .news__title {
   padding-top: 4px;
+  padding-bottom: 8px;
   line-height: 23px;
   font-family: "UbuntuMedium";
   font-size: 16px;
@@ -793,9 +794,13 @@ table {
 .contacts p {
   line-height: 60px;
   font-family: Arial;
-  font-size: 13px;
+  font-size: 12px;
   color: rgba(255, 255, 255, 0.2);
   font-weight: normal;
+}
+
+.contacts p i {
+  font-size: 16px;
 }
 
 .contacts p:not(:last-child) {
@@ -804,4 +809,12 @@ table {
 
 .contacts__copyright {
   float: right;
+}
+
+.contacts__tel {
+  padding-left: 33px;
+}
+
+.contacts__email {
+  padding-left: 41px;
 }

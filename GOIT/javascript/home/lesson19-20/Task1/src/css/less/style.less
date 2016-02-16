@@ -383,6 +383,7 @@
 
 	&__title {
 		padding-top: 4px;
+		padding-bottom: 8px;
 		line-height: 23px;
 		.font-custom(@font-default, 16px, @menu-color);
 
@@ -547,7 +548,11 @@
 .contacts {
 	p {
 		line-height: 60px;
-		.font-custom(Arial, 13px, rgba(255,255,255,.2));
+		.font-custom(Arial, 12px, rgba(255,255,255,.2));
+
+		i {
+			font-size: 16px;
+		}
 	}
 
 	p:not(:last-child) {
@@ -556,6 +561,15 @@
 
 	&__copyright {
 		float: right;
+	}
+
+
+	&__tel {
+		padding-left: 33px;
+	}
+
+	&__email {
+		padding-left: 41px;
 	}
 }
 
