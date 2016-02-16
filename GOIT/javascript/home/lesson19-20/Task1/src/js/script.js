@@ -5,10 +5,10 @@
 			articles: [
 				{
 					date: {
-						day: 26,
+						day: 23,
 						month: 'Jan'
 					},
-					src: 'public/img/news_1.jpg',
+					src: 'dist/img/news_1.jpg',
 					title: 'Advanced Machinery Helps Improve Quality',
 					user: 'cmsmasters',
 					comments: 6,
@@ -16,10 +16,10 @@
 				},
 				{
 					date: {
-						day: 26,
+						day: 21,
 						month: 'Jan'
 					},
-					src: 'public/img/news_2.jpg',
+					src: 'dist/img/news_2.jpg',
 					title: 'Powerful Techniques for Advanced Service',
 					user: 'cmsmasters',
 					comments: 3,
@@ -66,10 +66,14 @@ function loadData() {
 
 		$('.jcarousel-pagination')
 		.on('jcarouselpagination:active', 'a', function() {
-			$(this).addClass('jcarousel-pagination--active');
+			$(this).addClass('jcarousel-pagination__link--active');
+			var i = $(this).index();
+			$('.jcarousel li').eq(i).find('h3').addClass('slider__title--active');
 		})
 		.on('jcarouselpagination:inactive', 'a', function() {
-			$(this).removeClass('jcarousel-pagination--active');
+			$(this).removeClass('jcarousel-pagination__link--active');
+			var i = $(this).index();
+			$('.jcarousel li').eq(i).find('h3').removeClass('slider__title--active');
 		})
 		.jcarouselPagination();
 }
