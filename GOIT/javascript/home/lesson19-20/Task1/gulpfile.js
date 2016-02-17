@@ -1,4 +1,5 @@
 var gulp = require('gulp');
+var gutil = require('gulp-util');
 var less = require('gulp-less');
 var watch = require('gulp-watch');
 var concatCss = require('gulp-concat-css');
@@ -12,7 +13,8 @@ gulp.task('css', function(){
 		.pipe(concatCss("default.css"));
 
 	var lessStream = gulp.src('src/css/**/*.less')
-		.pipe(less());
+		.pipe(less())
+		.on('error', gutil.log);
 
 	var mergedStream = streamqueue({ objectMode: true }, cssStream, lessStream)
 		.pipe(concatCss('style.css'))

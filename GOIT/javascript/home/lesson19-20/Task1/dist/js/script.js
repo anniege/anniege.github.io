@@ -1,4 +1,4 @@
-(function() {
+$(function() {
 	var info = {
 		news: {
 			title: 'latest news',
@@ -32,8 +32,7 @@
 			bannerList: [
 				{
 					title: 'Accordion Panel 1',
-					content: 'Cum sociis natoque penatibus et magnis dis parturient mus. Pro vel nibh et elit mollis commodo et nec augueique Nemo enim ipsam voluptatem quia ptas sit aspernatur momo. Cum sociis natoque penatibus et magnis dis parturient ontesmus. Nemo enim ipsam voluptatem quia ptas sit aspernatur samomoPro vel nibh et elit mollis commodo et nec augueique Nemo enim ipsam voluptatem quia ptas sit aspernatur\
-	samomo enim ipsam voluptatem.'
+					content: 'Cum sociis natoque penatibus et magnis dis parturient mus. Pro vel nibh et elit mollis commodo et nec augueique Nemo enim ipsam voluptatem quia ptas sit aspernatur momo. Cum sociis natoque penatibus et magnis dis parturient ontesmus. Nemo enim ipsam voluptatem quia ptas sit aspernatur samomoPro vel nibh et elit mollis commodo et nec augueique Nemo enim ipsam voluptatem quia ptas sit aspernatur'
 				},
 				{
 					title: 'Accordion Panel 2',
@@ -51,24 +50,40 @@
 		}
 	}
 
-function loadBanner(){
-	$('.banners__item').eq(0).addClass('banners__item--active').find('.banners__title span').html('-');
 
-	$('.banners__list').on('click', '.banners__item', function() {
-		$(this).toggleClass('banners__item--active');
-		if ($(this).hasClass('banners__item--active')) {
-			$(this).find('.banners__title span').html('-');
-		} else {
-			$(this).find('.banners__title span').html('+');				
-		}
-	});
-}	
 
-function loadData() {
-	var temp = _.template(document.getElementById('tmpl').innerHTML);
-	var newsBanners = document.querySelector('.news-banners');
-	newsBanners.innerHTML = temp(info);
+ var appRun = function() {
+	var temp = _.template($('#tmpl').html());
+	$('.news-banners').html(temp(info));
 
+
+	function bannerControl(){
+		$('.banners__item').eq(0).addClass('banners__item--active').find('.banners__title span').html('-');
+
+		$('.banners__list').on('click', '.banners__item', function() {
+			$('.banners__item').removeClass('banners__item--active');
+			$(this).addClass('banners__item--active');
+			if ($(this).hasClass('banners__item--active')) {
+				$(this).find('.banners__title span').html('-');
+			} else {
+				$(this).find('.banners__title span').html('+');
+			}
+		});
+	}	
+
+
+	function menuControl() {
+		$('.menu__list').on('click', function(e) {
+			var target = e.target;
+			$(this).find('.menu__link--active').removeClass('menu__link--active');
+
+			if (target.nodeName === 'A') {
+					$(target).addClass('menu__link--active');
+			}
+		});
+	}
+
+	function carouselControl () {
 		$('.jcarousel').jcarousel({
 				wrap: 'both'
 		}).jcarouselAutoscroll({
@@ -89,12 +104,14 @@ function loadData() {
 			$('.jcarousel li').eq(i).find('h3').removeClass('slider__title--active');
 		})
 		.jcarouselPagination();
+	}
 
-		loadBanner();
+	carouselControl();
+	bannerControl();
+	menuControl();
 }
 
-document.addEventListener('DOMContentLoaded', loadData);
+appRun();
 
-
-})();
+});
 
