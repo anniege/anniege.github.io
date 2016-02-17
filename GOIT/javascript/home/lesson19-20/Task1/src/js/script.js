@@ -62,12 +62,9 @@ $(function() {
 
 		$('.banners__list').on('click', '.banners__item', function() {
 			$('.banners__item').removeClass('banners__item--active');
+			$('.banners__title span').html('+');
 			$(this).addClass('banners__item--active');
-			if ($(this).hasClass('banners__item--active')) {
-				$(this).find('.banners__title span').html('-');
-			} else {
-				$(this).find('.banners__title span').html('+');
-			}
+			$(this).find('.banners__title span').html('-');
 		});
 	}	
 

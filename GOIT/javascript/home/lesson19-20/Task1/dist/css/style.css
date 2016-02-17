@@ -242,6 +242,9 @@ table {
 .link {
   text-decoration: none;
 }
+.link {
+  text-decoration: none;
+}
 
 .clearfix {
   display: block;
@@ -258,7 +261,7 @@ table {
 }
 
 .wrapper {
-  max-width: 1160px;
+  width: 1160px;
   padding-top: 38px;
   margin: 0 auto;
 }
@@ -437,8 +440,8 @@ table {
 .jcarousel-pagination {
   position: absolute;
   left: 50%;
-  transform: translate(-50%, -50%);
   bottom: 17px;
+  transform: translate(-50%, -50%);
   font-size: 0;
 }
 
@@ -683,8 +686,8 @@ table {
   left: 0;
   width: 150px;
   height: 150px;
-  overflow: hidden;
   background-size: cover;
+  overflow: hidden;
 }
 
 .news__date {
@@ -695,9 +698,9 @@ table {
 
 .news__date-block {
   display: block;
-  text-align: center;
   width: 41px;
   line-height: 41px;
+  text-align: center;
   font-family: "UbuntuMedium", Arial, sans-serif;
   font-size: 16px;
   color: #2a2d32;
@@ -722,8 +725,8 @@ table {
 }
 
 .banners {
-  width: 48.3%;
   float: right;
+  width: 48.3%;
 }
 
 .banners__title {

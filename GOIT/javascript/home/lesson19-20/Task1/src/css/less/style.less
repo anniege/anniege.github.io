@@ -1,42 +1,5 @@
-@font-size-default: 16px;
-@font-weight-default:normal;
-
-@font-default: "UbuntuMedium", Arial, sans-serif;
-@font-default-small: "UbuntuLight", Arial, sans-serif;
-@menu-font-family: "UbuntuCondensedRegular", Arial, sans-serif;
-@arial: Arial, sans-serif;
-
-@font-color: #434343;
-@menu-color: #2a2d32;
-@menu-text-color: #fff;
-@border-color-default: #181a1d;
-@yellow-color: #f4b60d;
-@blue-color: #248cec;
-@color-pagination: #001d1d;
-@color-article-title: #2a2b2e;
-@color-article-text: #8a8a8a;
-
-@white-color: rgba(255, 255, 255, 1);
-@bgColor-footer-lower: #35383c;
-
-.font-custom(@family: @font-default, @size: @font-size-default, @color: @font-color, @weight:@font-weight-default) {
-	font-family: @family;
-	font-size: @size;
-	color: @color;
-	font-weight: @weight;
-}
-
-.link {
-	text-decoration: none;
-}
-
-.font-color(@opacity: 1) {
-	color: rgba(255, 255, 255, @opacity);
-}
-
-.border(@size: 1px, @type: solid, @color: @border-color-default) {
-	border: @arguments;
-}
+@import 'variables.less';
+@import 'mixins.less';
 
 
 .clearfix {
@@ -53,13 +16,15 @@
 	}
 }
 
+// wrapper definition
 .wrapper {
-	max-width: 1160px;
+	width: 1160px;
 	padding-top: 38px;
 	margin: 0 auto;
 }
 
 
+// logo section
 .logo {
 	float: left;
 	position: relative;
@@ -86,12 +51,13 @@
 			overflow: hidden;
 		}
 	}
-
 }
 
+// Section HEADER
 .header {
 	padding-bottom: 36px;
 }
+
 
 .socials {
 	float: right;
@@ -116,63 +82,67 @@
 	}
 }
 
+
+// Menu section
 .menu {
 	position: relative;
 	background-color: @menu-color;
-}
 
-.menu__item {
-	float: left;
-}
-
-.menu__link {
-	display: block;
-	padding: 0 40px;
-	border-right: 1px solid #181a1d;
-	line-height: 56px;
-	text-transform: uppercase;
-	.link;
-	.font-custom(@menu-font-family, 14px, @menu-text-color);
-
-	
-	&.menu__link--active {
-		background-color: @blue-color;
+	&__item {
+		float: left;
 	}
 
-	&:not(.menu__link--active):hover {
-		color: @yellow-color;
+	&__link {
+		display: block;
+		padding: 0 40px;
+		border-right: 1px solid #181a1d;
+		line-height: 56px;
+		text-transform: uppercase;
+		.link;
+		.font-custom(@menu-font-family, 14px, @menu-text-color);
+
+		
+		&.menu__link--active {
+			background-color: @blue-color;
+		}
+
+		&:not(.menu__link--active):hover {
+			color: @yellow-color;
+		}
 	}
-}
 
-.menu__search {
-	position: absolute;
-	right: 8px;
-	top: 50%;
-	margin-top: -19px;
-
-	& .fa {
+	&__search {
 		position: absolute;
-		right: 13px;
+		right: 8px;
 		top: 50%;
-		margin-top: -(@font-size-default*0.5);
-		font-size: @font-size-default;
-		.font-color(.2);
+		margin-top: -19px;
+
+		& .fa {
+			position: absolute;
+			right: 13px;
+			top: 50%;
+			margin-top: -(@font-size-default*0.5);
+			font-size: @font-size-default;
+			.font-color(.2);
+		}
+	}
+
+	&__search-control {
+		width: 223px;
+		height: 38px;
+		padding-left: 15px;
+		.border();
+		.font-color(.5);
+		background-color: #35383c;
+
+		&:focus {
+			outline: none;
+		}
 	}
 }
 
-.menu__search-control {
-	width: 223px;
-	height: 38px;
-	padding-left: 15px;
-	.border();
-	.font-color(.5);
-	background-color: #35383c;
 
-	&:focus {
-		outline: none;
-	}
-}
-
+// section SLIDER
 .slider {
 	position: relative;
 	margin-top: 40px;
@@ -181,7 +151,6 @@
 	&__list {
 		width: 20000em;
 		position: relative;
-		// list-style: none;
 		margin: 0;
 		padding: 0;
 	}
@@ -223,11 +192,13 @@
 	}
 }
 
+
+// carousel definiton of SLIDER
 .jcarousel-pagination {
 	position: absolute;
 	left: 50%;
-	transform: translate(-50%, -50%);
 	bottom: 17px;
+	transform: translate(-50%, -50%);
 	font-size: 0;
 
 
@@ -249,10 +220,11 @@
 	}
 }
 
+
+// section ARTICLES
 .articles {
 	padding: 122px 0 87px;
 	width: 100%;
-
 
 	&__item {
 		position: relative;
@@ -272,7 +244,6 @@
 		&:not(:last-of-type) {
 			padding-right: 3.8%;
 		}
-
 
 		&--settings:before {
 			position: absolute;
@@ -313,7 +284,6 @@
 		padding-bottom: 19px;
 	}
 
-
 	&__link {
 		position: relative;
 		.link;
@@ -338,9 +308,10 @@
 			}
 		}
 	}
-
 }
 
+
+// section SERVICES
 .services {
 	padding: 9px 0 118px;
 	background-color: @menu-color;
@@ -365,7 +336,7 @@
 		display: block;
 		height: 100%;
 		.link;
-		.font-custom(@font-default, 16px, @menu-text-color);
+		.font-custom(@font-default, @font-size-default, @menu-text-color);
 		transition: background-color .8s;
 
 		&:hover {
@@ -410,6 +381,8 @@
 	}
 }
 
+
+// section NEWS
 .news {
 	width: 48.3%;
 	float: left;
@@ -425,8 +398,7 @@
 		padding-top: 4px;
 		padding-bottom: 8px;
 		line-height: 23px;
-		.font-custom(@font-default, 16px, @menu-color);
-
+		.font-custom(@font-default, @font-size-default, @menu-color);
 	}
 
 	&__title:hover {
@@ -451,8 +423,8 @@
 		left: 0;
 		width: 150px;
 		height: 150px;
-		overflow: hidden;
 		background-size: cover;
+		overflow: hidden;
 	}
 
 	&__date {
@@ -462,11 +434,10 @@
 
 		&-block {
 			display: block;
-			text-align: center;
 			width: 41px;
 			line-height: 41px;
-
-			.font-custom(@font-default, 16px, @menu-color);
+			text-align: center;
+			.font-custom(@font-default, @font-size-default, @menu-color);
 
 			&--month {
 				color: #fff;
@@ -485,9 +456,12 @@
 	}
 }
 
+
+
+// section BANNERS
 .banners {
-	width: 48.3%;
 	float: right;
+	width: 48.3%;
 
 	&__title {
 		padding: 12px 0;
@@ -519,6 +493,8 @@
 	}
 }
 
+
+// section BRANDS
 .brands {
 	padding: 115px 0;
 	
@@ -526,11 +502,14 @@
 		display: table;
 		width: 100%;
 	}
+	
 	&__item {
 		display: table-cell;
 	}
 }
 
+
+// FOOTER
 .footer {
 	@color-footer-default: rgba(255,255,255,.3);
 
@@ -560,8 +539,6 @@
 		&:not(:last-of-type) a {
 			border-bottom: 1px solid rgba(255,255,255,.1);
 		}
-
-
 	}
 
 	&__link {
@@ -585,6 +562,7 @@
 }
 
 
+// section CONTACTS
 .contacts {
 	@font-contacts: rgba(255,255,255,.2);
 

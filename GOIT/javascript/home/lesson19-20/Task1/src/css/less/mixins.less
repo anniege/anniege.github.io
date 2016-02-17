@@ -1,0 +1,20 @@
+
+
+.font-custom(@family: @font-default, @size: @font-size-default, @color: @font-color, @weight:@font-weight-default) {
+	font-family: @family;
+	font-size: @size;
+	color: @color;
+	font-weight: @weight;
+}
+
+.link {
+	text-decoration: none;
+}
+
+.font-color(@opacity: 1) {
+	color: rgba(255, 255, 255, @opacity);
+}
+
+.border(@size: 1px, @type: solid, @color: @border-color-default) {
+	border: @arguments;
+}
