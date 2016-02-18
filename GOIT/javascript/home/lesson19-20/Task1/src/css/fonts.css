@@ -18,16 +18,6 @@
     font-style: normal;
     font-weight: normal;
 }
-/* font-family: "UbuntuItalic"; */
-@font-face {
-    font-family: "UbuntuItalic";
-    src: url("../fonts/Ubuntu/UbuntuItalic/UbuntuItalic.eot");
-    src: url("../fonts/Ubuntu/UbuntuItalic/UbuntuItalic.eot?#iefix")format("embedded-opentype"),
-    url("../fonts/Ubuntu/UbuntuItalic/UbuntuItalic.woff") format("woff"),
-    url("../fonts/Ubuntu/UbuntuItalic/UbuntuItalic.ttf") format("truetype");
-    font-style: normal;
-    font-weight: normal;
-}
 /* font-family: "UbuntuLight"; */
 @font-face {
     font-family: "UbuntuLight";
@@ -38,16 +28,6 @@
     font-style: normal;
     font-weight: normal;
 }
-/* font-family: "UbuntuLightItalic"; */
-@font-face {
-    font-family: "UbuntuLightItalic";
-    src: url("../fonts/Ubuntu/UbuntuLightItalic/UbuntuLightItalic.eot");
-    src: url("../fonts/Ubuntu/UbuntuLightItalic/UbuntuLightItalic.eot?#iefix")format("embedded-opentype"),
-    url("../fonts/Ubuntu/UbuntuLightItalic/UbuntuLightItalic.woff") format("woff"),
-    url("../fonts/Ubuntu/UbuntuLightItalic/UbuntuLightItalic.ttf") format("truetype");
-    font-style: normal;
-    font-weight: normal;
-}
 /* font-family: "UbuntuMedium"; */
 @font-face {
     font-family: "UbuntuMedium";
@@ -55,26 +35,6 @@
     src: url("../fonts/Ubuntu/UbuntuMedium/UbuntuMedium.eot?#iefix")format("embedded-opentype"),
     url("../fonts/Ubuntu/UbuntuMedium/UbuntuMedium.woff") format("woff"),
     url("../fonts/Ubuntu/UbuntuMedium/UbuntuMedium.ttf") format("truetype");
-    font-style: normal;
-    font-weight: normal;
-}
-/* font-family: "UbuntuMediumItalic"; */
-@font-face {
-    font-family: "UbuntuMediumItalic";
-    src: url("../fonts/Ubuntu/UbuntuMediumItalic/UbuntuMediumItalic.eot");
-    src: url("../fonts/Ubuntu/UbuntuMediumItalic/UbuntuMediumItalic.eot?#iefix")format("embedded-opentype"),
-    url("../fonts/Ubuntu/UbuntuMediumItalic/UbuntuMediumItalic.woff") format("woff"),
-    url("../fonts/Ubuntu/UbuntuMediumItalic/UbuntuMediumItalic.ttf") format("truetype");
-    font-style: normal;
-    font-weight: normal;
-}
-/* font-family: "UbuntuBoldItalic"; */
-@font-face {
-    font-family: "UbuntuBoldItalic";
-    src: url("../fonts/Ubuntu/UbuntuBoldItalic/UbuntuBoldItalic.eot");
-    src: url("../fonts/Ubuntu/UbuntuBoldItalic/UbuntuBoldItalic.eot?#iefix")format("embedded-opentype"),
-    url("../fonts/Ubuntu/UbuntuBoldItalic/UbuntuBoldItalic.woff") format("woff"),
-    url("../fonts/Ubuntu/UbuntuBoldItalic/UbuntuBoldItalic.ttf") format("truetype");
     font-style: normal;
     font-weight: normal;
 }

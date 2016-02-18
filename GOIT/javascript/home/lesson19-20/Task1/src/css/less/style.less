@@ -225,6 +225,7 @@
 .articles {
 	padding: 122px 0 87px;
 	width: 100%;
+	@font-family-link: "UbuntuBold", "Arial Bold", Arial, sans-serif;
 
 	&__item {
 		position: relative;
@@ -287,7 +288,7 @@
 	&__link {
 		position: relative;
 		.link;
-		.font-custom(@font-default, 13px, @color-article-title);
+		.font-custom(@font-family-link, 13px, @color-article-title);
 		transition: color .25s;
 
 		&:after {
