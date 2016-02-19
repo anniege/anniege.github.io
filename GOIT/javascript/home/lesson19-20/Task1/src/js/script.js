@@ -51,23 +51,22 @@ $(function() {
 		}
 	}
 
-
-
  var appRun = function() {
 	var temp = _.template($('#tmpl').html());
 	$('.news-banners').html(temp(info));
 
 	function bannerControl(){
-		$('.banners__item').eq(0).addClass('banners__item--active').find('.banners__title span').html('-');
+		var banner = $('.banners__item').eq(0);
+		banner.addClass('banners__item--active').children('.banners__title span').html('-');
+		banner.children('.banners__content').show();
 
 		$('.banners__list').on('click', '.banners__item', function() {
-			$('.banners__item').removeClass('banners__item--active');
+			$('.banners__item--active').removeClass('banners__item--active');
 			$('.banners__title span').html('+');
-			$(this).addClass('banners__item--active');
-			$(this).find('.banners__title span').html('-');
+			$(this).addClass('banners__item--active').children('.banners__title span').html('-');
+			$(this).children('.banners__content').show();
 		});
-	}	
-
+	}
 
 	function menuControl() {
 		$('.menu__list').on('click', function(e) {
@@ -103,20 +102,13 @@ $(function() {
 		})
 		.jcarouselPagination();
 
-		//---------------------------------------------------
-
 		$('.slider__list').find('img').each(function(){
 			var realsrc = $(this).attr('data-src');
-			// console.log(this);
 			$(this).one('load', function(){
-			console.log(this);
 				$(this).addClass('acarousel-img').animate({opacity: 1}, 500);
 			});
 			$(this).attr('src', realsrc);
 		});
-
-//---------------------------------------------------------
-
 	}
 
 	carouselControl();
@@ -125,6 +117,5 @@ $(function() {
 }
 
 appRun();
-
 });
 

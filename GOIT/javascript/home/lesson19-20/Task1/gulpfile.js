@@ -37,7 +37,6 @@ gulp.task('css', function(){
 
 gulp.task('scripts', function(){
 	return gulp.src('src/js/*.js')
-	.pipe(watch('src/js/*.js'))
 	.pipe(concat('script.js'))
 	.pipe(uglify())
 	.pipe(rename('script.min.js'))

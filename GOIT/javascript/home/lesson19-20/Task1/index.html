@@ -7,9 +7,6 @@
 	<link rel="stylesheet" href="dist/css/style.min.css">
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.0.0/lodash.js"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-	<script src="dist/js/jquery.jcarousel.js"></script>
-	<script src="dist/js/script.js"></script>
-	<scrip src="dist/js/script.min.js"></scrip>
 </head>
 <body>
 	<div class="wrapper">
@@ -273,11 +270,15 @@
 			<% banners.bannerList.forEach(function(banner) { %>
 				<li class="banners__item">
 					<h4 class="banners__title"><span>+</span><%- banner.title %></h4>
-					<p class="banners__content"><%- banner.content %></p>
+					<div class="banners__content"><p ><%- banner.content %></p></div>
+					
 				</li>
 			<% });	%>
 			</ul>
 		</section>
 	</script>
+<!-- 	<script src="dist/js/jquery.jcarousel.js"></script>
+	<script src="dist/js/script.js"></script> -->
+	<script src="dist/js/script.min.js"></script>
 </body>
 </html>

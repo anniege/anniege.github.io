@@ -175,6 +175,7 @@
 		.font-custom(@font-default, 39px, #fff, bold);
 		padding: 5px;
 		visibility: hidden;
+		z-index: 999;
 
 		span {
 			clear:both;
@@ -477,32 +478,49 @@
 	width: 48.3%;
 
 	&__title {
-		padding: 12px 0;
+		position: relative;
+		padding: 13.5px 0 13.5px 52px;
 		text-transform: uppercase;
 		.font-custom(@font-default, 13px, @menu-color);
 		cursor: pointer;
 
 		span {
-			display: inline-block;
-			padding: 0 26px 0 12px;
+			position: absolute;
+			top: 0;
+			left: 0;
+			border-right: none;
+			padding: 9.5px 13.5px;
 			font-size: 21px;
 		}
 	}
 
 	&__item  &__content {
 		display: none;
-		padding: 30px 5px 40px 38px;
-		line-height: 19px;
-		.font-custom(Arial, 13px, @color-article-text);
+		max-height: 0;
+		overflow: hidden;
+		transition: 0.4s ease;
+		opacity: 0;
+
+		p {
+			padding: 30px 5px 40px 38px;
+			line-height: 19px;
+			.font-custom(Arial, 13px, @color-article-text);
+		}
 	}
 
 	&__item--active  &__content {
-		display: block;
+		max-height: 150px;
+		opacity: 1;
 	}
 
 	&__item--active  &__title {
 		background: @yellow-color;
 		color: #fff;
+
+		span {
+			border-right: 1px solid #f6c53d;
+			background: @yellow-color;
+		}
 	}
 }
 
