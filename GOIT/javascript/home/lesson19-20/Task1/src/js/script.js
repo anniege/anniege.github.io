@@ -58,13 +58,13 @@ $(function() {
 	function bannerControl(){
 		var banner = $('.banners__item').eq(0);
 		banner.addClass('banners__item--active').children('.banners__title span').html('-');
-		banner.children('.banners__content').show();
+		banner.children('.banners__content').slideDown();
 
 		$('.banners__list').on('click', '.banners__item', function() {
 			$('.banners__item--active').removeClass('banners__item--active');
 			$('.banners__title span').html('+');
 			$(this).addClass('banners__item--active').children('.banners__title span').html('-');
-			$(this).children('.banners__content').show();
+			$(this).children('.banners__content').slideDown();
 		});
 	}
 
