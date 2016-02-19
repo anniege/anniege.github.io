@@ -158,6 +158,13 @@
 	&__item {
 		float: left;
 		position: relative;
+		width: 1160px;
+		height: 470px;
+		// text-align: center;
+
+		& .acarousel-img {
+			opacity: 0;
+		}
 	}
 
 	&__title {
@@ -187,8 +194,13 @@
 	}
 
 	img {
-		width: 1160px;
-		height: 470px;
+		// width: 1160px;
+		// height: 470px;
+		display: block;
+		position: relative;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
 	}
 }
 
