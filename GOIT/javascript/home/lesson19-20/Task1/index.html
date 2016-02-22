@@ -246,7 +246,7 @@
 	</footer>
 	<script type="text/template" id="tmpl">
 		<section class="news">
-			<h2 class="news-banners__title"><%- news.title %></h2>
+			<h2 class="news__title"><%- news.title %></h2>
 			<% news.articles.forEach(function(article) { %>
 			<article class="news__article">
 				<div class="news__photo">
@@ -256,25 +256,25 @@
 					<span class="news__date-block news__date-block--month"><%- article.date.month %></span>
 					<span class="news__date-block news__date-block--day"><%- article.date.day %></span>
 				</div>
-				<h3 class="news__title"><%- article.title %></h3>
-				<p class="news__subtitle">
+				<h3 class="news__article__title"><%- article.title %></h3>
+				<h4 class="news__article__subtitle">
 					by <a href="#"><%- article.user %></a> Comments(<a href="#"><%- article.comments %></a>)
-				</p>
+				</h4>
 				<p class="news__content"><%- article.content %></p>
 			</article>
 			<% });	%>
 		</section>
 		<section class="banners">
-		<h2 class="news-banners__title"><%- banners.title %></h2>
-			<ul class="banners__list">
-			<% banners.bannerList.forEach(function(banner) { %>
-				<li class="banners__item">
-					<h4 class="banners__title"><span>+</span><%- banner.title %></h4>
-					<div class="banners__content"><p ><%- banner.content %></p></div>
-					
-				</li>
-			<% });	%>
-			</ul>
+			<h2 class="banners__title"><%- banners.title %></h2>
+				<ul class="banners__list">
+				<% banners.bannerList.forEach(function(banner) { %>
+					<li class="banners__i">
+						<h4 class="banners__i__title"><span>+</span><%- banner.title %></h4>
+						<div class="banners__content"><p ><%- banner.content %></p></div>
+						
+					</li>
+				<% });	%>
+				</ul>
 		</section>
 	</script>
 <!-- 	<script src="dist/js/jquery.jcarousel.js"></script>
