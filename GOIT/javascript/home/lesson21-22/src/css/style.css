@@ -1,0 +1,217 @@
+* {
+padding: 0;
+margin: 0;
+}
+
+.wrapper {
+	width: 60%;
+	padding: 20px 0;
+	margin: 0 auto;
+	font-family: Arial, sans-serif;
+	text-align: center;
+}
+
+.header {
+	position: relative;
+}
+
+.header__logo {
+	position: absolute;
+	top: 0;
+	left: 20px;
+	width: 50px;
+	height: 50px;
+}
+
+.header__title {
+	padding: 15px 0;
+	line-height: 35px;
+	text-align: center;
+	font-size: 28px;
+	color: #000;
+}
+
+.test__content {
+	margin-bottom: 20px;
+}
+
+.test__i {
+	list-style: none;
+	padding: 5px 10px;
+	border: 1px solid #ddd;
+	border-radius: 5px;
+	background-color: transparent;
+	text-align: left;
+	transition: all .5s;
+}
+
+.test__i:not(:last-of-type) {
+	margin-bottom: 5px;
+}
+
+.test__i:hover {
+	background-color: #ccc;
+}
+
+.test__i--modified {
+	border: none;
+	border-radius: 0;
+	padding: 0;
+	transition: none;
+}
+
+.test__i .test__i--modified:hover {
+	background-color: transparent;
+	cursor: inherit;
+}
+
+.test__i label {
+	display: block;
+	margin-bottom: 5px;
+	font-size: 13px;
+	color: #444;
+}
+
+.test__i  input[type="checkbox"] {
+	vertical-align: middle;
+}
+
+.test__i__small-header {
+	padding: 10px 0 10px;
+	font-size: 18px;
+	color: #555;
+}
+
+.test__submit {
+	width: 180px;
+	height: 40px;
+	border-radius: 6px;
+	background-color: #09B8F7;
+	box-shadow: none;
+	border: none;
+	outline: none;
+	color: #fff;
+}
+
+.test__submit:hover {
+	background-color: #089CE0;
+	color: #eee;
+	cursor: pointer;
+}
+
+.modal {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: rgba(0,0,0,.4);
+	display: none;
+	z-index: 9999;
+	overflow: auto;
+}
+
+.modal-inner {
+	position: relative;
+	margin: 20px auto;
+	width: 45%;
+	padding: 15px 25px;
+	background-color: #fff;
+	text-align: center;
+	border-radius: 5px;
+	-webkit-box-shadow: 0 0 15px rgba(0,0,0,.5);
+	box-shadow: 0 0 15px rgba(0,0,0,.5);
+	animation: pulse 1s ease;
+}
+
+@keyframes pulse {
+  0% {	
+	transform: translateY(-999px);
+  }
+  100% {
+	transform: translateY(10px);
+  }
+}
+
+.modal__title {
+	text-align: center;
+	font-size: 20px;
+	color: #000;
+}
+
+.modal .test__i, .modal .test__i__question {
+	pointer-events: none;
+}
+
+.test__i  .test__i__label--incorrect {
+	text-decoration: line-through;
+	color: #EA2923;
+}
+
+.test__i  .test__i__label--correct {
+	color: #09B8F7;
+	font-style: italic;
+}
+
+.test__i .test__i__label--correct-missed {
+	color: #777;
+	font-weight: bold;
+	text-decoration: underline;
+}
+
+.modal .test__i__small-header {
+	font-size: 16px;
+}
+
+.modal__button {
+	padding: 5px 30px;
+	border: 1px solid #aaa;
+	border-radius: 6px;
+	background-color: #eee;
+	color: #888;
+}
+
+.modal__button:hover {
+	border: 1px solid transparent;
+	background-color: #999;
+	color: #fff;
+	cursor: pointer;
+}
+
+.modal__close {
+	position: absolute;
+	top: -12px;
+	right: -12px;
+	width: 24px;
+	height: 24px;
+	text-decoration: none;
+	line-height: 24px;
+	text-align: center;
+	font-family: Arial,sans-serif;
+	font-size: 14px;
+	font-weight: bold;
+	border-radius: 50%;
+	background-color: #444;
+	color: #fff;
+}
+
+.modal__close:hover {
+	background-color: #ccc;
+}
+
+.modal__result {
+	padding-top: 20px;
+	text-align: center;
+	font-family: Arial, sans-serif;
+	font-weight: bold;
+	font-size: 12px;
+	color: red;
+}
+
+.modal__result__success {
+	color: blue;
+}
+
+.hide {
+	overflow: hidden;
+}
