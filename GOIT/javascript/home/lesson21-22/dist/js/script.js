@@ -1,8 +1,7 @@
 "use strict";
 
 var app = {
-	// body: document.querySelector('body');
-	// let rightAnswers;
+	test: null,
 
 	render: function render(test) {
 		var target = document.getElementById("resultTest");
@@ -10,192 +9,161 @@ var app = {
 		target.innerHTML = testFunc(test);
 		return test;
 	},
+	getUserAnswers: function getUserAnswers(items) {
+		var result = [];
 
-	// getUserAnswers: (items) => {
-	// 	let tempArr = [],
-	// 		result = [];
-
-	// 	[].forEach.call(items, (value, i) => {
-	// 		tempArr.push(i)
-	// 	}
-	// }
-
-	// function createModal() {
-	// 	var modal = document.createElement('div');
-	// 	var modalInner = document.createElement('div');
-	// 	var modalClose = document.createElement('a');
-	// 	var modalTitle = document.createElement('h2');
-	// 	var modalResult = document.createElement('p');
-	// 	var btnClose = document.createElement('button');
-
-	// 		modal.classList.add('modal');
-	// 		modalInner.classList.add('modal-inner');
-	// 		modalTitle.classList.add('modal_title');
-	// 		modalResult.classList.add('modal_result');
-	// 		btnClose.classList.add('modal_button');
-	// 		modalClose.classList.add('modal_close');
-
-	// 		modalTitle.innerHTML = "Результат теста";
-	// 		modalResult.innerHTML = "Количество правильных ответов - ";
-	// 		btnClose.innerHTML = "Закрыть";
-	// 		modalClose.href ="#close";
-	// 		modalClose.title="Закрыть";
-	// 		modalClose.innerHTML = "X";
-
-	// 	var targetNode = document.querySelector('.test_list');
-	// 	var cloneItem = targetNode.cloneNode(true);
-	// 	var liItems = cloneItem.querySelectorAll('.test_item');
-	// 	[].forEach.call(liItems, function(liItem) {
-	// 		liItem.classList.add('test_item_modified');
-	// 	});
-
-	// 	modalInner.appendChild(modalTitle);
-	// 	modalInner.appendChild(modalResult);
-	// 	modalInner.appendChild(cloneItem);
-	// 	modalInner.appendChild(btnClose);
-	// 	modalInner.appendChild(modalClose);
-	// 	modal.appendChild(modalInner);
-	// 	body.appendChild(modal);
-	// 	body.classList.add('hide');
-	// 	btnClose.addEventListener('click', closeModal);
-	// 	modalClose.addEventListener('click', closeModal);
-	// }
-
-	// function showModal() {
-	// 	var modal = document.querySelector('.modal');
-	// 	modal.setAttribute('style', 'display:block;');
-	// }
-
-	// function closeModal() {
-	// 	body.classList.remove('hide');
-
-	// 	var modal = document.querySelector('.modal');
-	// 	if (modal) body.removeChild(modal);
-
-	// 	var inputsChecked = document.querySelectorAll('.wrapper .test_item_question:checked');
-	// 	[].forEach.call(inputsChecked, function(inputChecked) {
-	// 		inputChecked.checked = false;
-	// 	});
-	// }
-
-	// function createRightAnswersDB(test) {
-	// 	var answersObject = {};
-	// 	test.questions.forEach(function(question, index) {
-	// 		answersObject["question"+index] = question.trueValue;
-	// 	});
-	// 	return answersObject;
-	// }
-
-	// function checkAnswers(event) {
-	// 	var e = event || window.event;
-	// 	e.preventDefault();
-
-	// 	//create the elements of modal
-	// 	createModal();
-
-	// 	//create user answers database
-	// 	var userAnswers = {};
-	// 	var inputsChecked = document.querySelectorAll('.wrapper .test_item_question:checked');
-	// 	var tempAnswerArr;
-	// 	[].forEach.call(inputsChecked, function(inputChecked) {
-	// 		if (!userAnswers[inputChecked.name]) {
-	// 		tempAnswerArr= [];
-	// 		tempAnswerArr.push(+inputChecked.value);
-	// 		userAnswers[inputChecked.name] = tempAnswerArr;
-	// 		} else {
-	// 			tempAnswerArr.push(+inputChecked.value);
-	// 			userAnswers[inputChecked.name] = tempAnswerArr;
-	// 		}
-	// 	});
-	// 	//compare the user answers with right answers
-	// 	var counterOfRightAnswers = 0;
-	// 	var modal = document.querySelector('.modal');
-
-	// 	for (var rightQuestion in rightAnswers) {
-	// 		//array of right answers
-	// 		var rightList = rightAnswers[rightQuestion];
-	// 		//length of array of right answers
-	// 		var rightListLength = rightAnswers[rightQuestion].length;
-	// 		//select all checkboxes by key(question) from right answers database
-	// 		var inputsRightQuestion = modal.querySelectorAll('input[name="'+ rightQuestion +'"]');
-
-	// 		//if user answered on proper question
-	// 		if (rightQuestion in userAnswers) {
-	// 			//array of user answers
-	// 			var userList = userAnswers[rightQuestion];
-	// 			//length of array of user answers
-	// 			var userListLength = userAnswers[rightQuestion].length;
-	// 			var counterFlag = true;
-	// 			//loop through the 2 arrays of right and user answers with comparing
-	// 			for (var j = 0; j < rightListLength; j++) {
-	// 				var flag = false;
-	// 				for (var i = 0; i < userListLength; i++) {
-	// 					if (rightList[j] === userList[i]) {
-	// 						inputsRightQuestion[userList[i]].parentNode.classList.add('correct');
-	// 						flag = true;
-	// 					}
-	// 				}
-	// 				if (!flag) {	
-	// 					inputsRightQuestion[rightList[j]].parentNode.classList.add('correct--missed');
-	// 					counterFlag = false;
-	// 				}
-	// 			}
-	// 			//highlight the incorrect user answers
-	// 			for (var i = 0; i < userListLength; i++) {
-	// 				if (!inputsRightQuestion[userList[i]].parentNode.classList.contains('correct')) {
-	// 					inputsRightQuestion[userList[i]].parentNode.classList.add('incorrect');
-	// 					counterFlag = false;
-	// 				}	
-	// 			}
-	// 			//if all answers were correct
-	// 			if (counterFlag) ++counterOfRightAnswers;
-	// 		} else {
-	// 			//highlight the correct answers missed by user
-	// 			for (var j=0; j<rightListLength; j++) {
-	// 				inputsRightQuestion[rightList[j]].parentNode.classList.add('correct--missed');
-	// 			}
-	// 		}
-	// 	}
-	// 	//add the result message in modal
-	// 	var result = document.querySelector('.modal_result');
-	// 	if (counterOfRightAnswers === Object.keys(rightAnswers).length) {
-	// 		result.classList.add('modal_result_success');
-	// 		result.innerHTML += counterOfRightAnswers + ". ТЕСТ ПРОЙДЕН.";
-	// 	} else {
-	// 		result.innerHTML += counterOfRightAnswers + ". ТЕСТ НЕ ПРОЙДЕН.";
-	// 	}
-	// 	//show the modal
-	// 	showModal();
-	// 	return false;
-	// }
-
-	clearStorage: function clearStorage() {
-		window.localStorage.clear();
+		[].forEach.call(items, function (item) {
+			var index = +item.name.slice(8);
+			if (result[index]) {
+				result[index].push(+item.value);
+			} else {
+				result[index] = [+item.value];
+			}
+		});
+		return result;
 	},
+	createModal: function createModal(self) {
+		var modal = document.createElement('div');
+		var modalInner = document.createElement('div');
+		var modalClose = document.createElement('a');
+		var modalTitle = document.createElement('h2');
+		var modalResult = document.createElement('p');
+		var btnClose = document.createElement('button');
 
+		modal.classList.add('modal');
+		modalInner.classList.add('modal-inner');
+		modalTitle.classList.add('modal__title');
+		modalResult.classList.add('modal__result');
+		btnClose.classList.add('modal__button');
+		modalClose.classList.add('modal__close');
+
+		modalTitle.innerHTML = "Результат теста";
+		modalResult.innerHTML = "Количество правильных ответов - ";
+		btnClose.innerHTML = "Закрыть";
+		modalClose.href = "#close";
+		modalClose.title = "Закрыть";
+		modalClose.innerHTML = "X";
+
+		var targetNode = document.querySelector('.test__list');
+		var cloneItem = targetNode.cloneNode(true);
+		var liItems = cloneItem.querySelectorAll('.test__i');
+
+		// [].forEach.call(liItems, (liItem) => {
+		// 	liItem.classList.add('test__i--modified');
+		// });
+		if (!NodeList.prototype[Symbol.iterator]) NodeList.prototype[Symbol.iterator] = Array.prototype[Symbol.iterator];
+
+		var _iteratorNormalCompletion = true;
+		var _didIteratorError = false;
+		var _iteratorError = undefined;
+
+		try {
+			for (var _iterator = liItems[Symbol.iterator](), _step; !(_iteratorNormalCompletion = (_step = _iterator.next()).done); _iteratorNormalCompletion = true) {
+				var liItem = _step.value;
+
+				liItem.classList.add('test__i--modified');
+			}
+		} catch (err) {
+			_didIteratorError = true;
+			_iteratorError = err;
+		} finally {
+			try {
+				if (!_iteratorNormalCompletion && _iterator.return) {
+					_iterator.return();
+				}
+			} finally {
+				if (_didIteratorError) {
+					throw _iteratorError;
+				}
+			}
+		}
+
+		modalInner.appendChild(modalTitle);
+		modalInner.appendChild(modalResult);
+		modalInner.appendChild(cloneItem);
+		modalInner.appendChild(btnClose);
+		modalInner.appendChild(modalClose);
+		modal.appendChild(modalInner);
+		document.body.appendChild(modal);
+		document.body.classList.add('hide');
+		btnClose.addEventListener('click', self.closeModal);
+		modalClose.addEventListener('click', self.closeModal);
+	},
+	showModal: function showModal() {
+		var modal = document.querySelector('.modal');
+		modal.setAttribute('style', 'display:block;');
+	},
+	checkAnswers: function checkAnswers(e) {
+		e.preventDefault();
+		var flag = undefined;
+		var counterRightAnswer = 0;
+		var userAnswers = this.getUserAnswers(document.querySelectorAll('.wrapper .test__i__question:checked'));
+		var rightAnswers = this.test.questions;
+		var _this = this;
+		this.createModal(_this);
+
+		var modalQuestions = document.querySelectorAll('.modal .test__i');
+
+		[].forEach.call(rightAnswers, function (answer, i) {
+			var arrCorrect = answer.trueValue;
+			var out = modalQuestions[i].querySelectorAll('label');
+
+			var arrUser = userAnswers[i];
+			if (arrUser) {
+				flag = true;
+				arrCorrect.forEach(function (elem) {
+					if (arrUser.includes(elem)) {
+						out[+elem].classList.add('test__i__label--correct');
+					} else {
+						out[+elem].classList.add('test__i__label--correct-missed');
+						flag = false;
+					}
+				});
+
+				// modalQuestions[i].querySelectorAll('label:not([class ~= test__i__label]) input:checked').parentNode.classList.add('test__i__label--incorrect');
+				if (flag && arrUser.length === arrCorrect.length) ++counterRightAnswer;
+			}
+		});
+
+		var result = document.querySelector('.modal__result');
+		if (counterRightAnswer === Object.keys(rightAnswers).length) {
+			result.classList.add('modal__result__success');
+			result.innerHTML += counterRightAnswer + ". ТЕСТ ПРОЙДЕН.";
+		} else {
+			result.innerHTML += counterRightAnswer + ". ТЕСТ НЕ ПРОЙДЕН.";
+		}
+		this.showModal();
+	},
+	closeModal: function closeModal() {
+		document.body.classList.remove('hide');
+
+		var modal = document.querySelector('.modal');
+		if (modal) document.body.removeChild(modal);
+
+		var inputsChecked = document.querySelectorAll('.wrapper .test__item__question:checked');
+		[].forEach.call(inputsChecked, function (inputChecked) {
+			inputChecked.checked = false;
+		});
+	},
 	doTest: function doTest() {
-		// try {
+
 		//parse from localStorage
-		var test = JSON.parse(localStorage.test);
-		console.log(undefined);
-		console.log(test);
+		this.test = JSON.parse(localStorage.test);
+
 		//render data from localStorage
-		undefined.render(test);
+		this.render(this.test);
 
 		//add event on test submit
 		var sbmtButton = document.querySelector('[type="submit"]');
-		if (sbmtButton) sbmtButton.addEventListener('click', checkAnswers);
-
-		var inputsChecked = document.querySelectorAll('.wrapper .test_item_question:checked');
-		console.log(inputsChecked);
-		//create right answers database
-		// rightAnswers = createRightAnswersDB(test);
-
-		// } catch(e) {
-		// 	console.log('error = ', e);
-		// }
+		if (sbmtButton) sbmtButton.addEventListener('click', this.checkAnswers.bind(this));
+	},
+	init: function init() {
+		document.addEventListener('DOMContentLoaded', this.doTest.bind(this));
 	}
-
 };
-document.addEventListener('DOMContentLoaded', app.doTest);
-document.addEventListener('beforeunload', app.clearStorage);
+
+try {
+	module.exports = app;
+} catch (e) {}
+
+app.init();
