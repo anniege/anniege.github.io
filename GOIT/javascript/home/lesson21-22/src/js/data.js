@@ -1,5 +1,5 @@
-(function() {
-		var testData = { 
+(() => {
+		let testData = { 
 		logo: 'dist/img/logo.png',
 		mainTitle: 'ТЕСТ AngularJS',
 		questions: [

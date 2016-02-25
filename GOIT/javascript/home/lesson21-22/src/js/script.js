@@ -53,9 +53,6 @@ let app =  {
 		let cloneItem = targetNode.cloneNode(true);
 		let liItems = cloneItem.querySelectorAll('.test__i');
 
-		// [].forEach.call(liItems, (liItem) => {
-		// 	liItem.classList.add('test__i--modified');
-		// });
 		if (!NodeList.prototype[Symbol.iterator])
 		NodeList.prototype[Symbol.iterator] = Array.prototype[Symbol.iterator];
 
@@ -109,7 +106,6 @@ let app =  {
 						}
 					});
 
-					// modalQuestions[i].querySelectorAll('label:not([class ~= test__i__label]) input:checked').parentNode.classList.add('test__i__label--incorrect');
 					if (flag && (arrUser.length === arrCorrect.length)) ++counterRightAnswer;
 				}
 		});
@@ -157,6 +153,7 @@ let app =  {
 }
 
 
+app.init();
 
 try {
 	module.exports = app;
@@ -164,7 +161,6 @@ try {
 
 } 
 
-app.init();
 
 
 
