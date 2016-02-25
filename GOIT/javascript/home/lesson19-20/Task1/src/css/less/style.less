@@ -1,10 +1,12 @@
 @import 'variables.less';
 @import 'mixins.less';
 
+
 html {
 	width: 100%;
 	height: 100%;
 }
+
 
 // width: 1240px;
 body {
@@ -574,6 +576,15 @@ body {
 	&__item {
 		display: table-cell;
 	}
+
+	&__link {
+		opacity: .7;
+		transition: opacity .3s;
+
+		&:hover {
+			opacity: 1;
+		}
+	}
 }
 
 
@@ -620,6 +631,7 @@ body {
 		line-height: 36px;
 		.link;
 		.font-custom(Arial, 13px, @color-footer-default);
+		transition: color .3s ease-in;
 
 		&:hover {
 			color: @blue-color;
@@ -714,9 +726,9 @@ and (max-width : 1024px) {
 
 }
 
-// @media (min-width : 768px) 
-// and (max-width : 956px) {
-@media (max-width : 956px) {
+@media (min-width : 768px) 
+and (max-width : 956px) {
+// @media (max-width : 956px) {
 
 	.menu { 
 		position: relative;
@@ -767,10 +779,20 @@ and (max-width : 1024px) {
 			padding: 0;
 			text-align: center;
 		}
+
+		&__search {
+			width: 30%;
+		}
 	}
 
-	.slider__item {
-		height: 250px;
+	.slider {
+		&__item {
+			height: 250px;
+		}
+
+		&__title {
+			font-size: 25px;
+		}
 	}
 
 	.articles {
@@ -821,7 +843,7 @@ and (max-width : 1024px) {
 
 	.footer {
 		&__upper {
-			padding: 0 0 30px;
+			padding: 0 0 0;
 
 			.wrapper {
 				position: relative;
@@ -843,7 +865,388 @@ and (max-width : 1024px) {
 			max-height: 0;
 			opacity: 0;
 			overflow: hidden;
-			transition: 0.5s ease-in;
+			transition: 0.5s ease-in-out;
+
+
+			&:hover {
+				max-height: 700px;
+				opacity: 1;
+				overflow: none;
+			}
+		}
+
+		&__item:last-of-type {
+			padding-bottom: 30px;
+		}
+	}
+
+}
+
+@media (min-width : 527px) 
+and (max-width : 767px) { 
+	.menu { 
+		position: relative;
+		height: 56px;
+
+		&:before {
+			content: url('../../img/menu24.svg');
+			position: absolute;
+			display: block;
+			padding: 14.5px;
+			top: 0;
+			left: 0;
+			z-index: 999;
+		}
+
+		&:hover::before {
+			cursor: pointer;
+			// visibility: hidden;
+		}
+
+		// &:hover &__list {
+		// 	cursor: pointer;
+		// 	max-height: 700px;
+		// 	opacity: 1;
+		// }
+
+		&__list {
+			position: absolute;
+			background-color: @menu-color;
+			max-height: 0;
+			opacity: 0;
+			overflow: hidden;
+			transition: 0.3s ease-in;
+
+			 &--active {
+				max-height: 700px;
+				opacity: 1;
+				overflow: none;
+			}
+		}
+
+		&__item {
+			float: none;
+			width: 113px;
+		}
+
+		&__link {
+			padding: 0;
+			text-align: center;
+		}
+
+		&__search {
+			width: 35%;
+		}
+	}
+
+	.slider {
+		&__title {
+			font-size: 20px;
+		}
+
+		&__item {
+			height: 250px;
+		}
+	}
+
+	.articles {
+		padding: 61px 0 43.5px;
+
+		&__item {
+
+			float: none;
+			width: 100%;
+			margin-bottom: 40px;
+			padding-left: 0px;
+			box-sizing: border-box;
+
+			&--params, &--settings, &--truck{
+
+				&:before {
+					display: none;
+				}
+
+			}
+			span {
+				display: none;
+			}
+		}
+
+		.news__article__title {
+			font-size: 13px;
+		}
+	}
+
+	.services {
+		padding: 0 0 20px 0;
+
+		&__item {
+			float: none;
+			width: 15%;
+			margin-bottom: 15px;
+		}
+
+		&__title {
+			top: 30%;
+			transform: translateY(-50%);
+			left: 270%;
+		}
+	}
+	
+
+	.news {
+		float: none;
+		width: 100%;
+		margin-bottom: 30px;
+
+		&__photo {
+			display: none;
+		}
+
+		&__article {
+			padding-left: 51px;
+		}
+	}
+
+	.banners {
+		float: none;
+		width: 100%;
+	}
+
+	.brands {
+		img {
+			max-width: 100%;
+			height: auto;
+		}
+	}
+
+	.footer {
+		&__upper {
+			padding: 0 0 0;
+
+			.wrapper {
+				position: relative;
+			}
+		}
+
+		&__lower {
+			padding-top: 20px;
+			padding-bottom: 10px;
+		}
+
+		&__title {
+			cursor: pointer;
+
+			&:hover  + ul {
+				max-height: 700px;
+				opacity: 1;
+				overflow: none;
+			}
+		}
+		
+		&__list{
+			width: 100%;
+			max-height: 0;
+			opacity: 0;
+			overflow: hidden;
+			transition: 0.5s ease-in-out;
+
+
+			&:hover {
+				max-height: 700px;
+				opacity: 1;
+				overflow: none;
+			}
+		}
+
+		&__item:last-of-type {
+			padding-bottom: 30px;
+		}
+	}
+	
+	.contacts  {
+		p {
+			line-height: 40px;
+		}
+
+		p:not(:last-child) {
+			float: none;
+			padding-left: 10px;
+		}
+
+		&__copyright {
+			float: none;
+			padding-left: 10px;
+		}
+	}
+}
+
+
+@media (max-width : 526px) { 
+
+	.wrapper {
+		width: 405px;
+	}
+
+	.menu { 
+		position: relative;
+		height: 56px;
+
+		&:before {
+			content: url('../../img/menu24.svg');
+			position: absolute;
+			display: block;
+			padding: 14.5px;
+			top: 0;
+			left: 0;
+			z-index: 999;
+		}
+
+		&:hover::before {
+			cursor: pointer;
+			// visibility: hidden;
+		}
+
+		// &:hover &__list {
+		// 	cursor: pointer;
+		// 	max-height: 700px;
+		// 	opacity: 1;
+		// }
+
+		&__list {
+			position: absolute;
+			background-color: @menu-color;
+			max-height: 0;
+			opacity: 0;
+			overflow: hidden;
+			transition: 0.3s ease-in;
+
+			 &--active {
+				max-height: 700px;
+				opacity: 1;
+				overflow: none;
+			}
+		}
+
+		&__item {
+			float: none;
+			width: 113px;
+		}
+
+		&__link {
+			padding: 0;
+			text-align: center;
+		}
+
+		&__search {
+			width: 35%;
+		}
+	}
+
+	.slider {
+		&__title {
+			font-size: 14px;
+		}
+
+		&__item {
+			height: 250px;
+		}
+	}
+
+	.articles {
+		padding: 61px 0 43.5px;
+
+		&__item {
+
+			float: none;
+			width: 100%;
+			margin-bottom: 40px;
+			padding-left: 0px;
+			box-sizing: border-box;
+
+			&--params, &--settings, &--truck{
+
+				&:before {
+					display: none;
+				}
+
+			}
+			span {
+				display: none;
+			}
+		}
+
+		.news__article__title {
+			font-size: 13px;
+		}
+	}
+
+	.services {
+		padding: 0 0 20px 0;
+
+		&__item {
+			float: none;
+			width: 15%;
+			margin-bottom: 15px;
+		}
+
+		&__title {
+			top: 30%;
+			transform: translateY(-50%);
+			left: 250%;
+		}
+	}
+	
+
+	.news {
+		float: none;
+		width: 100%;
+		margin-bottom: 30px;
+
+		&__photo {
+			display: none;
+		}
+
+		&__article {
+			padding-left: 51px;
+		}
+	}
+
+	.banners {
+		float: none;
+		width: 100%;
+	}
+
+	.brands {
+		img {
+			max-width: 100%;
+			height: auto;
+		}
+	}
+
+	.footer {
+		&__upper {
+			display: none;
+		}
+
+		&__lower {
+			padding-top: 20px; 
+			padding-bottom: 10px;
+		}
+	}
+	
+	.contacts  {
+		p {
+			line-height: 40px;
+		}
+		p:not(:last-child) {
+			float: none;
+			padding-left: 10px;
+		}
+
+		&__copyright {
+			float: none;
+			padding-left: 10px;
 		}
 	}
 
