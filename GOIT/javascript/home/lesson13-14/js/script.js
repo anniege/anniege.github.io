@@ -1,6 +1,4 @@
 (function() {
-	"use strict";
-
 
 	var body = document.querySelector('body');
 	var rightAnswers;
@@ -184,9 +182,11 @@
 		try {
 			//parse from localStorage
 			var test = JSON.parse(localStorage.test);
+			console.log(test);
 
 			//render data from localStorage
 			render(test);
+
 
 			//create right answers database
 			rightAnswers = createRightAnswersDB(test);

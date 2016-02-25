@@ -1,42 +1,39 @@
-var app = function() {
+let app =  {
+	test: null,
 
-	var body = document.querySelector('body');
-	var test;
-
-
-
-	var render =  function (test) {
-		var target = document.getElementById("resultTest");
-		var testFunc = _.template(document.getElementById("test_Id").innerHTML);
+	render(test) {
+		let target = document.getElementById("resultTest");
+		let testFunc = _.template(document.getElementById("test_Id").innerHTML);
 		target.innerHTML = testFunc(test);
 		return test;
-	}
+	},
 
 
+	getUserAnswers(items) {
+		let result = [];
 
-	var getUserAnswers = function (items) {
-		var result = [];
+		[].forEach.call(items, 
+			(item) => 
+			{
+				let index = +item.name.slice(8);
+				if (result[index]) {
+					result[index].push(+item.value);
+				} else {
+					result[index] = [+item.value];
+				}
 
-		[].forEach.call(items, function (item) {
-			var index = +item.name.slice(8);
-			if (result[index]) {
-				result[index].push(+item.value);
-			} else {
-				result[index] = [+item.value];
-			}
-		});
+			});
 		return result;
-	}
+	},
 
 
-
-	var createModal = function() {
-		var modal = document.createElement('div');
-		var modalInner = document.createElement('div');
-		var modalClose = document.createElement('a');
-		var modalTitle = document.createElement('h2');
-		var modalResult = document.createElement('p');
-		var btnClose = document.createElement('button');
+	createModal(self) {
+		let modal = document.createElement('div');
+		let modalInner = document.createElement('div');
+		let modalClose = document.createElement('a');
+		let modalTitle = document.createElement('h2');
+		let modalResult = document.createElement('p');
+		let btnClose = document.createElement('button');
 			
 			modal.classList.add('modal');
 			modalInner.classList.add('modal-inner');
@@ -52,12 +49,16 @@ var app = function() {
 			modalClose.title="Закрыть";
 			modalClose.innerHTML = "X";
 
-		var targetNode = document.querySelector('.test__list');
-		var cloneItem = targetNode.cloneNode(true);
-		var liItems = cloneItem.querySelectorAll('.test__i');
-		[].forEach.call(liItems, function(liItem) {
+		let targetNode = document.querySelector('.test__list');
+		let cloneItem = targetNode.cloneNode(true);
+		let liItems = cloneItem.querySelectorAll('.test__i');
+
+		if (!NodeList.prototype[Symbol.iterator])
+		NodeList.prototype[Symbol.iterator] = Array.prototype[Symbol.iterator];
+
+		for (let liItem of liItems) {
 			liItem.classList.add('test__i--modified');
-		});
+		}
 
 		modalInner.appendChild(modalTitle);
 		modalInner.appendChild(modalResult);
@@ -65,39 +66,39 @@ var app = function() {
 		modalInner.appendChild(btnClose);
 		modalInner.appendChild(modalClose);
 		modal.appendChild(modalInner);
-		body.appendChild(modal);
-		body.classList.add('hide');
-		btnClose.addEventListener('click', closeModal);
-		modalClose.addEventListener('click', closeModal);
-	}
+		document.body.appendChild(modal);
+		document.body.classList.add('hide');
+		btnClose.addEventListener('click', self.closeModal);
+		modalClose.addEventListener('click', self.closeModal);
+	},
 
 
-
-	var showModal = function () {
-		var modal = document.querySelector('.modal');
+	showModal() {
+		let modal = document.querySelector('.modal');
 		modal.setAttribute('style', 'display:block;');
-	}
+	},
 
 
-
-	var checkAnswers = function(e) {
+	checkAnswers(e) {
 		e.preventDefault();
-		var flag;
-		var counterRightAnswer = 0; 
-		var userAnswers = getUserAnswers(document.querySelectorAll('.wrapper .test__i__question:checked'));
-		var rightAnswers = test.questions;
-		createModal();
+		let flag;
+		let counterRightAnswer = 0; 
+		let userAnswers = this.getUserAnswers(document.querySelectorAll('.wrapper .test__i__question:checked'));
+		let rightAnswers = this.test.questions;
+		let _this = this;
+		this.createModal(_this);
 
-		var modalQuestions = document.querySelectorAll('.modal .test__i');
-		[].forEach.call(rightAnswers, function(answer, i) {
-				var arrCorrect = answer.trueValue;
-				var out = modalQuestions[i].querySelectorAll('label');
+		let modalQuestions = document.querySelectorAll('.modal .test__i');
 
-				var arrUser = userAnswers[i];
+		[].forEach.call(rightAnswers, (answer, i) => {
+				let arrCorrect = answer.trueValue;
+				let out = modalQuestions[i].querySelectorAll('label');
+
+				let arrUser = userAnswers[i];
 				if (arrUser) {
 					flag = true;
-					arrCorrect.forEach(function(elem){
-						if (arrUser.indexOf(elem) >= 0) {
+					arrCorrect.forEach( (elem) => {
+						if (arrUser.includes(elem)) {
 							out[+elem].classList.add('test__i__label--correct');
 						} else {
 							out[+elem].classList.add('test__i__label--correct-missed');
@@ -105,59 +106,61 @@ var app = function() {
 						}
 					});
 
-					// modalQuestions[i].querySelectorAll('label:not([class ~= test__i__label]) input:checked').parentNode.classList.add('test__i__label--incorrect');
 					if (flag && (arrUser.length === arrCorrect.length)) ++counterRightAnswer;
 				}
 		});
 
-		var result = document.querySelector('.modal__result');
+		let result = document.querySelector('.modal__result');
 		if (counterRightAnswer === Object.keys(rightAnswers).length) {
 			result.classList.add('modal__result__success');
 			result.innerHTML += counterRightAnswer + ". ТЕСТ ПРОЙДЕН."; 
 		} else {
 			result.innerHTML += counterRightAnswer + ". ТЕСТ НЕ ПРОЙДЕН."; 
 		}
-		showModal();
-	}
+		this.showModal();
+	},
 
 
+	closeModal() {
+		document.body.classList.remove('hide');
 
-	function closeModal() {
-		body.classList.remove('hide');
+		let modal = document.querySelector('.modal');
+		if (modal) document.body.removeChild(modal);
 
-		var modal = document.querySelector('.modal');
-		if (modal) body.removeChild(modal);
-
-		var inputsChecked = document.querySelectorAll('.wrapper .test__item__question:checked');
-		[].forEach.call(inputsChecked, function(inputChecked) {
+		let inputsChecked = document.querySelectorAll('.wrapper .test__item__question:checked');
+		[].forEach.call(inputsChecked, (inputChecked) => {
 			inputChecked.checked = false;
 		});
-	}
+	},
 
 
-
-	var doTest = function () {
+	doTest() {
 
 		//parse from localStorage
-		test = JSON.parse(localStorage.test);
+		this.test = JSON.parse(localStorage.test);
 
 		//render data from localStorage
-		render(test);
+		this.render(this.test);
 
 		//add event on test submit
-		var sbmtButton = document.querySelector('[type="submit"]');
-		if (sbmtButton) sbmtButton.addEventListener('click', checkAnswers);
+		let sbmtButton = document.querySelector('[type="submit"]');
+		if (sbmtButton) sbmtButton.addEventListener('click', this.checkAnswers.bind(this));
+	},
+
+	init() {
+		document.addEventListener('DOMContentLoaded', this.doTest.bind(this));
 	}
+}
+
+
+app.init();
+
+try {
+	module.exports = app;
+} catch (e) {
+
+} 
 
 
 
-	return {
-		getResult : doTest
-	}
-
-}();
-
-module.exports = app;
-
-document.addEventListener('DOMContentLoaded', app.getResult);
 

@@ -2,10 +2,10 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Lesson13-14</title>
-	<link rel="stylesheet" href="css/style.css">
+	<title>Lesson21-22</title>
+	<link rel="stylesheet" href="src/css/style.css">
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.0.0/lodash.js"></script>
-	<script src="js/data.js"></script>
+	<script src="../../../dist/js/data.js"></script>
 </head>
 <body>
 	<div id="resultTest"></div>
@@ -13,18 +13,18 @@
 	<script type="text/template" id="test_Id">
 	<div class="wrapper">
 		<header class="header">
-			<img src="<%- logo %>" alt="logo" class="header_logo"/>
-			<h1 class="header_title"><%-mainTitle%></h1>
+			<img src="<%- logo%>" alt="logo" class="header__logo"/>
+			<h1 class="header__title"><%-mainTitle%></h1>
 		</header>
 		<form action="#" class="test">
-		<div class="test_content">
-			<ul class="test_list">
+		<div class="test__content">
+			<ul class="test__list">
 				<% questions.forEach(function(question, i) { %>
-				<li class="test_item">
-					<h2 class="test_item_small-header"><%-question.title%></h2>
+				<li class="test__i">
+					<h2 class="test__i__small-header"><%-question.title%></h2>
 					<% question.options.forEach(function(option, index) { %>
 						<label>
-							<input type="checkbox" class="test_item_question" name="question<%-i%>" value="<%-index%>">
+							<input type="checkbox" class="test__i__question" name="question<%-i%>" value="<%-index%>">
 							<%-option%>
 						</label>
 					<% }); %>
@@ -32,11 +32,10 @@
 				<% }); %>
 			</ul>
 		</div>
-		<input type="submit" class="test_submit" value="<%-submit%>">
+		<input type="submit" class="test__submit" value="<%-submit%>">
 		</form>
 	</div>
 	</script>
-	
-	<script src="js/script.js"></script>
+	<script src="dist/js/script.js"></script>
 </body>
 </html>
