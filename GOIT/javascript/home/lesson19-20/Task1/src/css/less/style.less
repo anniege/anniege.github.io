@@ -540,6 +540,7 @@ body {
 
 		p {
 			padding: 30px 5px 40px 38px;
+			max-height: 114px;
 			line-height: 19px;
 			.font-custom(Arial, 13px, @color-article-text);
 			text-overflow: ellipsis;
@@ -735,6 +736,19 @@ and (max-width : 956px) {
 		position: relative;
 		height: 56px;
 
+		&--large-menu {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			// min-height: 100%;
+			background-color: rgba(0, 0, 0, 0.5);
+							max-height: 1000px;
+				opacity: 1;
+				overflow: hidden;
+						z-index: 999;
+		}
+
 		&:before {
 			content: url('../../img/menu24.svg');
 			position: absolute;
@@ -742,7 +756,6 @@ and (max-width : 956px) {
 			padding: 14.5px;
 			top: 0;
 			left: 0;
-			z-index: 999;
 		}
 
 		&:hover::before {
