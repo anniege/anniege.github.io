@@ -731,71 +731,94 @@ and (max-device-width : 1024px) {
 @media (min-width : 768px) 
 and (max-width : 956px) {
 
-
 	.menu { 
 		position: relative;
 		height: 56px;
 
-		&--large-menu {
-			position: absolute;
-			top: 0;
+		&--large {
+			position: fixed;
+			top:0;
 			left: 0;
 			width: 100%;
-			// min-height: 100%;
-			background-color: rgba(0, 0, 0, 0.5);
-							max-height: 1000px;
-				opacity: 1;
-				overflow: hidden;
-						z-index: 999;
+			height: 100%;
+			background-color: @menu-color;
+			opacity: 1;
+			overflow: hidden;
+			z-index: 999;
+			animation: menuanimation .5s ease-in 1;
+
+			&__exit {
+				 position: absolute;
+				 top: 5%;
+				 right: 5%;
+				 font-size: 30px;
+				 color: #fff;
+
+				 &:hover {
+					color: @yellow-color;
+					cursor: pointer;
+				 }
+			}
 		}
 
-		&:before {
-			content: url('../../img/menu24.svg');
-			position: absolute;
+		&__icon {
 			display: block;
+			position: absolute;
+			content: url('../../img/menu24.svg');
 			padding: 14.5px;
 			top: 0;
 			left: 0;
-		}
-
-		&:hover::before {
 			cursor: pointer;
-			// visibility: hidden;
 		}
 
-		// &:hover &__list {
-		// 	cursor: pointer;
-		// 	max-height: 700px;
-		// 	opacity: 1;
-		// }
 
 		&__list {
-			position: absolute;
-			background-color: @menu-color;
-			max-height: 0;
-			opacity: 0;
-			overflow: hidden;
-			transition: 0.3s ease-in;
+			position: static;
+			background-color: transparent;
+			display: none;
+			width: 100%;
+			padding: 40px 30px 50px;
 
 			 &--active {
-				max-height: 700px;
-				opacity: 1;
-				overflow: none;
+				display: block;
+				background-color: transparent;
 			}
 		}
 
 		&__item {
 			float: none;
-			width: 113px;
 		}
 
 		&__link {
 			padding: 0;
-			text-align: center;
+			text-align: left;
+			font-size: 35px;
+			border-right: 0;
+			display: inline;
+
 		}
+
+		&__link&__link--active {
+				background-color: transparent;
+
+				&:hover {
+					color: #fff;
+				}
+			}
 
 		&__search {
 			width: 30%;
+		}
+	}
+
+	@keyframes menuanimation {
+		from {
+			height: 0px;
+			opacity: 0;	
+		}
+		to { 
+			height: 100%;
+			opacity: 1;
 		}
 	}
 
@@ -904,54 +927,90 @@ and (max-width : 767px) {
 		position: relative;
 		height: 56px;
 
-		&:before {
-			content: url('../../img/menu24.svg');
-			position: absolute;
+		&--large {
+			position: fixed;
+			top:0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background-color: @menu-color;
+			opacity: 1;
+			overflow: hidden;
+			z-index: 999;
+			animation: menuanimation .5s ease-in 1;
+
+			&__exit {
+				 position: absolute;
+				 top: 5%;
+				 right: 5%;
+				 font-size: 30px;
+				 color: #fff;
+
+				 &:hover {
+					color: @yellow-color;
+					cursor: pointer;
+				 }
+			}
+		}
+
+		&__icon {
 			display: block;
+			position: absolute;
+			content: url('../../img/menu24.svg');
 			padding: 14.5px;
 			top: 0;
 			left: 0;
-			z-index: 999;
-		}
-
-		&:hover::before {
 			cursor: pointer;
-			// visibility: hidden;
 		}
 
-		// &:hover &__list {
-		// 	cursor: pointer;
-		// 	max-height: 700px;
-		// 	opacity: 1;
-		// }
 
 		&__list {
-			position: absolute;
-			background-color: @menu-color;
-			max-height: 0;
-			opacity: 0;
-			overflow: hidden;
-			transition: 0.3s ease-in;
+			position: static;
+			background-color: transparent;
+			display: none;
+			width: 100%;
+			padding: 40px 30px 50px;
 
 			 &--active {
-				max-height: 700px;
-				opacity: 1;
-				overflow: none;
+				display: block;
+				background-color: transparent;
 			}
 		}
 
 		&__item {
 			float: none;
-			width: 113px;
 		}
 
 		&__link {
 			padding: 0;
-			text-align: center;
+			text-align: left;
+			font-size: 35px;
+			border-right: 0;
+			display: inline;
+
 		}
+
+		&__link&__link--active {
+				background-color: transparent;
+
+				&:hover {
+					color: #fff;
+				}
+			}
 
 		&__search {
 			width: 35%;
+		}
+	}
+
+	@keyframes menuanimation {
+		from {
+			height: 0px;
+			opacity: 0;	
+		}
+		to { 
+			height: 100%;
+			opacity: 1;
 		}
 	}
 
@@ -1108,54 +1167,90 @@ and (max-width : 767px) {
 		position: relative;
 		height: 56px;
 
-		&:before {
-			content: url('../../img/menu24.svg');
-			position: absolute;
+		&--large {
+			position: fixed;
+			top:0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background-color: @menu-color;
+			opacity: 1;
+			overflow: hidden;
+			z-index: 999;
+			animation: menuanimation .5s ease-in 1;
+
+			&__exit {
+				 position: absolute;
+				 top: 5%;
+				 right: 5%;
+				 font-size: 30px;
+				 color: #fff;
+
+				 &:hover {
+					color: @yellow-color;
+					cursor: pointer;
+				 }
+			}
+		}
+
+		&__icon {
 			display: block;
+			position: absolute;
+			content: url('../../img/menu24.svg');
 			padding: 14.5px;
 			top: 0;
 			left: 0;
-			z-index: 999;
-		}
-
-		&:hover::before {
 			cursor: pointer;
-			// visibility: hidden;
 		}
 
-		// &:hover &__list {
-		// 	cursor: pointer;
-		// 	max-height: 700px;
-		// 	opacity: 1;
-		// }
 
 		&__list {
-			position: absolute;
-			background-color: @menu-color;
-			max-height: 0;
-			opacity: 0;
-			overflow: hidden;
-			transition: 0.3s ease-in;
+			position: static;
+			background-color: transparent;
+			display: none;
+			width: 100%;
+			padding: 40px 30px 50px;
 
 			 &--active {
-				max-height: 700px;
-				opacity: 1;
-				overflow: none;
+				display: block;
+				background-color: transparent;
 			}
 		}
 
 		&__item {
 			float: none;
-			width: 113px;
 		}
 
 		&__link {
 			padding: 0;
-			text-align: center;
+			text-align: left;
+			font-size: 35px;
+			border-right: 0;
+			display: inline;
+
 		}
+
+		&__link&__link--active {
+				background-color: transparent;
+
+				&:hover {
+					color: #fff;
+				}
+			}
 
 		&__search {
 			width: 35%;
+		}
+	}
+
+	@keyframes menuanimation {
+		from {
+			height: 0px;
+			opacity: 0;	
+		}
+		to { 
+			height: 100%;
+			opacity: 1;
 		}
 	}
 

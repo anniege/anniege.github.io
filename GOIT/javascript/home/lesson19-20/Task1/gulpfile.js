@@ -61,4 +61,4 @@ gulp.task('watch', function() {
 	return gulp.watch('src/css/**/*.less', ['css']);
 });
 
-gulp.task('default', ['css', 'scripts', 'images', 'fonts']);
+gulp.task('default', ['css', 'scripts', 'images', 'fonts', 'watch']);

@@ -69,14 +69,16 @@ $(function() {
 	}
 
 	function menuControl() {
-		$('.menu__list').on('click', function(e) {
+		$('.menu__list').on('click', menuClick);
+	}
+
+	function menuClick (e) {
 			var target = e.target;
 			$(this).find('.menu__link--active').removeClass('menu__link--active');
 
 			if (target.nodeName === 'A') {
 					$(target).addClass('menu__link--active');
 			}
-		});
 	}
 
 	function resonsiveMenu() {
@@ -86,29 +88,38 @@ $(function() {
 		  WidthChange(mq);
 		}
 
-		// media query change
 		function WidthChange(mq) {
 
 		  if (mq.matches) {
-		    // window width is at least 500px
-		    var menuHandler = document.querySelector('.menu');
-		    console.log(menuHandler);
-		    menuHandler.addEventListener('click', function(){
-		    	var menuLarge = document.createElement('div');
-		    	menuLarge.classList.add('menu--large-menu');
-		    	menuLarge.classList.add('clearfix');
-		  		var targetNode = document.querySelector('ul.menu__list');
-		    	console.log(targetNode);
+			var menuHandler = document.querySelector('.menu__icon');
+
+			menuHandler.addEventListener('click', function(){
+				document.body.style.overflow = "hidden";
+				var menuLarge = document.createElement('div');
+				var exit = document.createElement('span');
+				exit.className = 'fa fa-times';
+				exit.classList.add('menu--large__exit');
+
+				menuLarge.classList.add('menu--large');
+				// menuLarge.style.height = heightScreen + "px";
+				menuLarge.classList.add('clearfix');
+				var targetNode = document.querySelector('ul.menu__list');
 				var cloneMenu = targetNode.cloneNode(true);
-		    	console.log(cloneMenu);
+				cloneMenu.classList.add('menu__list--active');
+				cloneMenu.addEventListener('click', menuClick);
 
+				menuLarge.appendChild(exit);
 				menuLarge.appendChild(cloneMenu);
-		    	console.log("menu", menuLarge);
-
 				document.body.appendChild(menuLarge);
-		    });
+
+				exit.addEventListener('click', function() {
+					document.body.style.overflow = "scroll";
+					var menuLarge = document.querySelector('div.menu--large');
+					document.body.removeChild(menuLarge);
+				})
+			});
 		  } else {
-		    // window width is less than 500px
+			// window width is less than 500px
 		  }
 
 		}
@@ -148,8 +159,8 @@ $(function() {
 
 	carouselControl();
 	bannerControl();
-	menuControl();
 	resonsiveMenu();
+	menuControl();
 }
 
 appRun();
