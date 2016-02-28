@@ -10,10 +10,10 @@
 <body>
 <script type="text/template" id="wrapper-template">
 	<div class="wrapper">
-		<h1 class="header"></h1>
+		<h1 class="header">ToDo List</h1>
 		<div class="controlls">
 			<input type="text" class="data__value">
-			<button class="data__add"></button>
+			<button class="data__add">Add</button>
 		</div>
 		<ul class="data__list"></ul>
 	</div>
@@ -21,8 +21,8 @@
 
 <script type="text/template" id="list-template">
 	<% data.forEach(function(value) {%>
-	<li class="data__list__item">
-		<%= value %>
+	<li class="data__i">
+		<%= value %> <span class="data__delete">x</span>
 	</li>
 	<% }); %>
 </script>
