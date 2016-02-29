@@ -1,0 +1,224 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+body {
+  width: 100%;
+  font-family: "Times New Roman", serif;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.wrapper {
+  max-width: 860px;
+  padding: 40px 0 90px;
+  margin: 0 auto;
+}
+
+.title {
+  font-size: 36px;
+  padding-bottom: 55px;
+  text-align: center;
+}
+
+.data__controls {
+  width: 50%;
+  padding: 10px 0 40px;
+  margin: 0 auto;
+}
+
+.data__value {
+  display: block;
+  width: 100%;
+  height: 40px;
+  font-size: 21.6px;
+  border: none;
+  border-bottom: 1px solid #ddd;
+  outline: none;
+}
+
+.data__list {
+  display: block;
+  padding: 45px 0 105px;
+  border: 1px solid #ddd;
+}
+
+.data__i {
+  display: block;
+  position: relative;
+  padding: 20px 10px 20px 60px;
+  font-size: 18px;
+  font-style: italic;
+  color: #999;
+  -webkit-transition: all .2s;
+  transition: all .2s;
+}
+
+.data__i:hover {
+  background-color: #ddd;
+  cursor: pointer;
+  color: #666666;
+}
+
+.data__i span {
+  display: block;
+  float: right;
+  padding: 0 10px;
+  visibility: hidden;
+}
+
+.data__delete {
+  color: red;
+}
+
+.data__i:hover .data__delete {
+  visibility: visible;
+}
+
+.data__edit {
+  color: green;
+}
+
+.data__i:hover .data__edit {
+  visibility: visible;
+}
+
+.data__new-value {
+  position: absolute;
+  top: 16px;
+  left: 58px;
+  font-size: 16px;
+  font-style: italic;
+}

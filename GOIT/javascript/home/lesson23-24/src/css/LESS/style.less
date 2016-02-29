@@ -1,0 +1,100 @@
+@font-size-default: 18px;
+@font-size-title: @font-size-default*2;
+@font-size-input: @font-size-default*1.2;
+@font-family-default: "Times New Roman", serif;
+@width: .8;
+@border-default: 1px solid #ddd;
+@font-color-default: #999;
+@bgcolor-list-item: #ddd;
+
+body {
+	width: 100%;
+	font-family: @font-family-default;
+	box-sizing: border-box;
+}
+
+.wrapper {
+	max-width: 860px;
+	// width: percentage(@width);
+	padding: 40px 0 90px; 
+	margin: 0 auto;
+
+}
+
+.title {
+	font-size: @font-size-title;
+	padding-bottom: 55px; 
+	text-align: center;
+}
+
+.data {
+	&__controls {
+		width: 50%;
+		padding: 10px 0 40px;
+		margin: 0 auto;
+	}
+
+	&__value {
+		display: block;
+		width: 100%;
+		height: 40px;
+		font-size: @font-size-input;
+		border: none;
+		border-bottom: @border-default;
+		outline: none;
+	}
+
+	&__list {
+		display: block;
+		padding: 45px 0 105px;
+		border: @border-default;
+	}
+
+	&__i {
+		display: block;
+		position: relative;
+		padding: 20px 10px 20px 60px;
+		font-size: @font-size-default;
+		font-style: italic;
+		color: @font-color-default;
+		transition: all .2s;
+
+		&:hover {
+			background-color: @bgcolor-list-item;
+			cursor: pointer;
+			color: darken(@font-color-default, 20%)
+		}
+
+		span {
+			display: block;
+			float: right;
+			padding: 0 10px;
+			visibility: hidden;
+		}
+	}
+
+
+	&__delete {
+		color: red;
+	}
+
+	&__i:hover .data__delete {
+		visibility: visible;
+	}
+
+	&__edit {
+		color: green;
+	}
+
+	&__i:hover .data__edit {
+		visibility: visible;
+	}
+
+	&__new-value {
+		position: absolute;
+		top: 16px;
+		left: 58px;
+		font-size: 16px;
+		font-style: italic;
+	}
+}
