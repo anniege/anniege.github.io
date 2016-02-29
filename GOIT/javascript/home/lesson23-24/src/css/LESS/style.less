@@ -90,11 +90,23 @@ body {
 		visibility: visible;
 	}
 
+	&__modal {
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background-color: rgba(0, 0, 0, 0.5)
+	}
+
 	&__new-value {
 		position: absolute;
 		top: 16px;
 		left: 58px;
-		font-size: 16px;
+		font-size: 18px;
 		font-style: italic;
+		font-family: @font-family-default;
+		z-index: 9999;
+		// overflow: hidden;
 	}
 }

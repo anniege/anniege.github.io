@@ -44,7 +44,7 @@ function View(model) {
 		self.elements = {
 			input: $('.data__value'),
 			list: $('.data__list'),
-			editInput: $('<input type="text" class="data__new-value">')
+			editInput: $('<input type="text" class="data__new-value"><div class="data__modal"></div>')
 		}
 
 		self.render(model.data);
@@ -56,8 +56,13 @@ function View(model) {
 		self.elements.list.html(listTmpl({data: data}));
 	}
 
-	self.addEditInput = function(_this) {
-		$(_this).parent().append(self.elements.editInput);
+	self.addEditInput = function(_this, value) {
+		var currentListItem = $(_this).parent();
+		currentListItem.val('');
+		$('.data__i').css("pointer-events", 'none');
+		currentListItem.css("pointer-events", 'auto'); 
+		currentListItem.append(self.elements.editInput);
+		currentListItem.find('.data__new-value').val(value);
 	}
 
 	init();
@@ -86,13 +91,13 @@ function Controller(model, view) {
 
 	view.elements.list.on('click', '.data__edit', function() {
 		var attrVal = $(this).attr('data-value');
-		console.log('attrVal = ', attrVal);
-		view.addEditInput(this);
+		view.addEditInput(this, attrVal);
 
-		$('.data__new-value').attr('placeholder', attrVal);
 		$('.data__new-value').on('keypress', function(event) {
 			if (event.keyCode == 13) {
-				model.editItem(attrVal, $(this).val());
+				var userInput = $(this).val();
+				if ( +userInput === 0)  return;
+				model.editItem(attrVal, userInput);
 				$(this).val('');
 				view.render(model.data);
 			}
