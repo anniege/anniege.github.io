@@ -29,6 +29,10 @@ function Model(data) {
 		self.data[index] = newItem;
 		return self.data;
 	}
+
+	self.countItems = function () {
+		return self.data.length;
+	}
 }
 
 
@@ -44,6 +48,7 @@ function View(model) {
 		self.elements = {
 			input: $('.data__value'),
 			list: $('.data__list'),
+			// counterItem: $('.data__counter'),
 			editInput: $('<input type="text" class="data__new-value"><div class="data__modal"></div>')
 		}
 
@@ -54,6 +59,8 @@ function View(model) {
 	self.render = function(data) {
 		var listTmpl = _.template($('#list-template').html());
 		self.elements.list.html(listTmpl({data: data}));
+
+		$('.data__counter').html(model.countItems());
 	}
 
 	self.edit = function(_this, value) {
@@ -76,33 +83,39 @@ function Controller(model, view) {
 	var self = this;
 
 
-	view.elements.input.on('keypress', function(event) {
-		if (event.keyCode == 13) {
+	var ENTER_KEY = 13;
+	var ESCAPE_KEY = 27;
+
+
+	view.elements.input.on('keydown', addItem);
+	view.elements.list.on('click', '.data__delete', removeItem);
+	view.elements.list.on('click', '.data__edit', editItem);
+
+
+	function addItem(event) {
+		if (event.which == ENTER_KEY) {
 			var userInput = view.elements.input.val();
 			model.addItem(userInput);
 			view.render(model.data);
 			view.elements.input.val('');
 		}
-	});
+	}
 
 
-
-	view.elements.list.on('click', '.data__delete', function() {
+	function removeItem() {
 		var attrVal = $(this).attr('data-value');
-		// debugger;
 		model.removeItem(attrVal);
 		view.render(model.data);
-	});
+	}
 
 
-
-	view.elements.list.on('click', '.data__edit', function() {
+	function editItem() {
 		var attrVal = $(this).attr('data-value');
 		var inputEdit = view.edit(this, attrVal); // this = .data__edit
 
 
 		inputEdit.on('keydown', function(event) {
-			if (event.which == 13) {
+			if (event.which == ENTER_KEY) {
 				var userText = $(this).val();
 				$(this).val('');
 
@@ -112,9 +125,9 @@ function Controller(model, view) {
 				view.render(model.data);
 			}
 
-			if (event.which == 27) { view.render(model.data); }
+			if (event.which == ESCAPE_KEY) { view.render(model.data); }
 		});
-	});
+	}
 }
 
 

@@ -1,11 +1,15 @@
+@width: .8;
 @font-size-default: 18px;
 @font-size-title: @font-size-default*2;
 @font-size-input: @font-size-default*1.2;
-@font-family-default: "Times New Roman", serif;
-@width: .8;
-@border-default: 1px solid #ddd;
 @font-color-default: #999;
+@font-family-default: "Times New Roman", serif;
 @bgcolor-list-item: #ddd;
+@red-color: rgba(234, 103, 103, .8);
+@red-color-hover: rgba(234, 103, 103, 1);
+@blue-color: rgba(80, 188, 224, .7);
+@blue-color-hover: rgba(80, 188, 224, 1);
+@border-default: 1px solid #ddd;
 
 body {
 	width: 100%;
@@ -15,10 +19,8 @@ body {
 
 .wrapper {
 	max-width: 860px;
-	// width: percentage(@width);
 	padding: 40px 0 90px; 
 	margin: 0 auto;
-
 }
 
 .title {
@@ -55,8 +57,10 @@ body {
 
 	&__list {
 		display: block;
+		position: relative;
 		padding: 45px 0 105px;
 		border: @border-default;
+		background-color: #eae8e5;
 		-webkit-box-shadow: 6px 6px 3px -1px rgba(163,163,163,0.5);
 		-moz-box-shadow: 6px 6px 3px -1px rgba(163,163,163,0.5);
 		box-shadow: 6px 6px 3px -1px rgba(163,163,163,0.5);
@@ -88,11 +92,17 @@ body {
 		right: 5px;
 		padding: 0 10px;
 		visibility: hidden;
-		color: red;
+		color: @red-color;
 	}
 
 	&__i:hover .data__delete {
 		visibility: visible;
+		transition: transform .2s;
+
+		&:hover {
+			color: @red-color-hover;
+			transform: scale(1.2, 1.2);
+		}
 	}
 
 	&__edit {
@@ -100,11 +110,17 @@ body {
 		right: 40px;
 		padding: 0 10px;
 		visibility: hidden;
-		color: green;
+		color: @blue-color;
 	}
 
 	&__i:hover .data__edit {
 		visibility: visible;
+		transition: transform .2s;
+
+		&:hover {
+			color: @blue-color-hover;
+			transform: scale(1.2, 1.2);
+		}
 	}
 
 	&__modal {
@@ -113,7 +129,7 @@ body {
 		left: 0;
 		width: 100%;
 		height: 100%;
-		background-color: rgba(0, 0, 0, 0.25)
+		background-color: rgba(0, 0, 0, 0.15)
 	}
 
 	&__new-value {
@@ -126,5 +142,16 @@ body {
 		border: none;
 		outline: none;
 		z-index: 9999;
+	}
+
+	&__result {
+		position: absolute;
+		bottom: 0;
+		padding: 10px 0 10px 60px;
+		font-size: @font-size-default*0.8;
+		color: darken(@font-color-default, 5%);
+		font-family: @font-family-default;
+		letter-spacing: 2px;
+		text-shadow: 1px 3px 3px #ddd;
 	}
 }

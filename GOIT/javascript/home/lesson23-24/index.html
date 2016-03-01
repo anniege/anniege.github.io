@@ -14,7 +14,7 @@
 	<div class="wrapper">
 		<h1 class="title">ToDo List</h1>
 		<div class="data__controls">
-			<input type="text" class="data__value" placeholder="Add new task..." autofocus>
+			<input type="text" class="data__value" placeholder="What should be done today?" autofocus>
 		</div>
 		<ul class="data__list"></ul>
 	</div>
@@ -26,6 +26,7 @@
 		<%= value %> <span data-value="<%= value %>" class="fa fa-times-circle data__delete"></span><span data-value="<%= value %>" class="fa fa-pencil data__edit"></span>
 	</li>
 	<% }); %>
+	<div class="data__result">Total notes: <span class="data__counter">0</span></div>
 </script>
 
 <script src="src/js/app.js"></script>
