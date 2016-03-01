@@ -171,6 +171,7 @@ body {
   height: 40px;
   font-size: 21.6px;
   font-family: "Times New Roman", serif;
+  font-style: italic;
   border: none;
   border-bottom: 1px solid #ddd;
   outline: none;
@@ -188,12 +189,13 @@ body {
 .data__i {
   display: block;
   position: relative;
-  padding: 20px 10px 20px 60px;
+  padding: 20px 75px 20px 60px;
   height: 18px;
   font-size: 18px;
   font-style: italic;
   color: #999;
   overflow: hidden;
+  white-space: nowrap;
   text-overflow: ellipsis;
   -webkit-transition: all .2s;
   transition: all .2s;
@@ -205,14 +207,11 @@ body {
   color: #666666;
 }
 
-.data__i span {
-  display: block;
-  float: right;
+.data__delete {
+  position: absolute;
+  right: 5px;
   padding: 0 10px;
   visibility: hidden;
-}
-
-.data__delete {
   color: red;
 }
 
@@ -221,6 +220,10 @@ body {
 }
 
 .data__edit {
+  position: absolute;
+  right: 40px;
+  padding: 0 10px;
+  visibility: hidden;
   color: green;
 }
 
@@ -234,7 +237,7 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.25);
 }
 
 .data__new-value {
@@ -244,5 +247,7 @@ body {
   font-size: 18px;
   font-style: italic;
   font-family: "Times New Roman", serif;
+  border: none;
+  outline: none;
   z-index: 9999;
 }

@@ -5,7 +5,7 @@ function Model(data) {
 
 
 	self.addItem = function(item) {
-		if (item.length === 0) return;
+		if ( !$.trim(item).length ) return;
 
 		self.data.push(item);
 		return self.data;
@@ -89,6 +89,7 @@ function Controller(model, view) {
 
 	view.elements.list.on('click', '.data__delete', function() {
 		var attrVal = $(this).attr('data-value');
+		// debugger;
 		model.removeItem(attrVal);
 		view.render(model.data);
 	});
@@ -105,7 +106,7 @@ function Controller(model, view) {
 				var userText = $(this).val();
 				$(this).val('');
 
-				if ( userText.length === 0 )  return;
+				if ( !$.trim(userText).length )  return;
 
 				model.editItem(attrVal, userText);
 				view.render(model.data);
