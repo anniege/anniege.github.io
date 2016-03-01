@@ -56,13 +56,14 @@ function View(model) {
 		self.elements.list.html(listTmpl({data: data}));
 	}
 
-	self.addEditInput = function(_this, value) {
-		var currentListItem = $(_this).parent();
-		currentListItem.val('');
+	self.edit = function(_this, value) {
+		var currentLi = $(_this).parent();
+		currentLi.html('');
 		$('.data__i').css("pointer-events", 'none');
-		currentListItem.css("pointer-events", 'auto'); 
-		currentListItem.append(self.elements.editInput);
-		currentListItem.find('.data__new-value').val(value);
+		currentLi.css("pointer-events", 'auto'); 
+		currentLi.append(self.elements.editInput);
+		var inputEdit = currentLi.find('.data__new-value').val(value).focus();
+		return inputEdit;
 	}
 
 	init();
@@ -74,6 +75,7 @@ function View(model) {
 function Controller(model, view) {
 	var self = this;
 
+
 	view.elements.input.on('keypress', function(event) {
 		if (event.keyCode == 13) {
 			var userInput = view.elements.input.val();
@@ -83,24 +85,33 @@ function Controller(model, view) {
 		}
 	});
 
+
+
 	view.elements.list.on('click', '.data__delete', function() {
 		var attrVal = $(this).attr('data-value');
 		model.removeItem(attrVal);
 		view.render(model.data);
 	});
 
+
+
 	view.elements.list.on('click', '.data__edit', function() {
 		var attrVal = $(this).attr('data-value');
-		view.addEditInput(this, attrVal);
+		var inputEdit = view.edit(this, attrVal); // this = .data__edit
 
-		$('.data__new-value').on('keypress', function(event) {
-			if (event.keyCode == 13) {
-				var userInput = $(this).val();
-				if ( +userInput === 0)  return;
-				model.editItem(attrVal, userInput);
+
+		inputEdit.on('keydown', function(event) {
+			if (event.which == 13) {
+				var userText = $(this).val();
 				$(this).val('');
+
+				if ( userText.length === 0 )  return;
+
+				model.editItem(attrVal, userText);
 				view.render(model.data);
 			}
+
+			if (event.which == 27) { view.render(model.data); }
 		});
 	});
 }

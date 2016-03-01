@@ -149,8 +149,14 @@ body {
 
 .title {
   font-size: 36px;
-  padding-bottom: 55px;
+  padding: 25px;
+  margin-bottom: 40px;
   text-align: center;
+  font-weight: bold;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  background-color: #808080;
+  color: #fff;
 }
 
 .data__controls {
@@ -164,24 +170,31 @@ body {
   width: 100%;
   height: 40px;
   font-size: 21.6px;
+  font-family: "Times New Roman", serif;
   border: none;
   border-bottom: 1px solid #ddd;
   outline: none;
+  color: #444;
 }
 
 .data__list {
   display: block;
   padding: 45px 0 105px;
   border: 1px solid #ddd;
+  -webkit-box-shadow: 6px 6px 3px -1px rgba(163, 163, 163, 0.5);
+  box-shadow: 6px 6px 3px -1px rgba(163, 163, 163, 0.5);
 }
 
 .data__i {
   display: block;
   position: relative;
   padding: 20px 10px 20px 60px;
+  height: 18px;
   font-size: 18px;
   font-style: italic;
   color: #999;
+  overflow: hidden;
+  text-overflow: ellipsis;
   -webkit-transition: all .2s;
   transition: all .2s;
 }

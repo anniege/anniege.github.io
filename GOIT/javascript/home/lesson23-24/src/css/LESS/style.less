@@ -23,8 +23,14 @@ body {
 
 .title {
 	font-size: @font-size-title;
-	padding-bottom: 55px; 
+	padding: 25px; 
+	margin-bottom: 40px;
 	text-align: center;
+	font-weight: bold;
+	letter-spacing: 5px;
+	text-transform: uppercase;
+	background-color: darken(@font-color-default, 10%);
+	color: #fff;
 }
 
 .data {
@@ -39,24 +45,32 @@ body {
 		width: 100%;
 		height: 40px;
 		font-size: @font-size-input;
+		font-family: @font-family-default;
 		border: none;
 		border-bottom: @border-default;
 		outline: none;
+		color: #444;
 	}
 
 	&__list {
 		display: block;
 		padding: 45px 0 105px;
 		border: @border-default;
+		-webkit-box-shadow: 6px 6px 3px -1px rgba(163,163,163,0.5);
+		-moz-box-shadow: 6px 6px 3px -1px rgba(163,163,163,0.5);
+		box-shadow: 6px 6px 3px -1px rgba(163,163,163,0.5);
 	}
 
 	&__i {
 		display: block;
 		position: relative;
 		padding: 20px 10px 20px 60px;
+		height: @font-size-default;
 		font-size: @font-size-default;
 		font-style: italic;
 		color: @font-color-default;
+		overflow: hidden;
+		text-overflow: ellipsis;
 		transition: all .2s;
 
 		&:hover {
