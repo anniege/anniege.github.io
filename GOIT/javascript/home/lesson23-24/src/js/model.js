@@ -3,6 +3,7 @@ define(
 		'jquery'
 	],
 	function($) {
+		console.log($);
 
 		function Model(data) {
 			var self = this;
