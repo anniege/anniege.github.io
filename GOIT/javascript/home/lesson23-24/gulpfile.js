@@ -5,31 +5,19 @@ var concatCss = require('gulp-concat-css');
 var streamqueue = require('streamqueue');
 var watch = require('gulp-watch');
 
-gulp.task('css', function(){
-	var cssStream = gulp.src('src/css/*.css');
-		// .pipe(order(["reset.css"]))
-		// .pipe(concatCss("default.css"));
-		// .pipe("default.css");
-
-	var lessStream = gulp.src('src/css/**/*.less')
-		.pipe(less());
-
-	var mergedStream = streamqueue({ objectMode: true }, cssStream, lessStream)
-		.pipe(concatCss('style.css'))
-		.pipe(autoprefixer({
-			browsers: ['last 10 versions', '> 2%'],
-			cascade: false
-		}))
-		// .pipe(cssnano())
-		// .pipe(rename('style.min.css'))
-		.pipe(gulp.dest('dist/css'));
-
-	return mergedStream;
+gulp.task('less', function() {
+	return gulp.src('src/css/**/*.less')
+	.pipe(less())
+	.pipe(autoprefixer({
+		browsers: ['last 10 versions', '> 2%'],
+		cascade: false
+	}))
+	.pipe(gulp.dest('src/css'));
 });
+
 
 gulp.task('watch', function() {
 	return gulp.watch('src/css/**/*.less', ['css']);
 });
 
-
-gulp.task('default', ['css', 'watch']);
+gulp.task('default', ['less', 'watch']);
