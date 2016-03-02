@@ -1,9 +1,11 @@
 define(
+	'view',
 	[
 		'model',
-		'jquery'
+		'jquery',
+		'lodash'
 	],
-	function(model, $) {
+	function() {
 
 		function View(model) {
 			var self = this;

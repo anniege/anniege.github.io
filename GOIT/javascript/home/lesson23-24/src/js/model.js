@@ -1,8 +1,7 @@
 define(
-	[
-		'jquery'
-	],
-	function($) {
+	'model',
+	[],
+	function() {
 
 		function Model(data) {
 			var self = this;
@@ -40,7 +39,6 @@ define(
 				return self.data.length;
 			}
 		}
-
 		return Model;
 	}
 );

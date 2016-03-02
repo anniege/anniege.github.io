@@ -1,11 +1,7 @@
 requirejs.config({
 	paths: {
-		'jquery': "https://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"
-	},
-	shim: {
-		'jquery': {
-			exports: 'jQuery'
-		}
+		"jquery": "libs/jquery/jquery-1.7.1",
+		"lodash": "libs/lodash/lodash"
 	}
 });
 
@@ -14,16 +10,17 @@ require(
 		'model',
 		'view',
 		'controller',
-		'jQuery'
+		'jquery',
+		'lodash'
 	],
-	function(model, view, controller, $) {
-		
+	function(Model, View, Controller, $, _) {
+
 		$(function(){
 			var initToDoList = ['learn Javascript', 'learn MVC', 'learn Angular'];
 
-			var model = new Model(initToDoList);
-			var view = new View(model);
-			var controller = new Controller(model, view);
+			var modelInstance = new Model(initToDoList);
+			var viewInstance = new View(modelInstance);
+			var controller = new Controller(modelInstance, viewInstance);
 		});
 	}
 );
