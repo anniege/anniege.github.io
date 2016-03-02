@@ -1,10 +1,12 @@
 define(
+	'controller',
 	[
 		'model',
 		'view',
-		'jquery'
+		'jquery',
+		'lodash'
 	],
-	function(model, view, $) {
+	function() {
 
 		function Controller(model, view) {
 			var self = this;
