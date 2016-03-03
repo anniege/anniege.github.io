@@ -1,7 +1,7 @@
 requirejs.config({
 	paths: {
-		"jquery": "libs/jquery/jquery-1.7.1",
-		"lodash": "libs/lodash/lodash"
+		"jquery": "../../bower_components/jquery-1.7.7.min/index",
+		"lodash": "../../bower_components/lodash/lodash"
 	}
 });
 

@@ -1,0 +1,25 @@
+{
+  "name": "todolist",
+  "description": "todo list",
+  "main": "index.js",
+  "authors": [
+    "Anna Garmashevska <anniegemail@gmail.com>"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/anniege/anniege.github.io",
+  "moduleType": [
+    "amd"
+  ],
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery-1.7.1.min": "http://code.jquery.com/jquery-1.7.1.min.js",
+    "lodash": "^4.6.1"
+  }
+}
