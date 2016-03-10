@@ -6,7 +6,7 @@ var streamqueue = require('streamqueue');
 var watch = require('gulp-watch');
 
 gulp.task('less', function() {
-	return gulp.src('src/css/**/*.less')
+	return gulp.src('src/css/LESS/*.less')
 	.pipe(less())
 	.pipe(autoprefixer({
 		browsers: ['last 10 versions', '> 2%'],
