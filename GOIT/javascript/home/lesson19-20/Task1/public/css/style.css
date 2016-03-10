@@ -1,0 +1,392 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* font-family: "UbuntuRegular"; */
+
+@font-face {
+  font-family: "UbuntuRegular";
+  src: url("../fonts/UbuntuRegular/UbuntuRegular.eot");
+  src: url("../fonts/UbuntuRegular/UbuntuRegular.eot?#iefix")format("embedded-opentype"),
+    url("../fonts/UbuntuRegular/UbuntuRegular.woff") format("woff"),
+    url("../fonts/UbuntuRegular/UbuntuRegular.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
+
+/* font-family: "UbuntuBold"; */
+
+@font-face {
+  font-family: "UbuntuBold";
+  src: url("../fonts/UbuntuBold/UbuntuBold.eot");
+  src: url("../fonts/UbuntuBold/UbuntuBold.eot?#iefix")format("embedded-opentype"),
+    url("../fonts/UbuntuBold/UbuntuBold.woff") format("woff"),
+    url("../fonts/UbuntuBold/UbuntuBold.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
+
+/* font-family: "UbuntuItalic"; */
+
+@font-face {
+  font-family: "UbuntuItalic";
+  src: url("../fonts/UbuntuItalic/UbuntuItalic.eot");
+  src: url("../fonts/UbuntuItalic/UbuntuItalic.eot?#iefix")format("embedded-opentype"),
+    url("../fonts/UbuntuItalic/UbuntuItalic.woff") format("woff"),
+    url("../fonts/UbuntuItalic/UbuntuItalic.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
+
+/* font-family: "UbuntuLight"; */
+
+@font-face {
+  font-family: "UbuntuLight";
+  src: url("../fonts/UbuntuLight/UbuntuLight.eot");
+  src: url("../fonts/UbuntuLight/UbuntuLight.eot?#iefix")format("embedded-opentype"),
+    url("../fonts/UbuntuLight/UbuntuLight.woff") format("woff"),
+    url("../fonts/UbuntuLight/UbuntuLight.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
+
+/* font-family: "UbuntuLightItalic"; */
+
+@font-face {
+  font-family: "UbuntuLightItalic";
+  src: url("../fonts/UbuntuLightItalic/UbuntuLightItalic.eot");
+  src: url("../fonts/UbuntuLightItalic/UbuntuLightItalic.eot?#iefix")format("embedded-opentype"),
+    url("../fonts/UbuntuLightItalic/UbuntuLightItalic.woff") format("woff"),
+    url("../fonts/UbuntuLightItalic/UbuntuLightItalic.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
+
+/* font-family: "UbuntuMedium"; */
+
+@font-face {
+  font-family: "UbuntuMedium";
+  src: url("../fonts/UbuntuMedium/UbuntuMedium.eot");
+  src: url("../fonts/UbuntuMedium/UbuntuMedium.eot?#iefix")format("embedded-opentype"),
+    url("../fonts/UbuntuMedium/UbuntuMedium.woff") format("woff"),
+    url("../fonts/UbuntuMedium/UbuntuMedium.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
+
+/* font-family: "UbuntuMediumItalic"; */
+
+@font-face {
+  font-family: "UbuntuMediumItalic";
+  src: url("../fonts/UbuntuMediumItalic/UbuntuMediumItalic.eot");
+  src: url("../fonts/UbuntuMediumItalic/UbuntuMediumItalic.eot?#iefix")format("embedded-opentype"),
+    url("../fonts/UbuntuMediumItalic/UbuntuMediumItalic.woff") format("woff"),
+    url("../fonts/UbuntuMediumItalic/UbuntuMediumItalic.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
+
+/* font-family: "UbuntuBoldItalic"; */
+
+@font-face {
+  font-family: "UbuntuBoldItalic";
+  src: url("../fonts/UbuntuBoldItalic/UbuntuBoldItalic.eot");
+  src: url("../fonts/UbuntuBoldItalic/UbuntuBoldItalic.eot?#iefix")format("embedded-opentype"),
+    url("../fonts/UbuntuBoldItalic/UbuntuBoldItalic.woff") format("woff"),
+    url("../fonts/UbuntuBoldItalic/UbuntuBoldItalic.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
+
+/* font-family: "UbuntuCondensed Regular; */
+
+@font-face {
+  font-family: "UbuntuCondensedRegular";
+  src: url("../fonts/UbuntuCondensed/Ubuntu-C.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
+.link {
+  text-decoration: none;
+}
+
+.clearfix {
+  display: block;
+  zoom: 1;
+}
+
+.clearfix:after {
+  content: " ";
+  display: block;
+  font-size: 0;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+
+.wrapper {
+  max-width: 1160px;
+  margin: 0 auto;
+  padding-top: 38px;
+}
+
+.logo {
+  float: left;
+  position: relative;
+  padding-left: 51px;
+}
+
+.logo__big {
+  margin-bottom: 5px;
+  font-family: "UbuntuMedium";
+  font-size: 22px;
+  color: #434343;
+  font-weight: bold;
+}
+
+.logo__small {
+  font-family: "UbuntuLight";
+  font-size: 9px;
+  color: #333;
+  font-weight: normal;
+  text-transform: uppercase;
+  letter-spacing: 2.3px;
+}
+
+.logo__small:before {
+  content: url("../img/logo.png");
+  display: block;
+  position: absolute;
+  width: 36px;
+  height: 36px;
+  top: 0;
+  left: 0;
+}
+
+.header {
+  padding-bottom: 36px;
+}
+
+.socials {
+  float: right;
+}
+
+.socials .socials__item {
+  float: left;
+  width: 33px;
+  line-height: 36px;
+  text-align: right;
+}
+
+.socials .socials__link .fa {
+  color: #ccc;
+  font-size: 16px;
+}
+
+.socials .socials__link:hover .fa {
+  color: #248cec;
+}
+
+.menu {
+  position: relative;
+  background-color: #2a2d32;
+}
+
+.menu__item {
+  float: left;
+}
+
+.menu__link {
+  display: block;
+  line-height: 56px;
+  padding: 0 40px;
+  text-transform: uppercase;
+  border-right: 1px solid #181a1d;
+  text-decoration: none;
+  font-family: "UbuntuCondensedRegular";
+  font-size: 14px;
+  color: #fff;
+  font-weight: normal;
+}
+
+.menu__link.menu__link--active {
+  background-color: #248cec;
+}
+
+.menu__link:not(.menu__link--active):hover {
+  color: #f4b60d;
+}
+
+.menu__search {
+  position: absolute;
+  right: 8px;
+  top: 50%;
+  margin-top: -19px;
+}
+
+.menu__search .fa {
+  position: absolute;
+  right: 13px;
+  top: 50%;
+  font-size: 16px;
+  margin-top: -8px;
+  color: #fff;
+}
+
+.menu__search-control {
+  width: 223px;
+  height: 38px;
+  padding-left: 15px;
+  background-color: #35383c;
+  border: 1px solid #181a1d;
+  color: #fff;
+}
+
+.menu__search-control:focus {
+  outline: none;
+}
+
+.jcarousel ul {
+  width: 20000em;
+  position: relative;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.jcarousel li {
+  float: left;
+}

@@ -1,14 +1,12 @@
-"use strict";
+use strict";
 
 const gulp = require('gulp');
 const babel = require('gulp-babel');
  
-gulp.task('babel', () => {
-	return gulp.src('src/js/*.js')
+gulp.task('default', () => {
+	return gulp.src('src/app.js')
 		.pipe(babel({
 			presets: ['es2015']
 		}))
-		.pipe(gulp.dest('dist/js'));
+		.pipe(gulp.dest('dist'));
 });
-
-gulp.task('default', ['babel']);
