@@ -1,0 +1,121 @@
+// @import (css) "../reset.css";
+// @import (css) "../fonts.css";
+@import (less) "_variables.less";
+@import (less) "_mixins.less";
+
+/* DEFAULT */
+
+.wrapper {
+	min-width: 300px;
+	padding: 0 10px;
+	margin: 0 auto;
+}
+
+/* HEADER */
+
+.header {
+	position: relative;
+	background: url('../../img/header_bg.jpg') center center no-repeat;
+	background-size: cover;
+	padding: 20px 0 137px;
+	// height: 540px;
+}
+
+.logo {
+	position: absolute;
+	top: 171.5px;
+	left: 50%;
+	transform: translateX(-50%);
+
+	&__link {
+		text-transform: uppercase;
+		font-size: @font-size-header-title;
+		.font-default;
+	}
+}
+
+.authorize {
+	text-align: center;
+
+	&__log-in, 	&__sign-in {
+		.authorize-link;
+	}
+
+	&__log-in:hover, &__sign-in:hover {
+		border: 2px solid @font-color-white;
+	}
+}
+
+.promo {
+	padding: 166px 10px 0;
+	text-align: center;
+
+	&__title {
+		text-transform: uppercase;
+		line-height: 36px;
+		font-size: 22px;
+		.font-default;
+	}
+
+	&__sub-title {
+		padding: 12.5px 30px 19px;
+		font-size: 18px;
+		font-family: @font-family-subtitles;
+		color: @font-color-white;
+	}
+
+	&__link {
+		display: block;
+		position: relative;
+		left: 50%;
+		transform: translateX(-50%);
+		width: 280px;
+		line-height: 41px;
+		background-color: @color-red;
+		border-radius: 25px;
+		font-size: 14px;
+		.font-default;
+		transition: all .2s;
+
+		&:hover {
+			background-color: @color-red-hover;
+		}
+	}
+}
+
+/* MAIN */
+
+.main {
+	padding-top: 39px;
+}
+
+/* GUIDES */
+
+.guide {
+	position: relative;
+	padding-bottom: 10px;
+
+	&-section__title {
+		padding-bottom: 15px;
+		text-align: center;
+		font-size: @font-size-guide-title;
+		font-family: @font-family-titles;
+	}
+
+	&__info {
+		position: absolute;
+		top: 0;
+		z-index: 999;
+	}
+
+/* SLIDER */
+
+	&-slider {
+		&__i {
+			display: none; 
+		}
+	}
+
+}
+
+

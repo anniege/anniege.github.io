@@ -4,14 +4,17 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>URLAUBSGLÜCK</title>
+	<!-- <link rel="stylesheet/less" type="text/css" href="src/css/less/style.less"> -->
+	<!-- <script src="src/js/less.min.js" type="text/javascript"></script> -->
+	<link rel="stylesheet" href="dist/css/style.css">
 </head>
 <body>
 	<header class="header">
 		<div class="wrapper">
 			<h1 class="logo"><a class="logo__link" href="#">URLAUBSGLÜCK</a></h1>
 			<div class="authorize">
-				<a href="#" class="authorize__log-in">log in</a>
-				<a href="#" class="authorize__sign-in">sign in</a>
+				<a href="#" class="authorize__log-in">Log in</a>
+				<a href="#" class="authorize__sign-in">Sign in</a>
 			</div>
 			<section class="promo">
 				<h2 class="promo__title">share your holiday dreams</h2>
@@ -25,25 +28,46 @@
 			<section class="guide-section">
 				<h2 class="guide-section__title">How Urlaubsglück works?</h2>
 				<article class="guide guide--step1">
-					<a href="#" class="guide__link">step 1</a>
-					<h3 class="guide__title">Sed leo enim, condimentum</h3>
-					<p class="guide__text">Quisque libero libero, dictum non turpis in, luctus semper lore</p>
-					<a href="#" class="guide__control guide__control--left"></a>
-					<a href="#" class="guide__control guide__control--right"></a>
+					<ul class="guide-slider">
+						<li class="guide-slider__i guide-slider__i--active"><img src="dist/img/slider1_1.jpg" alt="" class="guide-slider__img"></li>
+						<li class="guide-slider__i"><img src="dist/img/slider1_1.jpg" alt="" class="guide-slider__img"></li>
+						<li class="guide-slider__i"><img src="dist/img/slider1_1.jpg" alt="" class="guide-slider__img"></li>
+					</ul>
+					<a href="#" class="guide-slider__control guide-slider__control--left"></a>
+					<a href="#" class="guide-slider__control guide-slider__control--right"></a>
+					<div class="guide__info">
+						<a href="#" class="guide__link">step 1</a>
+						<h3 class="guide__title">Sed leo enim, condimentum</h3>
+						<p class="guide__text">Quisque libero libero, dictum non turpis in, luctus semper lore</p>
+					</div>
 				</article>
 				<article class="guide guide--step2">
-					<a href="#" class="guide__link">step 2</a>
-					<h3 class="guide__title">Morbi velit risus</h3>
-					<p class="guide__text">Nulla venenatis tempor dui in molestie. Nulla quis dictum purus</p>
-					<a href="#" class="guide__control guide__control--left"></a>
-					<a href="#" class="guide__control guide__control--right"></a>
+					<ul class="guide-slider">
+						<li class="guide-slider__i guide-slider__i--active"><img src="dist/img/slider2_1.jpg" alt="" class="guide-slider__img"></li>
+						<li class="guide-slider__i"><img src="dist/img/slider2_1.jpg" alt="" class="guide-slider__img"></li>
+						<li class="guide-slider__i"><img src="dist/img/slider2_1.jpg" alt="" class="guide-slider__img"></li>
+					</ul>
+					<a href="#" class="guide-slider__control guide-slider__control--left"></a>
+					<a href="#" class="guide-slider__control guide-slider__control--right"></a>
+					<div class="guide__info">
+						<a href="#" class="guide__link">step 2</a>
+						<h3 class="guide__title">Morbi velit risus</h3>
+						<p class="guide__text">Nulla venenatis tempor dui in molestie. Nulla quis dictum purus</p>
+					</div>
 				</article>
 				<article class="guide guide--step3">
-					<a href="#" class="guide__link">step 3</a>
-					<h3 class="guide__title">Sed leo enim, condimentum</h3>
-					<p class="guide__text">Quisque libero libero, dictum non turpis in, luctus semper lore</p>
-					<a href="#" class="guide__control guide__control--left"></a>
-					<a href="#" class="guide__control guide__control--right"></a>
+					<ul class="guide-slider">
+						<li class="guide-slider__i guide-slider__i--active"><img src="dist/img/slider3_1.jpg" alt="" class="guide-slider__img"></li>
+						<li class="guide-slider__i"><img src="dist/img/slider3_1.jpg" alt="" class="guide-slider__img"></li>
+						<li class="guide-slider__i"><img src="dist/img/slider3_1.jpg" alt="" class="guide-slider__img"></li>
+					</ul>
+					<a href="#" class="guide-slider__control guide-slider__control--left"></a>
+					<a href="#" class="guide-slider__control guide-slider__control--right"></a>
+					<div class="guide__info">
+						<a href="#" class="guide__link">step 3</a>
+						<h3 class="guide__title">Sed leo enim, condimentum</h3>
+						<p class="guide__text">Quisque libero libero, dictum non turpis in, luctus semper lore</p>
+					</div>
 				</article>
 			</section>
 			<section class="partner-section">
@@ -51,28 +75,28 @@
 				<article class="partner partner--first">
 					<a href="#" class="partner__link partner__link--tv">
 						<img src="" alt="" class="partner__img">
-					</a>				
+					</a>
 					<h3 class="partner__name"></h3>
 					<p class="partner__about"></p>
 				</article>
 				<article class="partner partner--second">
 					<a href="#" class="partner__link partner__link--bulb">
 						<img src="" alt="" class="partner__img">
-					</a>				
+					</a>
 					<h3 class="partner__name"></h3>
 					<p class="partner__about"></p>
 				</article>
 				<article class="partner partner--third">
 					<a href="#" class="partner__link partner__link--coffee">
 						<img src="" alt="" class="partner__img">
-					</a>				
+					</a>
 					<h3 class="partner__name"></h3>
 					<p class="partner__about"></p>
 				</article>
 				<article class="partner partner--fourth">
 					<a href="#" class="partner__link partner__link--plane">
 						<img src="" alt="" class="partner__img">
-					</a>				
+					</a>
 					<h3 class="partner__name"></h3>
 					<p class="partner__about"></p>
 				</article>
