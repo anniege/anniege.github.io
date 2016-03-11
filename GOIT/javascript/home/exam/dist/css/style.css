@@ -1,0 +1,382 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* font-family: "RobotoRegular"; */
+
+@font-face {
+  font-family: "RobotoRegular";
+  src: url("../fonts/Roboto/RobotoRegular/RobotoRegular.eot");
+  src: url("../fonts/Roboto/RobotoRegular/RobotoRegular.eot?#iefix")format("embedded-opentype"),
+    url("../fonts/Roboto/RobotoRegular/RobotoRegular.woff") format("woff"),
+    url("../fonts/Roboto/RobotoRegular/RobotoRegular.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
+
+/* font-family: "RobotoLight"; */
+
+@font-face {
+  font-family: "RobotoLight";
+  src: url("../fonts/Roboto/RobotoLight/RobotoLight.eot");
+  src: url("../fonts/Roboto/RobotoLight/RobotoLight.eot?#iefix")format("embedded-opentype"),
+    url("../fonts/Roboto/RobotoLight/RobotoLight.woff") format("woff"),
+    url("../fonts/Roboto/RobotoLight/RobotoLight.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
+
+/* font-family: "RobotoMedium"; */
+
+@font-face {
+  font-family: "RobotoMedium";
+  src: url("../fonts/Roboto/RobotoMedium/RobotoMedium.eot");
+  src: url("../fonts/Roboto/RobotoMedium/RobotoMedium.eot?#iefix")format("embedded-opentype"),
+    url("../fonts/Roboto/RobotoMedium/RobotoMedium.woff") format("woff"),
+    url("../fonts/Roboto/RobotoMedium/RobotoMedium.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
+
+/* font-family: "RobotoBold"; */
+
+@font-face {
+  font-family: "RobotoBold";
+  src: url("../fonts/Roboto/RobotoBold/RobotoBold.eot");
+  src: url("../fonts/Roboto/RobotoBold/RobotoBold.eot?#iefix")format("embedded-opentype"),
+    url("../fonts/Roboto/RobotoBold/RobotoBold.woff") format("woff"),
+    url("../fonts/Roboto/RobotoBold/RobotoBold.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
+
+/* font-family: "RobotoBlack"; */
+
+@font-face {
+  font-family: "RobotoBlack";
+  src: url("../fonts/Roboto/RobotoBold/Roboto-Black.eot");
+  src: url("../fonts/Roboto/RobotoBold/Roboto-Black.eot?#iefix")format("embedded-opentype"),
+    url("../fonts/Roboto/RobotoBold/Roboto-Black.woff") format("woff"),
+    url("../fonts/Roboto/RobotoBold/Roboto-Black.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
+
+/* font-family: "RobotoBlackItalic"; */
+
+@font-face {
+  font-family: "RobotoBlackItalic";
+  src: url("../fonts/Roboto/RobotoBold/Roboto-BlackItalic.eot");
+  src: url("../fonts/Roboto/RobotoBold/Roboto-BlackItalic.eot?#iefix")format("embedded-opentype"),
+    url("../fonts/Roboto/RobotoBold/Roboto-BlackItalic.woff") format("woff"),
+    url("../fonts/Roboto/RobotoBold/Roboto-BlackItalic.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
+
+/* font-family: "MontserratBold"; */
+
+@font-face {
+  font-family: "MontserratBold";
+  src: url("../fonts/Montserrat/MontserratBold/Montserrat-Bold.eot");
+  src: url("../fonts/Montserrat/MontserratBold/Montserrat-Bold.eot?#iefix")format("embedded-opentype"),
+    url("../fonts/Montserrat/MontserratBold/Montserrat-Bold.woff") format("woff"),
+    url("../fonts/Montserrat/MontserratBold/Montserrat-Bold.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
+
+/* font-family: "MontserratRegular"; */
+
+@font-face {
+  font-family: "MontserratRegular";
+  src: url("../fonts/Montserrat/MontserratRegular/Montserrat-Regular.eot");
+  src: url("../fonts/Montserrat/MontserratRegular/Montserrat-Regular.eot?#iefix")format("embedded-opentype"),
+    url("../fonts/Montserrat/MontserratRegular/Montserrat-Regular.woff") format("woff"),
+    url("../fonts/Montserrat/MontserratRegular/Montserrat-Regular.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
+/* COMMON */
+
+/* HEADER */
+
+/*MAIN*/
+
+/* SECTION GUIDES*/
+
+.font-default {
+  font-family: "MontserratBold", Arial, sans-serif;
+  color: #fff;
+}
+
+.authorize-link {
+  display: inline-block;
+  padding: 9px 20px;
+  -webkit-border-radius: 19px;
+  border-radius: 19px;
+  font-size: 14px;
+  border: 2px solid transparent;
+  font-family: "MontserratBold", Arial, sans-serif;
+  color: #fff;
+}
+
+/* DEFAULT */
+
+.wrapper {
+  min-width: 300px;
+  padding: 0 10px;
+  margin: 0 auto;
+}
+
+/* HEADER */
+
+.header {
+  position: relative;
+  background: url("../img/header_bg.jpg") center center no-repeat;
+  background-size: cover;
+  padding: 20px 0 137px;
+}
+
+.logo {
+  position: absolute;
+  top: 171.5px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
+}
+
+.logo__link {
+  text-transform: uppercase;
+  font-size: 20px;
+  font-family: "MontserratBold", Arial, sans-serif;
+  color: #fff;
+}
+
+.authorize {
+  text-align: center;
+}
+
+.authorize__log-in,
+.authorize__sign-in {
+  display: inline-block;
+  padding: 9px 20px;
+  -webkit-border-radius: 19px;
+  border-radius: 19px;
+  font-size: 14px;
+  border: 2px solid transparent;
+  font-family: "MontserratBold", Arial, sans-serif;
+  color: #fff;
+}
+
+.authorize__log-in:hover,
+.authorize__sign-in:hover {
+  border: 2px solid #fff;
+}
+
+.promo {
+  padding: 166px 10px 0;
+  text-align: center;
+}
+
+.promo__title {
+  text-transform: uppercase;
+  line-height: 36px;
+  font-size: 22px;
+  font-family: "MontserratBold", Arial, sans-serif;
+  color: #fff;
+}
+
+.promo__sub-title {
+  padding: 12.5px 30px 19px;
+  font-size: 18px;
+  font-family: "RobotoLight", Arial, sans-serif;
+  color: #fff;
+}
+
+.promo__link {
+  display: block;
+  position: relative;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
+  width: 280px;
+  line-height: 41px;
+  background-color: #ff4e50;
+  -webkit-border-radius: 25px;
+  border-radius: 25px;
+  font-size: 14px;
+  font-family: "MontserratBold", Arial, sans-serif;
+  color: #fff;
+  -webkit-transition: all .2s;
+  transition: all .2s;
+}
+
+.promo__link:hover {
+  background-color: #fd6f71;
+}
+
+/* MAIN */
+
+.main {
+  padding-top: 39px;
+}
+
+/* GUIDES */
+
+.guide {
+  position: relative;
+  padding-bottom: 10px;
+}
+
+.guide-section__title {
+  padding-bottom: 15px;
+  text-align: center;
+  font-size: 22px;
+  font-family: "MontserratBold", Arial, sans-serif;
+}
+
+.guide__info {
+  position: absolute;
+  top: 0;
+  z-index: 999;
+}
