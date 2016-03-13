@@ -92,7 +92,6 @@
 /* GUIDES */
 
 .guide {
-	position: relative;
 	padding-bottom: 10px;
 
 	&-section__title {
@@ -105,17 +104,39 @@
 	&__info {
 		position: absolute;
 		top: 0;
-		z-index: 999;
+		z-index: 998;
 	}
 
 /* SLIDER */
-
-	&-slider {
-		&__i {
-			display: none; 
-		}
+	&__wrapper {
+		position: relative;
+		max-width: 350px;
+		left: 50%;
+		transform: translateX(-50%);
+		border-radius: 6px; 
+		background: -moz-linear-gradient(top, rgba(0,0,0,0) 0%, rgba(0,0,0,0.48) 29%, rgba(0,0,0,1) 60%); /* FF3.6-15 */
+background: -webkit-linear-gradient(top, rgba(0,0,0,0) 0%,rgba(0,0,0,0.48) 29%,rgba(0,0,0,1) 60%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom, rgba(0,0,0,0) 0%,rgba(0,0,0,0.48) 29%,rgba(0,0,0,1) 60%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#000000',GradientType=0 )
 	}
 
+	&__slider {
+	}
+
+	&__img {
+		max-width: 100%;
+	}
 }
 
 
+#slider1, #slider2, #slider3 {
+		opacity: .7;
+	position: relative;
+	max-width: 350px;
+	// margin: 0 auto; 
+}
+
+.ideal-image-slider {
+		border-radius: 6px; 
+	background-size: cover;
+}

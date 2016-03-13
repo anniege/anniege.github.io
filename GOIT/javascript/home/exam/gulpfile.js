@@ -15,7 +15,9 @@ var imagemin = require('gulp-imagemin');
 gulp.task('css', function(){
 	var cssStream = gulp.src('src/css/*.css')
 		.pipe(order(["reset.css",
-					 "fonts.css"]))
+					 "fonts.css",
+					 "ideal-image-slider",
+					 "default.css"]))
 		.pipe(concatCss("default.css"))
 		.on('error', function(e){
 			console.log(e);
@@ -68,4 +70,4 @@ gulp.task('less:watch', function() {
 	return gulp.watch('src/css/**/*.less', ['css']);
 });
 
-gulp.task('default', ['images', 'fonts', 'less:watch']);
+gulp.task('default', ['images', 'fonts', 'css', 'less:watch']);

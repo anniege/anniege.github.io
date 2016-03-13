@@ -2,11 +2,14 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>URLAUBSGLÜCK</title>
 	<!-- <link rel="stylesheet/less" type="text/css" href="src/css/less/style.less"> -->
 	<!-- <script src="src/js/less.min.js" type="text/javascript"></script> -->
 	<link rel="stylesheet" href="dist/css/style.css">
+<!-- 	<link rel="stylesheet" href="src/css/ideal-image-slider.css">
+    <link rel="stylesheet" href="src/css/default.css"> -->
 </head>
 <body>
 	<header class="header">
@@ -27,47 +30,53 @@
 		<div class="wrapper">
 			<section class="guide-section">
 				<h2 class="guide-section__title">How Urlaubsglück works?</h2>
-				<article class="guide guide--step1">
-					<ul class="guide-slider">
-						<li class="guide-slider__i guide-slider__i--active"><img src="dist/img/slider1_1.jpg" alt="" class="guide-slider__img"></li>
-						<li class="guide-slider__i"><img src="dist/img/slider1_1.jpg" alt="" class="guide-slider__img"></li>
-						<li class="guide-slider__i"><img src="dist/img/slider1_1.jpg" alt="" class="guide-slider__img"></li>
-					</ul>
+				<article class="guide">
+					<div class="guide__wrapper">
+						<div id="slider1" class="guide__slider">
+							<img class="guide__img" src="dist/img/slider1_1.jpg" alt="">
+							<img class="guide__img" data-src="dist/img/slider2_1.jpg" alt="">
+							<img class="guide__img" data-src="dist/img/slider3_1.jpg" alt="">
+						</div>
+						<div class="guide__info">
+							<a href="#" class="guide__link">step 1</a>
+							<h3 class="guide__title">Sed leo enim, condimentum</h3>
+							<p class="guide__text">Quisque libero libero, dictum non turpis in, luctus semper lore</p>
+						</div>
+					</div>
 					<a href="#" class="guide-slider__control guide-slider__control--left"></a>
 					<a href="#" class="guide-slider__control guide-slider__control--right"></a>
-					<div class="guide__info">
-						<a href="#" class="guide__link">step 1</a>
-						<h3 class="guide__title">Sed leo enim, condimentum</h3>
-						<p class="guide__text">Quisque libero libero, dictum non turpis in, luctus semper lore</p>
-					</div>
 				</article>
-				<article class="guide guide--step2">
-					<ul class="guide-slider">
-						<li class="guide-slider__i guide-slider__i--active"><img src="dist/img/slider2_1.jpg" alt="" class="guide-slider__img"></li>
-						<li class="guide-slider__i"><img src="dist/img/slider2_1.jpg" alt="" class="guide-slider__img"></li>
-						<li class="guide-slider__i"><img src="dist/img/slider2_1.jpg" alt="" class="guide-slider__img"></li>
-					</ul>
+				<article class="guide">
+					<div class="guide__wrapper">
+						<div id="slider2" class="guide__slider">
+							<img src="dist/img/slider2_1.jpg" alt="" class="guide-slider__img">
+							<img data-src="dist/img/slider1_1.jpg" alt="" class="guide-slider__img">
+							<img data-src="dist/img/slider3_1.jpg" alt="" class="guide-slider__img">
+						</div>
+						<div class="guide__info">
+							<a href="#" class="guide__link">step 2</a>
+							<h3 class="guide__title">Morbi velit risus</h3>
+							<p class="guide__text">Nulla venenatis tempor dui in molestie. Nulla quis dictum purus</p>
+						</div>
+					</div>
 					<a href="#" class="guide-slider__control guide-slider__control--left"></a>
 					<a href="#" class="guide-slider__control guide-slider__control--right"></a>
-					<div class="guide__info">
-						<a href="#" class="guide__link">step 2</a>
-						<h3 class="guide__title">Morbi velit risus</h3>
-						<p class="guide__text">Nulla venenatis tempor dui in molestie. Nulla quis dictum purus</p>
-					</div>
 				</article>
-				<article class="guide guide--step3">
-					<ul class="guide-slider">
-						<li class="guide-slider__i guide-slider__i--active"><img src="dist/img/slider3_1.jpg" alt="" class="guide-slider__img"></li>
-						<li class="guide-slider__i"><img src="dist/img/slider3_1.jpg" alt="" class="guide-slider__img"></li>
-						<li class="guide-slider__i"><img src="dist/img/slider3_1.jpg" alt="" class="guide-slider__img"></li>
-					</ul>
+				<article class="guide">
+					<div class="guide__wrapper">
+						<div id="slider3" class="guide__slider">
+							<img src="dist/img/slider3_1.jpg" alt="" class="guide-slider__img">
+							<img data-src="dist/img/slider2_1.jpg" alt="" class="guide-slider__img">
+							<img data-src="dist/img/slider1_1.jpg" alt="" class="guide-slider__img">
+						</div>
+						<div class="guide__info">
+							<a href="#" class="guide__link">step 3</a>
+							<h3 class="guide__title">Sed leo enim, condimentum</h3>
+							<p class="guide__text">Quisque libero libero, dictum non turpis in, luctus semper lore</p>
+						</div>
+					</div>
 					<a href="#" class="guide-slider__control guide-slider__control--left"></a>
 					<a href="#" class="guide-slider__control guide-slider__control--right"></a>
-					<div class="guide__info">
-						<a href="#" class="guide__link">step 3</a>
-						<h3 class="guide__title">Sed leo enim, condimentum</h3>
-						<p class="guide__text">Quisque libero libero, dictum non turpis in, luctus semper lore</p>
-					</div>
 				</article>
 			</section>
 			<section class="partner-section">
@@ -166,5 +175,28 @@
 			</div>
 		</div>
 	</footer>
+	<script src="src/js/ideal-image-slider.js"></script>
+	<script>
+		var slider1 = new IdealImageSlider.Slider({
+			selector: '#slider1',
+			maxHeight: 239,
+			interval: 4000
+		});
+		slider1.start();
+
+		var slider2 = new IdealImageSlider.Slider({
+			selector: '#slider2',
+			maxHeight: 239,
+			interval: 4000
+		});
+		slider2.start();
+
+		var slider3 = new IdealImageSlider.Slider({
+			selector: '#slider3',
+			maxHeight: 239,
+			interval: 4000
+		});
+		slider3.start();
+    </script>
 </body>
 </html>
