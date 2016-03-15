@@ -110,6 +110,8 @@
 			<section class="activity-section">
 				<div class="activity-section__gallery clearfix">
 				<h3 class="activity-section__title">Discover holiday activity ideas</h3>
+					<div class="activity clearfix">
+					</div>
 				</div>
 				<div class="activity-section__bottom">
 					<h3 class="activity-section__title">Discover holiday activity ideas</h3>
@@ -144,14 +146,12 @@
 		</div>
 	</footer>
 	<script id="template" type="text/x-handlebars-template">
-		<div class="activity clearfix">
 		{{#each images.photos}}
 		<a href="#" class="activity__link activity__link--sport">
 			<img src={{this}} alt="" class="activity__img">
 			<h4 class="activity__title">{{images.word}}</h4>
 		</a>
 		 {{/each}}
-	</div>
 	</script>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
 	<script src="src/js/isotope.pkgd.js"></script>
