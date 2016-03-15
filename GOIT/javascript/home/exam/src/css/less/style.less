@@ -210,6 +210,7 @@
 	&--activity {
 		color: @btn-partner-color-hover;
 		background-color: @btn-partner-color;
+		outline: none;
 
 		&:hover {
 			background-color: #fff;
@@ -314,11 +315,13 @@
 /* ACTIVITIES */
 
 .activity {
+	margin: 0 auto;
+
 	&-section{
 		padding: 37px 0 40px;
 
 		&__title {
-			padding: 0 22px;
+			padding: 20px 22px 40px;
 			text-align: center;
 			font-family: @font-family-titles;
 			font-size: @font-size-activity-title;
@@ -327,8 +330,47 @@
 
 		&__bottom {
 			padding-top: 30px;
-
 		}
+	}
+
+	&__link {
+		position: relative;
+		display: block;
+		float: left;
+		width: 300px;
+		height: 120px;
+		border-radius: 5px;
+		background-color: rgba(0,0,0,0.7);
+		overflow: hidden;
+
+		&:not(:last-child) {
+			margin-bottom: 10px;
+		}
+
+		&:hover .activity__img {
+			opacity: 1;
+		}
+
+		&:hover .activity__title {
+			color: @font-color-activity-caption-hover;
+		}
+	}
+
+	&__img {
+		min-width: 100%;
+		opacity: .6;
+		transition: opacity .3s;
+	}
+
+	&__title {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		text-align: center;
+		font-size: @font-size-activity-caption;
+		font-family: @font-family-titles;
+		color: @font-color-white;
 	}
 
 	&-form {

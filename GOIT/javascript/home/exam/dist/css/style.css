@@ -774,6 +774,7 @@ a {
 .section__link--activity {
   color: #fff;
   background-color: #ff4e50;
+  outline: none;
 }
 
 .section__link--activity:hover {
@@ -884,12 +885,16 @@ a {
 
 /* ACTIVITIES */
 
+.activity {
+  margin: 0 auto;
+}
+
 .activity-section {
   padding: 37px 0 40px;
 }
 
 .activity-section__title {
-  padding: 0 22px;
+  padding: 20px 22px 40px;
   text-align: center;
   font-family: "MontserratBold", Arial, sans-serif;
   font-size: 22px;
@@ -898,6 +903,50 @@ a {
 
 .activity-section__bottom {
   padding-top: 30px;
+}
+
+.activity__link {
+  position: relative;
+  display: block;
+  float: left;
+  width: 300px;
+  height: 120px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  background-color: rgba(0, 0, 0, 0.7);
+  overflow: hidden;
+}
+
+.activity__link:not(:last-child) {
+  margin-bottom: 10px;
+}
+
+.activity__link:hover .activity__img {
+  opacity: 1;
+}
+
+.activity__link:hover .activity__title {
+  color: #666;
+}
+
+.activity__img {
+  min-width: 100%;
+  opacity: .6;
+  -webkit-transition: opacity .3s;
+  transition: opacity .3s;
+}
+
+.activity__title {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+  font-size: 16px;
+  font-family: "MontserratBold", Arial, sans-serif;
+  color: #fff;
 }
 
 .activity-form__text {
