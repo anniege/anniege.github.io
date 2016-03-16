@@ -146,17 +146,18 @@
 		</div>
 	</footer>
 	<script id="template" type="text/x-handlebars-template">
-		{{#each images.photos}}
-		<a href="#" class="activity__link activity__link--sport">
+		{{#each photos}}
+		<a href={{this}} class="activity__link activity__link--sport" target="_blank">
 			<img src={{this}} alt="" class="activity__img">
-			<h4 class="activity__title">{{images.word}}</h4>
+			<h4 class="activity__title">{{../word}}</h4>
 		</a>
 		 {{/each}}
 	</script>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
-	<script src="src/js/isotope.pkgd.js"></script>
-	<script src="src/js/handlebars-v4.0.5.js"></script>
 	<script src="src/js/ideal-image-slider.js"></script>
+	<script src="src/js/handlebars-v4.0.5.js"></script>
+	<script src="src/js/masonry.pkgd.min.js"></script>
+	<script src="src/js/isotope.pkgd.js"></script>
 	<script src="src/js/app.js"></script>
 </body>
 </html>

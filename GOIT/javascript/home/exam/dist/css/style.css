@@ -930,7 +930,7 @@ a {
 }
 
 .activity__img {
-  min-width: 100%;
+  max-width: 100%;
   opacity: .6;
   -webkit-transition: opacity .3s;
   transition: opacity .3s;
@@ -943,6 +943,7 @@ a {
   -webkit-transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
+  text-transform: capitalize;
   text-align: center;
   font-size: 16px;
   font-family: "MontserratBold", Arial, sans-serif;

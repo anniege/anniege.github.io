@@ -1,6 +1,5 @@
 (function(){
 	var images = {
-		photos: [],
 		word: 'Sport and Activity',
 		captions: [
 		"Sport and Activity", 
@@ -10,6 +9,15 @@
 		"Culture and Education",
 		"Relaxation",
 		"Travelling"
+		],
+		photos: [
+		"dist/img/gallery_1.jpg",
+		"dist/img/gallery_2.jpg",
+		"dist/img/gallery_3.jpg",
+		"dist/img/gallery_4.jpg",
+		"dist/img/gallery_5.jpg",
+		"dist/img/gallery_6.jpg",
+		"dist/img/gallery_7.jpg"
 		]
 	}
 
@@ -19,49 +27,32 @@
 	function getImagesByRequest() {
 			images.photos = [];
 			var wordArr = images.word.split(" ");
-			console.log(wordArr);
 			var requestStr = 'https://pixabay.com/api/?key=2223288-d10240586d6b3acc79b68cd15&q=';
 			wordArr.forEach(function(word, i) {
 				(i != 0) ? requestStr = requestStr + '+' + word : requestStr = requestStr + word;
 			});
 			requestStr = requestStr + '&image_type=photo';
 
-			
 			function successFunc(data) {
-					console.log(data);
 					var i = 0;
 					while(i <= 7) {
 						images.photos.push(data.hits[i].webformatURL);
-						// console.log(data.hits[i].webformatURL);
 						i++;
 					}
-						console.log(images.photos);
-						console.log(images.word);
 						render();
-
+						IsotopeInit();
 				}
-
-
 
 			var promise = $.ajax({
 				url: requestStr
-				// success: 
 			});
-
 			promise.done(successFunc);
-
-			console.log("photos = ", images.photos);
-			console.log("word = ", images.word);
-
 	}
 
 	//GET IMAGES BY REQUEST
 	function getUserQuery(event) {
 		event.preventDefault();
-		
 		images.word = inputActivity.value;
-		// if (inputText) images.word = inputText;
-
 		getImagesByRequest();
 
 	}
@@ -106,30 +97,20 @@
 
 	function render() {
 		var source = $("#template").html();
-		console.log("source = ", source);
 		var template = Handlebars.compile(source);
-		// console.log("template = ", template);
-		console.log("images = ", images);
 		var html = template(images);
-		console.log("html= ", html);
 		var element = document.querySelector('.activity');
 		element.innerHTML = html;
 	}
 
 	function init() {
 		slidersCreate();
-		getImagesByRequest();
-					console.log("photos = ", images.photos);
-			console.log("word = ", images.word);
-		// render();
+		render();
 		IsotopeInit();
-
+		// getImagesByRequest();
 		formActivity.addEventListener('submit', getUserQuery);
 	}
 
 	document.addEventListener('DOMContentLoaded', init);
 })();
 
-function GoogleCallback(func, data){
-	window[func](data);
-}
