@@ -61,21 +61,21 @@
 	function slidersCreate() {
 		var slider1 = new IdealImageSlider.Slider({
 			selector: '#slider1',
-			maxHeight: 239,
+			// maxHeight: 239,
 			interval: 4000
 		});
 		slider1.start();
 
 		var slider2 = new IdealImageSlider.Slider({
 			selector: '#slider2',
-			maxHeight: 239,
+			// maxHeight: 239,
 			interval: 4000
 		});
 		slider2.start();
 
 		var slider3 = new IdealImageSlider.Slider({
 			selector: '#slider3',
-			maxHeight: 239,
+			// maxHeight: 239,
 			interval: 4000
 		});
 		slider3.start();

@@ -9,7 +9,7 @@
 }
 
 .wrapper {
-	min-width: 300px;
+	min-width: (@mobile - 20px);
 	padding: 0 10px;
 	margin: 0 auto;
 }
@@ -20,7 +20,7 @@
 	position: relative;
 	background: url('../../img/header_bg.jpg') center center no-repeat;
 	background-size: cover;
-	padding: 20px 0 137px;
+	padding: 20px 0 136px;
 	// height: 540px;
 }
 
@@ -42,6 +42,7 @@
 		.font-default;
 
 		&--footer {
+			font-size: 17px;
 			color: @color-red;
 		}
 	}
@@ -54,7 +55,8 @@
 		.authorize-link;
 	}
 
-	&__log-in:hover, &__sign-in:hover {
+	&__sign-in {
+		margin-right: 8px;
 		border: 2px solid @font-color-white;
 	}
 }
@@ -66,7 +68,7 @@
 	&__title {
 		text-transform: uppercase;
 		line-height: 36px;
-		font-size: 22px;
+		font-size: @font-size-promo-title;
 		.font-default;
 	}
 
@@ -76,22 +78,49 @@
 		font-family: @font-family-subtitles;
 		color: @font-color-white;
 	}
+}
 
-	&__link {
-		display: block;
+
+.main-link {
+	display: block;
+	width: 276px;
+	line-height: 38px;
+	margin: 0 auto;
+	text-align: center;
+	border-radius: 20px;
+	border: 2px solid @btn-partner-color;
+	font-family: @font-family-titles;
+	font-size: @btn-partner-font-size;
+	color: @btn-partner-color;
+	transition: all .3s;
+
+	&:hover {
+		color: @btn-partner-color-hover;
+		background-color: @btn-partner-color;
+	}
+
+	&--activity {
+		color: @btn-partner-color-hover;
+		background-color: @btn-partner-color;
+		outline: none;
+
+		&:hover {
+			background-color: #fff;
+			color: @btn-partner-color;
+		}
+	}
+
+	&--promo {
+		margin: 0;
 		position: relative;
 		left: 50%;
 		transform: translateX(-50%);
-		width: 280px;
-		line-height: 41px;
 		background-color: @color-red;
-		border-radius: 25px;
-		font-size: 14px;
-		.font-default;
-		transition: all .2s;
+		color: @font-color-white;
 
 		&:hover {
-			background-color: @color-red-hover;
+			background-color: transparent;
+			color: @color-red;
 		}
 	}
 }
@@ -99,7 +128,7 @@
 /* MAIN */
 
 .main {
-	padding-top: 39px;
+	padding-top: 36px;
 }
 
 /* SECTIONS */
@@ -133,8 +162,8 @@
 
 	&__info {
 		position: absolute;
-		top: 69px;
-		left: 20px;
+		top: 70px;
+		left: 22px;
 		z-index: 998;
 	}
 
@@ -158,17 +187,17 @@
 	}
 
 	&__title {
-		width: 171px;
+		width: 195px;
 		padding-top: 20px;
-		font-size: 21px;
+		font-size: 24px;
 		font-family: @font-family-titles;
 		color: @font-color-white;
 	}
 
 	&__text {
-		padding-top: 20px;
-		padding-right: 22px;
-		font-size: 15px;
+		padding-top: 16px;
+		padding-right: 5px;
+		font-size: 13px;
 		line-height: 16px;
 		font-family: @font-family-subtitles;
 		color: @font-color-white;
@@ -189,41 +218,11 @@
 
 /* PARTNERS */
 
-.section__link {
-	display: block;
-	width: 276px;
-	line-height: 38px;
-	margin: 0 auto;
-	text-align: center;
-	border-radius: 20px;
-	border: 2px solid @btn-partner-color;
-	font-family: @font-family-titles;
-	font-size: @btn-partner-font-size;
-	color: @btn-partner-color;
-	transition: all .3s;
-
-	&:hover {
-		color: @btn-partner-color-hover;
-		background-color: @btn-partner-color;
-	}
-
-	&--activity {
-		color: @btn-partner-color-hover;
-		background-color: @btn-partner-color;
-		outline: none;
-
-		&:hover {
-			background-color: #fff;
-			color: @btn-partner-color;
-		}
-	}
-}
-
 .partner {
 	margin-top: 10px;
 	
 	&:last-of-type {
-		padding-bottom: 10px;
+		padding-bottom: 7px;
 	}
 
 	&>* {
@@ -234,7 +233,7 @@
 		padding-top: 38px;
 
 		&__title {
-			padding: 0 28px;
+			padding: 0 20px;
 			line-height: 26px;
 			text-align: center;
 			font-family: @font-family-titles;
@@ -318,14 +317,19 @@
 	margin: 0 auto;
 
 	&-section{
-		padding: 37px 0 40px;
+		padding: 15px 0 36px;
 
 		&__title {
-			padding: 20px 22px 40px;
+			padding: 20px 10px 20px;
 			text-align: center;
 			font-family: @font-family-titles;
 			font-size: @font-size-activity-title;
 			color: @font-color-activity-title;
+
+			&--bottom {
+				padding-top: 8px;
+				padding-bottom: 0px;
+			}
 		}
 
 		&__bottom {
@@ -376,7 +380,7 @@
 
 	&-form {
 		&__text {
-			padding-top: 19px;
+			padding-top: 18px;
 			padding-bottom: 16px;
 			text-align: center;
 			font-size: @font-size-activity-form-text;
@@ -387,8 +391,8 @@
 		&__input {
 			display: block;
 			width: 280px;
-			height: 40px;
-			margin: 0 auto 10px;
+			height: 39px;
+			margin: 0 auto 8px;
 			text-indent: 17px;
 			outline: none;
 		}
@@ -400,10 +404,10 @@
 
 .footer {
 	border-top: 4px solid @color-red;
-	padding: 16px 0 7px;
+	padding: 15px 0 7px;
 
 	&__title {
-		padding: 19px 0 6px;
+		padding: 14px 0 4px;
 		text-align: center;
 		text-transform: capitalize;
 
@@ -415,7 +419,7 @@
 		}
 
 		&--partners {
-			padding: 16px 0 20px;
+			padding: 13px 0 9px;
 		}
 	}
 }
@@ -465,5 +469,80 @@
 		width: 110px;
 		height: 24px;
 		background: url('../../img/logo_copyright.png') center center no-repeat;
+	}
+}
+
+@media (min-width: @tablet) 
+and (max-width: @desktop) { 
+	.wrapper {
+		min-width: (@tablet - 20px);
+	}
+
+	.header {
+		padding: 38px 0 233px;
+	}
+
+	.logo {
+		position: static;
+		left: 0;
+		transform: none;
+		float: left;
+		padding-left: 40px;
+		padding-top: 12px;
+	}
+
+	.authorize {
+		float: right;
+		padding-right: 40px;
+	}
+
+	.promo {
+		clear: both;
+		padding-top: 140px;
+
+		&__title {
+			padding: 0 127px;
+			line-height: 64px;
+			// font-size: @font-size-promo-title + 27px;
+			font-size: 49px;
+
+			letter-spacing: 1.2px;
+		}
+
+		&__sub-title {
+			padding-top: 24px;
+			padding-bottom: 35px;
+			font-size: 23px;
+		}
+	}
+
+	.main-link {
+		width: 220px;
+	}
+
+	.main {
+		padding-top: 97px;
+	}
+
+	.guide {
+		// float: left;
+		display: inline-block;
+
+		&__wrapper {
+			max-width: 236px;
+			// min-height: 400px;
+		}
+
+		&-section {
+			&__title {
+				padding-bottom: 37px;
+			}
+		}
+	}
+
+
+	#slider1, #slider2, #slider3 {
+		// max-width: 236px;
+		min-height: 400px;
 	}
 }
