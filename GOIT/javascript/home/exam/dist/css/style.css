@@ -674,13 +674,17 @@ a {
 
 /* MAIN */
 
-.main {
-  padding-top: 36px;
-}
-
 /* SECTIONS */
 
 /* GUIDES */
+
+.section-title {
+  padding: 40px 0 15px;
+  text-align: center;
+  font-size: 22px;
+  font-family: "MontserratBold", Arial, sans-serif;
+  color: #333;
+}
 
 .guide {
   /* SLIDER */
@@ -688,13 +692,6 @@ a {
 
 .guide:not(:last-of-type) {
   padding-bottom: 10px;
-}
-
-.guide-section__title {
-  padding-bottom: 15px;
-  text-align: center;
-  font-size: 22px;
-  font-family: "MontserratBold", Arial, sans-serif;
 }
 
 .guide__wrapper {
@@ -823,19 +820,6 @@ a {
   margin: 0 auto;
 }
 
-.partner-section {
-  padding-top: 38px;
-}
-
-.partner-section__title {
-  padding: 0 20px;
-  line-height: 26px;
-  text-align: center;
-  font-family: "MontserratBold", Arial, sans-serif;
-  font-size: 21px;
-  color: #333;
-}
-
 .partner__link {
   position: relative;
   display: block;
@@ -915,24 +899,11 @@ a {
 /* ACTIVITIES */
 
 .activity {
-  margin: 0 auto;
+  margin: 10px auto;
 }
 
 .activity-section {
-  padding: 15px 0 36px;
-}
-
-.activity-section__title {
-  padding: 20px 10px 20px;
-  text-align: center;
-  font-family: "MontserratBold", Arial, sans-serif;
-  font-size: 22px;
-  color: #333;
-}
-
-.activity-section__title--bottom {
-  padding-top: 8px;
-  padding-bottom: 0px;
+  padding-bottom: 36px;
 }
 
 .activity-section__bottom {
@@ -964,7 +935,7 @@ a {
 }
 
 .activity__img {
-  max-width: 100%;
+  min-width: 100%;
   opacity: .6;
   -webkit-transition: opacity .3s;
   transition: opacity .3s;
@@ -1119,8 +1090,8 @@ a {
     width: 220px;
   }
 
-  .main {
-    padding-top: 97px;
+  .section-title {
+    padding: 100px 0 33px;
   }
 
   .guide {
@@ -1131,10 +1102,6 @@ a {
 
   .guide:not(:last-of-type) {
     margin-right: 20px;
-  }
-
-  .guide-section__title {
-    padding-bottom: 37px;
   }
 
   .guide-section__container {
@@ -1182,12 +1149,9 @@ a {
 
   .partner {
     display: inline-block;
+    vertical-align: top;
     width: 236px;
-    padding-top: 31px;
-  }
-
-  .partner-section {
-    padding-top: 100px;
+    padding-top: 21px;
   }
 
   .partner-section__container {
@@ -1201,11 +1165,46 @@ a {
 
   .partner--first,
   .partner--third {
-    margin-right: 20px;
+    margin-right: 10px;
+  }
+
+  .partner--second,
+  .partner--fourth {
+    margin-left: 10px;
   }
 
   .main-link {
     clear: both;
+    margin-top: 16px;
+  }
+
+  .activity__link {
+    float: left;
+    width: 31.3333333%;
+    height: 310px;
+  }
+
+  .activity__link:not(:last-child) {
+    margin-bottom: 10px;
+  }
+
+  .activity__link:nth-child(6),
+  .activity__link:nth-child(7) {
+    width: 62.3%;
+  }
+
+  .activity__link:nth-child(6) .activity__img,
+  .activity__link:nth-child(7) .activity__img {
+    min-width: 100%;
+  }
+
+  .activity__sizer {
+    width: 3%;
+  }
+
+  .activity__img {
+    min-height: 100%;
+    max-width: none;
   }
 }
 
@@ -1263,5 +1262,73 @@ a {
   .next,
   .prev {
     display: block;
+  }
+
+  /* PARTNER */
+
+  .partner {
+    display: table-cell;
+    vertical-align: top;
+    width: 236px;
+    padding-top: 21px;
+  }
+
+  .partner-section__container {
+    position: relative;
+    float: left;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%);
+    text-align: center;
+    padding: 0 128px;
+  }
+
+  .partner__about {
+    padding: 16px 0 17px;
+  }
+
+  .partner--first,
+  .partner--third {
+    margin-right: 10px;
+  }
+
+  .partner--second,
+  .partner--fourth {
+    margin-left: 10px;
+  }
+
+  .main-link {
+    clear: both;
+    margin-top: 16px;
+  }
+
+  .activity__link {
+    float: left;
+    width: 31.3333333%;
+    height: 310px;
+  }
+
+  .activity__link:not(:last-child) {
+    margin-bottom: 10px;
+  }
+
+  .activity__link:nth-child(6),
+  .activity__link:nth-child(7) {
+    width: 62.3%;
+  }
+
+  .activity__link:nth-child(6) .activity__img,
+  .activity__link:nth-child(7) .activity__img {
+    min-width: 100%;
+  }
+
+  .activity__sizer {
+    width: 3%;
+  }
+
+  .activity__img {
+    min-height: 100%;
+    max-width: none;
   }
 }

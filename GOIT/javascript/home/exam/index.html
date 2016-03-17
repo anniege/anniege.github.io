@@ -25,7 +25,7 @@
 	<main class="main" role="main">
 		<div class="wrapper">
 			<section class="guide-section clearfix">
-				<h2 class="guide-section__title">How Urlaubsglück works?</h2>
+				<h2 class="section-title">How Urlaubsglück works?</h2>
 				<div class="guide-section__container clearfix">
 					<article class="guide">
 						<div class="guide__wrapper">
@@ -114,7 +114,7 @@
 				</div>
 			</section>
 			<section id="partners" class="partner-section clearfix">
-				<h2 class="partner-section__title">Meet a partner for your best holiday</h2>
+				<h2 class="section-title">Meet a partner for your best holiday</h2>
 				<div class="partner-section__container clearfix">
 					<article class="partner partner--first">
 						<a href="#" class="partner__link partner__link--tv">
@@ -149,12 +149,12 @@
 			</section>
 			<section class="activity-section">
 				<div class="activity-section__gallery clearfix">
-					<h3 class="activity-section__title">Discover holiday activity ideas</h3>
+					<h3 class="section-title">Discover holiday activity ideas</h3>
 					<div class="activity clearfix">
 					</div>
 				</div>
 				<div class="activity-section__bottom">
-					<h3 class="activity-section__title activity-section__title--bottom">Discover holiday activity ideas</h3>
+					<h3 class="section-title">Discover holiday activity ideas</h3>
 					<form class="activity-form" action="#">
 						<p class="activity-form__text">Hi! What are your holiday interests?</p>
 						<input type="text" class="activity-form__input" placeholder="Enter your interests" required> 
@@ -186,8 +186,9 @@
 		</div>
 	</footer>
 	<script id="template" type="text/x-handlebars-template">
+	<a href="#" class="activity__sizer"></a>
 		{{#each photos}}
-		<a href={{this}} class="activity__link activity__link--sport" target="_blank">
+		<a href={{this}} class="activity__link" target="_blank">
 			<img src={{this}} alt="" class="activity__img">
 			<h4 class="activity__title">{{../word}}</h4>
 		</a>

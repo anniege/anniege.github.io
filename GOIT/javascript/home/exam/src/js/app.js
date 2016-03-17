@@ -35,7 +35,7 @@
 
 			function successFunc(data) {
 					var i = 0;
-					while(i <= 7) {
+					while(i < 7) {
 						images.photos.push(data.hits[i].webformatURL);
 						i++;
 					}
@@ -97,9 +97,11 @@
 		itemSelector: '.activity__link',
 		transitionDuration: '0.8s',
 		masonry: {
-			columnWidth: 300,
-			gutter: 10,
-			isFitWidth: true
+			columnWidth: ".activity__sizer",
+			gutter: '.activity__sizer',
+			// gutter: 10,
+			isFitWidth: true,
+			percentPosition: true
 			}
 		});
 	}

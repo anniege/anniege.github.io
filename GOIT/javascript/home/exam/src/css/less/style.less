@@ -127,28 +127,27 @@
 
 /* MAIN */
 
-.main {
-	padding-top: 36px;
-}
+// .main {
+// 	padding-top: 36px;
+// }
 
 /* SECTIONS */
 /* GUIDES */
 
+.section-title {
+	padding: 40px 0 15px;
+	text-align: center;
+	font-size: @font-size-section-title;
+	font-family: @font-family-titles;
+	color: @font-color-section-title;
+}
 .guide {
-
-
 	&:not(:last-of-type) {
 		padding-bottom: 10px;
 	}
 
-	&-section__title {
-		padding-bottom: 15px;
-		text-align: center;
-		font-size: @font-size-guide-title;
-		font-family: @font-family-titles;
-	}
 
-/* SLIDER */
+	/* SLIDER */
 	&__wrapper {
 		position: relative;
 		// max-width: 350px;
@@ -215,25 +214,25 @@
 	/**
 	 * (optional) wrapper width, specifies width of the slider frame.
 	 */
-	width: 300px;
-	position: relative;
-	font-size: 0;
-	line-height: 0;
-	overflow: hidden;
-	white-space: nowrap;
-}
+	 width: 300px;
+	 position: relative;
+	 font-size: 0;
+	 line-height: 0;
+	 overflow: hidden;
+	 white-space: nowrap;
+	}
 
-.slides {
-	display: inline-block;
+	.slides {
+		display: inline-block;
 
-li {
-	position: relative;
-	display: inline-block;
+		li {
+			position: relative;
+			display: inline-block;
 	/**
 	 * (optional) if the content inside the slide element has a defined size.
 	 */
 	// width: 300px;
-	}
+}
 }
 
 .active {
@@ -274,16 +273,16 @@ li {
 	}
 
 	&-section {
-		padding-top: 38px;
+		// padding-top: 38px;
 
-		&__title {
-			padding: 0 20px;
-			line-height: 26px;
-			text-align: center;
-			font-family: @font-family-titles;
-			font-size: @font-size-partner-title;
-			color: @font-color-partner-title;
-		}
+		// &__title {
+		// 	padding: 0 20px;
+		// 	line-height: 26px;
+		// 	text-align: center;
+		// 	font-family: @font-family-titles;
+		// 	font-size: @font-size-partner-title;
+		// 	color: @font-color-partner-title;
+		// }
 	}
 
 	&__link {
@@ -358,23 +357,24 @@ li {
 /* ACTIVITIES */
 
 .activity {
-	margin: 0 auto;
+	margin: 10px auto;
 
 	&-section{
-		padding: 15px 0 36px;
+		// padding: 15px 0 36px;
+		padding-bottom: 36px;
 
-		&__title {
-			padding: 20px 10px 20px;
-			text-align: center;
-			font-family: @font-family-titles;
-			font-size: @font-size-activity-title;
-			color: @font-color-activity-title;
+		// &__title {
+		// 	padding: 20px 10px 20px;
+		// 	text-align: center;
+		// 	font-family: @font-family-titles;
+		// 	font-size: @font-size-activity-title;
+		// 	color: @font-color-activity-title;
 
-			&--bottom {
-				padding-top: 8px;
-				padding-bottom: 0px;
-			}
-		}
+			// &--bottom {
+			// 	padding-top: 8px;
+			// 	padding-bottom: 0px;
+			// }
+		// }
 
 		&__bottom {
 			padding-top: 30px;
@@ -385,6 +385,7 @@ li {
 		position: relative;
 		display: block;
 		float: left;
+		// width: 50%;
 		width: 300px;
 		height: 120px;
 		border-radius: 5px;
@@ -405,10 +406,18 @@ li {
 	}
 
 	&__img {
-		max-width: 100%;
+		min-width: 100%;
 		opacity: .6;
 		transition: opacity .3s;
 	}
+
+	// &__gutter {
+	// 	width: 10px;
+	// }
+
+	// &__sizer {
+	// 	width: 3%;
+	// }
 
 	&__title {
 		position: absolute;
@@ -563,8 +572,9 @@ and (max-width: @desktop) {
 		width: 220px;
 	}
 
-	.main {
-		padding-top: 97px;
+
+	.section-title {
+		padding: 100px 0 33px;
 	}
 
 	.guide {
@@ -577,9 +587,6 @@ and (max-width: @desktop) {
 		}
 
 		&-section {
-			&__title {
-				padding-bottom: 37px;
-			}
 
 			&__container {
 				position: relative;
@@ -620,46 +627,85 @@ and (max-width: @desktop) {
 		display: block;
 	}
 
-/* PARTNER */
+	/* PARTNER */
 
-.partner {
-	// float: left;
-	display: inline-block;
-	width: 236px;
-	padding-top: 31px;
+	.partner {
+		display: inline-block;
+		vertical-align: top;
+		width: 236px;
+		padding-top: 21px;
 
-	&-section {
-		padding-top: 100px;
+		&-section {
 
-		&__container {
-			text-align: center;
-			// position: relative;
-			padding: 0 128px;
-			// // float: left;
-			// width: 66%;
-			// left: 50%;
-			// transform: translateX(-50%);
+			&__container {
+				text-align: center;
+				padding: 0 128px;
+			}
+		}
+
+		&__about {
+			padding: 16px 0 17px;
+		}
+
+		&--first, &--third {
+			margin-right: 10px;
+		}
+
+		&--second, &--fourth {
+			margin-left: 10px;
+		}
+
+	}
+
+	.main-link {
+		clear: both;
+		margin-top: 16px;
+	}
+
+	.activity {
+	// margin: 0;
+
+	&__link {
+		&:not(:last-child) {
+
+			margin-bottom: 10px;
+		// margin-right: 20px;
+	}
+		// width: 38.6%;
+		float: left;
+		// width: 236px;
+		// height: 310px;
+		width: 31.3333333%;
+		height: 310px;
+
+		&:nth-child(6), &:nth-child(7) {
+			width: 62.3%;
+			// width: 492px;
+
+			.activity__img {
+				min-width: 100%;
+			}
 		}
 	}
 
-	&__about {
-		padding: 16px 0 17px;
+	// &__gutter {
+	// 	width: 20px;
+	// }
+
+	&__sizer {
+		width: 3%;
 	}
-
-	&--first, &--third {
-		margin-right: 20px;
-	}
-
-}
-
-.main-link {
-	clear: both;
+	
+	&__img {
+		min-height: 100%;
+		max-width: none;
+	}	
 }
 }	
 
 @media (min-width: @desktop) { 
 
-.guide {
+	.guide {
 		float: left;
 		width: 300px;
 		height: 400px;
@@ -711,4 +757,85 @@ and (max-width: @desktop) {
 	.next, .prev {
 		display: block;
 	}
+
+
+	/* PARTNER */
+
+	.partner {
+	// display: inline-block;
+	display: table-cell;
+	vertical-align: top;
+	width: 236px;
+	padding-top: 21px;
+
+	&-section {
+
+		&__container {
+			position: relative;
+			float: left;
+			left: 50%;
+			transform: translateX(-50%);
+			text-align: center;
+			padding: 0 128px;
+		}
+	}
+
+	&__about {
+		padding: 16px 0 17px;
+	}
+
+	&--first, &--third {
+		margin-right: 10px;
+	}
+
+	&--second, &--fourth {
+		margin-left: 10px;
+	}
+
+}
+
+.main-link {
+	clear: both;
+	margin-top: 16px;
+}
+
+.activity {
+	// margin: 0;
+
+	&__link {
+		&:not(:last-child) {
+
+			margin-bottom: 10px;
+		// margin-right: 20px;
+	}
+		// width: 38.6%;
+		float: left;
+		// width: 236px;
+		// height: 310px;
+		width: 31.3333333%;
+		height: 310px;
+
+		&:nth-child(6), &:nth-child(7) {
+			width: 62.3%;
+			// width: 492px;
+
+			.activity__img {
+				min-width: 100%;
+			}
+		}
+	}
+
+	// &__gutter {
+	// 	width: 20px;
+	// }
+
+	&__sizer {
+		width: 3%;
+	}
+	
+	&__img {
+		min-height: 100%;
+		max-width: none;
+	}	
+}
 }
