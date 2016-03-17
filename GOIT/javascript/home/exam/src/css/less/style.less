@@ -527,7 +527,7 @@
 }
 
 @media (min-width: @tablet) 
-and (max-width: @desktop) { 
+and (max-width: (@desktop - 1px)) { 
 	.wrapper {
 		min-width: (@tablet - 20px);
 	}
@@ -703,7 +703,10 @@ and (max-width: @desktop) {
 }
 }	
 
-@media (min-width: @desktop) { 
+@media (min-width: @desktop) {
+	.wrapper {
+		width: @desktop - 20px; 
+	} 
 
 	.guide {
 		float: left;

@@ -1208,7 +1208,11 @@ a {
   }
 }
 
-@media (min-width: 959px) {
+@media (min-width: 960px) {
+  .wrapper {
+    width: 940px;
+  }
+
   .guide {
     float: left;
     width: 300px;
