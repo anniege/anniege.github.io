@@ -21,7 +21,6 @@
 	background: url('../../img/header_bg.jpg') center center no-repeat;
 	background-size: cover;
 	padding: 20px 0 136px;
-	// height: 540px;
 }
 
 .logo {
@@ -127,12 +126,9 @@
 
 /* MAIN */
 
-// .main {
-// 	padding-top: 36px;
-// }
+/* MAIN - SECTIONS */
 
-/* SECTIONS */
-/* GUIDES */
+/* MAIN - SECTIONS - GUIDES */
 
 .section-title {
 	padding: 40px 0 15px;
@@ -150,7 +146,6 @@
 	/* SLIDER */
 	&__wrapper {
 		position: relative;
-		// max-width: 350px;
 		max-width: 300px;
 		left: 50%;
 		transform: translateX(-50%);
@@ -192,8 +187,10 @@
 		width: 195px;
 		padding-top: 20px;
 		font-size: 24px;
+		line-height: 24px;
 		font-family: @font-family-titles;
 		color: @font-color-white;
+		white-space: normal;
 	}
 
 	&__text {
@@ -202,37 +199,28 @@
 		font-size: 13px;
 		line-height: 16px;
 		font-family: @font-family-subtitles;
-		color: @font-color-white;
+		color: #ccc;
 		letter-spacing: .6px;
+		white-space: normal;
 	}
-}
-
-.slider {
 }
 
 .frame {
-	/**
-	 * (optional) wrapper width, specifies width of the slider frame.
-	 */
-	 width: 300px;
-	 position: relative;
-	 font-size: 0;
-	 line-height: 0;
-	 overflow: hidden;
-	 white-space: nowrap;
-	}
-
-	.slides {
-		display: inline-block;
-
-		li {
-			position: relative;
-			display: inline-block;
-	/**
-	 * (optional) if the content inside the slide element has a defined size.
-	 */
-	// width: 300px;
+	width: 300px;
+	position: relative;
+	font-size: 0;
+	line-height: 0;
+	overflow: hidden;
+	white-space: nowrap;
 }
+
+.slides {
+	display: inline-block;
+
+	li {
+		position: relative;
+		display: inline-block;
+	}
 }
 
 .active {
@@ -259,7 +247,8 @@
 	left: 20px;
 }
 
-/* PARTNERS */
+
+/* MAIN - SECTIONS - PARTNERS */
 
 .partner {
 	margin-top: 10px;
@@ -270,19 +259,6 @@
 
 	&>* {
 		margin: 0 auto;
-	}
-
-	&-section {
-		// padding-top: 38px;
-
-		// &__title {
-		// 	padding: 0 20px;
-		// 	line-height: 26px;
-		// 	text-align: center;
-		// 	font-family: @font-family-titles;
-		// 	font-size: @font-size-partner-title;
-		// 	color: @font-color-partner-title;
-		// }
 	}
 
 	&__link {
@@ -354,27 +330,17 @@
 	}
 }
 
-/* ACTIVITIES */
+/* MAIN - SECTIONS - ACTIVITIES */
 
 .activity {
 	margin: 10px auto;
 
+	a {
+		display: block;
+	}
+
 	&-section{
-		// padding: 15px 0 36px;
 		padding-bottom: 36px;
-
-		// &__title {
-		// 	padding: 20px 10px 20px;
-		// 	text-align: center;
-		// 	font-family: @font-family-titles;
-		// 	font-size: @font-size-activity-title;
-		// 	color: @font-color-activity-title;
-
-			// &--bottom {
-			// 	padding-top: 8px;
-			// 	padding-bottom: 0px;
-			// }
-		// }
 
 		&__bottom {
 			padding-top: 30px;
@@ -385,9 +351,11 @@
 		position: relative;
 		display: block;
 		float: left;
-		// width: 50%;
-		width: 300px;
+		width: 100%;
 		height: 120px;
+		// max-width: 300px;
+		// left: 50%!important;
+		// margin-left: -150px;
 		border-radius: 5px;
 		background-color: rgba(0,0,0,0.7);
 		overflow: hidden;
@@ -405,19 +373,29 @@
 		}
 	}
 
+	&__gutter {
+		width: 0%;
+	}
+
+	&__sizer {
+		width: 100%;
+	}
+
 	&__img {
 		min-width: 100%;
 		opacity: .6;
 		transition: opacity .3s;
 	}
 
-	// &__gutter {
-	// 	width: 10px;
-	// }
+	&__preloader {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		min-width: auto;
 
-	// &__sizer {
-	// 	width: 3%;
-	// }
+	}
+
 
 	&__title {
 		position: absolute;
@@ -527,8 +505,10 @@
 	}
 }
 
-@media (min-width: @tablet) 
-and (max-width: (@desktop - 1px)) { 
+
+/* TABLETS */
+
+@media (min-width: @tablet) and (max-width: (@desktop - 1px)) { 
 	.wrapper {
 		min-width: (@tablet - 20px);
 	}
@@ -672,11 +652,6 @@ and (max-width: (@desktop - 1px)) {
 
 	}
 
-	// .main-link {
-
-
-	// }
-
 	.activity {
 		margin: 0 auto;
 
@@ -774,12 +749,15 @@ and (max-width: (@desktop - 1px)) {
 	}
 }
 
+
+/* DESCTOPES */
+
 @media (min-width: @desktop) {
+
 	.wrapper {
 		width: @desktop - 20px; 
 	} 
 
-	/* -------------------------------------------*/
 	.header {
 		padding: 38px 0 233px;
 	}
@@ -789,11 +767,9 @@ and (max-width: (@desktop - 1px)) {
 		left: 0;
 		transform: none;
 		float: left;
-		// padding-left: 0px;
 		padding-top: 13px;
 
 		&--footer {
-			// padding-left: 0px;
 			padding-top: 0px;
 		}
 	}
@@ -804,7 +780,6 @@ and (max-width: (@desktop - 1px)) {
 		&__sign-in {
 			margin-right: 0px;
 		}
-		// padding-right: 0px;
 	}
 
 	.promo {
@@ -842,12 +817,9 @@ and (max-width: (@desktop - 1px)) {
 		}
 	}
 
-
 	.section-title {
 		padding: 100px 0 33px;
 	}
-
-	/*****************************************************************/
 
 	.guide {
 		float: left;
@@ -942,109 +914,103 @@ and (max-width: (@desktop - 1px)) {
 
 	}
 
-// .main-link {
-// 	clear: both;
-// 	margin-top: 16px;
-// }
-/*-----------------------------------------------------------------*/
 
-/* PARTNER */
+	/* ACTIVITY */
 
 
-.activity {
-	margin: 0 auto;
+	.activity {
+		margin: 0 auto;
 
-	a {
-		display: block;
-	}
-
-	&-section {
-		padding-bottom: 100px;
-	}
-
-	&__link {
-		float: left;
-		width: 32%;
-		height: 310px;
-
-		&:not(:last-child) {
-			margin-bottom: 20px;
+		a {
+			display: block;
 		}
 
-		&:nth-child(7), &:nth-child(8) {
-			width: 66.5%;
+		&-section {
+			padding-bottom: 100px;
+		}
 
-			.activity__img {
-				min-width: 100%;
+		&__link {
+			float: left;
+			width: 32%;
+			height: 310px;
+
+			&:not(:last-child) {
+				margin-bottom: 20px;
+			}
+
+			&:nth-child(7), &:nth-child(8) {
+				width: 66.5%;
+
+				.activity__img {
+					min-width: 100%;
+				}
+			}
+		}
+
+		&__gutter {
+			width: 3.5%;
+		}
+
+		&__sizer {
+			width: 31%;
+		}
+
+		&__img {
+			min-height: 100%;
+			min-width: auto;
+		}
+
+		&-form {
+			text-align: center;
+			font-size: 0;
+			line-height: 0;
+
+			&__text {
+				padding-top: 4px;
+				padding-bottom: 40px;
+			}
+
+			&__input {
+				display: inline-block;
+				width: 240px;
+				margin-right: 10px;
+				margin-bottom: 0px;
+			}
+
+		}
+	}
+
+	.footer {
+		padding-top: 40px;
+		padding-bottom: 41px;
+
+		&__title {
+			padding-top: 0px;
+			padding-bottom: 15px;
+		}
+	}
+
+	.menu {
+		float: left;
+		padding-left: 85px;
+
+		&__i {
+			display: block;
+			float: none;
+
+			&:not(:last-child) {
+				padding-bottom: 10px;
 			}
 		}
 	}
 
-	&__gutter {
-		width: 3.5%;
+	.partners {
+		float: left;
+		clear: none;
+		padding-left: 105px;
 	}
 
-	&__sizer {
-		width: 31%;
+	.copyright {
+		float: right;
 	}
-
-	&__img {
-		min-height: 100%;
-		min-width: auto;
-	}
-
-	&-form {
-		text-align: center;
-		font-size: 0;
-		line-height: 0;
-
-		&__text {
-			padding-top: 4px;
-			padding-bottom: 40px;
-		}
-
-		&__input {
-			display: inline-block;
-			width: 240px;
-			margin-right: 10px;
-			margin-bottom: 0px;
-		}
-
-	}
-}
-
-.footer {
-	padding-top: 40px;
-	padding-bottom: 41px;
-
-	&__title {
-		padding-top: 0px;
-		padding-bottom: 15px;
-	}
-}
-
-.menu {
-	float: left;
-	padding-left: 85px;
-
-	&__i {
-		display: block;
-		float: none;
-
-		&:not(:last-child) {
-			padding-bottom: 10px;
-		}
-	}
-}
-
-.partners {
-	float: left;
-	clear: none;
-	padding-left: 105px;
-}
-
-.copyright {
-	float: right;
-	// padding-right: 30px;
-}
 }

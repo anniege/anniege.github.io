@@ -32,7 +32,7 @@
 			wordArr.forEach(function(word, i) {
 				(i != 0) ? requestStr = requestStr + '+' + word : requestStr = requestStr + word;
 			});
-			requestStr = requestStr + '&image_type=photo';
+			requestStr = requestStr + '&image_type=photo&orientation=horizontal&min_width=310&min_height=410';
 
 			function successFunc(data) {
 					var i = 0;
@@ -102,22 +102,22 @@
 		masonry: {
 			columnWidth: '.activity__sizer',
 			gutter: '.activity__gutter',
-			// gutter: 10,
 			isFitWidth: true
 			}
 		});
 
-	// 	imagesLoaded( elem, function() {
-	// // layout Isotope after each image loads
-	// 		iso.layout();
-	// 	});
-
-		imagesLoaded(elem).on('always',function() {
-			iso.leyout();
+		imagesLoaded(elem, function() {
+			iso.layout();
 		});
 
-		imagesLoaded(elem).on('progress',function() {
-			iso.leyout();
+		imagesLoaded(elem).on('done',function(iso) {
+			var imgs = elem.querySelectorAll('.activity__preloader');
+			[].forEach.call(imgs, function(item) {
+				item.src = item.getAttribute("data-src");
+				console.log(item.src);
+				item.classList.add('activity__img');
+				item.classList.remove('activity__preloader');
+			});
 		});
 	}
 

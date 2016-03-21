@@ -15,9 +15,7 @@ var imagemin = require('gulp-imagemin');
 gulp.task('css', function(){
 	var cssStream = gulp.src('src/css/*.css')
 		.pipe(order(["reset.css",
-					 "fonts.css",
-					 "ideal-image-slider",
-					 "default.css"]))
+					 "fonts.css"]))
 		.pipe(concatCss("default.css"))
 		.on('error', function(e){
 			console.log(e);
