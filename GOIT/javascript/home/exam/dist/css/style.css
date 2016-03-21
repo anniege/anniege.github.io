@@ -960,6 +960,7 @@ a {
   padding-bottom: 16px;
   text-align: center;
   font-size: 18px;
+  line-height: 18px;
   font-family: "RobotoLight", Arial, sans-serif;
   color: #333;
 }
@@ -1063,6 +1064,11 @@ a {
     padding-top: 12px;
   }
 
+  .logo--footer {
+    padding-left: 30px;
+    padding-top: 0px;
+  }
+
   .authorize {
     float: right;
     padding-right: 40px;
@@ -1090,6 +1096,15 @@ a {
     width: 220px;
   }
 
+  .main-link--activity {
+    clear: both;
+    margin-top: 16px;
+    display: inline-block;
+    -webkit-border-radius: 28px;
+    border-radius: 28px;
+    width: 160px;
+  }
+
   .section-title {
     padding: 100px 0 33px;
   }
@@ -1102,6 +1117,7 @@ a {
 
   .guide:not(:last-of-type) {
     margin-right: 20px;
+    padding-bottom: 0px;
   }
 
   .guide-section__container {
@@ -1156,7 +1172,7 @@ a {
 
   .partner-section__container {
     text-align: center;
-    padding: 0 128px;
+    padding: 0 126px;
   }
 
   .partner__about {
@@ -1173,38 +1189,101 @@ a {
     margin-left: 10px;
   }
 
-  .main-link {
-    clear: both;
-    margin-top: 16px;
+  .activity {
+    margin: 0 auto;
+  }
+
+  .activity a {
+    display: block;
+  }
+
+  .activity-section {
+    padding-bottom: 100px;
   }
 
   .activity__link {
     float: left;
-    width: 31.3333333%;
+    width: 31%;
     height: 310px;
   }
 
   .activity__link:not(:last-child) {
-    margin-bottom: 10px;
+    margin-bottom: 20px;
   }
 
-  .activity__link:nth-child(6),
-  .activity__link:nth-child(7) {
-    width: 62.3%;
+  .activity__link:nth-child(7),
+  .activity__link:nth-child(8) {
+    width: 65%;
   }
 
-  .activity__link:nth-child(6) .activity__img,
-  .activity__link:nth-child(7) .activity__img {
+  .activity__link:nth-child(7) .activity__img,
+  .activity__link:nth-child(8) .activity__img {
     min-width: 100%;
   }
 
+  .activity__gutter {
+    width: 3.5%;
+  }
+
   .activity__sizer {
-    width: 3%;
+    width: 31%;
   }
 
   .activity__img {
     min-height: 100%;
-    max-width: none;
+    min-width: auto;
+  }
+
+  .activity-form {
+    text-align: center;
+    font-size: 0;
+    line-height: 0;
+  }
+
+  .activity-form__text {
+    padding-bottom: 40px;
+  }
+
+  .activity-form__input {
+    display: inline-block;
+    width: 240px;
+    margin-right: 10px;
+    margin-bottom: 0px;
+  }
+
+  .footer {
+    padding-top: 40px;
+    padding-bottom: 41px;
+  }
+
+  .footer__title {
+    padding-top: 0px;
+    padding-bottom: 15px;
+  }
+
+  .menu {
+    float: left;
+    padding-left: 85px;
+  }
+
+  .menu__i {
+    display: block;
+    float: none;
+  }
+
+  .menu__i:not(:last-child) {
+    padding-bottom: 10px;
+  }
+
+  .partners {
+    float: left;
+    clear: none;
+    padding-left: 105px;
+  }
+
+  .copyright {
+    float: right;
+    padding-right: 30px;
   }
 }
 
@@ -1212,6 +1291,76 @@ a {
   .wrapper {
     width: 940px;
   }
+
+  /* -------------------------------------------*/
+
+  .header {
+    padding: 38px 0 233px;
+  }
+
+  .logo {
+    position: static;
+    left: 0;
+    -webkit-transform: none;
+    -ms-transform: none;
+    transform: none;
+    float: left;
+    padding-top: 13px;
+  }
+
+  .logo--footer {
+    padding-top: 0px;
+  }
+
+  .authorize {
+    float: right;
+  }
+
+  .authorize__sign-in {
+    margin-right: 0px;
+  }
+
+  .promo {
+    clear: both;
+    padding-top: 140px;
+  }
+
+  .promo__title {
+    padding: 0 23%;
+    line-height: 62px;
+    font-size: 49px;
+    letter-spacing: 1.2px;
+  }
+
+  .promo__sub-title {
+    padding-top: 28px;
+    padding-bottom: 35px;
+    font-size: 23px;
+  }
+
+  .main-link {
+    width: 220px;
+    margin-top: 0px;
+    clear: both;
+  }
+
+  .main-link--partners {
+    width: 193px;
+  }
+
+  .main-link--activity {
+    margin-top: 0px;
+    display: inline-block;
+    -webkit-border-radius: 28px;
+    border-radius: 28px;
+    width: 160px;
+  }
+
+  .section-title {
+    padding: 100px 0 33px;
+  }
+
+  /*****************************************************************/
 
   .guide {
     float: left;
@@ -1221,6 +1370,7 @@ a {
 
   .guide:not(:last-of-type) {
     margin-right: 20px;
+    padding-bottom: 0px;
   }
 
   .guide-section__title {
@@ -1273,8 +1423,12 @@ a {
   .partner {
     display: table-cell;
     vertical-align: top;
-    width: 236px;
+    width: 220px;
     padding-top: 21px;
+  }
+
+  .partner:not(:last-of-type) {
+    padding-right: 20px;
   }
 
   .partner-section__container {
@@ -1285,7 +1439,7 @@ a {
     -ms-transform: translateX(-50%);
     transform: translateX(-50%);
     text-align: center;
-    padding: 0 128px;
+    padding: 0 0 19px 0;
   }
 
   .partner__about {
@@ -1302,37 +1456,104 @@ a {
     margin-left: 10px;
   }
 
-  .main-link {
-    clear: both;
-    margin-top: 16px;
+  /*-----------------------------------------------------------------*/
+
+  /* PARTNER */
+
+  .activity {
+    margin: 0 auto;
+  }
+
+  .activity a {
+    display: block;
+  }
+
+  .activity-section {
+    padding-bottom: 100px;
   }
 
   .activity__link {
     float: left;
-    width: 31.3333333%;
+    width: 32%;
     height: 310px;
   }
 
   .activity__link:not(:last-child) {
-    margin-bottom: 10px;
+    margin-bottom: 20px;
   }
 
-  .activity__link:nth-child(6),
-  .activity__link:nth-child(7) {
-    width: 62.3%;
+  .activity__link:nth-child(7),
+  .activity__link:nth-child(8) {
+    width: 66.5%;
   }
 
-  .activity__link:nth-child(6) .activity__img,
-  .activity__link:nth-child(7) .activity__img {
+  .activity__link:nth-child(7) .activity__img,
+  .activity__link:nth-child(8) .activity__img {
     min-width: 100%;
   }
 
+  .activity__gutter {
+    width: 3.5%;
+  }
+
   .activity__sizer {
-    width: 3%;
+    width: 31%;
   }
 
   .activity__img {
     min-height: 100%;
-    max-width: none;
+    min-width: auto;
+  }
+
+  .activity-form {
+    text-align: center;
+    font-size: 0;
+    line-height: 0;
+  }
+
+  .activity-form__text {
+    padding-top: 4px;
+    padding-bottom: 40px;
+  }
+
+  .activity-form__input {
+    display: inline-block;
+    width: 240px;
+    margin-right: 10px;
+    margin-bottom: 0px;
+  }
+
+  .footer {
+    padding-top: 40px;
+    padding-bottom: 41px;
+  }
+
+  .footer__title {
+    padding-top: 0px;
+    padding-bottom: 15px;
+  }
+
+  .menu {
+    float: left;
+    padding-left: 85px;
+  }
+
+  .menu__i {
+    display: block;
+    float: none;
+  }
+
+  .menu__i:not(:last-child) {
+    padding-bottom: 10px;
+  }
+
+  .partners {
+    float: left;
+    clear: none;
+    padding-left: 105px;
+  }
+
+  .copyright {
+    float: right;
   }
 }

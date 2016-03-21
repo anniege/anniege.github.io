@@ -1,6 +1,7 @@
 (function(){
 	var images = {
 		word: 'Sport and Activity',
+		preload: 'dist/img/preloader.gif',
 		captions: [
 		"Sport and Activity", 
 		"Wellnes and Health",
@@ -82,27 +83,41 @@
 
 
 
-            Array.prototype.slice.call(document.querySelectorAll('.js_slider')).forEach(function (element, index) {
-                lory(element, {
-                	infinite: 1,
-               		enableMouseEvents: true
-                });
-            });
+			Array.prototype.slice.call(document.querySelectorAll('.js_slider')).forEach(function (element, index) {
+				lory(element, {
+					infinite: 1,
+					enableMouseEvents: true
+				});
+			});
 	}
 
 		// ISOOPE
 	function IsotopeInit() {
 		var elem = document.querySelector('.activity');
 		var iso = new Isotope( elem, {
+		layoutMode: 'masonry',
 		itemSelector: '.activity__link',
+		percentPosition: true,
 		transitionDuration: '0.8s',
 		masonry: {
-			columnWidth: ".activity__sizer",
-			gutter: '.activity__sizer',
+			columnWidth: '.activity__sizer',
+			gutter: '.activity__gutter',
 			// gutter: 10,
-			isFitWidth: true,
-			percentPosition: true
+			isFitWidth: true
 			}
+		});
+
+	// 	imagesLoaded( elem, function() {
+	// // layout Isotope after each image loads
+	// 		iso.layout();
+	// 	});
+
+		imagesLoaded(elem).on('always',function() {
+			iso.leyout();
+		});
+
+		imagesLoaded(elem).on('progress',function() {
+			iso.leyout();
 		});
 	}
 
