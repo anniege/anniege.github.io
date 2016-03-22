@@ -124,9 +124,12 @@
 	function render() {
 		var source = $("#template").html();
 		var template = Handlebars.compile(source);
+		console.log(template);
 		var html = template(images);
+		console.log(html);
 		var element = document.querySelector('.activity');
-		element.innerHTML = html;
+		// element.innerHTML = html;
+		$(element).html(html);
 	}
 
 	function init() {

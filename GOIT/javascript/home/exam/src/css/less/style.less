@@ -131,17 +131,26 @@
 /* MAIN - SECTIONS - GUIDES */
 
 .section-title {
-	padding: 40px 0 15px;
+	padding: 40px 0 12px;
+	line-height: 24px;
 	text-align: center;
 	font-size: @font-size-section-title;
 	font-family: @font-family-titles;
 	color: @font-color-section-title;
+
+	&--partner {
+		padding: 36px 0 11px;
+	}
+
+	&--activity: {
+		padding-top: 37px;
+	} 
 }
+
 .guide {
 	&:not(:last-of-type) {
 		padding-bottom: 10px;
 	}
-
 
 	/* SLIDER */
 	&__wrapper {
@@ -159,9 +168,13 @@
 
 	&__info {
 		position: absolute;
-		top: 70px;
-		left: 22px;
+		top: 68px;
+		left: 18px;
 		z-index: 998;
+
+		&--lower {
+			top: 98px;
+		}
 	}
 
 	&__link {
@@ -203,10 +216,16 @@
 		letter-spacing: .6px;
 		white-space: normal;
 	}
+
+	&__img {
+		max-width: 100%;
+		// max-height: 100%;
+	}
 }
 
 .frame {
 	width: 300px;
+	height: 240px;
 	position: relative;
 	font-size: 0;
 	line-height: 0;
@@ -216,11 +235,16 @@
 
 .slides {
 	display: inline-block;
+	height: 100%;
 
 	li {
 		position: relative;
 		display: inline-block;
 	}
+}
+
+.js_slide {
+	height: 100%;
 }
 
 .active {
@@ -254,7 +278,7 @@
 	margin-top: 10px;
 	
 	&:last-of-type {
-		padding-bottom: 7px;
+		padding-bottom: 18px;
 	}
 
 	&>* {
@@ -321,7 +345,7 @@
 	}
 
 	&__about {
-		padding: 16px 50px 17px;
+		padding: 16px 50px 12px;
 		text-align: center;
 		font-size: 14px;
 		line-height: 17px;
@@ -594,6 +618,7 @@
 		&__img {
 			display: block;
 			height: 400px;
+			max-width: none;
 			width: auto;
 			display: block;
 			position: relative;
@@ -604,13 +629,17 @@
 		&__info {
 			top: 229px;
 		}
+
+	}
+
+	.frame {
+		height: 400px;
 	}
 
 	.slider {
-		height: 400px;
-
 		li {
 			width: 236px;
+			height: 400px;
 		}
 	}
 
@@ -847,6 +876,7 @@
 		&__img {
 			display: block;
 			height: 400px;
+			max-width: none;
 			width: auto;
 			display: block;
 			position: relative;
@@ -859,11 +889,16 @@
 		}
 	}
 
+	.frame {
+		height: 100%;
+	}
+
 	.slider {
 		height: 400px;
 
 		li {
 			width: 300px;
+			height: 400px;
 		}
 	}
 

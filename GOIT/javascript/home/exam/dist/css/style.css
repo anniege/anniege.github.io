@@ -426,11 +426,16 @@ a {
 /* MAIN - SECTIONS - GUIDES */
 
 .section-title {
-  padding: 40px 0 15px;
+  padding: 40px 0 12px;
+  line-height: 24px;
   text-align: center;
   font-size: 22px;
   font-family: "MontserratBold", Arial, sans-serif;
   color: #333;
+}
+
+.section-title--partner {
+  padding: 36px 0 11px;
 }
 
 .guide {
@@ -461,9 +466,13 @@ a {
 
 .guide__info {
   position: absolute;
-  top: 70px;
-  left: 22px;
+  top: 68px;
+  left: 18px;
   z-index: 998;
+}
+
+.guide__info--lower {
+  top: 98px;
 }
 
 .guide__link {
@@ -508,8 +517,13 @@ a {
   white-space: normal;
 }
 
+.guide__img {
+  max-width: 100%;
+}
+
 .frame {
   width: 300px;
+  height: 240px;
   position: relative;
   font-size: 0;
   line-height: 0;
@@ -519,11 +533,16 @@ a {
 
 .slides {
   display: inline-block;
+  height: 100%;
 }
 
 .slides li {
   position: relative;
   display: inline-block;
+}
+
+.js_slide {
+  height: 100%;
 }
 
 .active {
@@ -557,7 +576,7 @@ a {
 }
 
 .partner:last-of-type {
-  padding-bottom: 7px;
+  padding-bottom: 16px;
 }
 
 .partner > * {
@@ -632,7 +651,7 @@ a {
 }
 
 .partner__about {
-  padding: 16px 50px 17px;
+  padding: 16px 50px 12px;
   text-align: center;
   font-size: 14px;
   line-height: 17px;
@@ -899,6 +918,7 @@ a {
 
   .guide__img {
     height: 400px;
+    max-width: none;
     width: auto;
     display: block;
     position: relative;
@@ -912,12 +932,13 @@ a {
     top: 229px;
   }
 
-  .slider {
+  .frame {
     height: 400px;
   }
 
   .slider li {
     width: 236px;
+    height: 400px;
   }
 
   .active {
@@ -1154,6 +1175,7 @@ a {
 
   .guide__img {
     height: 400px;
+    max-width: none;
     width: auto;
     display: block;
     position: relative;
@@ -1167,12 +1189,17 @@ a {
     top: 229px;
   }
 
+  .frame {
+    height: 100%;
+  }
+
   .slider {
     height: 400px;
   }
 
   .slider li {
     width: 300px;
+    height: 400px;
   }
 
   .active {
