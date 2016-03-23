@@ -16,6 +16,7 @@
 	<script src="src/js/eventListener.polyfill.js"></script>
 	<script src="src/js/html5shiv.min.js"></script>
 	<script src="src/js/respond.min.js"></script>
+	<script src="src/js/json3.js"></script>
 <![endif]-->
 	<header class="header">
 		<div class="wrapper">
@@ -71,8 +72,6 @@
 								<span class="js_next next"></span>
 							</div>
 						</div>
-<!-- 						<a href="#" class="guide-slider__control guide-slider__control--left"></a>
-						<a href="#" class="guide-slider__control guide-slider__control--right"></a> -->
 					</article>
 					<article class="guide">
 						<div class="guide__wrapper">
@@ -109,8 +108,6 @@
 								<span class="js_next next"></span>
 							</div>
 						</div>
-<!-- 						<a href="#" class="guide-slider__control guide-slider__control--left"></a>
-						<a href="#" class="guide-slider__control guide-slider__control--right"></a> -->
 					</article>
 					<article class="guide">
 						<div class="guide__wrapper">
@@ -147,8 +144,6 @@
 								<span class="js_next next"></span>
 							</div>
 						</div>
-<!-- 						<a href="#" class="guide-slider__control guide-slider__control--left"></a>
-						<a href="#" class="guide-slider__control guide-slider__control--right"></a> -->
 					</article>
 				</div>
 			</section>
@@ -228,7 +223,7 @@
 		<a href="#" class="activity__sizer"></a>
 		<a href="#" class="activity__gutter"></a>
 		{{#each photos}}
-		<a href={{this}} class="activity__link" target="_blank" data-src={{this}} style= "background: #4C4C4C url({{../preload}}) no-repeat center center">
+		<a href="#" class="activity__link" data-src={{this}} style= "background: #4C4C4C url({{../preload}}) no-repeat center center">
 				<h4 class="activity__title">{{../word}}</h4>
 		</a>
 		{{/each}}
