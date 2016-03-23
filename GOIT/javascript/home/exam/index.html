@@ -228,9 +228,8 @@
 		<a href="#" class="activity__sizer"></a>
 		<a href="#" class="activity__gutter"></a>
 		{{#each photos}}
-		<a href={{this}} class="activity__link" target="_blank">
-			<img src={{../preload}} data-src={{this}} alt="" class="activity__preloader">
-			<h4 class="activity__title">{{../word}}</h4>
+		<a href={{this}} class="activity__link" target="_blank" data-src={{this}} style= "background: #4C4C4C url({{../preload}}) no-repeat center center">
+				<h4 class="activity__title">{{../word}}</h4>
 		</a>
 		{{/each}}
 	</script>
@@ -238,8 +237,8 @@
 	<script src="src/js/classList.js"></script>
 	<script src="src/js/lory.min.js"></script>
 	<script src="src/js/handlebars-v4.0.5.js"></script>
-	<script src="src/js/isotope.pkgd.js"></script>
 	<script src="src/js/imagesloaded.pkgd.min.js"></script>
+	<script src="src/js/isotope.pkgd.js"></script>
 	<script src="src/js/app.js"></script>
 </body>
 </html>
