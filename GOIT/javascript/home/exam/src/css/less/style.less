@@ -1,5 +1,3 @@
-// @import (css) "../reset.css";
-// @import (css) "../fonts.css";
 @import (less) "_variables.less";
 @import (less) "_mixins.less";
 
@@ -159,16 +157,23 @@
 }
 
 .guide {
+	display: inline-block;
+
 	&:not(:last-of-type) {
 		padding-bottom: 10px;
+	}
+
+	&-section {
+		&__container {
+			width: 300px;
+			margin: 0 auto;
+		}
 	}
 
 	/* SLIDER */
 	&__wrapper {
 		position: relative;
 		max-width: 300px;
-		left: 50%;
-		transform: translateX(-50%);
 		border-radius: 6px;  
 		overflow: hidden;
 		background: -webkit-linear-gradient(rgba(0,0,0,0) 0%, rgba(0,0,0,0.48) 29%, rgba(0,0,0,1) 60%);
@@ -179,14 +184,9 @@
 
 	&__info {
 		position: absolute;
-		// top: 68px;
 		bottom: 19px;
 		left: 18px;
 		z-index: 998;
-
-		// &--lower {
-		// 	top: 98px;
-		// }
 	}
 
 	&__link {
@@ -245,18 +245,24 @@
 	white-space: nowrap;
 }
 
-.slides {
-	display: inline-block;
-	height: 100%;
-
-	li {
-		position: relative;
-		display: inline-block;
-	}
-}
-
 .js_slide {
-	height: 100%;
+	position: relative;
+	display: inline-block;
+	width: 300px;
+	height: 240px;
+	background-size: cover;
+
+	&--first {
+		background: url('../../img/slider1_1.jpg') center center no-repeat;
+	}
+
+	&--second {
+		background: url('../../img/slider2_1.jpg') center center no-repeat;
+	}
+
+	&--third {
+		background: url('../../img/slider3_1.jpg') center center no-repeat;
+	}
 }
 
 .active {
@@ -312,6 +318,7 @@
 		&:after {
 			content: "";
 			display: block;
+			z-index: 999;
 			position: absolute;
 			top: 89px;
 			left: 86px;
@@ -321,7 +328,6 @@
 			border: 4px solid #fff;
 			background: url('../../img/partner_sprite.png') 0px 0px no-repeat;
 			overflow: hidden;
-			z-index: 999;
 		}
 
 		&--tv:after{
@@ -623,10 +629,7 @@
 			padding-bottom: 3px;
 
 			&__container {
-				position: relative;
-				float: left;
-				left: 50%;
-				transform: translateX(-50%);
+				width: 748px;
 			}
 		}
 
@@ -649,15 +652,16 @@
 
 	.frame {
 		height: 400px;
+		width: 236px;
 	}
 
-	.slider {
-		li {
-			width: 236px;
-			height: 400px;
-		}
+	.js_slide {
+		width: 236px;
+		height: 400px;
+		position: relative;
+		display: inline-block;
+		background-size: cover;
 	}
-
 	.active {
 		z-index: 999;
 	}
@@ -881,12 +885,13 @@
 	}
 
 	.guide {
-		float: left;
+		// float: left;
+		display: inline-block;
 		width: 300px;
 		height: 400px;
 
 		&:not(:last-of-type) {
-			margin-right: 20px;
+			margin-right: 10px;
 			padding-bottom: 0px;
 		}
 
@@ -896,10 +901,7 @@
 			}
 
 			&__container {
-				position: relative;
-				float: left;
-				left: 50%;
-				transform: translateX(-50%);
+				width: 940px;
 			}
 		}
 
@@ -925,11 +927,12 @@
 
 	.slider {
 		height: 400px;
+	}
 
-		li {
-			width: 300px;
-			height: 400px;
-		}
+	.js_slide {
+		width: 300px;
+		height: 400px;
+		background-size: cover;
 	}
 
 	.active {
@@ -957,9 +960,6 @@
 
 			&__container {
 				position: relative;
-				float: left;
-				left: 50%;
-				transform: translateX(-50%);
 				text-align: center;
 				padding: 0 0 17px 0;
 			}

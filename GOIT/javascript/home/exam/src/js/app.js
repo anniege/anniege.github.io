@@ -1,34 +1,23 @@
 (function(){
 	var images = {
-		word: 'Sport and Activity',
 		preload: 'dist/img/preloader.gif',
-		captions: [
-		"Sport and Activity", 
-		"Wellnes and Health",
-		"Extreme Sports and Expeditions",
-		"Games",
-		"Culture and Education",
-		"Relaxation",
-		"Travelling"
-		],
 		photos: [
-		"dist/img/gallery_1.jpg",
-		"dist/img/gallery_2.jpg",
-		"dist/img/gallery_3.jpg",
-		"dist/img/gallery_4.jpg",
-		"dist/img/gallery_5.jpg",
-		"dist/img/gallery_6.jpg",
-		"dist/img/gallery_7.jpg"
-		]
+		{ url: "dist/img/gallery_1.jpg", word: "Sport and Activity" },
+		{ url: "dist/img/gallery_2.jpg", word: "Wellnes and Health" },
+		{ url: "dist/img/gallery_3.jpg", word: "Extreme Sports and Expeditions"},
+		{ url: "dist/img/gallery_4.jpg", word: "Games"},
+		{ url: "dist/img/gallery_5.jpg", word: "Culture and Education"},
+		{ url: "dist/img/gallery_6.jpg", word: "Relaxation"},
+		{ url: "dist/img/gallery_7.jpg", word: "Travelling"}]
 	}
 
 	function addEvent(evnt, elem, func) {
-		if (elem.addEventListener)  // W3C DOM
+		if (elem.addEventListener)  
 			elem.addEventListener(evnt,func,false);
-		else if (elem.attachEvent) { // IE DOM
+		else if (elem.attachEvent) { 
 			elem.attachEvent("on"+evnt, func);
 	}
-	else { // No much to do
+	else { 
 		elem[evnt] = func;
 		}
 	}
@@ -37,8 +26,7 @@
 	var formActivity = document.querySelector('.activity-form');
 
 	function getImagesByRequest() {
-		images.photos = [];
-		var wordArr = images.word.split(" ");
+		var wordArr = images.photos[0].word.split(" ");
 		var requestStr = 'https://pixabay.com/api/?key=2223288-d10240586d6b3acc79b68cd15&q=';
 		wordArr.forEach(function(word, i) {
 			(i != 0) ? requestStr = requestStr + '+' + word : requestStr = requestStr + word;
@@ -48,7 +36,7 @@
 		function successFunc(data) {
 			var i = 0;
 			while(i < 7) {
-				images.photos.push(data.hits[i].webformatURL);
+				images.photos[i].url = data.hits[i].webformatURL;
 				i++;
 			}
 			render();
@@ -64,19 +52,28 @@
 	//GET IMAGES BY REQUEST
 	function getUserQuery(event) {
 		event.preventDefault();
-		images.word = inputActivity.value;
+		for (var i = images.photos.length - 1; i >= 0; i--) {
+			images.photos[i].word = inputActivity.value;
+		}
 		getImagesByRequest();
-
 	}
 
 	// SLIDERS
 	function slidersCreate() {
-		Array.prototype.slice.call(document.querySelectorAll('.js_slider')).forEach(function (element, index) {
-			lory(element, {
+		// Array.prototype.slice.call(document.querySelectorAll('.js_slider')).forEach(function (element, index) {
+		// 	lory(element, {
+		// 		infinite: 1,
+		// 		enableMouseEvents: true
+		// 	});
+		// });
+
+		var sliders = document.querySelectorAll('.js_slider');
+		for (var i = sliders.length - 1; i >= 0; i--) {
+			lory(sliders[i], {
 				infinite: 1,
 				enableMouseEvents: true
 			});
-		});
+		}
 	}
 
 		// ISOOPE
@@ -109,48 +106,42 @@
 				iso.layout();
 			});
 
-			addEvent('resize', window, function() {
-				iso.leyout();
-			});
-	// 		if(window.attachEvent) {
-	// 			window.attachEvent('onresize', function() {
-	// 				alert('attachEvent - resize');
-	// 				iso.layout();
-	// });
-	// 		}
-	// 		else if(window.addEventListener) {
-	// 			window.addEventListener('resize', function() {
-	// 				console.log('addEventListener - resize');
-	// 				iso.layout();
-	// }, true);
-	// 		}
-	// 		else {
-	// 			console.log('The browser does not support Javascript event binding');
-			// }
+			function reLeyout() {
+				iso.layout();
+			}
+
+			addEvent('resize', window, reLeyout);
 	}
 
 	function render() {
-		var activity = document.querySelector('.activity');
-		activity.innerHTML = "";
-		var source = $("#template").html();
-		var template = Handlebars.compile(source);
-		// console.log(template);
-		var html = template(images);
-		// console.log(html);
-		var element = document.querySelector('.activity');
-		// element.innerHTML = html;
-		$(element).html(html);
+		// var activity = document.querySelector('.activity');
+		// activity.innerHTML = "";
+
+		// var source = document.getElementById('template').innerHTML;
+		// var template = Handlebars.compile(source);
+
+		// var htmlResult = template(images);
+		
+		// activity.innerHTML = htmlResult;
+
+		// var activity = document.querySelector('.activity');
+		// activity.innerHTML = "";
+
+		// var source = document.getElementById('_template').innerHTML;
+		// activity.innerHTML = tmpl(source, images);
+
+		var source = $('#_template').html();
+		$('.activity').html(tmpl(source, images));
 	}
 
 	function init() {
-		slidersCreate();
 		render();
+		slidersCreate();
 		IsotopeInit();
 		// getImagesByRequest();
 		formActivity.addEventListener('submit', getUserQuery);
 	}
 
 	addEvent('DOMContentLoaded', document, init);
-	// document.addEventListener('DOMContentLoaded', init);
 })();
 

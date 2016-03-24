@@ -438,6 +438,7 @@ a {
 }
 
 .guide {
+  display: inline-block;
   /* SLIDER */
 }
 
@@ -445,13 +446,14 @@ a {
   padding-bottom: 10px;
 }
 
+.guide-section__container {
+  width: 300px;
+  margin: 0 auto;
+}
+
 .guide__wrapper {
   position: relative;
   max-width: 300px;
-  left: 50%;
-  -webkit-transform: translateX(-50%);
-  -ms-transform: translateX(-50%);
-  transform: translateX(-50%);
   -webkit-border-radius: 6px;
   border-radius: 6px;
   overflow: hidden;
@@ -526,18 +528,24 @@ a {
   white-space: nowrap;
 }
 
-.slides {
-  display: inline-block;
-  height: 100%;
-}
-
-.slides li {
+.js_slide {
   position: relative;
   display: inline-block;
+  width: 300px;
+  height: 240px;
+  background-size: cover;
 }
 
-.js_slide {
-  height: 100%;
+.js_slide--first {
+  background: url("../img/slider1_1.jpg") center center no-repeat;
+}
+
+.js_slide--second {
+  background: url("../img/slider2_1.jpg") center center no-repeat;
+}
+
+.js_slide--third {
+  background: url("../img/slider3_1.jpg") center center no-repeat;
 }
 
 .active {
@@ -600,6 +608,7 @@ a {
 .partner__link:after {
   content: "";
   display: block;
+  z-index: 999;
   position: absolute;
   top: 89px;
   left: 86px;
@@ -610,7 +619,6 @@ a {
   border: 4px solid #fff;
   background: url("../img/partner_sprite.png") 0px 0px no-repeat;
   overflow: hidden;
-  z-index: 999;
 }
 
 .partner__link--tv:after {
@@ -912,12 +920,7 @@ a {
   }
 
   .guide-section__container {
-    position: relative;
-    float: left;
-    left: 50%;
-    -webkit-transform: translateX(-50%);
-    -ms-transform: translateX(-50%);
-    transform: translateX(-50%);
+    width: 748px;
   }
 
   .guide__img {
@@ -938,11 +941,15 @@ a {
 
   .frame {
     height: 400px;
+    width: 236px;
   }
 
-  .slider li {
+  .js_slide {
     width: 236px;
     height: 400px;
+    position: relative;
+    display: inline-block;
+    background-size: cover;
   }
 
   .active {
@@ -1169,13 +1176,13 @@ a {
   }
 
   .guide {
-    float: left;
+    display: inline-block;
     width: 300px;
     height: 400px;
   }
 
   .guide:not(:last-of-type) {
-    margin-right: 20px;
+    margin-right: 10px;
     padding-bottom: 0px;
   }
 
@@ -1184,12 +1191,7 @@ a {
   }
 
   .guide-section__container {
-    position: relative;
-    float: left;
-    left: 50%;
-    -webkit-transform: translateX(-50%);
-    -ms-transform: translateX(-50%);
-    transform: translateX(-50%);
+    width: 940px;
   }
 
   .guide__img {
@@ -1216,9 +1218,10 @@ a {
     height: 400px;
   }
 
-  .slider li {
+  .js_slide {
     width: 300px;
     height: 400px;
+    background-size: cover;
   }
 
   .active {
@@ -1245,11 +1248,6 @@ a {
 
   .partner-section__container {
     position: relative;
-    float: left;
-    left: 50%;
-    -webkit-transform: translateX(-50%);
-    -ms-transform: translateX(-50%);
-    transform: translateX(-50%);
     text-align: center;
     padding: 0 0 17px 0;
   }
