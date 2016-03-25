@@ -437,11 +437,6 @@ a {
   padding-bottom: 0px;
 }
 
-.guide {
-  display: inline-block;
-  /* SLIDER */
-}
-
 .guide:not(:last-of-type) {
   padding-bottom: 10px;
 }
@@ -449,20 +444,6 @@ a {
 .guide-section__container {
   width: 300px;
   margin: 0 auto;
-}
-
-.guide__wrapper {
-  position: relative;
-  max-width: 300px;
-  -webkit-border-radius: 6px;
-  border-radius: 6px;
-  overflow: hidden;
-  background: -webkit-linear-gradient(rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.48) 29%, #000000 60%);
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0)), color-stop(29%, rgba(0, 0, 0, 0.48)), color-stop(60%, #000000));
-  background: linear-gradient(rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.48) 29%, #000000 60%);
-  /* Chrome10-25,Safari5.1-6 */
-  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00000000', endColorstr='#000000', GradientType=0);
 }
 
 .guide__info {
@@ -514,62 +495,67 @@ a {
   white-space: normal;
 }
 
-.guide__img {
-  max-width: 100%;
-}
-
-.frame {
-  width: 300px;
-  height: 240px;
+.guide__i {
   position: relative;
-  font-size: 0;
-  line-height: 0;
-  overflow: hidden;
-  white-space: nowrap;
-}
-
-.js_slide {
-  position: relative;
-  display: inline-block;
   width: 300px;
   height: 240px;
   background-size: cover;
 }
 
-.js_slide--first {
+.guide__i--first {
   background: url("../img/slider1_1.jpg") center center no-repeat;
 }
 
-.js_slide--second {
+.guide__i--second {
   background: url("../img/slider2_1.jpg") center center no-repeat;
 }
 
-.js_slide--third {
+.guide__i--third {
   background: url("../img/slider3_1.jpg") center center no-repeat;
 }
 
-.active {
-  z-index: 999;
-}
-
-.next,
-.prev {
+.guide__next,
+.guide__prev {
   position: absolute;
   display: block;
   width: 30px;
   height: 55px;
   top: 154px;
   display: none;
+  cursor: pointer;
 }
 
-.next {
+.guide__next {
   background: url("../img/arrow_right.png");
   right: 20px;
 }
 
-.prev {
+.guide__prev {
   background: url("../img/arrow_left.png");
   left: 20px;
+}
+
+.jcarousel {
+  width: 300px;
+  height: 240px;
+  margin-bottom: 10px;
+  position: relative;
+  overflow: hidden;
+  -webkit-border-radius: 2px;
+  border-radius: 2px;
+}
+
+.jcarousel ul {
+  width: 20000em;
+  position: relative;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.jcarousel li {
+  float: left;
+  left: 0;
 }
 
 /* MAIN - SECTIONS - PARTNERS */
@@ -905,9 +891,7 @@ a {
   }
 
   .guide {
-    float: left;
-    width: 236px;
-    height: 400px;
+    display: inline-block;
   }
 
   .guide:not(:last-of-type) {
@@ -921,45 +905,30 @@ a {
 
   .guide-section__container {
     width: 748px;
-  }
-
-  .guide__img {
-    height: 400px;
-    max-width: none;
-    width: auto;
-    display: block;
-    position: relative;
-    left: 50%;
-    -webkit-transform: translateX(-50%);
-    -ms-transform: translateX(-50%);
-    transform: translateX(-50%);
+    white-space: nowrap;
   }
 
   .guide__info {
     bottom: 17px;
   }
 
-  .frame {
-    height: 400px;
-    width: 236px;
-  }
-
-  .js_slide {
+  .guide__i {
     width: 236px;
     height: 400px;
     position: relative;
-    display: inline-block;
     background-size: cover;
   }
 
-  .active {
-    z-index: 999;
-  }
-
-  .next,
-  .prev {
+  .guide__next,
+  .guide__prev {
     display: block;
     top: 43px;
+  }
+
+  .jcarousel {
+    width: 236px;
+    height: 400px;
+    margin-bottom: 0px;
   }
 
   /* PARTNER */
@@ -1177,8 +1146,6 @@ a {
 
   .guide {
     display: inline-block;
-    width: 300px;
-    height: 400px;
   }
 
   .guide:not(:last-of-type) {
@@ -1188,49 +1155,31 @@ a {
 
   .guide-section__title {
     padding-bottom: 37px;
+    white-space: nowrap;
   }
 
   .guide-section__container {
     width: 940px;
   }
 
-  .guide__img {
+  .guide__i {
     height: 400px;
-    max-width: none;
-    width: auto;
+    background-position: center;
+  }
+
+  .guide__next,
+  .guide__prev {
     display: block;
-    position: relative;
-    left: 50%;
-    -webkit-transform: translateX(-50%);
-    -ms-transform: translateX(-50%);
-    transform: translateX(-50%);
   }
 
   .guide__info {
     bottom: 19px;
   }
 
-  .frame {
-    height: 100%;
-  }
-
-  .slider {
-    height: 400px;
-  }
-
-  .js_slide {
+  .jcarousel {
     width: 300px;
     height: 400px;
-    background-size: cover;
-  }
-
-  .active {
-    z-index: 999;
-  }
-
-  .next,
-  .prev {
-    display: block;
+    margin-bottom: 0px;
   }
 
   /* PARTNER */

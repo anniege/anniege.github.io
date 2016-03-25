@@ -80,13 +80,47 @@
 		// 	});
 		// });
 
-		var sliders = document.querySelectorAll('.js_slider');
-		for (var i = sliders.length - 1; i >= 0; i--) {
-			lory(sliders[i], {
-				infinite: 1,
-				enableMouseEvents: true
+		// var sliders = document.querySelectorAll('.js_slider');
+		// for (var i = sliders.length - 1; i >= 0; i--) {
+		// 	lory(sliders[i], {
+		// 		infinite: 1,
+		// 		enableMouseEvents: true
+		// 	});
+		// }
+
+		$('.jcarousel').jcarousel({
+			animation: 'slow',
+			wrap: 'circular'
+		})
+
+		.jcarouselAutoscroll({
+			interval: 5000,
+			target: '+=1',
+			autostart: true
+		});
+
+		$('.jcarousel-control-prev')
+			.on('jcarouselcontrol:active', function() {
+				$(this).removeClass('inactive');
+			})
+			.on('jcarouselcontrol:inactive', function() {
+				$(this).addClass('inactive');
+			})
+			.jcarouselControl({
+				target: '-=1'
 			});
-		}
+
+		$('.jcarousel-control-next')
+			.on('jcarouselcontrol:active', function() {
+				$(this).removeClass('inactive');
+			})
+			.on('jcarouselcontrol:inactive', function() {
+				$(this).addClass('inactive');
+			})
+			.jcarouselControl({
+				target: '+=1'
+			});
+
 	}
 
 		// ISOOPE
