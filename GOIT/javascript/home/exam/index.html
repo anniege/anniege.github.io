@@ -6,17 +6,16 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>URLAUBSGLÜCK</title>
 	<link rel="stylesheet" href="dist/css/style.css">
-	<script src="src/js/jquery-1.10.0.min.js"></script>
+	<script src="src/js/jquery-1.12.1.min.js"></script>
+	<script src="src/js/jquery.jcarousel.min.js"></script>
+     <script src="src/js/ie/jquery.xdomainrequest.min.js"></script>
+
+<!--[if lt IE 9]>
+      <script> /* html5shiv - 3.7.3 */ !function(a,b){function c(a,b){var c=a.createElement("p"),d=a.getElementsByTagName("head")[0]||a.documentElement;return c.innerHTML="x<style>"+b+"</style>",d.insertBefore(c.lastChild,d.firstChild)}function d(){var a=t.elements;return"string"==typeof a?a.split(" "):a}function e(a,b){var c=t.elements;"string"!=typeof c&&(c=c.join(" ")),"string"!=typeof a&&(a=a.join(" ")),t.elements=c+" "+a,j(b)}function f(a){var b=s[a[q]];return b||(b={},r++,a[q]=r,s[r]=b),b}function g(a,c,d){if(c||(c=b),l)return c.createElement(a);d||(d=f(c));var e;return e=d.cache[a]?d.cache[a].cloneNode():p.test(a)?(d.cache[a]=d.createElem(a)).cloneNode():d.createElem(a),!e.canHaveChildren||o.test(a)||e.tagUrn?e:d.frag.appendChild(e)}function h(a,c){if(a||(a=b),l)return a.createDocumentFragment();c=c||f(a);for(var e=c.frag.cloneNode(),g=0,h=d(),i=h.length;i>g;g++)e.createElement(h[g]);return e}function i(a,b){b.cache||(b.cache={},b.createElem=a.createElement,b.createFrag=a.createDocumentFragment,b.frag=b.createFrag()),a.createElement=function(c){return t.shivMethods?g(c,a,b):b.createElem(c)},a.createDocumentFragment=Function("h,f","return function(){var n=f.cloneNode(),c=n.createElement;h.shivMethods&&("+d().join().replace(/[\w\-:]+/g,function(a){return b.createElem(a),b.frag.createElement(a),'c("'+a+'")'})+");return n}")(t,b.frag)}function j(a){a||(a=b);var d=f(a);return!t.shivCSS||k||d.hasCSS||(d.hasCSS=!!c(a,"article,aside,dialog,figcaption,figure,footer,header,hgroup,main,nav,section{display:block}mark{background:#FF0;color:#000}template{display:none}")),l||i(a,d),a}var k,l,m="3.7.3",n=a.html5||{},o=/^<|^(?:button|map|select|textarea|object|iframe|option|optgroup)$/i,p=/^(?:a|b|code|div|fieldset|h1|h2|h3|h4|h5|h6|i|label|li|ol|p|q|span|strong|style|table|tbody|td|th|tr|ul)$/i,q="_html5shiv",r=0,s={};!function(){try{var a=b.createElement("a");a.innerHTML="<xyz></xyz>",k="hidden"in a,l=1==a.childNodes.length||function(){b.createElement("a");var a=b.createDocumentFragment();return"undefined"==typeof a.cloneNode||"undefined"==typeof a.createDocumentFragment||"undefined"==typeof a.createElement}()}catch(c){k=!0,l=!0}}();var t={elements:n.elements||"abbr article aside audio bdi canvas data datalist details dialog figcaption figure footer header hgroup main mark meter nav output picture progress section summary template time video",version:m,shivCSS:n.shivCSS!==!1,supportsUnknownElements:l,shivMethods:n.shivMethods!==!1,type:"default",shivDocument:j,createElement:g,createDocumentFragment:h,addElements:e};a.html5=t,j(b),"object"==typeof module&&module.exports&&(module.exports=t)}("undefined"!=typeof window?window:this,document);</script>
+    <![endif]-->
+
 </head>
 <body>
-<!--[if lt IE 9]>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/es5-shim/4.5.7/es5-shim.min.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/es5-shim/4.5.7/es5-sham.min.js"></script>
-	<script  type="text/javascript" src="src/js/ie/html5shiv.min.js"></script>
-	<script  type="text/javascript" src="src/js/ie/respond.min.js"></script>
-	<script  type="text/javascript" src="src/js/ie/json3.js"></script>
-	<script  type="text/javascript" src="src/js/ie/jquery.xdomainrequest.min.js"></script>
-	<![endif]-->
 	<header class="header">
 		<div class="wrapper">
 			<h1 class="logo"><a class="logo__link" href="#">URLAUBSGLÜCK</a></h1>
@@ -36,7 +35,6 @@
 			<section class="guide-section clearfix">
 				<h2 class="section-title">How Urlaubsglück works?</h2>
 				<div class="guide-section__container">
-					<!-- <div class="jcarousel-wrapper"> -->
 					<div class="jcarousel guide" data-jcarousel="true" data-jcarouselautoscroll="true">
 						<ul class="guide__list">
 							<li class="guide__i guide__i--first">
@@ -64,8 +62,6 @@
 						<span class="jcarousel-control-prev guide__prev"></span>
 						<span class="jcarousel-control-next guide__next"></span>
 					</div>
-					<!-- </div> -->
-					<!-- <div class="jcarousel-wrapper"> -->
 					<div class="jcarousel guide" data-jcarousel="true" data-jcarouselautoscroll="true">
 						<ul class="guide__list">
 							<li class="guide__i guide__i--second">
@@ -93,8 +89,6 @@
 						<span class="jcarousel-control-prev guide__prev"></span>
 						<span class="jcarousel-control-next guide__next"></span>
 					</div>
-					<!-- </div> -->
-					<!-- <div class="jcarousel-wrapper"> -->
 					<div class="jcarousel guide" data-jcarousel="true" data-jcarouselautoscroll="true">
 						<ul class="guide__list">
 							<li class="guide__i guide__i--third">
@@ -122,106 +116,6 @@
 						<span class="jcarousel-control-prev guide__prev"></span>
 						<span class="jcarousel-control-next guide__next"></span>
 					</div>
-					<!-- </div> -->
-					<!-- <article class="guide">
-						<div class="guide__wrapper">
-							<div class="slider js_slider">
-								<div class="frame js_frame">
-									<ul class="guide__slider slides js_slides">
-										<li class="js_slide js_slide--first">
-											<div class="guide__info">
-												<a href="#" class="guide__link">step 1</a>
-												<h3 class="guide__title">Sed leo enim, condimentum</h3>
-												<p class="guide__text">Quisque libero libero, dictum non turpis in, luctus semper lorem. Donec rhoncus a leo sit amet facilisis.</p>
-											</div>									
-										</li>
-										<li class="js_slide js_slide--third">
-											<div class="guide__info">
-												<a href="#" class="guide__link">step 3</a>
-												<h3 class="guide__title">Sed leo enim, condimentum</h3>
-												<p class="guide__text">Quisque libero libero, dictum non turpis in, luctus semper lorem. Donec rhoncus a leo sit amet facilisis.</p>
-											</div>
-										</li>
-										<li class="js_slide js_slide--second">
-											<div class="guide__info">
-												<a href="#" class="guide__link">step 2</a>
-												<h3 class="guide__title">Morbi velit risus</h3>
-												<p class="guide__text">Nulla venenatis tempor dui in molestie. Nulla quis dictum purus, sit amet porttitor est.</p>
-											</div>
-										</li>
-									</ul>
-								</div>
-								<span class="js_prev prev"></span>
-								<span class="js_next next"></span>
-							</div>
-						</div>
-					</article>
-					<article class="guide">
-						<div class="guide__wrapper">
-							<div class="slider js_slider">
-								<div class="frame js_frame">
-									<ul class="guide__slider slides js_slides">
-										<li class="js_slide js_slide--second">
-											<div class="guide__info">
-												<a href="#" class="guide__link">step 2</a>
-												<h3 class="guide__title">Morbi velit risus</h3>
-												<p class="guide__text">Nulla venenatis tempor dui in molestie. Nulla quis dictum purus, sit amet porttitor est.</p>
-											</div>
-										</li>
-										<li class="js_slide js_slide--first">
-											<div class="guide__info">
-												<a href="#" class="guide__link">step 1</a>
-												<h3 class="guide__title">Sed leo enim, condimentum</h3>
-												<p class="guide__text">Quisque libero libero, dictum non turpis in, luctus semper lorem. Donec rhoncus a leo sit amet facilisis.</p>
-											</div>
-										</li>
-										<li class="js_slide js_slide--third">
-											<div class="guide__info">
-												<a href="#" class="guide__link">step 3</a>
-												<h3 class="guide__title">Sed leo enim, condimentum</h3>
-												<p class="guide__text">Quisque libero libero, dictum non turpis in, luctus semper lorem. Donec rhoncus a leo sit amet facilisis.</p>
-											</div>
-										</li>
-									</ul>
-								</div>
-								<span class="js_prev prev"></span>
-								<span class="js_next next"></span>
-							</div>
-						</div>
-					</article>
-					<article class="guide">
-						<div class="guide__wrapper">
-							<div class="slider js_slider">
-								<div class="frame js_frame">
-									<ul class="guide__slider slides js_slides">
-										<li class="js_slide js_slide--third">
-											<div class="guide__info">
-												<a href="#" class="guide__link">step 3</a>
-												<h3 class="guide__title">Sed leo enim, condimentum</h3>
-												<p class="guide__text">Quisque libero libero, dictum non turpis in, luctus semper lorem. Donec rhoncus a leo sit amet facilisis.</p>
-											</div>
-										</li>
-										<li class="js_slide js_slide--second">
-											<div class="guide__info">
-												<a href="#" class="guide__link">step 2</a>
-												<h3 class="guide__title">Morbi velit risus</h3>
-												<p class="guide__text">Nulla venenatis tempor dui in molestie. Nulla quis dictum purus, sit amet porttitor est.</p>
-											</div>
-										</li>
-										<li class="js_slide js_slide--first">
-											<div class="guide__info">
-												<a href="#" class="guide__link">step 1</a>
-												<h3 class="guide__title">Sed leo enim, condimentum</h3>
-												<p class="guide__text">Quisque libero libero, dictum non turpis in, luctus semper lorem. Donec rhoncus a leo sit amet facilisis.</p>
-											</div>
-										</li>
-									</ul>
-								</div>
-								<span class="js_prev prev"></span>
-								<span class="js_next next"></span>
-							</div>
-						</div>
-					</article> -->
 				</div>
 			</section>
 			<section id="partners" class="partner-section clearfix">
@@ -266,7 +160,7 @@
 				</div>
 				<div class="activity-section__bottom">
 					<h3 class="section-title section-title--activity-bottom">Discover holiday activity ideas</h3>
-					<form class="activity-form clearfix" action="#">
+					<form class="activity-form clearfix" action="#" id="form-activity">
 						<p class="activity-form__text">Hi! What are your holiday interests?</p>
 						<input type="text" class="activity-form__input" placeholder="Enter your interests" required> 
 						<button type="submit" class="main-link main-link--activity">Search partners</button>
@@ -296,34 +190,23 @@
 			</div>
 		</div>
 	</footer>
-<!-- 	<script id="template" type="text/x-handlebars-template">
-		<a href="#" class="activity__sizer"></a>
-		<a href="#" class="activity__gutter"></a>
-		{{#each photos}}
-		<a href="#" class="activity__link" data-src={{url}} style= "background: #4C4C4C url({{../preload}}) no-repeat center center">
-				<h4 class="activity__title">{{word}}</h4>
-		</a>
-		{{/each}}
-	</script> -->
 	<script type="text/html" id="_template" >
-		<a href="#" class="activity__sizer"></a>
-		<a href="#" class="activity__gutter"></a>
 		<% for ( var i = 0; i < photos.length; i++ ) { %>
-		<a href="#" class="activity__link" data-src=<%=photos[i].url%> style="background: url(<%=photos[i].url%>) no-repeat center center">
+		<a href="#" class="activity__link
+		<% if ((i==4)||(i==5)){%>activity__link--resize<%}%>" data-src=<%=photos[i].url%> style="background: url(<%=photos[i].url%>) no-repeat center center; background-size: cover;">
 			<h4 class="activity__title"><%=photos[i].word%></h4>
 		</a>
 		<% } %>
 	</script>
-	<!-- <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script> -->
-	<!-- <script src="src/js/lory.min.js"></script> -->
-	<script src="src/js/jquery.jcarousel.min.js"></script>
-	<!-- <script src="src/js/handlebars-v4.0.5.js"></script> -->
-	<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-ajaxtransport-xdomainrequest/1.0.3/jquery.xdomainrequest.min.js"></script>
-	<script src="src/js/tmpl.js"></script>
-	<!--	<script src="src/js/isotope.pkgd.js"></script> -->
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/2.2.2/isotope.pkgd.min.js"></script>
-	<script src="src/js/imagesloaded.pkgd.min.js"></script>
-	<!-- <script src="https://npmcdn.com/imagesloaded@3.0/imagesloaded.pkgd.min.js"></script> -->
-	<script src="src/js/app.js"></script>
+	<script type="text/javascript" src="src/js/tmpl.js"></script>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/2.2.2/isotope.pkgd.min.js"></script>
+	<script type="text/javascript" src="src/js/app.js"></script>
+	<!--[if lt IE 9]>
+      <script type="text/javascript" src="src/js/ie/ie-love.min.js"></script>
+    <![endif]-->
+
+    <!--[if gt IE 8]>
+      <script type="text/javascript" src="http://code.jquery.com/jquery-2.2.0.min.js">
+    <![endif]-->
 </body>
 </html>
