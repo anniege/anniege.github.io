@@ -116,11 +116,8 @@
 
 	&--promo {
 		margin: 0 auto;
-		// position: relative;
-		// left: 50%;
-		// transform: translateX(-50%);
-		// background-color: @color-red;
-		// color: @font-color-white;
+		color: @btn-partner-color-hover;
+		background-color: @btn-partner-color;
 
 		&:hover {
 			background-color: transparent;
@@ -144,7 +141,7 @@
 	color: @font-color-section-title;
 
 	&--partner {
-		padding: 36px 0 11px;
+		padding: 23px 0 11px;
 	}
 
 	&--activity {
@@ -153,15 +150,15 @@
 	} 
 
 	&--activity-bottom {
-		padding-top: 27px;
+		padding-top: 20px;
 		padding-bottom: 0px;
 	} 
 }
 
 .guide {
-	&:not(:last-of-type) {
-		padding-bottom: 10px;
-	}
+	// &:not(:last-of-type) {
+	// 	padding-bottom: 10px;
+	// }
 
 	&-section {
 		&__container {
@@ -264,6 +261,7 @@
 	position: relative;
 	overflow: hidden;
 	border-radius: 2px;
+	white-space: nowrap;
 
 	ul {
 		width: 20000em;
@@ -364,10 +362,15 @@
 /* MAIN - SECTIONS - ACTIVITIES */
 
 .activity {
+	width: 300px;
 	margin: 10px auto;
 
 	a {
 		display: block;
+	}
+
+	a&__link {
+		display: table;
 	}
 
 	&-section{
@@ -380,18 +383,17 @@
 
 	&__link {
 		position: relative;
-		display: block;
-		float: left;
 		width: 300px;
 		height: 120px;
 		border-radius: 5px;
 		opacity: .8;
 		transition: opacity .3s;
 		overflow: hidden;
+		margin-bottom: 10px;
 
-			margin-bottom: 20px;
-		// &:not(:last-child) {
-		// }
+		&&--resize {
+			width: 300px;
+		}
 
 		&:hover {
 			opacity: 1;
@@ -402,23 +404,12 @@
 		}
 	}
 
-	&__gutter {
-		width: 50%;
-	}
-
-	&__sizer {
-		width: 300px;
-	}
-
-	
 	&__title {
-		position: absolute;
-		top: 50%;
-		left: 50%;
-		transform: translate(-50%, -50%);
-		text-transform: capitalize;
+		display: table-cell;
+		margin: 0;
+		vertical-align: middle;
 		text-align: center;
-		font-size: @font-size-activity-caption;
+		font-size: 22px;
 		font-family: @font-family-titles;
 		color: @font-color-white;
 	}
@@ -605,11 +596,10 @@
 	}
 
 	.guide {
-		display: inline-block;
+		float: left;
 
 		&:not(:last-of-type) {
 			margin-right: 20px;
-			padding-bottom: 0px;
 		}
 
 		&-section {
@@ -617,8 +607,6 @@
 
 			&__container {
 				width: 748px;
-				// font-size: 0;
-				// line-height: 0;
 				white-space: nowrap;
 			}
 		}
@@ -648,7 +636,6 @@
 
 
 	/* PARTNER */
-
 	.partner {
 		display: inline-block;
 		vertical-align: top;
@@ -681,10 +668,15 @@
 	}
 
 	.activity {
+		width: 748px;
 		margin: 0 auto;
 
 		a {
 			display: block;
+		}
+
+		a&__link {
+			display: table;
 		}
 
 		&-section {
@@ -692,30 +684,13 @@
 		}
 
 		&__link {
-			float: left;
-			width: 31%;
+			width: 236px;
 			height: 310px;
+			margin-bottom: 20px;
 
-				margin-bottom: 20px;
-			// &:not(:last-child) {
-			// }
-
-			&:nth-child(7), &:nth-child(8) {
-				width: 65%;
+			&&--resize {
+				width: 492px;
 			}
-		}
-
-		&__gutter {
-			width: 3.5%;
-		}
-
-		&__sizer {
-			width: 31%;
-		}
-
-		&__img {
-			min-height: 100%;
-			min-width: auto;
 		}
 
 		&-form {
@@ -861,11 +836,10 @@
 	}
 
 	.guide {
-		display: inline-block;
+		float: left;
 
 		&:not(:last-of-type) {
-			margin-right: 10px;
-			padding-bottom: 0px;
+			margin-right: 20px;
 		}
 
 		&-section {
@@ -899,8 +873,8 @@
 		margin-bottom: 0px;
 	}
 
-	/* PARTNER */
 
+	/* PARTNER */
 	.partner {
 		display: table-cell;
 		vertical-align: top;
@@ -936,8 +910,6 @@
 
 
 	/* ACTIVITY */
-
-
 	.activity {
 		margin: 0 auto;
 		width: 940px;
@@ -947,40 +919,27 @@
 			display: block;
 		}
 
+		a&__link {
+			display: table;
+		}
+
 		&-section {
 			padding-bottom: 100px;
 		}
 
 		&__link {
-			float: left;
-			// display: table-cell;
 			width: 300px;
-			// width: 31%;
 			height: 310px;
+			margin-bottom: 20px;
 
-				margin-bottom: 20px;
-			// &:not(:last-child) {
-			// }
-
-			// &:nth-child(5), &:nth-child(6) 
 			&&--resize {
 				width: 620px;
-				// width: 66.5%;
 			}
 		}
 
-		// &__gutter {
-		// 	width: 3.5%;
-		// }
+		&__title {
 
-		// &__sizer {
-		// 	width: 31%;
-		// }
-
-		// &__img {
-		// 	min-height: 100%;
-		// 	min-width: auto;
-		// }
+		}
 
 		&-form {
 			text-align: center;

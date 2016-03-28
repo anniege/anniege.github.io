@@ -396,6 +396,8 @@ a {
 
 .main-link--promo {
   margin: 0 auto;
+  color: #fff;
+  background-color: #ff4e50;
 }
 
 .main-link--promo:hover {
@@ -419,7 +421,7 @@ a {
 }
 
 .section-title--partner {
-  padding: 36px 0 11px;
+  padding: 23px 0 11px;
 }
 
 .section-title--activity {
@@ -428,12 +430,8 @@ a {
 }
 
 .section-title--activity-bottom {
-  padding-top: 27px;
+  padding-top: 20px;
   padding-bottom: 0px;
-}
-
-.guide:not(:last-of-type) {
-  padding-bottom: 10px;
 }
 
 .guide-section__container {
@@ -538,6 +536,7 @@ a {
   overflow: hidden;
   -webkit-border-radius: 2px;
   border-radius: 2px;
+  white-space: nowrap;
 }
 
 .jcarousel ul {
@@ -646,11 +645,16 @@ a {
 /* MAIN - SECTIONS - ACTIVITIES */
 
 .activity {
+  width: 300px;
   margin: 10px auto;
 }
 
 .activity a {
   display: block;
+}
+
+a.activity__link {
+  display: table;
 }
 
 .activity-section {
@@ -663,8 +667,6 @@ a {
 
 .activity__link {
   position: relative;
-  display: block;
-  float: left;
   width: 300px;
   height: 120px;
   -webkit-border-radius: 5px;
@@ -673,7 +675,11 @@ a {
   -webkit-transition: opacity .3s;
   transition: opacity .3s;
   overflow: hidden;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
+}
+
+.activity__link.activity__link--resize {
+  width: 300px;
 }
 
 .activity__link:hover {
@@ -684,24 +690,12 @@ a {
   color: #eee;
 }
 
-.activity__gutter {
-  width: 50%;
-}
-
-.activity__sizer {
-  width: 300px;
-}
-
 .activity__title {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-  text-transform: capitalize;
+  display: table-cell;
+  margin: 0;
+  vertical-align: middle;
   text-align: center;
-  font-size: 16px;
+  font-size: 22px;
   font-family: "MontserratBold", Arial, sans-serif;
   color: #fff;
 }
@@ -883,12 +877,11 @@ a {
   }
 
   .guide {
-    display: inline-block;
+    float: left;
   }
 
   .guide:not(:last-of-type) {
     margin-right: 20px;
-    padding-bottom: 0px;
   }
 
   .guide-section {
@@ -955,6 +948,7 @@ a {
   }
 
   .activity {
+    width: 748px;
     margin: 0 auto;
   }
 
@@ -962,33 +956,22 @@ a {
     display: block;
   }
 
+  a.activity__link {
+    display: table;
+  }
+
   .activity-section {
     padding-bottom: 100px;
   }
 
   .activity__link {
-    float: left;
-    width: 31%;
+    width: 236px;
     height: 310px;
     margin-bottom: 20px;
   }
 
-  .activity__link:nth-child(7),
-  .activity__link:nth-child(8) {
-    width: 65%;
-  }
-
-  .activity__gutter {
-    width: 3.5%;
-  }
-
-  .activity__sizer {
-    width: 31%;
-  }
-
-  .activity__img {
-    min-height: 100%;
-    min-width: auto;
+  .activity__link.activity__link--resize {
+    width: 492px;
   }
 
   .activity-form {
@@ -1134,12 +1117,11 @@ a {
   }
 
   .guide {
-    display: inline-block;
+    float: left;
   }
 
   .guide:not(:last-of-type) {
-    margin-right: 10px;
-    padding-bottom: 0px;
+    margin-right: 20px;
   }
 
   .guide-section__title {
@@ -1216,12 +1198,15 @@ a {
     display: block;
   }
 
+  a.activity__link {
+    display: table;
+  }
+
   .activity-section {
     padding-bottom: 100px;
   }
 
   .activity__link {
-    float: left;
     width: 300px;
     height: 310px;
     margin-bottom: 20px;
