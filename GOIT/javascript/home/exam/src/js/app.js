@@ -1,5 +1,5 @@
 (function($){
-	// $.support.cors = true;
+	$.support.cors = true;
 	
 	var images = [
 	{ url: "dist/img/gallery_1.jpg", word: "Sport and Activity" },
@@ -30,14 +30,14 @@
 			cache: false,
 			url: requestStr,
 			success: function(data) {
-				if (data.hits.length) { 
+				if ( data.status === 'failed' ) {
 					var i = 0;
 					while(i < 7) {
 						images[i].url = data.hits[i].webformatURL;
 						i++;
 					}
 				} 
-				render();
+				render(images);
 			},
 			error: function() {
 				alert('Ajax not support by current browser.');
@@ -106,7 +106,7 @@
 	}
 
 	//RENDER TEMPLATE
-	function render() {
+	function render(images) {
 		var html = tmpl($('#_template').html(), { data:images });
 		$('.activity').html(html);
 	}
@@ -115,7 +115,7 @@
 		slidersCreate();
 
 		var renderTmpl = function() {
-			return render();
+			return render(images);
 		}
 
 		$.when(renderTmpl()).done(function() {
