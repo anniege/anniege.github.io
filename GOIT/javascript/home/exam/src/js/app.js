@@ -1,5 +1,11 @@
+//= partials/jquery.min.js
+//= partials/jquery.jcarousel.min.js
+//= partials/jquery.xdomainrequest.min.js
+//= partials/isotope.pkgd.min.js
+//= partials/tmpl.js
+
+
 (function($){
-	$.support.cors = true;
 	
 	var images = [
 	{ url: "dist/img/gallery_1.jpg", word: "Sport and Activity" },
@@ -30,7 +36,7 @@
 			cache: false,
 			url: requestStr,
 			success: function(data) {
-				if ( data.status === 'failed' ) {
+				if ( data.status !== 'failed' ) {
 					var i = 0;
 					while(i < 7) {
 						images[i].url = data.hits[i].webformatURL;

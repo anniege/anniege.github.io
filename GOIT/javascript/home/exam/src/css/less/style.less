@@ -13,7 +13,6 @@
 }
 
 /* HEADER */
-
 .header {
 	position: relative;
 	background: url('../../img/header_bg.jpg');
@@ -156,10 +155,6 @@
 }
 
 .guide {
-	// &:not(:last-of-type) {
-	// 	padding-bottom: 10px;
-	// }
-
 	&-section {
 		&__container {
 			width: 300px;
@@ -278,7 +273,6 @@
 }
 
 /* MAIN - SECTIONS - PARTNERS */
-
 .partner {
 	margin-top: 10px;
 	
@@ -313,7 +307,7 @@
 			height: 32px;
 			border-radius: 50%;
 			border: 4px solid #fff;
-			background: url('../../img/partner_sprite.png') 0px 0px no-repeat;
+			background: url('../../img/partner_sprite.png') -90px 6px no-repeat;
 			overflow: hidden;
 		}
 
@@ -323,17 +317,17 @@
 
 		&--bulb:after {
 			background-color: @bg-color-bulb;
-			background-position: -32px;
+			background-position: 9px;
 		}
 
 		&--coffee:after {
 			background-color: @bg-color-coffee;
-			background-position: -64px;
+			background-position: -22px;
 		}
 
 		&--plane:after {
 			background-color: @bg-color-plane;
-			background-position: -96px;
+			background-position: -56px;
 		}
 	}
 
@@ -360,7 +354,6 @@
 }
 
 /* MAIN - SECTIONS - ACTIVITIES */
-
 .activity {
 	width: 300px;
 	margin: 10px auto;
@@ -438,7 +431,6 @@
 
 
 /* FOOTER */
-
 .footer {
 	border-top: 4px solid @color-red;
 	padding: 18px 0 7px;
@@ -462,7 +454,6 @@
 }
 
 .menu {
-
 	&__list {
 		position: relative;
 		float: left;
@@ -510,8 +501,7 @@
 }
 
 
-/* TABLETS */
-
+/* TABLET */
 @media (min-width: @tablet) and (max-width: (@desktop - 1px)) { 
 	.wrapper {
 		min-width: (@tablet - 20px);
@@ -581,7 +571,6 @@
 			width: 160px;
 		}
 	}
-
 
 	.section-title {
 		padding: 95px 0 33px;
@@ -748,8 +737,7 @@
 }
 
 
-/* DESCTOPES */
-
+/* DESKTOP */
 @media (min-width: @desktop) {
 
 	.wrapper {
