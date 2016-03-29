@@ -56,6 +56,14 @@ gulp.task('build:scripts', function(){
 });
 
 gulp.task('build:vendor', function(){
+	return gulp.src('src/js/vendor.js')
+	.pipe(rigger())
+	.pipe(uglify())
+	.pipe(rename('vendor.min.js'))
+	.pipe(gulp.dest('dist/js'));
+});
+
+gulp.task('build:ie', function(){
 	return gulp.src('src/js/IE/*.js')
 	.pipe(gulp.dest('dist/js/IE'));
 });
@@ -110,6 +118,7 @@ gulp.task('default', [
 	'build:sprites',
 	'build:fonts',
 	'build:css',
+	'build:ie',
 	'build:vendor',
 	'build:scripts',
 	'less:watch']);
