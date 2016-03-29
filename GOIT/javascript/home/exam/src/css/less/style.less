@@ -25,8 +25,8 @@
 .logo {
 	position: absolute;
 	top: 171.5px;
-	left: 50%;
-	transform: translateX(-50%);
+	width: 100%;
+	text-align: center;
 
 	&--footer {
 		position: static;
@@ -455,10 +455,8 @@
 
 .menu {
 	&__list {
-		position: relative;
-		float: left;
-		left: 50%;
-		transform: translate(-50%);
+		display: table;
+		margin: auto;
 	}
 
 	&__i {
@@ -513,8 +511,9 @@
 
 	.logo {
 		position: static;
-		left: 0;
-		transform: none;
+		width: auto;
+		// left: 0;
+		// transform: none;
 		float: left;
 		padding-left: 40px;
 		padding-top: 12px;
@@ -711,6 +710,7 @@
 	}
 
 	.menu {
+		display: block;
 		float: left;
 		padding-left: 81px;
 
@@ -750,8 +750,9 @@
 
 	.logo {
 		position: static;
-		left: 0;
-		transform: none;
+		width: auto;
+		// left: 0;
+		// transform: none;
 		float: left;
 		padding-top: 13px;
 
@@ -960,6 +961,7 @@
 	}
 
 	.menu {
+		display: block;
 		float: left;
 		padding-left: 98px;
 

@@ -1,4 +1,4 @@
-var gulp = require('gulp'),
+var	gulp = require('gulp'),
 	gutil = require('gulp-util'),
 	less = require('gulp-less'),
 	watch = require('gulp-watch'),
@@ -63,11 +63,6 @@ gulp.task('build:vendor', function(){
 	.pipe(gulp.dest('dist/js'));
 });
 
-gulp.task('build:ie', function(){
-	return gulp.src('src/js/IE/*.js')
-	.pipe(gulp.dest('dist/js/IE'));
-});
-
 gulp.task('build:images', function() {
 	return gulp.src('src/img/*.*')
 	.pipe(imagemin({
@@ -118,7 +113,6 @@ gulp.task('default', [
 	'build:sprites',
 	'build:fonts',
 	'build:css',
-	'build:ie',
 	'build:vendor',
 	'build:scripts',
 	'less:watch']);
