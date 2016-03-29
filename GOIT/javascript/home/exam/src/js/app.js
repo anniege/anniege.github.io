@@ -1,7 +1,6 @@
 //= partials/isotope.pkgd.min.js
 //= partials/tmpl.js
 
-
 (function($){
 	
 	var images = [
@@ -52,8 +51,16 @@
 
 	//RENDER IMAGES BY REQUEST
 	function getUserRequest() {
+		var userWord = $('.activity-form__input').val();
+		localStorage.setItem("word", userWord);
+
+		initRequest(userWord);
+	}
+
+
+	function initRequest(userWord) {
 		for (var i = images.length - 1; i >= 0; i--) {
-			images[i].word =  $('.activity-form__input').val();
+			images[i].word = userWord;
 		}
 
 		//CALL FUNC TO GET AND RENDER USER REQUEST
@@ -117,13 +124,29 @@
 	$(function() {
 		slidersCreate();
 
-		var renderTmpl = function() {
-			return render(images);
-		}
+		if(typeof(Storage) !== "undefined") {
 
-		$.when(renderTmpl()).done(function() {
-			IsotopeInit();
-		});
+			var savedWord = localStorage.getItem("word");
+
+			if (savedWord) {
+				// for (var i = images.length - 1; i >= 0; i--) {
+				// 	images[i].word = savedWord;
+				// }
+				initRequest(savedWord);
+			} else {
+				var renderTmpl = function() {
+					return render(images);
+				}
+
+				$.when(renderTmpl()).done(function() {
+					IsotopeInit();
+				});
+			}
+
+		} else {
+
+			alert('Local storage isn\'t supported by current browser.');
+		}
 	});
 	
 
