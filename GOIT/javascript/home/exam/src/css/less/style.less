@@ -42,6 +42,11 @@
 		&--footer {
 			font-size: 17px;
 			color: @color-red;
+			transition: all .3s;
+
+			&:hover {
+				color: @color-red-hover;
+			}
 		}
 	}
 }
@@ -451,6 +456,10 @@
 		text-align: center;
 		text-transform: capitalize;
 
+		&:hover {
+			transform: scale(1.05, 1.05);
+		}
+
 		a {
 			font-family: @font-family-titles;
 			font-size: @font-size-footer-title;
@@ -483,11 +492,20 @@
 		font-size: @font-size-footer-menu;
 		font-family: @font-family-subtitles;
 		color: @font-color-footer-menu;
+		transition: all .2s;
+
+		&:hover {
+			color: #aaa;
+		}
 	}
 }
 
 .partners {
 	clear: both;
+
+	&:hover {
+		transform: scaleY(1.15);
+	}
 }
 
 .copyright {
