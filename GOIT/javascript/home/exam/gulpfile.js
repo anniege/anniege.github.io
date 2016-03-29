@@ -40,7 +40,7 @@ gulp.task('build:css', function(){
 		browsers: ['last 10 versions', '> 2%'],
 		cascade: false
 	}))
-	.pipe(cssnano())
+	// .pipe(cssnano())
 	.pipe(rename('style.min.css'))
 	.pipe(gulp.dest('dist/css'));
 
