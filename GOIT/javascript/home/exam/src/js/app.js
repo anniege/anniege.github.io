@@ -129,9 +129,6 @@
 			var savedWord = localStorage.getItem("word");
 
 			if (savedWord) {
-				// for (var i = images.length - 1; i >= 0; i--) {
-				// 	images[i].word = savedWord;
-				// }
 				initRequest(savedWord);
 			} else {
 				var renderTmpl = function() {
