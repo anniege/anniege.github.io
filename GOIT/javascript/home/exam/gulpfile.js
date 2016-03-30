@@ -119,8 +119,9 @@ gulp.task('default', [
 	'build:css',
 	'build:vendor',
 	'build:scripts',
-	'less:watch',
-	'js:watch']);
+	// 'less:watch',
+	// 'js:watch'
+	]);
 
 
 
