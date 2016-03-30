@@ -73,11 +73,37 @@ gulp.task('build:images', function() {
 	.pipe(gulp.dest('dist/img'));
 });
 
-gulp.task('build:sprites', function () {
-	var spriteData = gulp.src('src/img/sprites/*.png').pipe(spritesmith({
+gulp.task('build:sprite', function () {
+	var spriteData = gulp.src('src/img/sprites/regular/*.png').pipe(spritesmith({
 		imgName: 'partner_sprite.png',
 		cssName: 'partner_sprite.css',
 		imgPath: '../img/partner_sprite.png',
+		padding: 17,
+		algorithm: 'left-right'
+	})).on('error', function(e){
+		console.log(e);
+	});
+
+	var imgStream = spriteData.img
+	.pipe(buff())
+	.pipe(imagemin({
+		progressive: true,
+		use: [pngquant({quality: '65-80', speed: 4})],
+		interlaced: true
+	}))
+	.pipe(gulp.dest('dist/img'));
+
+	var cssStream = spriteData.css
+	.pipe(gulp.dest('src/css'));
+
+	return merge(imgStream, cssStream);
+});
+
+gulp.task('build:retinaSprite', function () {
+	var spriteData = gulp.src('src/img/sprites/retina/*.png').pipe(spritesmith({
+		imgName: 'partner_sprite@2x.png',
+		cssName: 'partner_sprite@2x.css',
+		imgPath: '../img/partner_sprite@2x.png',
 		padding: 17,
 		algorithm: 'left-right'
 	})).on('error', function(e){
@@ -114,11 +140,12 @@ gulp.task('js:watch', function() {
 
 gulp.task('default', [
 	'build:images',
-	'build:sprites',
+	'build:sprite',
+	'build:retinaSprite',
 	'build:fonts',
 	'build:css',
 	'build:vendor',
-	'build:scripts',
+	'build:scripts'
 	// 'less:watch',
 	// 'js:watch'
 	]);

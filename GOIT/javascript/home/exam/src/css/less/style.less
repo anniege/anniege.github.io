@@ -1034,11 +1034,50 @@ html, body {
 				background-size: cover;
 			}
 		}
+
+		&__next {
+			background: url('../../img/arrow_right@2x.png');
+			background-size: contain;
+			right: 20px;
+		}
+
+		&__prev {
+			background: url('../../img/arrow_left@2x.png');
+			background-size: contain;
+			left: 20px;
+		}
 	}
 
 	.partner {
 		&__img {
 			max-width: 100%;
+		}
+
+		&__link {
+
+			&:after {
+				background: url('../../img/partner_sprite@2x.png') -49px 6px no-repeat;
+				background-size: auto 64%;
+			}
+
+			&--tv:after{
+				background-color: @bg-color-tv;
+			}
+
+			&--bulb:after {
+				background-color: @bg-color-bulb;
+				background-position: 8px;
+			}
+
+			&--coffee:after {
+				background-color: @bg-color-coffee;
+				background-position: -19px;
+			}
+
+			&--plane:after {
+				background-color: @bg-color-plane;
+				background-position: -79px;
+			}
 		}
 	}
 
@@ -1048,6 +1087,8 @@ html, body {
 			background-size: contain;
 		}
 	}
+
+
 
 	@media (min-width: @desktop) {
 		.header {
