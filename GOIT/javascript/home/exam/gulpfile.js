@@ -105,7 +105,11 @@ gulp.task('build:fonts', function() {
 });
 
 gulp.task('less:watch', function() {
-	return gulp.watch('src/css/**/*.less', ['css']);
+	return gulp.watch('src/css/**/*.less', ['build:css']);
+});
+
+gulp.task('js:watch', function() {
+	return gulp.watch('src/js/**/*.js', ['build:scripts']);
 });
 
 gulp.task('default', [
@@ -115,7 +119,8 @@ gulp.task('default', [
 	'build:css',
 	'build:vendor',
 	'build:scripts',
-	'less:watch']);
+	'less:watch',
+	'js:watch']);
 
 
 

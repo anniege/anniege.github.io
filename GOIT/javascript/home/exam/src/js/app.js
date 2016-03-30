@@ -3,42 +3,53 @@
 
 (function($){
 	
-	var images = [
-	{ url: "dist/img/gallery_1.jpg", word: "Sport and Activity" },
-	{ url: "dist/img/gallery_2.jpg", word: "Wellnes and Health" },
-	{ url: "dist/img/gallery_3.jpg", word: "Extreme Sports and Expeditions"},
-	{ url: "dist/img/gallery_4.jpg", word: "Games"},
-	{ url: "dist/img/gallery_5.jpg", word: "Culture and Education"},
-	{ url: "dist/img/gallery_6.jpg", word: "Relaxation"},
-	{ url: "dist/img/gallery_7.jpg", word: "Travelling"}
-	];
+	var images = [],
+		defaults = [
+		{ url: "dist/img/gallery_1.jpg", word: "Sport and Activity" },
+		{ url: "dist/img/gallery_2.jpg", word: "Wellnes and Health" },
+		{ url: "dist/img/gallery_3.jpg", word: "Extreme Sports and Expeditions"},
+		{ url: "dist/img/gallery_4.jpg", word: "Games"},
+		{ url: "dist/img/gallery_5.jpg", word: "Culture and Education"},
+		{ url: "dist/img/gallery_6.jpg", word: "Relaxation"},
+		{ url: "dist/img/gallery_7.jpg", word: "Travelling"}];
 
-	function renderImagesByRequest() {
-		var wordArr = images[0].word.split(" ");
-		var requestStr = 'https://pixabay.com/api/?key=2223288-d10240586d6b3acc79b68cd15&q=';
-		for (var i = 0; i < wordArr.length; i++) {
-			
-			if (i != 0) {
-				requestStr = requestStr + '+' + wordArr[i];
-			} else { 
-				requestStr = requestStr + wordArr[i];
-			}
-		}
-		requestStr = requestStr + '&image_type=photo&orientation=horizontal&min_width=310&min_height=410';
 
+	//RENDER IMAGES BY REQUEST
+	function getUserRequest() {
+		var userWord = $('.activity-form__input').val();
+		$('.activity-form__input').val("");
+		initRequest(userWord);
+	}
+
+	function initRequest(userWord) {
+		// RENDER USER REQUEST
+		var word = encodeURIComponent(userWord);
+		var result = 'http://api.pixplorer.co.uk/image?word=' + word + '&amount=7&size=s';
 		$.ajax({
 			type: "GET",
-			dataType: "jsonp",
+			dataType: "json",
 			cache: false,
-			url: requestStr,
+			url: result,
 			success: function(data) {
 				if ( data.status !== 'failed' ) {
-					var i = 0;
-					while(i < 7) {
-						images[i].url = data.hits[i].webformatURL;
-						i++;
+					if (data.images.length > 0) {
+						localStorage.setItem("word", userWord);
+						var i = 0;
+						while(i < 7) {
+							images[i].url = data.images[i].imageurl;
+							images[i].word = data.images[i].word;
+							i++;
+						}
+					} else {
+						if (localStorage.word) {
+							$.each(images, function(i, img) {
+								img.word = localStorage.word;
+							});
+						}
 					}
-				} 
+				} else {
+					images = copy(defaults);
+				}
 				render(images);
 			},
 			error: function() {
@@ -47,24 +58,6 @@
 		}).done(function(){
 			IsotopeInit();
 		});
-	}
-
-	//RENDER IMAGES BY REQUEST
-	function getUserRequest() {
-		var userWord = $('.activity-form__input').val();
-		localStorage.setItem("word", userWord);
-
-		initRequest(userWord);
-	}
-
-
-	function initRequest(userWord) {
-		for (var i = images.length - 1; i >= 0; i--) {
-			images[i].word = userWord;
-		}
-
-		//CALL FUNC TO GET AND RENDER USER REQUEST
-		renderImagesByRequest();
 	}
 
 	// SLIDERS INIT
@@ -121,8 +114,18 @@
 		$('.activity').html(html);
 	}
 
+	function copy(arrOld) {
+		var arrNew = [];
+		$.each(arrOld, function(i) {
+			arrNew[i] = $.extend({}, arrOld[i]);
+		});
+		return arrNew;
+	}
+
 	$(function() {
 		slidersCreate();
+
+		images = copy(defaults);
 
 		if(typeof(Storage) !== "undefined") {
 
@@ -131,6 +134,11 @@
 			if (savedWord) {
 				initRequest(savedWord);
 			} else {
+				initRequest('');
+			}
+
+		} else {
+			// alert('Local storage isn\'t supported by current browser.');
 				var renderTmpl = function() {
 					return render(images);
 				}
@@ -138,11 +146,6 @@
 				$.when(renderTmpl()).done(function() {
 					IsotopeInit();
 				});
-			}
-
-		} else {
-
-			alert('Local storage isn\'t supported by current browser.');
 		}
 	});
 	
