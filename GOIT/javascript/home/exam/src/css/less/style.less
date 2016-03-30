@@ -6,6 +6,10 @@
 	.clearfix-mixin;
 }
 
+html, body {
+	width: 100%;
+}
+
 .wrapper {
 	min-width: (@mobile - 20px);
 	padding: 0 10px;
@@ -1010,7 +1014,7 @@
 (min-device-pixel-ratio: 1.5) {
 	.header {
 		background: url('../../img/header_bg@2x.jpg') center center no-repeat;
-		background-size: contain;
+		background-size: 100%;
 	}
 
 	.guide {
@@ -1032,7 +1036,7 @@
 		}
 	}
 
-	.parner {
+	.partner {
 		&__img {
 			max-width: 100%;
 		}
@@ -1042,6 +1046,12 @@
 		&__logo {
 			background: url('../../img/logo_copyright@2x.png') center center no-repeat;
 			background-size: contain;
+		}
+	}
+
+	@media (min-width: @desktop) {
+		.header {
+			background-size: cover;
 		}
 	}
 }
