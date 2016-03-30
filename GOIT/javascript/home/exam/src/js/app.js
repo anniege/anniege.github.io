@@ -122,8 +122,29 @@
 		return arrNew;
 	}
 
+
+	function retinaImgReplace() {
+		//replace src of img tags on higher resolution ones (Partners section)
+		if (window.devicePixelRatio > 1) {
+			var lowresImages = $('.partner-section img');
+
+			$(lowresImages).each(function(i, img) {
+				var lowres = $(img).attr('src');
+				var highres = lowres.replace(".jpg", "@2x.png");
+				$(img).attr('src', highres);
+			});
+
+			// replace the stored data urls
+			for (var i = defaults.length - 1; i >= 0; i--) {
+				var res = defaults[i].url.replace(".jpg", "@2x.jpg");
+				defaults[i].url = res;
+			}
+		}
+	}
+
 	$(function() {
 		slidersCreate();
+		retinaImgReplace();
 
 		images = copy(defaults);
 

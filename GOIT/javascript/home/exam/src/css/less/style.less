@@ -1003,3 +1003,34 @@
 		float: right;
 	}
 }
+
+@media (-Webkit-min-device-pixel-ratio: 1.5),
+(-moz-min-device-pixel-ratio: 1.5),
+(-o-min-device-pixel-ratio: 3/2),
+(min-device-pixel-ratio: 1.5) {
+	.header {
+		background: url('../../img/header_bg@2x.jpg');
+	}
+
+	.guide {
+		&__i {
+			&--first {
+				background: url('../../img/slider1_1@2x.jpg') center center no-repeat;
+			}
+
+			&--second {
+				background: url('../../img/slider2_1@2x.jpg') center center no-repeat;
+			}
+
+			&--third {
+				background: url('../../img/slider3_1@2x.jpg') center center no-repeat;
+			}
+		}
+	}
+
+	.copyright {
+		&__logo {
+			background: url('../../img/logo_copyright@2x.png') center center no-repeat;
+		}
+	}
+}
