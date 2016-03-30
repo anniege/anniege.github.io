@@ -1014,24 +1014,24 @@ html, body {
 (min-device-pixel-ratio: 1.5) {
 	.header {
 		background: url('../../img/header_bg@2x.jpg') center center no-repeat;
-		background-size: 100%;
+		background-size: auto 100%;
 	}
 
 	.guide {
 		&__i {
 			&--first {
 				background: url('../../img/slider1_1@2x.jpg') center center no-repeat;
-				background-size: contain;
+				background-size: cover;
 			}
 
 			&--second {
 				background: url('../../img/slider2_1@2x.jpg') center center no-repeat;
-				background-size: contain;
+				background-size: cover;
 			}
 
 			&--third {
 				background: url('../../img/slider3_1@2x.jpg') center center no-repeat;
-				background-size: contain;
+				background-size: cover;
 			}
 		}
 	}
@@ -1052,6 +1052,22 @@ html, body {
 	@media (min-width: @desktop) {
 		.header {
 			background-size: cover;
+		}
+
+		.guide {
+			&__i {
+				&--first {
+					background-size: contain;
+				}
+
+				&--second {
+					background-size: contain;
+				}
+
+				&--third {
+					background-size: contain;
+				}
+			}
 		}
 	}
 }
