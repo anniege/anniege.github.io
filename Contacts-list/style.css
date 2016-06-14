@@ -23,6 +23,15 @@
   border-bottom: 1px dotted grey;
 }
 
+// .contact-info {
+//   height: 44px;
+//   overflow: hidden;
+// }
+
+// .contact-info--active {
+//   overflow: auto;
+// }
+
 .contact-image {
     border-radius: 50%;
     margin: 5px;
